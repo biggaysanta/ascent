@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Venmo on The Sacramento Massage Therapist</title>
+    <link>http://localhost:1313/tags/venmo/</link>
+    <description>Recent content in Venmo on The Sacramento Massage Therapist</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 12 May 2017 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/venmo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Now accepting Venmo!</title>
+      <link>http://localhost:1313/writings/now-accepting-venmo/</link>
+      <pubDate>Fri, 12 May 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/writings/now-accepting-venmo/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://eepurl.com/cOHnaz&#34;&gt;Now accepting Venmo!&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
