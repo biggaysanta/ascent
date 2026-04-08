@@ -19,10 +19,10 @@
   </url><url>
     <loc>http://localhost:1313/pages/about-paul-brown/</loc>
   </url><url>
-    <loc>http://localhost:1313/pages/</loc>
+    <loc>http://localhost:1313/location/</loc>
     <lastmod>2026-03-19T22:45:37-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/location/</loc>
+    <loc>http://localhost:1313/pages/</loc>
     <lastmod>2026-03-19T22:45:37-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/contact/</loc>
@@ -845,6 +845,10 @@
     <loc>http://localhost:1313/writings/no-more-pain-advanced-massage-table/</loc>
   </url><url>
     <loc>http://localhost:1313/test/</loc>
+  </url><url>
+    <loc>http://localhost:1313/oz/</loc>
+  </url><url>
+    <loc>http://localhost:1313/oz/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/patient-comfort/</loc>
   </url><url>
