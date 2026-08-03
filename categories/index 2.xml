@@ -17,20 +17,6 @@
       <description></description>
     </item>
     <item>
-      <title>Announcement</title>
-      <link>http://localhost:1313/categories/announcement/</link>
-      <pubDate>Tue, 06 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/announcement/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Sale</title>
-      <link>http://localhost:1313/categories/sale/</link>
-      <pubDate>Tue, 06 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/sale/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Research</title>
       <link>http://localhost:1313/categories/research/</link>
       <pubDate>Wed, 31 Jul 2024 00:00:00 +0000</pubDate>
@@ -42,6 +28,13 @@
       <link>http://localhost:1313/categories/self-care/</link>
       <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/categories/self-care/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Announcement</title>
+      <link>http://localhost:1313/categories/announcement/</link>
+      <pubDate>Fri, 08 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/announcement/</guid>
       <description></description>
     </item>
     <item>
@@ -66,10 +59,10 @@
       <description></description>
     </item>
     <item>
-      <title>Wellness</title>
-      <link>http://localhost:1313/categories/wellness/</link>
-      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/wellness/</guid>
+      <title>Sale</title>
+      <link>http://localhost:1313/categories/sale/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/sale/</guid>
       <description></description>
     </item>
     <item>
@@ -80,17 +73,17 @@
       <description></description>
     </item>
     <item>
+      <title>Wellness</title>
+      <link>http://localhost:1313/categories/wellness/</link>
+      <pubDate>Sun, 04 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/wellness/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Answer-a-Question</title>
       <link>http://localhost:1313/categories/answer-a-question/</link>
       <pubDate>Tue, 16 May 2023 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/categories/answer-a-question/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Sponsorship</title>
-      <link>http://localhost:1313/categories/sponsorship/</link>
-      <pubDate>Fri, 06 Dec 2019 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/sponsorship/</guid>
       <description></description>
     </item>
     <item>

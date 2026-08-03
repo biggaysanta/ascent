@@ -10,24 +10,17 @@
     <lastBuildDate>Sat, 07 Feb 2026 03:10:38 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/announcements/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>New Location Coming Soon!</title>
-      <link>http://localhost:1313/announcements/im-moving/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/announcements/im-moving/</guid>
-      <description>&lt;p&gt;After 16 years in downtown Sacramento, it&amp;rsquo;s time to move on - I love how the area has been developing and growing and turning into a great place to do urban things, but I have different needs now:&lt;/p&gt;&#xA;&lt;p&gt;So, I&amp;rsquo;m going to be out in Woodside, at 947 Enterprise Dr, Sacramento, CA&lt;/p&gt;&#xA;&lt;p&gt;Sign up to get updates about the move and other news from The Firelight Studio at Paul Brown Massage Therapy!&lt;/p&gt;</description>
-    </item>
-    <item>
       <title>Booking</title>
       <link>http://localhost:1313/announcements/booking/</link>
       <pubDate>Sat, 07 Feb 2026 02:47:56 +0000</pubDate>
       <guid>http://localhost:1313/announcements/booking/</guid>
-      <description>&lt;p&gt;Request Your Appointment&lt;/p&gt;&#xA;&lt;img src=&#34;http://localhost:1313/qr_45250e87dd4735dd.png&#34; width=&#34;180&#34; height=&#34;180&#34;&gt;&#xA;&lt;a href=&#34;https://paulbrown.noterro.com/service/26506/zero-point-advanced-myofascial-release&#34;&#xA;    class=&#34;w-auto mx-auto inline-block px-6 py-3 bg-linear-to-r from-green-600 to-100% to-blue-700 hover:bg-linear-to-l hover:outline-2 outline-green-600 cs-glass-pink-3d text-white font-semibold rounded-lg  transition-colors justify-center items-center&#34;&gt;&#xA;    Book Now!&#xA;&lt;/a&gt;</description>
+      <description>&lt;p&gt;Request Your Appointment&lt;/p&gt;&#xA;&lt;img src=&#34;http://localhost:1313/qr_93a4075d8b44dd28.png&#34; width=&#34;196&#34; height=&#34;196&#34;&gt;&#xA;&lt;a href=&#34;https://vagaro.com/firelightstudio/service/26506/zero-point-advanced-myofascial-release&#34;&#xA;    class=&#34;w-auto mx-auto inline-block px-6 py-3 bg-linear-to-r from-green-600 to-100% to-blue-700 hover:bg-linear-to-l hover:outline-2 outline-green-600 cs-glass-pink-3d text-white font-semibold rounded-lg  transition-colors justify-center items-center&#34;&gt;&#xA;    Book Now!&#xA;&lt;/a&gt;</description>
     </item>
     <item>
       <title>Free Massage?</title>
-      <link>http://localhost:1313/announcements/free-massage/</link>
+      <link>http://localhost:1313/how-to-get-a-free-massage/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/announcements/free-massage/</guid>
+      <guid>http://localhost:1313/how-to-get-a-free-massage/</guid>
       <description>You can get a free massage!  It&amp;rsquo;s true, refer three people who book a session, and you&amp;rsquo;ll get a FREE 60-minute Tidal Wave Relaxation Massage!</description>
     </item>
   </channel>
