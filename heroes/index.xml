@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Heroes on The Firelight Studio</title>
+    <link>https://paulbrown.net/heroes/</link>
+    <description>Recent content in Heroes on The Firelight Studio</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <copyright>2000-2026 Paul Brown. All rights reserved.</copyright>
+    <lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://paulbrown.net/heroes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>rechargee</title>
+      <link>https://paulbrown.net/heroes/oz/recharge/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://paulbrown.net/heroes/oz/recharge/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>refresh</title>
+      <link>https://paulbrown.net/heroes/oz/refresh/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://paulbrown.net/heroes/oz/refresh/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>relate</title>
+      <link>https://paulbrown.net/heroes/oz/relate/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://paulbrown.net/heroes/oz/relate/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>release</title>
+      <link>https://paulbrown.net/heroes/oz/release/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://paulbrown.net/heroes/oz/release/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>this is the oz hero archetype</title>
+      <link>https://paulbrown.net/heroes/oz/receive/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://paulbrown.net/heroes/oz/receive/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
