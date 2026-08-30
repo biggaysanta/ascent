@@ -1,0 +1,65 @@
+{{ define "main" }}
+<div class="w-full space-y-8">
+  {{/* 1. Hero / Welcome Article */}}
+  {{ with .Content }}
+  <article class="glass-panel-secondary-fill p-6 sm:p-8 rounded-3xl space-y-4">
+    <header class="text-center sm:text-left">
+      <h1 class="glass-text-secondary-text text-2xl md:text-4xl font-display font-bold">
+        {{ $.Title }}
+      </h1>
+      {{ with $.Params.subtitle }}
+      <p class="text-secondary/80 text-xs sm:text-sm mt-1">{{ . }}</p>
+      {{ end }}
+    </header>
+
+    <div class="glass-panel-secondary p-6 sm:p-8 rounded-2xl">
+      <div class="prose max-w-none text-on-secondary prose-headings:text-primary prose-p:text-on-secondary text-xs sm:text-sm leading-relaxed">
+        {{ . }}
+      </div>
+    </div>
+  </article>
+  {{ end }}
+
+  {{/* 2. Interactive Services Tabs */}}
+  {{ partial "organisms/services.tabs.html" . }}
+
+  {{/* 3. Conditions We Treat Grid */}}
+  {{ partial "organisms/conditions-grid.html" . }}
+
+  {{/* 4. Featured Articles & Writings */}}
+  {{ $writings := where site.RegularPages "Section" "writings" | first 2 }}
+  {{ if $writings }}
+  <section class="w-full my-8 space-y-6">
+    <header class="text-center">
+      <h2 class="glass-text-primary text-2xl md:text-3xl font-display font-bold">Featured Insights & Writings</h2>
+      <p class="text-secondary/80 text-xs sm:text-sm max-w-lg mx-auto">Explore therapeutic perspectives on pain relief, movement, and wellness.</p>
+    </header>
+
+    {{ range $writings }}
+    <article class="glass-panel-secondary-fill p-6 sm:p-8 rounded-3xl space-y-4">
+      <header>
+        <a href="{{ .RelPermalink }}" class="block group">
+          <h3 class="glass-text-secondary-text text-xl md:text-2xl font-bold group-hover:scale-[1.01] transition-transform">
+            {{ .Title }}
+          </h3>
+        </a>
+        {{ with .Params.subtitle }}
+        <p class="text-secondary/80 text-xs sm:text-sm mt-1">{{ . }}</p>
+        {{ end }}
+        <div class="glass-panel-card-alt border-subtle-border/20 px-2.5 py-1 text-2xs text-tertiary rounded-full inline-block mt-2">
+          {{ .Date.Format "January 2, 2006" }} {{ with .Params.author }}• {{ . }}{{ end }}
+        </div>
+      </header>
+
+      <div class="glass-panel-secondary p-5 sm:p-6 rounded-2xl">
+        <p class="text-on-secondary text-xs sm:text-sm leading-relaxed mb-4">{{ .Summary }}</p>
+        <a href="{{ .RelPermalink }}" class="glass-button-primary inline-block font-bold">
+          Read Article
+        </a>
+      </div>
+    </article>
+    {{ end }}
+  </section>
+  {{ end }}
+</div>
+{{ end }}

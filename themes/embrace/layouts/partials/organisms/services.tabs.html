@@ -1,0 +1,211 @@
+{{/* @title Services Tabs Organism @description Creates tabbed deck cards for
+service offerings. */}}
+
+{{ $services := (site.GetPage "services").RegularPages}} 
+{{ $order := slice "release" "refresh" "relate" "recharge" "renew" "repeat"}}
+
+<section class="w-full my-8" id="services-tabs-container">
+  <!-- Tabs -->
+  <nav
+    class="flex flex-wrap justify-center gap-2 mb-6 mx-auto"
+    role="tablist"
+    aria-label="Service Offerings"
+  >
+    {{ range $order }}
+    {{ $id := . }}
+    {{ range $services }}
+      {{ if eq .Params.line1 $id }}
+    <button
+      id="tab-btn-{{ $id }}"
+      role="tab"
+      aria-selected="false"
+      aria-controls="service-{{ $id }}"
+      class="{{ printf "theme-%s" $id }} service-tab-btn"
+      data-target="service-{{ $id }}"
+    >
+      {{ partial "atoms/icon.html" (dict "icon" .Params.icon "class" "w-5 h-5 inline-block") }} {{ .Params.line1 }}
+    </button>
+    {{ end }} {{ end }} {{ end }}
+  </nav>
+
+  <!-- Deck Stacked Service Boxes -->
+  <div id="deck-container" class="relative w-full mx-auto">
+    {{ range $order }} {{ $id := . }} {{ range $services }} {{ if eq
+    .Params.line1 $id }} {{ $colorTheme := .Params.colortheme }}
+    <article
+      id="service-{{ $id }}"
+      role="tabpanel"
+      aria-labelledby="tab-btn-{{ $id }}"
+      class="service-box {{ $colorTheme }} absolute inset-0 w-full mx-auto glass-panel-tertiary p-4 sm:p-6 flex flex-col justify-center items-center text-center rounded-xl transition-all duration-300 opacity-0 pointer-events-none scale-95 z-0 elevation-2 overflow-hidden"
+    >
+      <!-- Background Video/Image -->
+      {{ $vidUrl := .Params.videourl }}
+      {{ $posterUrl := .Params.posterurl }}
+      {{ $imgUrl := .Params.imageurl }}
+      
+      {{ if $vidUrl }}
+        {{ $vidPath := strings.TrimPrefix "/" $vidUrl }}
+        {{ $vid := resources.Get $vidPath }}
+        {{ $posterPath := "" }}
+        {{ if $posterUrl }}
+          {{ $posterPath = strings.TrimPrefix "/" $posterUrl }}
+        {{ end }}
+        {{ $poster := resources.Get $posterPath }}
+
+        <video
+          class="bg-vid absolute inset-0 w-full h-full object-cover z-0 motion-reduce:hidden grayscale opacity-80"
+          poster="{{- if $poster }}{{ $poster.RelPermalink }}{{ else if $posterUrl }}{{ $posterUrl | relURL }}{{ end -}}"
+          muted
+          playsinline
+          loop
+          autoplay
+          preload="auto"
+          aria-hidden="true"
+        >
+          <source src="{{- if $vid }}{{ $vid.RelPermalink }}{{ else }}{{ $vidUrl | relURL }}{{ end -}}" type="video/mp4">
+          <source src="{{- if $vid }}{{ $vid.RelPermalink }}{{ else }}{{ $vidUrl | relURL }}{{ end -}}" type="video/quicktime">
+        </video>
+
+        <!-- Motion Reduce Fallback Poster -->
+        {{ if or $poster $posterUrl }}
+        <img
+          src="{{- if $poster }}{{ $poster.RelPermalink }}{{ else }}{{ $posterUrl | relURL }}{{ end -}}"
+          alt=""
+          class="absolute inset-0 z-0 w-full h-full object-cover grayscale opacity-80 hidden motion-reduce:block"
+        />
+        {{ end }}
+      {{ else if $imgUrl }}
+        <!-- Unclipped Image Fallback -->
+        {{ $imgPath := strings.TrimPrefix "/" $imgUrl }}
+        {{ $img := resources.Get $imgPath }}
+        <img
+          src="{{- if $img }}{{ $img.RelPermalink }}{{ else }}{{ $imgUrl | relURL }}{{ end -}}"
+          alt=""
+          class="absolute inset-0 z-0 w-full h-full object-cover grayscale opacity-80"
+        />
+      {{ end }}
+
+      <!-- Glass Overlay (10% bg opacity, standard blur) -->
+      <div
+        class="absolute inset-0 z-10 bg-tertiary/10 backdrop-blur-sm pointer-events-none"
+      ></div>
+
+      <!-- Foreground Content -->
+      <div
+        class="relative z-20 flex flex-col items-center justify-center h-full w-full max-w-lg mx-auto"
+      >
+        <h2
+          class="font-black uppercase tracking-wide text-primary mb-2 text-2xl md:text-4xl leading-tight drop-shadow-md"
+        >
+          {{ .Params.line1 }}
+        </h2>
+        <h3
+          class="uppercase tracking-widest text-primary font-semibold mb-2 sm:mb-3 text-xs sm:text-sm drop-shadow-md"
+        >
+          {{ .Params.line2 }}
+        </h3>
+        <p class="italic text-primary mb-4 text-base sm:text-lg drop-shadow-md font-serif">
+          “{{ .Params.line3 }}”
+        </p>
+        <p class="text-primary mb-6 text-sm sm:text-base font-bold drop-shadow-md">
+          {{ .Params.line4 }}
+        </p>
+
+        <div class="w-full flex gap-4 mx-auto">
+          {{ $bookUrl := .Params.bookingurl }} {{ $btnText := .Params.buttontext
+          |default "Book Now" }}
+          <a
+            id="btn-learn-{{ $id }}"
+            href="{{ .RelPermalink }}"
+            class="flex-1 glass-button-secondary text-secondary font-bold uppercase tracking-wider inline-block py-2 px-3 text-xs transition-all text-center rounded-lg"
+          >
+            Learn More
+          </a>
+          <a
+            id="btn-book-{{ $id }}"
+            href="{{ $bookUrl }}"
+            class="flex-1 glass-button-primary text-primary font-bold uppercase tracking-wider inline-block py-2 px-3 text-xs transition-all text-center rounded-lg"
+          >
+            {{ $btnText }}
+          </a>
+        </div>
+      </div>
+    </article>
+    {{ end }} {{ end }} {{ end }}
+  </div>
+</section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const tabs = document.querySelectorAll(".service-tab-btn");
+    const boxes = document.querySelectorAll(".service-box");
+    const deckContainer = document.getElementById("deck-container");
+
+    function adjustHeight() {
+      if (!deckContainer) return;
+      deckContainer.style.minHeight = "460px";
+      deckContainer.style.height = "520px";
+    }
+
+    window.addEventListener("resize", adjustHeight);
+    adjustHeight();
+
+    function activateTab(targetId) {
+      tabs.forEach((tab) => {
+        if (tab.getAttribute("data-target") === targetId) {
+          tab.classList.add("active", "scale-105");
+          tab.setAttribute("aria-selected", "true");
+        } else {
+          tab.classList.remove("active", "scale-105");
+          tab.setAttribute("aria-selected", "false");
+        }
+      });
+
+      boxes.forEach((box) => {
+        const vid = box.querySelector("video");
+        if (box.id === targetId) {
+          box.classList.add(
+            "opacity-100",
+            "pointer-events-auto",
+            "scale-100",
+            "z-10"
+          );
+          box.classList.remove(
+            "opacity-0",
+            "pointer-events-none",
+            "scale-95",
+            "z-0"
+          );
+          if (vid) {
+            vid.playbackRate = 0.6;
+            vid.play().catch(() => {});
+          }
+        } else {
+          box.classList.remove(
+            "opacity-100",
+            "pointer-events-auto",
+            "scale-100",
+            "z-10"
+          );
+          box.classList.add(
+            "opacity-0",
+            "pointer-events-none",
+            "scale-95",
+            "z-0"
+          );
+          if (vid) {
+            vid.pause();
+          }
+        }
+      });
+    }
+
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", function () {
+        activateTab(this.getAttribute("data-target"));
+      });
+    });
+
+    activateTab("service-release");
+  });
+</script>

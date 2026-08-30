@@ -1,0 +1,109 @@
+{{- if .IsHome }}
+    {{- with .Site.Params.business }}
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": {{ .type | jsonify }},
+                "@id": "{{ $.Site.BaseURL }}#business",
+                "name": "{{ .name | default $.Site.Title }}",
+                "image": "{{ .image | absURL }}",
+                "url": "{{ $.Site.BaseURL }}",
+                "telephone": "{{ .telephone }}",
+                "priceRange": "{{ .priceRange }}",
+                "paymentAccepted": {{ .paymentAccepted | jsonify }},
+                "acceptsReservations": "True",
+                "medicalSpecialty": [
+                    "Massage Therapy",
+                    "Myofascial Release",
+                    "Sports Massage"
+                ],
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "{{ .address.streetAddress }}",
+                    "addressLocality": "{{ .address.addressLocality }}",
+                    "addressRegion": "{{ .address.addressRegion }}",
+                    "postalCode": "{{ .address.postalCode }}",
+                    "addressCountry": "{{ .address.addressCountry }}"
+                },
+                "geo": {
+                    "@type": "GeoCoordinates",
+                    "latitude": {{ .geo.latitude }},
+                    "longitude": {{ .geo.longitude }}
+                },
+                "openingHoursSpecification": [
+                    {{- $len := len .openingHours }}
+                    {{- range $i, $hours := .openingHours }}
+                    {
+                        "@type": "OpeningHoursSpecification",
+                        "dayOfWeek": {{ $hours.days | jsonify }},
+                        "opens": "{{ $hours.opens }}",
+                        "closes": "{{ $hours.closes }}"
+                    }{{ if lt (add $i 1) $len }},{{ end }}
+                    {{- end }}
+                ],
+                "potentialAction": {
+                    "@type": "ReserveAction",
+                    "target": {
+                        "@type": "EntryPoint",
+                        "urlTemplate": "https://vagaro.com/firelightstudio",
+                        "inLanguage": "en-US",
+                        "actionPlatform": [
+                            "http://schema.org/DesktopWebPlatform",
+                            "http://schema.org/MobileWebPlatform"
+                        ]
+                    },
+                    "result": {
+                        "@type": "Reservation",
+                        "name": "Massage Appointment"
+                    }
+                },
+                {{- if .conditions }}
+                "knowsAbout": [
+                    {{- $condLen := len .conditions }}
+                    {{- range $i, $cond := .conditions }}
+                    {
+                        "@type": "MedicalCondition",
+                        "name": "{{ $cond }}"
+                    }{{ if lt (add $i 1) $condLen }},{{ end }}
+                    {{- end }}
+                ],
+                {{- end }}
+                "availableService": [
+                    {{- $services := (site.GetPage "services").RegularPages }}
+                    {{- $servLen := len $services }}
+                    {{- range $i, $service := $services }}
+                    {
+                        "@type": "TherapeuticProcedure",
+                        "name": "{{ $service.Params.line4 | title }}",
+                        "description": "{{ $service.Params.line2 | title }} - {{ $service.Params.line3 }}",
+                        "url": "{{ $service.Permalink }}"
+                    }{{ if lt (add $i 1) $servLen }},{{ end }}
+                    {{- end }}
+                ],
+                "founder": {
+                    "@id": "{{ $.Site.BaseURL }}#paulbrown"
+                }
+            },
+            {
+                "@type": "Person",
+                "@id": "{{ $.Site.BaseURL }}#paulbrown",
+                "name": "Paul Brown",
+                "jobTitle": [
+                    "Certified Massage Therapist",
+                    "Life Coach",
+                    "Health Educator",
+                    "Content Creator",
+                    "Continuing Education Provider"
+                ],
+                "worksFor": {
+                    "@id": "{{ $.Site.BaseURL }}#business"
+                },
+                "url": "{{ $.Site.BaseURL }}about/"
+            }
+        ]
+    }
+    </script>
+    {{- end }}
+{{- end }}

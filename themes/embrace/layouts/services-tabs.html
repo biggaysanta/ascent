@@ -1,0 +1,21 @@
+{{ define "main" }} 
+      <div class= "cs-glass-featured" id="serviceswrapper" >
+      <section id="services" class="cs-card cs-shimmer">
+      <ul>
+{{ range hugo.Data.services }}
+
+            <li id="{{ .id }}">{{ .name }} </li>
+            <ul>
+                  <li>{{ .subtitle }}</li>
+                  <li>{{ .narrative_role | default (index . "narrative-role") }}</li>
+                  <li>{{ .description }}</li>
+                  <li>{{ .price }}</li>
+                  <li>{{ index . "color-theme" }}</li>
+                  <li>{{ .cta_url }}</li>
+                  <li>{{ .icon }}</li>
+            </ul>
+       {{ end }}
+       </ul> 
+      </section>
+</div>
+{{ end }}

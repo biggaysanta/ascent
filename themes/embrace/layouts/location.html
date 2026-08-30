@@ -1,0 +1,65 @@
+{{ define "main" }}
+{{ $biz := site.Params.business }}
+<div class="{{ index .Params "color-theme" | default "theme-auntie-em" }} w-full min-h-screen py-8 px-4 sm:px-6">
+  <div class="max-w-5xl mx-auto space-y-8">
+    <header class="text-center">
+      <h1 class="glass-text-primary text-3xl md:text-5xl font-display font-bold mb-2">{{ .Title }}</h1>
+      <p class="text-secondary/90 text-sm max-w-xl mx-auto">Visit our tranquil studio located in Arden-Arcade, Sacramento.</p>
+    </header>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+      <!-- Location Details Card -->
+      <div class="glass-panel-secondary-fill p-6 sm:p-8 rounded-3xl flex flex-col justify-between">
+        <div>
+          <h2 class="glass-text-secondary-text text-xl md:text-2xl font-bold mb-3">The Firelight Studio</h2>
+          {{ with .Content }}
+          <div class="text-secondary/90 text-xs sm:text-sm mb-6 leading-relaxed">
+            {{ . }}
+          </div>
+          {{ end }}
+
+          <div class="space-y-4 pt-2 border-t border-secondary/20">
+            <div class="flex items-start gap-3 text-secondary text-xs sm:text-sm">
+              {{ partial "atoms/icon.html" (dict "icon" "location_on" "class" "text-primary shrink-0 mt-0.5") }}
+              <div>
+                <p class="font-bold mb-0 text-secondary">{{ $biz.address.streetAddress }}</p>
+                <p class="text-muted-text mb-0">{{ $biz.address.addressLocality }}, {{ $biz.address.addressRegion }} {{ $biz.address.postalCode }}</p>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3 text-secondary text-xs sm:text-sm">
+              {{ partial "atoms/icon.html" (dict "icon" "phone" "class" "text-primary shrink-0") }}
+              <a href="tel:{{ replace $biz.telephone "-" "" }}" class="hover:text-primary font-bold text-secondary">({{ substr $biz.telephone 0 3 }}) {{ substr $biz.telephone 4 }}</a>
+            </div>
+
+            <div class="flex items-center gap-3 text-secondary text-xs sm:text-sm">
+              {{ partial "atoms/icon.html" (dict "icon" "mail" "class" "text-primary shrink-0") }}
+              <a href="mailto:{{ $biz.email }}" class="hover:text-primary text-secondary">{{ $biz.email }}</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-6 mt-6 border-t border-secondary/20 flex flex-wrap gap-3">
+          <a href="https://maps.google.com/?q={{ replace $biz.address.streetAddress " " "+" }}+{{ $biz.address.addressLocality }}+{{ $biz.address.addressRegion }}+{{ $biz.address.postalCode }}" target="_blank" rel="noopener noreferrer" class="glass-button-primary inline-flex items-center gap-1.5 font-bold">
+            {{ partial "atoms/icon.html" (dict "icon" "directions" "class" "text-primary") }}
+            Get Directions
+          </a>
+          <a href="tel:{{ replace $biz.telephone "-" "" }}" class="glass-button-secondary inline-flex items-center gap-1.5 font-bold">
+            {{ partial "atoms/icon.html" (dict "icon" "phone" "class" "text-secondary") }}
+            Call Us
+          </a>
+          <a href="sms:{{ replace $biz.telephone "-" "" }}" class="glass-button-secondary inline-flex items-center gap-1.5 font-bold">
+            {{ partial "atoms/icon.html" (dict "icon" "sms" "class" "text-secondary") }}
+            SMS
+          </a>
+        </div>
+      </div>
+
+      <!-- Map Container -->
+      <div class="glass-panel-card p-3 rounded-3xl overflow-hidden min-h-[380px] flex items-center justify-center">
+        {{ partial "molecules/map.html" . }}
+      </div>
+    </div>
+  </div>
+</div>
+{{ end }}

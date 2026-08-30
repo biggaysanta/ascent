@@ -1,0 +1,6 @@
+<div 
+  style="display: none;" 
+  x-data="{ cleanup: null }" 
+  x-init="import { {{ .effect }} } from '@casoon/atlas-effects'; this.cleanup = {{ .effect }}('{{ .target }}', {{ .opts | default "{}" | safeJS }});"
+  x-on:unmount="cleanup?.()"
+></div>

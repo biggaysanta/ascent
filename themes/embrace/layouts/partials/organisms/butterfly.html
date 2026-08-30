@@ -1,0 +1,11 @@
+<div x-data="butterflySystem()" class="fixed inset-0 pointer-events-none overflow-hidden [perspective:1000px] isolate z-50">
+  
+  <div class="absolute top-0 left-0 w-6 h-6 pointer-events-none origin-bottom transition-transform will-change-transform z-50 flex justify-center"
+       :style="`transform: translate3d(${x}px, ${y}px, 0) rotate(${angle}deg) rotateX(${zAngle}deg)`">
+    
+    <div class="w-full h-full rounded-full mix-blend-screen opacity-80"
+         :class="landed ? 'animate-breathe' : 'bg-accent animate-flap'">
+    </div>
+  </div>
+
+</div>

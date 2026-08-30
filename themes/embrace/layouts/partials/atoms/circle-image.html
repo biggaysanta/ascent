@@ -1,0 +1,16 @@
+{{/* Circle Image Atom 
+    @file circle-image.html 
+    @function rounds images to a circle, and converts them to webp
+    @example
+      {{ partial "atoms/circle-image.html" (dict "src" "path/to/image.jpg") }}
+    */}}
+
+{{- $src := .src }}
+{{- $alt := .alt | default "" }}
+{{- $class := .class | default "cs-glass-rounded-full" }}
+{{- $webpSrc := printf "%s.webp" (strings.TrimSuffix $src (path.Ext $src)) }}
+{{- with resources.Get $src }}
+  {{- $webp := . | images.Convert "webp" }}
+  {{- $webp.RelPermalink | safeURL }}
+  <img src="{{ $webp.RelPermalink }}" alt="{{ $alt }}" class="{{ $class }}">
+{{- end }}

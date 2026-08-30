@@ -1,0 +1,74 @@
+{{ define "main" }}
+<div class="{{ index .Params "color-theme" | default "theme-auntie-em" }} w-full min-h-screen py-8 px-4 sm:px-6">
+  <div class="max-w-5xl mx-auto space-y-12">
+    <header class="text-center max-w-2xl mx-auto mb-8">
+      <h1 class="glass-text-primary text-3xl md:text-5xl font-display font-bold mb-3">{{ .Title }}</h1>
+      {{ with .Description }}
+      <p class="text-secondary/90 text-sm max-w-2xl mx-auto">{{ . }}</p>
+      {{ end }}
+    </header>
+
+    <div class="space-y-8">
+      {{ range $index, $section := .Params.sections }}
+      {{ $isEven := eq (mod $index 2) 0 }}
+
+      <article
+        class="glass-panel-secondary-fill p-6 sm:p-8 rounded-3xl flex flex-col md:items-center gap-8 md:gap-12 {{ if $isEven }}md:flex-row{{ else }}md:flex-row-reverse{{ end }}">
+
+        {{/* Image Container */}}
+        <div class="w-full md:w-1/2 shrink-0">
+          {{ $imgResource := $.Resources.GetMatch $section.image }}
+          {{ if $imgResource }}
+          {{/* Process / Resize via Hugo Pipes */}}
+          {{ $img := $imgResource.Resize "x600 webp q85" }}
+          <figure class="glass-panel-card p-2 rounded-2xl overflow-hidden">
+            <img src="{{ $img.RelPermalink }}" width="{{ $img.Width }}" height="{{ $img.Height }}"
+              alt="{{ $section.alt | default $section.title }}"
+              class="h-[450px] w-auto mx-auto object-cover object-top rounded-xl transition-transform duration-500 hover:scale-102"
+              loading="lazy" />
+            {{ with $section.caption }}
+            <figcaption class="pt-2 text-xs text-center text-muted-text">
+              {{ . }}
+            </figcaption>
+            {{ end }}
+          </figure>
+          {{ else }}
+          <div class="glass-panel-card p-8 text-center text-error text-xs rounded-xl">
+            Image not found: <code>{{ $section.image }}</code>
+          </div>
+          {{ end }}
+        </div>
+
+        {{/* Content Block */}}
+        <div class="w-full md:w-1/2 space-y-3">
+          {{ with $section.badge }}
+          <span
+            class="glass-panel-card-alt border-subtle-border/20 px-2.5 py-1 text-xs font-semibold uppercase tracking-wider rounded-full text-tertiary inline-block">
+            {{ . }}
+          </span>
+          {{ end }}
+
+          <h2 class="glass-text-secondary-text text-xl md:text-2xl font-bold">
+            {{ $section.title }}
+          </h2>
+
+          <div class="prose max-w-none text-on-secondary prose-p:text-on-secondary prose-headings:text-primary leading-relaxed text-xs sm:text-sm">
+            {{ $section.body | markdownify }}
+          </div>
+        </div>
+
+      </article>
+      {{ end }}
+    </div>
+
+    {{/* Optional main Markdown body below if you have extra content */}}
+    {{ with .Content }}
+    <div class="glass-panel-secondary p-6 sm:p-10 rounded-2xl mt-8">
+      <div class="prose max-w-none text-on-secondary prose-p:text-on-secondary prose-headings:text-primary leading-relaxed">
+        {{ . }}
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</div>
+{{ end }}

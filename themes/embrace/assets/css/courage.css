@@ -1,0 +1,81 @@
+/* Wizard of Oz: Courage (The Lion) Context */
+.theme-courage {
+  /* Brand/Core Colors */
+  --color-primary: oklch(65% 0.15 65);
+  --color-on-primary: oklch(15% 0.05 65);
+  --color-secondary: oklch(45% 0.05 130);
+  --color-on-secondary: oklch(95% 0.02 130);
+  --color-tertiary: oklch(55% 0.18 25);
+  --color-on-tertiary: oklch(98% 0.01 25);
+  
+  /* Fill/Text Variants */
+  --color-primary-fill: oklch(88% 0.08 65);
+  --color-primary-text: oklch(35% 0.10 65);
+  --color-secondary-fill: oklch(90% 0.04 130);
+  --color-secondary-text: oklch(30% 0.06 130);
+  --color-tertiary-fill: oklch(88% 0.10 25);
+  --color-tertiary-text: oklch(35% 0.14 25);
+  
+  /* Surfaces & Backgrounds */
+  --color-background: oklch(98% 0.01 65);
+  --color-card: oklch(95% 0.015 65);
+  --color-card-alt: oklch(93% 0.02 65);
+  --color-elevated: oklch(90% 0.025 65);
+  --color-border: oklch(70% 0.03 65);
+  --color-subtle-border: oklch(85% 0.02 65);
+  
+  /* Typography */
+  --color-text: oklch(25% 0.02 65);
+  --color-muted-text: oklch(50% 0.02 65);
+
+  /* Semantic Error Colors (Standardized) */
+  --color-error: oklch(50.86% 0.193 27.64);
+  --color-on-error: oklch(98.20% 0.009 26.02);
+  --color-error-fill: oklch(67.11% 0.214 27.69);
+  --color-error-text: oklch(28.72% 0.117 27.53);
+
+  /* Shadows */
+  --color-shadow: var(--color-onyx);
+}
+
+
+@media (prefers-color-scheme: dark) {
+  .theme-courage {
+    /* Brand/Core Colors */
+    --color-primary: oklch(75% 0.12 65);
+    --color-on-primary: oklch(20% 0.08 65);
+    --color-secondary: oklch(75% 0.05 130);
+    --color-on-secondary: oklch(20% 0.05 130);
+    --color-tertiary: oklch(65% 0.16 25);
+    --color-on-tertiary: oklch(20% 0.10 25);
+
+    /* Fill/Text Variants */
+    --color-primary-fill: oklch(35% 0.10 65);
+    --color-primary-text: oklch(88% 0.08 65);
+    --color-secondary-fill: oklch(30% 0.05 130);
+    --color-secondary-text: oklch(85% 0.04 130);
+    --color-tertiary-fill: oklch(35% 0.12 25);
+    --color-tertiary-text: oklch(88% 0.10 25);
+
+    /* Surfaces & Backgrounds */
+    --color-background: oklch(15% 0.01 65);
+    --color-card: oklch(20% 0.015 65);
+    --color-card-alt: oklch(23% 0.02 65);
+    --color-elevated: oklch(26% 0.02 65);
+    --color-border: oklch(45% 0.02 65);
+    --color-subtle-border: oklch(30% 0.015 65);
+
+    /* Typography */
+    --color-text: oklch(95% 0.01 65);
+    --color-muted-text: oklch(75% 0.01 65);
+
+    /* Semantic Error Colors (Standardized) */
+    --color-error: oklch(71.82% 0.176 27.57);
+    --color-on-error: oklch(25.72% 0.105 27.65);
+    --color-error-fill: oklch(47.21% 0.187 27.54);
+    --color-error-text: oklch(84.66% 0.084 26.20);
+    
+    /* Shadows */
+    --color-shadow: var(--color-onyx);
+  }
+}

@@ -1,0 +1,50 @@
+<!-- @format -->
+
+{{ $description := .Description | default site.Params.tagline | default site.Params.subtitle | plainify }}
+{{ $canonical := .Permalink | default site.BaseURL }}
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="{{ $description }}" />
+<meta name="author" content="{{ site.Params.author | default "Paul Brown, CMT" }}" />
+{{/* Map your theme names to their primary hex colors */}}
+{{ $themeColors := dict 
+  "theme-auntie-em" "#897b71"
+  "theme-brains" "#b08800"
+  "theme-courage" "#cc7b2e"
+  "theme-dorothy" "#cc2036"
+  "theme-glinda" "#ea598b"
+  "theme-healing" "#a85d26"
+  "theme-home" "#a85d26"
+  "theme-receive" "#5e329c"
+  "theme-recharge" "#4c28e8"
+  "theme-refresh" "#5c4983"
+  "theme-relate" "#5e329c"
+  "theme-release" "#5e329c"
+  "theme-renew" "#5e329c"
+  "theme-repeat" "#4c28e8"
+}}
+
+{{/* Look up the color based on hugo.toml's colorMood, fallback to slate if not found */}}
+{{ $currentColor := index $themeColors site.Params.colorMood | default "#0f172a" }}
+
+<meta name="theme-color" content="{{ $currentColor }}" />
+<link rel="canonical" href="{{ $canonical }}" />
+<link rel="icon" type="image/png" href="{{ "favicon.png" | relURL }}" />
+<link rel="apple-touch-icon" href="{{ "favicon.png" | relURL }}" />
+
+<title>
+  {{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}
+</title>
+
+<!-- OpenGraph and Twitter Cards -->
+{{ template "_internal/opengraph.html" . }}
+{{ template "_internal/twitter_cards.html" . }}
+
+{{ partialCached "molecules/seo-schema.html" . }}
+
+{{ partialCached "head/css.html" . }}
+{{ partialCached "head/js.html" . }}
+{{ partialCached "head/typeface.html" . }}
+
+{{ template "_internal/google_analytics.html" . }}

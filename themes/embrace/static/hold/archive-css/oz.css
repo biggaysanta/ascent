@@ -1,0 +1,12 @@
+.parent-div {
+  position: relative;
+  /* your other styles (width, height, etc) */
+}
+
+.stacked-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* This moves the image's center point to the 0,0 coordinate */
+  transform: translate(-50%, -50%);
+}

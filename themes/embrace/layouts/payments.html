@@ -1,0 +1,64 @@
+{{ define "main" }}
+{{ $payments := hugo.Data.payments }}
+<div class="{{ index .Params "color-theme" | default "theme-auntie-em" }} w-full py-6 px-2 sm:px-4">
+  <div class="max-w-4xl mx-auto space-y-8">
+    <header class="text-center">
+      <h1 class="glass-text-primary text-3xl md:text-5xl font-display font-bold mb-2">{{ .Title }}</h1>
+      {{ with .Params.subtitle }}
+      <p class="text-secondary/90 text-sm max-w-xl mx-auto">{{ . }}</p>
+      {{ end }}
+    </header>
+
+    <!-- Overview & Policy Content -->
+    {{ with .Content }}
+    <article class="glass-panel-secondary-fill p-6 sm:p-8 rounded-3xl space-y-4">
+      <div class="glass-panel-secondary p-6 sm:p-8 rounded-2xl">
+        <div class="prose max-w-none text-on-secondary prose-headings:text-primary prose-p:text-on-secondary text-xs sm:text-sm leading-relaxed">
+          {{ . }}
+        </div>
+      </div>
+    </article>
+    {{ end }}
+
+    <!-- Payment Methods Grid -->
+    <section class="glass-panel-secondary-fill p-6 sm:p-8 rounded-3xl space-y-6">
+      <header class="text-center sm:text-left">
+        <h2 class="glass-text-secondary-text text-xl md:text-2xl font-bold mb-1">{{ $payments.title | default "Accepted Payment Methods" }}</h2>
+        {{ with $payments.description }}
+        <p class="text-secondary/80 text-xs sm:text-sm mb-0">{{ . }}</p>
+        {{ end }}
+      </header>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {{ range $payments.methods }}
+        <div class="glass-panel-card p-4 rounded-xl flex items-center gap-3.5 transition-all hover:scale-[1.01]">
+          <div class="w-10 h-10 rounded-xl glass-panel-primary flex items-center justify-center shrink-0">
+            {{ with .icon }}
+              {{ partial "atoms/icon.html" (dict "icon" . "class" "text-primary text-xl") }}
+            {{ end }}
+          </div>
+          <div>
+            <h3 class="text-sm font-bold text-secondary mb-0.5">{{ .name }}</h3>
+            {{ with .note }}
+            <p class="text-2xs text-muted-text mb-0 leading-tight">{{ . }}</p>
+            {{ end }}
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </section>
+
+    <!-- Booking / Action CTA -->
+    <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
+      <a href="https://vagaro.com/firelightstudio" target="_blank" rel="noopener noreferrer" class="glass-button-primary inline-flex items-center gap-2 font-bold py-2.5 px-5 text-sm">
+        {{ partial "atoms/icon.html" (dict "icon" "event" "class" "text-primary") }}
+        Book a Session
+      </a>
+      <a href="/contact" class="glass-button-secondary inline-flex items-center gap-2 font-bold py-2.5 px-5 text-sm">
+        {{ partial "atoms/icon.html" (dict "icon" "phone" "class" "text-secondary") }}
+        Questions? Contact Us
+      </a>
+    </div>
+  </div>
+</div>
+{{ end }}

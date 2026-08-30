@@ -1,0 +1,16 @@
+{{/* partial for embedding a google map
+    @param location string - the location to show on the map
+    @param size dict "width" 600 "height" 600 "pageID" .
+    @example {{ partial "map.html" (dict "location" "123 Main St. Anytown, CA" "width" 600 "height" 400 "pageID" .) }}
+    @returns and iframe with the embedded google map
+
+*/}}
+{{- $location := .location | urlquery }}
+{{- $width := .width | default 600 }}
+{{- $height := .height | default 600 }}
+{{- $pageID := .pageID }}
+<iframe
+  width="{{ $width }}"
+  height="{{ $height }}"
+  frameborder="0" style="border-2 border-emerald hover:border-4'"
+  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA9n8sXo7l2m3v5X9z8X9z8X9z8X9z8&q={{ $location }}" allowfullscreen>="" aria-hidden="false" tabindex="0"></iframe>

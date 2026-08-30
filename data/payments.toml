@@ -1,0 +1,47 @@
+title = "Accepted Payments"
+description = "Convenient payment options accepted at the time of service."
+
+[[methods]]
+name = "Credit & Debit Cards"
+icon = "credit_card"
+note = "Visa, MasterCard, Discover, Amex"
+
+[[methods]]
+name = "Apps"
+icon = "phone"
+note = "CashApp, Venmo, PayPal, Zelle"
+
+[[methods]]
+name = "Digital Wallets"
+icon = "contactless"
+note = "Apple Pay, Google Pay"
+
+[[methods]]
+name = "HSA / FSA"
+icon = "health_and_safety"
+note = "Health Savings & Flexible Spending accounts"
+
+[[methods]]
+name = "Cash"
+icon = "payments"
+note = "Exact change appreciated"
+
+[[methods]]
+name = "Vagaro Gift Cards"
+icon = "featured_seasonal_and_gifts"
+note = "Redeemable online or in person"
+
+[[methods]]
+name = "Bitcoin"
+icon = "currency_bitcoin"
+note = "Direct on-chain or Lightning network"
+
+[[methods]]
+name = "ACH Transfer"
+icon = "account_balance"
+note = "Direct bank transfer / electronic check"
+
+[[methods]]
+name = "Square Gift Cards"
+icon = "featured_seasonal_and_gifts"
+note = "Redeemable in person"

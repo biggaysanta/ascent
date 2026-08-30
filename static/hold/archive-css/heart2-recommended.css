@@ -1,0 +1,54 @@
+/* virtue-heart context (Light) */
+.virtue-heart {
+  --primary: oklch(48.99% 0.078 280.40);
+  --on-primary: oklch(98.34% 0.010 305.41);
+  --secondary: oklch(48.62% 0.033 285.09);
+  --on-secondary: oklch(98.34% 0.010 305.41);
+  --tertiary: oklch(49.27% 0.070 320.06);
+  --on-tertiary: oklch(98.34% 0.010 345.41);
+  
+  --primary-fill: oklch(84.02% 0.078 282.18);
+  --primary-text: oklch(38.39% 0.078 279.23);
+  --secondary-fill: oklch(91.51% 0.034 287.55);
+  --secondary-text: oklch(43.82% 0.033 282.70);
+  --tertiary-fill: oklch(90.44% 0.073 321.81);
+  --tertiary-text: oklch(43.27% 0.068 319.67);
+  
+  --background: oklch(98.31% 0.009 308.36);
+  --card: oklch(94.83% 0.014 299.80);
+  --card-alt: oklch(93.24% 0.014 295.31);
+  --elevated: oklch(91.48% 0.016 293.73);
+  --border: oklch(58.37% 0.015 290.52);
+  --subtle-border: oklch(76.46% 0.016 290.21);
+  --text: oklch(32.08% 0.016 285.47);
+  --muted-text: oklch(48.64% 0.016 290.39);
+
+  @media (prefers-color-scheme: dark)
+    {
+      .virtue-heart
+      {
+        --primary: oklch(83.06% 0.060 283.96);
+        --on-primary: oklch(37.50% 0.061 280.56);
+        --secondary: oklch(82.90% 0.035 287.45);
+        --on-secondary: oklch(37.46% 0.032 282.35);
+        --tertiary: oklch(94.51% 0.046 323.74);
+        --on-tertiary: oklch(46.29% 0.069 319.87);
+  
+        --primary-fill: oklch(44.17% 0.061 281.22);
+        --primary-text: oklch(91.90% 0.041 285.57);
+        --secondary-fill: oklch(35.55% 0.033 282.23);
+        --secondary-text: oklch(80.67% 0.034 287.53);
+        --tertiary-fill: oklch(90.44% 0.073 321.81);
+        --tertiary-text: oklch(43.27% 0.068 319.67);
+  
+        --background: oklch(16.57% 0.008 285.46);
+        --card: oklch(21.66% 0.014 285.21);
+        --card-alt: oklch(24.23% 0.013 285.37);
+        --elevated: oklch(26.84% 0.017 285.23);
+        --border: oklch(56.36% 0.017 290.03);
+        --subtle-border: oklch(40.13% 0.015 285.71);
+        --text: oklch(92.39% 0.016 293.74);
+        --muted-text: oklch(74.23% 0.016 290.20);
+      }
+    }
+}

@@ -1,0 +1,22 @@
+@theme {
+  /* =========================================================
+     CORE PALETTE (12 Gem Tones)
+     ========================================================= */
+  --color-ruby: oklch(55% 0.25 25);
+  --color-emerald: oklch(55% 0.15 155);
+  --color-gold: oklch(85% 0.18 65);
+  --color-aquamarine: oklch(75% 0.10 215);
+  --color-amethyst: oklch(60% 0.16 300);
+  --color-sapphire: oklch(45% 0.14 270);
+  --color-steel: oklch(55% 0.04 250);
+  --color-onyx: oklch(35% 0.02 270);
+  --color-cobalt: oklch(50% 0.16 260);
+  --color-bronze: oklch(55% 0.14 45);
+  --color-topaz: oklch(60% 0.16 75);
+  --color-jade: oklch(55% 0.11 150);
+  --color-snow: oklch(100% 0 0);
+  --color-ebon: oklch(0% 0 0);
+  --color-charcoal: oklch(25% 0 0);
+  /* Additional system colors */
+  --color-scrim: oklch(0% 0 0 / 0.32);
+}

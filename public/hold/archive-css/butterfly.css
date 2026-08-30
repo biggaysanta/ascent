@@ -1,0 +1,35 @@
+@theme
+{
+    /* Frantic flight */
+    --animate-flap: flap 0.15s ease-in-out infinite alternate;
+    /* Slow resting breath */
+    --animate-breathe: breathe 4s ease-in-out infinite alternate;
+
+    @keyframes flap
+    {
+        0%
+        {
+            transform: scaleX(1);
+        }
+
+        100%
+        {
+            transform: scaleX(0.1);
+        }
+    }
+
+    @keyframes breathe
+    {
+        0%
+        {
+            transform: scaleX(0.8) rotateX(60deg);
+        }
+
+        100%
+        {
+            transform: scaleX(0.4) rotateX(65deg);
+        }
+
+        /* Subtle wing shift while resting */
+    }
+}

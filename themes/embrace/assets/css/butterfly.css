@@ -1,0 +1,37 @@
+@theme
+{
+    /* Frantic flight */
+    --animate-flap: flap 0.15s ease-in-out infinite alternate;
+    /* Slow resting breath */
+    --animate-breathe: breathe 4s ease-in-out infinite alternate;
+
+    @keyframes flap
+    {
+        0%
+        {
+            transform: scaleX(1);
+        }
+
+        100%
+        {
+            transform: scaleX(0.1);
+        }
+    }
+
+    @keyframes breathe
+    {
+        0%
+        {
+            transform: scaleX(0.8) rotateX(60deg);
+            background-color: var(--color-accent);
+            box-shadow: 0 0 20px 10px color-mix(in srgb, var(--color-accent) 60%, transparent);
+        }
+
+        100%
+        {
+            transform: scaleX(0.4) rotateX(65deg);
+            background-color: var(--color-primary);
+            box-shadow: 0 0 40px 20px color-mix(in srgb, var(--color-primary) 40%, transparent);
+        }
+    }
+}

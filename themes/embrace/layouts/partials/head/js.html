@@ -1,0 +1,7 @@
+{{ $opts := dict 
+    "targetPath" "js/main.js" 
+    "minify" (not hugo.IsServer)
+    "loaders" (dict ".woff2" "dataurl" ".woff" "dataurl") 
+}}
+{{ $js := resources.Get "js/main.js" | js.Build $opts | fingerprint }}
+<script src="{{ $js.RelPermalink }}" defer></script>

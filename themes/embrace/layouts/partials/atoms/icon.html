@@ -1,0 +1,16 @@
+{{/* Icon.html partial 
+
+@description This partial is used to render icons from the Google Material Symbols typeface.
+
+@usage {{ partial "icon.html" (dict "icon" "home" "class" "text-white p-2") }}
+@returns A span element with the appropriate styling and icon ligature.
+
+*/}}
+{{- $icon := .icon | default "info" -}}
+{{/* Strip .svg suffix if legacy calls still pass it */}}
+{{- $icon = strings.TrimSuffix ".svg" $icon -}}
+{{- $class := .class | default "" -}}
+
+<span class="material-symbols-outlined select-none inline-flex items-center justify-center shrink-0 align-middle {{ $class }}">
+  {{- $icon -}}
+</span>

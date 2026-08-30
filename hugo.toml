@@ -1,0 +1,226 @@
+baseURL = 'https://paulbrown.net/'
+locale = 'en-us'
+title = 'The Firelight Studio'
+
+theme = 'embrace'
+mainsections = ['writings', 'about', 'announcements', 'services']
+copyright = '2000-2026 Paul Brown. All rights reserved.'
+ignoreFiles = ['^/prompts/', '^/data/hold/']
+
+[security]
+  [security.exec]
+    allow = ['^(dart-)?sass$', '^go$', '^git$', '^node$', '^postcss$', '^tailwindcss$']
+
+[params]
+colorMood = "theme-dorothy"
+subtitle = "by Paul Brown Massage Therapy"
+tagline = 'Expert Medical Massage Therapist in Arden-Arcade, Sacramento'
+description = 'Paul Brown, CMT is a licensed massage therapist in Sacramento, California specializing in medical massage therapy, myofascial release, and sports massage.'
+  [params.business]
+  type = ['HealthAndBeautyBusiness', 'MedicalBusiness']
+  name = 'The Firelight Studio at Paul Brown Massage Therapy'
+  image = 'images/png/paul-brown-massage-therapy-logo.png'
+  email = 'paul@paulbrown.net'
+  telephone = '916-534-8772'
+  priceRange = '$$'
+  paymentAccepted = ['Cash', 'Visa', 'Mastercard', 'Amex', 'HSA', 'FSA', 'Bitcoin', 'CashApp', 'PayPal', 'Venmo', 'Zelle', 'ACH']
+  conditions = ['Back Pain', 'Neck Pain', 'Carpal Tunnel Syndrome', 'Fibromyalgia', 'Hip Pain', 'Anxiety', 'Depression', 'Frozen Shoulder', 'Plantar Fasciitis']
+  [params.business.address]
+  streetAddress = '947 Enterprise Drive, Suite 20'
+  addressLocality = 'Sacramento'
+  addressRegion = 'CA'
+  postalCode = '95825'
+  addressCountry = 'US'
+  [params.business.geo]
+  latitude = 38.6037
+  longitude = -121.4045
+  [[params.business.openingHours]]
+  days = ['Monday']
+  opens = '12:00'
+  closes = '21:00'
+  [[params.business.openingHours]]
+  days = ['Tuesday']
+  opens = '09:00'
+  closes = '19:00'
+  [[params.business.openingHours]]
+  days = ['Wednesday']
+  opens = '09:00'
+  closes = '21:00'
+  [[params.business.openingHours]]
+  days = ['Thursday']
+  opens = '10:00'
+  closes = '20:00'
+  [[params.business.openingHours]]
+  days = ['Friday']
+  opens = '10:00'
+  closes = '20:00'
+  [[params.business.openingHours]] 
+  days = ['Saturday']
+  opens = '10:00'
+  closes = '20:00'
+ 
+  [module.hugoVersion]
+    extended = true
+    min = '0.146.0'
+  [[module.mounts]]
+    source = 'assets'
+    target = 'assets'
+  [[module.mounts]]
+    source = 'themes\embrace\assets'
+    target = 'assets'
+  [[module.mounts]]
+    source = 'node_modules/@material-design-icons/svg/round'
+    target = 'assets/svg'
+
+[[menu.cta]]
+name = 'Book Now'
+url = 'https://vagaro.com/firelightstudio'
+weight = 10
+[menu.cta.params]
+icon = 'event'
+class = 'glass-button-primary font-bold italic'
+
+[[menu.cta]]
+name='sms'
+url='sms:9165348772'
+weight=20
+[menu.cta.params]
+icon='sms'
+class='glass-button-primary'
+
+[[menu.cta]]
+name='phone'
+url='tel:9165348772'
+weight=30
+[menu.cta.params]
+icon='phone'
+class='glass-button-primary'
+
+[[menu.cta]]
+name='Location'
+identifier='location'
+url='/location'
+title='Where is Paul Located?'
+weight=90
+[menu.cta.params]
+icon = 'map'
+class = 'glass-button-primary'
+
+
+
+[[menu.main]]
+name = 'Home'
+url = '/'
+weight = 10
+[menu.main.params]
+icon = 'home'
+
+[[menu.main]]
+name = 'Book Now'
+url = 'https://vagaro.com/firelightstudio'
+weight = 20
+[menu.main.params]
+icon = 'event'
+
+[[menu.main]]
+name = 'eGift Cards'
+url = 'https://app.squareup.com/gift/BGPPNS6KGJ7WM/order'
+weight = 30
+[menu.main.params]
+icon = 'credit_card'
+
+[[menu.main]]
+name = "Services"
+identifier = 'services' 
+weight = 35
+url = '/services'
+[menu.main.params]
+icon = 'info'
+
+[[menu.main]]
+name = 'Writings'
+identifier = 'writings'
+weight = 40
+url = '/writings'
+[menu.main.params]
+icon='book'
+
+[[menu.main]]
+name = 'About'
+identifier = 'about'
+weight = 50
+[menu.main.params]
+icon = 'question_answer'
+
+[[menu.main]]
+name = 'Meet Paul Brown, CMT'
+url = '/about'
+parent = 'about'
+weight=5
+[menu.main.params]
+icon = 'person'
+
+[[menu.main]]
+name='How To Massage Prep'
+url='/about/massage-prep/'
+parent='about'
+[menu.main.params]
+icon='question_answer'
+[[menu.main]]
+name="Free Massage"
+url='/about/free-massage/'
+parent='about'
+[menu.main.params]
+icon='question_answer'
+class='hover:cs-anim-wiggle'
+
+[[menu.main]]
+
+name='Advanced Table'
+url='/about/advanced-table'
+parent='about'
+[[menu.main]]
+name='SMS Terms'
+parent='about'
+url='/about/sms'
+[menu.main.params]
+icon = 'handshake'
+[[menu.main]]
+name='Terms of Service'
+parent='about'
+url='/about/tos'
+[menu.main.params]
+icon = 'handshake'
+[[menu.main]]
+name='Appointment Policies'
+parent='about'
+url='/about/appointment-policies'
+[[menu.main]]
+name='Accepted Payments'
+parent='about'
+url='/about/accepted-payments'
+[menu.main.params]
+icon = 'payments'
+[[menu.main]]
+name='The Shoulder'
+identifier = 'shoulder'
+parent = 'writings'
+url = '/shoulder'
+weight=10
+
+[markup]
+[markup.goldmark]
+    [markup.goldmark.renderer]
+      hardWraps = false
+      unsafe = true
+      xhtml = false
+
+[build]
+  [build.buildStats]
+    enable = true
+  [[build.cachebusters]]
+    source = 'assets/notwatching/hugo_stats\.json'
+    target = 'css'
+  [[build.cachebusters]]
+    source = '(postcss|tailwind)\.config\.js'
+    target = 'css'

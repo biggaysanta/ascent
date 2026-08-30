@@ -1,0 +1,80 @@
+/* virtue-courage context */
+.theme-renew {
+  /* Brand/Core Colors */
+  --color-primary: oklch(49.48% 0.132 277.34);
+  --color-on-primary: oklch(98.34% 0.010 305.41);
+  --color-secondary: oklch(48.27% 0.088 123.38);
+  --color-on-secondary: oklch(97.35% 0.053 121.36);
+  --color-tertiary: oklch(48.81% 0.132 121.94);
+  --color-on-tertiary: oklch(97.10% 0.059 119.53);
+  
+  /* Fill/Text Variants */
+  --color-primary-fill: oklch(77.53% 0.091 280.20);
+  --color-primary-text: oklch(37.56% 0.133 277.67);
+  --color-secondary-fill: oklch(94.27% 0.076 123.00);
+  --color-secondary-text: oklch(45.54% 0.083 123.33);
+  --color-tertiary-fill: oklch(93.99% 0.147 120.91);
+  --color-tertiary-text: oklch(45.92% 0.126 121.94);
+  
+  /* Surfaces & Backgrounds */
+  --color-background: oklch(98.34% 0.009 311.16);
+  --color-card: oklch(93.58% 0.024 295.31);
+  --color-card-alt: oklch(91.75% 0.026 295.31);
+  --color-elevated: oklch(89.87% 0.028 295.31);
+  --color-border: oklch(55.67% 0.057 291.56);
+  --color-subtle-border: oklch(74.43% 0.055 291.56);
+  
+  /* Typography */
+  --color-text: oklch(30.63% 0.055 285.54);
+  --color-muted-text: oklch(46.99% 0.053 285.54);
+
+  /* Semantic Error Colors (NEWLY ADDED) */
+  --color-error: oklch(50.86% 0.193 27.64);
+  --color-on-error: oklch(98.20% 0.009 26.02);
+  --color-error-fill: oklch(67.11% 0.214 27.69);
+  --color-error-text: oklch(28.72% 0.117 27.53);
+
+  /* Shadows */
+  --color-shadow: var(--color-jade);
+}
+
+@media (prefers-color-scheme: dark) {
+  .theme-renew {
+    /* Brand/Core Colors */
+    --color-primary: oklch(81.99% 0.080 279.80);
+    --color-on-primary: oklch(37.89% 0.126 274.67);
+    --color-secondary: oklch(81.82% 0.048 119.56);
+    --color-on-secondary: oklch(36.19% 0.051 119.56);
+    --color-tertiary: oklch(96.11% 0.063 118.06);
+    --color-on-tertiary: oklch(47.93% 0.118 120.06);
+
+    /* Fill/Text Variants */
+    --color-primary-fill: oklch(77.53% 0.091 280.20);
+    --color-primary-text: oklch(33.00% 0.121 275.00);
+    --color-secondary-fill: oklch(21.43% 0.038 119.56);
+    --color-secondary-text: oklch(70.12% 0.035 119.56);
+    --color-tertiary-fill: oklch(91.10% 0.134 119.06);
+    --color-tertiary-text: oklch(45.92% 0.126 121.94);
+
+    /* Surfaces & Backgrounds */
+    --color-background: oklch(14.43% 0.023 288.54);
+    --color-card: oklch(18.43% 0.035 288.54);
+    --color-card-alt: oklch(20.43% 0.035 288.54);
+    --color-elevated: oklch(22.43% 0.035 288.54);
+    --color-border: oklch(52.67% 0.057 291.56);
+    --color-subtle-border: oklch(38.43% 0.055 291.56);
+
+    /* Typography */
+    --color-text: oklch(90.63% 0.055 285.54);
+    --color-muted-text: oklch(70.99% 0.053 285.54);
+
+    /* Semantic Error Colors (NEWLY ADDED) */
+    --color-error: oklch(71.82% 0.176 27.57);
+    --color-on-error: oklch(25.72% 0.105 27.65);
+    --color-error-fill: oklch(47.21% 0.187 27.54);
+    --color-error-text: oklch(84.66% 0.084 26.20);
+    
+    /* Shadows */
+    --color-shadow: var(--color-jade);
+  }
+}

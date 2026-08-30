@@ -1,0 +1,27 @@
+{
+  "name": "ascent",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npx concurrently \"hugo server -D\" vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@casoon/atlas": "^0.2.0",
+    "@material-design-icons/svg": "^0.14.15",
+    "@tailwindcss/vite": "^4.3.3",
+    "alpinejs": "^3.15.8",
+    "jest": "^30.3.0",
+    "lru-cache": "^11.2.7",
+    "material-symbols": "^0.42.3",
+    "nanostores": "^1.2.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "@tailwindcss/typography": "^0.5.20",
+    "tailwindcss": "^4.3.3",
+    "vite": "^8.0.2"
+  }
+}

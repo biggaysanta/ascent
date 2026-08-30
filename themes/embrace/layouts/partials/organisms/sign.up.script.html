@@ -1,0 +1,25 @@
+{{/* sign.up.script.html 
+injects the sign up modal script into the footer. script uses localStorage to count for every third page visit, and displays the modal.
+*/}}
+<script>
+document.addEventListener('alpine:init', () => {
+  Alpine.data('discountModal', () => ({
+    showModal: false,
+    
+    init() {
+      // Get the current page visit count from localStorage
+      let visits = parseInt(localStorage.getItem('ascent_visits') || '0', 10);
+      visits += 1;
+      localStorage.setItem('ascent_visits', visits.toString());
+
+      // Show the modal on every 3rd visit
+      if (visits % 3 === 0) {
+        // Delay opening slightly for a smoother UX
+        setTimeout(() => {
+          this.showModal = true;
+        }, 1500);
+      }
+    }
+  }));
+});
+</script>

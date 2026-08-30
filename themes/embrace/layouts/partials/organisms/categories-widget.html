@@ -1,0 +1,38 @@
+{{ if site.Taxonomies.categories }}
+<aside id="categories-widget" class="widget-categories w-full mb-6">
+  <div class="glass-panel-secondary rounded-2xl p-5">
+    <header class="widget-header mb-4 text-center">
+      <h2 class="widget-title mb-2 text-xl font-display text-primary">Categories</h2>
+    </header>
+    
+    <div class="widget-body flex flex-wrap gap-x-3 gap-y-2 justify-center items-center">
+      {{ $maxSize := 1.25 }}
+      {{ $minSize := 0.75 }}
+      
+      {{ $categories := site.Taxonomies.categories.ByCount }}
+      {{ $maxCount := 0 }}
+      {{ if len $categories }}
+        {{ $maxCount = (index $categories 0).Count }}
+      {{ end }}
+      
+      {{ range site.Taxonomies.categories.Alphabetical }}
+        {{ $weight := 0.0 }}
+        {{ if gt $maxCount 1 }}
+          {{/* Use Log math to calculate relative sizing between min and max */}}
+          {{ $weight = div (math.Log .Count) (math.Log $maxCount) }}
+        {{ else if eq $maxCount 1 }}
+          {{ $weight = 0.5 }}
+        {{ end }}
+        
+        {{ $size := add $minSize (mul $weight (sub $maxSize $minSize)) }}
+        
+        <a href="{{ .Page.RelPermalink }}" 
+           class="inline-block transition-all duration-200 text-secondary hover:text-primary hover:scale-105" 
+           style="font-size: {{ $size }}rem; opacity: {{ add 0.6 (mul $weight 0.4) }}; line-height: 1.2;">
+          {{ .Page.Title }}
+        </a>
+      {{ end }}
+    </div>
+  </div>
+</aside>
+{{ end }}

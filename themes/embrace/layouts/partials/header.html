@@ -1,0 +1,62 @@
+<div class="min-w-xs max-w-6xl mx-auto px-4">
+  <div
+    class="relative flex flex-col items-center justify-center py-6 border-b border-secondary/20"
+  >
+    <div class="relative inline-flex flex-col items-center justify-center py-4 px-8 rounded-2xl bg-[url('/svg/logo.svg')] bg-left bg-no-repeat bg-contain isolate leading-5 text-center">
+      <a href="/">
+        <h1 class="relative elevation-3 glass-text-primary">{{ site.Title }}</h1>
+      </a>
+      <a href="/about" class="relative elevation-2">
+        <p>{{ site.Params.subtitle }}</p>
+      </a>
+      <p class="text-center text-tertiary elevation-2">
+        {{ site.Params.tagline }}
+      </p>
+    </div>
+    <button
+      type="button"
+      class="nav-toggle-btn flex w-full mt-4 items-center justify-center p-2 text-secondary md:hidden glass-button-secondary rounded-lg"
+      aria-label="Toggle navigation"
+      aria-expanded="false"
+      @click="open = !open; $el.setAttribute('aria-expanded', open)"
+    >
+      <svg
+        class="h-6 w-6"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.8"
+        stroke-linecap="round"
+      >
+        <path x-show="!open" d="M3 6h18M3 12h18M3 18h18" />
+        <path
+          x-show="open"
+          d="M6 6l12 12M18 6L6 18"
+          style="display: none"
+          x-cloak
+        />
+      </svg>
+    </button>
+  </div>
+
+  <nav
+    id="main-nav"
+    class="hidden md:flex md:items-center md:justify-around md:gap-4 md:py-4 md:mb-2"
+  >
+    {{ partial "menu.html" (dict "menuID" "main" "pageID" .) }}
+  </nav>
+
+  <nav
+    id="main-nav-mobile"
+    x-show="open"
+    x-cloak
+    x-transition
+    class="md:hidden w-full pb-4"
+  >
+    <div
+      class="w-full rounded-xl glass-panel-secondary p-3"
+    >
+      {{ partial "menu.html" (dict "menuID" "main" "pageID" .) }}
+    </div>
+  </nav>
+</div>

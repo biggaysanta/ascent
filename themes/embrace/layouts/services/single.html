@@ -1,0 +1,88 @@
+{{ define "main" }}
+{{ $colorTheme := .Params.colortheme }}
+<div class="{{ $colorTheme | default "theme-auntie-em" }} w-full min-h-screen pb-12 px-4 sm:px-6">
+  <!-- Hero Section -->
+  <header class="relative w-full h-[55vh] min-h-[420px] flex flex-col justify-center items-center overflow-hidden rounded-3xl elevation-2 mb-12 max-w-5xl mx-auto">
+    <!-- Background Video/Image -->
+    {{ $vidUrl := .Params.videourl }}
+    {{ $posterUrl := .Params.posterurl }}
+    {{ $imgUrl := .Params.imageurl }}
+    
+    {{ if $vidUrl }}
+      {{ $vidPath := strings.TrimPrefix "/" $vidUrl }}
+      {{ $vid := resources.Get $vidPath }}
+      
+      {{ $posterPath := "" }}
+      {{ if $posterUrl }}
+        {{ $posterPath = strings.TrimPrefix "/" $posterUrl }}
+      {{ end }}
+      {{ $poster := resources.Get $posterPath }}
+      
+      <video class="absolute inset-0 w-full h-full object-cover z-0 grayscale opacity-80" 
+             src="{{ if $vid }}{{ $vid.RelPermalink }}{{ else }}{{ $vidUrl | relURL }}{{ end }}" 
+             poster="{{ if $poster }}{{ $poster.RelPermalink }}{{ else if $posterUrl }}{{ $posterUrl | relURL }}{{ end }}" 
+             muted playsinline loop autoplay></video>
+    {{ else if or .Params.coverImage $imgUrl }}
+      {{ $imageStr := .Params.coverImage | default $imgUrl }}
+      {{ $imagePath := strings.TrimPrefix "/" $imageStr }}
+      {{ $img := .Resources.GetMatch (printf "*%s*" $imagePath) }}
+      {{ if not $img }}{{ $img = resources.GetMatch (printf "*%s*" $imagePath) }}{{ end }}
+      <img src="{{ if $img }}{{ $img.RelPermalink }}{{ else }}{{ $imageStr | relURL }}{{ end }}" 
+           alt="{{ .Title }} hero image" 
+           class="absolute inset-0 w-full h-full object-cover z-0 grayscale opacity-80" />
+    {{ end }}
+    
+    <!-- Blur Overlay (Exact 10% opacity, standard blur) -->
+    <div class="absolute inset-0 z-10 bg-primary/10 backdrop-blur-sm pointer-events-none"></div>
+    
+    <!-- Hero Content -->
+    <div class="relative z-20 text-center px-4 max-w-3xl mx-auto flex flex-col items-center">
+      <!-- Fallback to Title if line1 is missing -->
+      <h1 class="glass-text-primary text-4xl md:text-6xl font-display uppercase drop-shadow-md mb-3 font-bold">
+        {{ .Params.line1 | default .Title }}
+      </h1>
+      
+      {{ if .Params.line2 }}
+      <h2 class="text-xs sm:text-sm text-secondary uppercase font-semibold tracking-widest mb-3 drop-shadow-md">
+        {{ .Params.line2 }}
+      </h2>
+      {{ end }}
+      
+      {{ if .Params.line3 }}
+      <p class="text-base sm:text-xl text-primary italic mb-3 drop-shadow-md font-serif">
+        “{{ .Params.line3 }}”
+      </p>
+      {{ end }}
+      
+      {{ if .Params.line4 }}
+      <p class="text-xs sm:text-sm text-secondary font-bold mb-6 max-w-xl drop-shadow-md">
+        {{ .Params.line4 }}
+      </p>
+      {{ end }}
+      
+      {{ $bookUrl := .Params.bookingurl }}
+      {{ $btnText := .Params.buttontext | default "Book Now" }}
+      {{ if $bookUrl }}
+      <a href="{{ $bookUrl }}" class="glass-button-primary inline-block px-6 py-2 text-xs uppercase tracking-wider font-bold transition-all text-center rounded-lg">
+        {{ $btnText }}
+      </a>
+      {{ end }}
+    </div>
+  </header>
+
+  <!-- Prose Content -->
+  <article class="glass-panel-secondary-fill max-w-4xl mx-auto p-6 sm:p-10 rounded-3xl mb-16">
+    <div class="glass-panel-secondary p-6 sm:p-10 rounded-2xl">
+      <div class="prose max-w-none text-on-secondary
+                  prose-headings:text-primary prose-headings:font-display
+                  prose-p:text-on-secondary prose-p:font-body
+                  prose-a:text-tertiary prose-a:font-accent hover:prose-a:text-primary
+                  prose-strong:text-on-secondary prose-strong:font-bold
+                  prose-blockquote:border-l-accent prose-blockquote:text-on-secondary prose-blockquote:font-accent
+                  prose-li:text-on-secondary text-xs sm:text-sm leading-relaxed">
+        {{ .Content }}
+      </div>
+    </div>
+  </article>
+</div>
+{{ end }}

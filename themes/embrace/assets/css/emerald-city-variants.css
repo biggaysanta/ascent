@@ -1,0 +1,240 @@
+/* ==========================================================================
+   EMERALD CITY THEME VARIANTS (REFINED, LUXURIOUS & RESTRAINED)
+   ========================================================================== */
+
+/* =========================================
+   Option 1: Classic Imperial Emerald
+   ========================================= */
+.theme-emerald-classic {
+  /* Brand/Core Colors */
+  --color-primary: oklch(48% 0.08 152);
+  --color-on-primary: oklch(98% 0.01 152);
+  --color-secondary: oklch(74% 0.045 85);
+  --color-on-secondary: oklch(22% 0.03 85);
+  --color-tertiary: oklch(45% 0.04 165);
+  --color-on-tertiary: oklch(96% 0.01 165);
+
+  /* Fill/Text Variants */
+  --color-primary-fill: oklch(92% 0.03 152);
+  --color-primary-text: oklch(32% 0.06 152);
+  --color-secondary-fill: oklch(93% 0.025 85);
+  --color-secondary-text: oklch(32% 0.04 85);
+  --color-tertiary-fill: oklch(92% 0.02 165);
+  --color-tertiary-text: oklch(30% 0.03 165);
+
+  /* Surfaces & Backgrounds */
+  --color-background: oklch(98.5% 0.008 150);
+  --color-card: oklch(96% 0.012 150);
+  --color-card-alt: oklch(93% 0.016 150);
+  --color-elevated: oklch(90% 0.02 150);
+  --color-border: oklch(78% 0.02 150);
+  --color-subtle-border: oklch(88% 0.012 150);
+
+  /* Typography */
+  --color-text: oklch(24% 0.025 150);
+  --color-muted-text: oklch(52% 0.02 150);
+
+  /* Semantic Error Colors */
+  --color-error: oklch(50.86% 0.193 27.64);
+  --color-on-error: oklch(98.20% 0.009 26.02);
+  --color-error-fill: oklch(67.11% 0.214 27.69);
+  --color-error-text: oklch(28.72% 0.117 27.53);
+
+  --color-shadow: var(--color-onyx);
+}
+
+@media (prefers-color-scheme: dark) {
+  .theme-emerald-classic {
+    /* Brand/Core Colors */
+    --color-primary: oklch(70% 0.09 152);
+    --color-on-primary: oklch(14% 0.03 152);
+    --color-secondary: oklch(78% 0.05 85);
+    --color-on-secondary: oklch(14% 0.03 85);
+    --color-tertiary: oklch(64% 0.05 165);
+    --color-on-tertiary: oklch(14% 0.02 165);
+
+    /* Fill/Text Variants */
+    --color-primary-fill: oklch(26% 0.04 152);
+    --color-primary-text: oklch(88% 0.05 152);
+    --color-secondary-fill: oklch(28% 0.03 85);
+    --color-secondary-text: oklch(88% 0.04 85);
+    --color-tertiary-fill: oklch(25% 0.03 165);
+    --color-tertiary-text: oklch(86% 0.03 165);
+
+    /* Surfaces & Backgrounds */
+    --color-background: oklch(14% 0.015 150);
+    --color-card: oklch(18% 0.02 150);
+    --color-card-alt: oklch(22% 0.025 150);
+    --color-elevated: oklch(26% 0.03 150);
+    --color-border: oklch(42% 0.02 150);
+    --color-subtle-border: oklch(28% 0.015 150);
+
+    /* Typography */
+    --color-text: oklch(94% 0.01 150);
+    --color-muted-text: oklch(72% 0.015 150);
+
+    /* Semantic Error Colors */
+    --color-error: oklch(71.82% 0.176 27.57);
+    --color-on-error: oklch(25.72% 0.105 27.65);
+    --color-error-fill: oklch(47.21% 0.187 27.54);
+    --color-error-text: oklch(84.66% 0.084 26.20);
+  }
+}
+
+/* =========================================
+   Option 2: Botanical Jade Emerald
+   ========================================= */
+.theme-emerald-neon {
+  /* Brand/Core Colors */
+  --color-primary: oklch(54% 0.11 148);
+  --color-on-primary: oklch(98% 0.01 148);
+  --color-secondary: oklch(68% 0.08 175);
+  --color-on-secondary: oklch(20% 0.03 175);
+  --color-tertiary: oklch(50% 0.07 130);
+  --color-on-tertiary: oklch(96% 0.01 130);
+
+  /* Fill/Text Variants */
+  --color-primary-fill: oklch(91% 0.04 148);
+  --color-primary-text: oklch(32% 0.08 148);
+  --color-secondary-fill: oklch(91% 0.03 175);
+  --color-secondary-text: oklch(32% 0.05 175);
+  --color-tertiary-fill: oklch(91% 0.03 130);
+  --color-tertiary-text: oklch(30% 0.05 130);
+
+  /* Surfaces & Backgrounds */
+  --color-background: oklch(98% 0.01 148);
+  --color-card: oklch(95% 0.018 148);
+  --color-card-alt: oklch(92% 0.025 148);
+  --color-elevated: oklch(88% 0.03 148);
+  --color-border: oklch(76% 0.025 148);
+  --color-subtle-border: oklch(88% 0.015 148);
+
+  /* Typography */
+  --color-text: oklch(22% 0.03 148);
+  --color-muted-text: oklch(50% 0.025 148);
+
+  /* Semantic Error Colors */
+  --color-error: oklch(50.86% 0.193 27.64);
+  --color-on-error: oklch(98.20% 0.009 26.02);
+  --color-error-fill: oklch(67.11% 0.214 27.69);
+  --color-error-text: oklch(28.72% 0.117 27.53);
+
+  --color-shadow: var(--color-onyx);
+}
+
+@media (prefers-color-scheme: dark) {
+  .theme-emerald-neon {
+    /* Brand/Core Colors */
+    --color-primary: oklch(74% 0.12 148);
+    --color-on-primary: oklch(14% 0.04 148);
+    --color-secondary: oklch(75% 0.09 175);
+    --color-on-secondary: oklch(14% 0.03 175);
+    --color-tertiary: oklch(68% 0.08 130);
+    --color-on-tertiary: oklch(14% 0.03 130);
+
+    /* Fill/Text Variants */
+    --color-primary-fill: oklch(26% 0.05 148);
+    --color-primary-text: oklch(88% 0.07 148);
+    --color-secondary-fill: oklch(27% 0.04 175);
+    --color-secondary-text: oklch(86% 0.05 175);
+    --color-tertiary-fill: oklch(26% 0.04 130);
+    --color-tertiary-text: oklch(86% 0.05 130);
+
+    /* Surfaces & Backgrounds */
+    --color-background: oklch(13% 0.02 148);
+    --color-card: oklch(17% 0.025 148);
+    --color-card-alt: oklch(21% 0.035 148);
+    --color-elevated: oklch(25% 0.045 148);
+    --color-border: oklch(40% 0.03 148);
+    --color-subtle-border: oklch(27% 0.02 148);
+
+    /* Typography */
+    --color-text: oklch(95% 0.015 148);
+    --color-muted-text: oklch(72% 0.02 148);
+
+    /* Semantic Error Colors */
+    --color-error: oklch(71.82% 0.176 27.57);
+    --color-on-error: oklch(25.72% 0.105 27.65);
+    --color-error-fill: oklch(47.21% 0.187 27.54);
+    --color-error-text: oklch(84.66% 0.084 26.20);
+  }
+}
+
+/* =========================================
+   Option 3: Mystic Mineral Jade
+   ========================================= */
+.theme-emerald-mystic {
+  /* Brand/Core Colors */
+  --color-primary: oklch(56% 0.05 155);
+  --color-on-primary: oklch(98% 0.01 155);
+  --color-secondary: oklch(52% 0.04 170);
+  --color-on-secondary: oklch(98% 0.01 170);
+  --color-tertiary: oklch(48% 0.035 140);
+  --color-on-tertiary: oklch(96% 0.01 140);
+
+  /* Fill/Text Variants */
+  --color-primary-fill: oklch(92% 0.02 155);
+  --color-primary-text: oklch(32% 0.04 155);
+  --color-secondary-fill: oklch(92% 0.02 170);
+  --color-secondary-text: oklch(28% 0.03 170);
+  --color-tertiary-fill: oklch(92% 0.02 140);
+  --color-tertiary-text: oklch(28% 0.03 140);
+
+  /* Surfaces & Backgrounds */
+  --color-background: oklch(99% 0.004 155);
+  --color-card: oklch(96% 0.008 155);
+  --color-card-alt: oklch(94% 0.012 155);
+  --color-elevated: oklch(91% 0.015 155);
+  --color-border: oklch(80% 0.015 155);
+  --color-subtle-border: oklch(90% 0.008 155);
+
+  /* Typography */
+  --color-text: oklch(24% 0.02 155);
+  --color-muted-text: oklch(54% 0.015 155);
+
+  /* Semantic Error Colors */
+  --color-error: oklch(50.86% 0.193 27.64);
+  --color-on-error: oklch(98.20% 0.009 26.02);
+  --color-error-fill: oklch(67.11% 0.214 27.69);
+  --color-error-text: oklch(28.72% 0.117 27.53);
+
+  --color-shadow: var(--color-onyx);
+}
+
+@media (prefers-color-scheme: dark) {
+  .theme-emerald-mystic {
+    /* Brand/Core Colors */
+    --color-primary: oklch(72% 0.06 155);
+    --color-on-primary: oklch(16% 0.02 155);
+    --color-secondary: oklch(68% 0.05 170);
+    --color-on-secondary: oklch(16% 0.02 170);
+    --color-tertiary: oklch(64% 0.04 140);
+    --color-on-tertiary: oklch(16% 0.015 140);
+
+    /* Fill/Text Variants */
+    --color-primary-fill: oklch(26% 0.03 155);
+    --color-primary-text: oklch(88% 0.04 155);
+    --color-secondary-fill: oklch(25% 0.025 170);
+    --color-secondary-text: oklch(86% 0.03 170);
+    --color-tertiary-fill: oklch(24% 0.025 140);
+    --color-tertiary-text: oklch(84% 0.03 140);
+
+    /* Surfaces & Backgrounds */
+    --color-background: oklch(15% 0.008 155);
+    --color-card: oklch(19% 0.012 155);
+    --color-card-alt: oklch(22% 0.016 155);
+    --color-elevated: oklch(25% 0.02 155);
+    --color-border: oklch(42% 0.015 155);
+    --color-subtle-border: oklch(28% 0.01 155);
+
+    /* Typography */
+    --color-text: oklch(95% 0.008 155);
+    --color-muted-text: oklch(74% 0.01 155);
+
+    /* Semantic Error Colors */
+    --color-error: oklch(71.82% 0.176 27.57);
+    --color-on-error: oklch(25.72% 0.105 27.65);
+    --color-error-fill: oklch(47.21% 0.187 27.54);
+    --color-error-text: oklch(84.66% 0.084 26.20);
+  }
+}

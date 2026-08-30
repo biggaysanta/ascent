@@ -1,0 +1,86 @@
+{{ define "main" }}
+<div class="{{ index .Params "color-theme" | default "theme-auntie-em" }} w-full min-h-screen py-8 px-4 sm:px-6">
+  <div class="max-w-4xl mx-auto space-y-8">
+    <header class="text-center max-w-2xl mx-auto mb-8">
+      <h1 class="glass-text-primary text-3xl md:text-5xl font-display font-bold mb-3">{{ .Title }}</h1>
+      <p class="text-secondary/90 text-sm max-w-xl mx-auto">
+        {{ with .Content }}{{ . }}{{ else }}Reach out with your questions, comments, and concerns. We are here to help you on your healing journey.{{ end }}
+      </p>
+    </header>
+
+    <div class="glass-panel-secondary-fill p-6 sm:p-10 rounded-3xl space-y-6">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <!-- Phone Card -->
+        <div class="glass-panel-card p-5 rounded-2xl text-center flex flex-col items-center justify-between">
+          <div class="flex flex-col items-center">
+            <div class="w-10 h-10 rounded-full glass-panel-primary flex items-center justify-center mb-3">
+              {{ partial "atoms/icon.html" (dict "icon" "phone" "class" "w-5 h-5 text-primary") }}
+            </div>
+            <h2 class="text-sm font-bold text-secondary mb-1">Direct Phone</h2>
+            <p class="text-xs text-muted-text mb-3">Call to speak directly with Paul</p>
+          </div>
+          <a href="tel:9165348772" class="glass-button-primary w-full text-center font-bold">
+            (916) 534-8772
+          </a>
+        </div>
+
+        <!-- SMS Card -->
+        <div class="glass-panel-card p-5 rounded-2xl text-center flex flex-col items-center justify-between">
+          <div class="flex flex-col items-center">
+            <div class="w-10 h-10 rounded-full glass-panel-primary flex items-center justify-center mb-3">
+              {{ partial "atoms/icon.html" (dict "icon" "sms" "class" "w-5 h-5 text-primary") }}
+            </div>
+            <h2 class="text-sm font-bold text-secondary mb-1">Text Message</h2>
+            <p class="text-xs text-muted-text mb-3">Fastest response for quick questions</p>
+          </div>
+          <a href="sms:9165348772" class="glass-button-primary w-full text-center font-bold">
+            Send SMS
+          </a>
+        </div>
+
+        <!-- Email Card -->
+        <div class="glass-panel-card p-5 rounded-2xl text-center flex flex-col items-center justify-between">
+          <div class="flex flex-col items-center">
+            <div class="w-10 h-10 rounded-full glass-panel-secondary flex items-center justify-center mb-3">
+              {{ partial "atoms/icon.html" (dict "icon" "mail" "class" "w-5 h-5 text-secondary") }}
+            </div>
+            <h2 class="text-sm font-bold text-secondary mb-1">Email</h2>
+            <p class="text-xs text-muted-text mb-3">For detailed inquiries & records</p>
+          </div>
+          <a href="mailto:paul@paulbrown.net" class="glass-button-secondary w-full text-center">
+            paul@paulbrown.net
+          </a>
+        </div>
+
+        <!-- Online Booking Card -->
+        <div class="glass-panel-card p-5 rounded-2xl text-center flex flex-col items-center justify-between">
+          <div class="flex flex-col items-center">
+            <div class="w-10 h-10 rounded-full glass-panel-primary flex items-center justify-center mb-3">
+              {{ partial "atoms/icon.html" (dict "icon" "event" "class" "w-5 h-5 text-primary") }}
+            </div>
+            <h2 class="text-sm font-bold text-secondary mb-1">Online Booking</h2>
+            <p class="text-xs text-muted-text mb-3">Schedule your session 24/7 via Vagaro</p>
+          </div>
+          <a href="https://vagaro.com/firelightstudio" target="_blank" rel="noopener noreferrer" class="glass-button-primary w-full text-center font-bold">
+            Book Online
+          </a>
+        </div>
+      </div>
+
+      <!-- Location Studio Reference Bar -->
+      <div class="glass-panel-card p-4 rounded-xl flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-3 text-center sm:text-left">
+          {{ partial "atoms/icon.html" (dict "icon" "location_on" "class" "w-6 h-6 text-primary shrink-0") }}
+          <div>
+            <p class="font-bold text-xs sm:text-sm text-secondary mb-0">The Firelight Studio</p>
+            <p class="text-xs text-muted-text mb-0">947 Enterprise Drive, Suite 20, Sacramento, CA 95825</p>
+          </div>
+        </div>
+        <a href="/location" class="glass-button-secondary text-xs shrink-0 font-bold">
+          View Map & Directions
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+{{ end }}

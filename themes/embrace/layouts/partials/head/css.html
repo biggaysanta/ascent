@@ -1,0 +1,5 @@
+
+{{- $options := dict "optimize" true -}}
+{{- $style := resources.Get "/css/main.css" | css.TailwindCSS $options -}}
+
+<link rel="stylesheet" href="{{ $style.RelPermalink }}">

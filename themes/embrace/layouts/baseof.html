@@ -1,0 +1,87 @@
+<!doctype html>
+<html
+  lang="{{ site.Language.Locale }}"
+  dir="{{ or site.Language.Direction `ltr` }}"
+  class="{{ site.Params.colorMood }}"
+>
+  <head>
+    {{ partial "head.html" . }}
+  </head>
+
+  <body class="min-h-screen relative">
+    <svg style="display: none" aria-hidden="true">
+      <!-- Wavy Liquid Glass -->
+      <filter id="glass-refraction-wavy">
+        <feTurbulence
+          type="fractalNoise"
+          baseFrequency="0.01"
+          numOctaves="2"
+          result="noise"
+        />
+        <feDisplacementMap
+          in="SourceGraphic"
+          in2="noise"
+          scale="50"
+          xChannelSelector="B"
+          yChannelSelector="G"
+        />
+      </filter>
+      <!-- Hammered Frosted Glass -->
+      <filter id="glass-refraction-hammered">
+        <feTurbulence
+          type="fractalNoise"
+          baseFrequency="0.4"
+          numOctaves="1"
+          result="noise"
+        />
+        <feDisplacementMap
+          in="SourceGraphic"
+          in2="noise"
+          scale="15"
+          xChannelSelector="R"
+          yChannelSelector="G"
+        />
+      </filter>
+    </svg>
+    <img
+      src="/svg/ppvb-no-bckgrnd.svg"
+      alt=""
+      class="fixed bottom-0 right-0 h-[15vh] w-auto z-1 pointer-events-none"
+      aria-hidden="true"
+    />
+    <div class="fixed top-2 right-2 z-50 flex items-center gap-2">
+      <nav id="cta-nav">
+        {{ partial "menu.html" (dict "menuID" "cta" "pageID" . "class" "!flex-row !flex-nowrap") }}
+      </nav>
+    </div>
+
+    <header
+      class="relative glass-panel-background z-30 min-w-xs max-w-6xl mx-auto px-4"
+      x-data="{ open: false }"
+    >
+      {{ partial "header.html" . }}
+    </header>
+
+    <main class="relative min-w-xs max-w-6xl mx-auto mt-4 px-4 py-4">
+      <div class="content-shell">
+<!-- Line 128 -->
+<div class="content-column" style="view-transition-name: main-content;">
+  {{ block "main" . }}{{ end }}
+</div>
+
+        <div class="side-column" aria-hidden="true">
+          <div class="side-column-block">
+            {{ partial "organisms/announcements-widget.html" . }}
+          </div>
+          <div class="side-column-block">
+            {{ partial "organisms/categories-widget.html" . }}
+          </div>
+        </div>
+      </div>
+    </main>
+    {{ partial "organisms/vagaro-popup-widget.html" . }}
+    <footer class="min-w-xs max-w-6xl mx-auto px-4 py-8">
+      {{ partial "organisms/tags-widget.html" . }} {{ partial "footer.html" . }}
+    </footer>
+  </body>
+</html>

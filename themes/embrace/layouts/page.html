@@ -1,0 +1,81 @@
+{{ define "main" }}
+<div class="{{ index .Params "color-theme" | default "theme-auntie-em" }} w-full min-h-screen py-12 px-4 sm:px-6">
+  <article class="glass-panel-secondary-fill max-w-4xl mx-auto p-6 sm:p-10 rounded-3xl mb-12">
+    <header class="mb-8 text-center">
+      <!-- 1. Floating Glass Title -->
+      <h1 class="glass-text-secondary-text text-4xl md:text-6xl font-display font-bold mb-4">{{ .Title }}</h1>
+
+      <!-- 2. Subtitle sitting directly on article panel -->
+      {{ with or .Params.subtitle .Description }}
+      <p class="text-secondary/90 text-lg font-body max-w-2xl mx-auto mb-4">{{ . }}</p>
+      {{ end }}
+
+      <!-- 3. Metadata Badge in card-alt panel with subtle-border -->
+      {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+      {{ $dateHuman := .Date | time.Format ":date_long" }}
+      {{ if .Date }}
+      <div class="glass-panel-card-alt rounded-xl px-4 py-2 inline-flex items-center gap-3 mt-2">
+        <span class="text-xs uppercase tracking-wider font-semibold text-muted-text">By Paul Brown</span>
+        <span class="text-muted-text/40">•</span>
+        <time datetime="{{ $dateMachine }}" class="text-xs uppercase tracking-wider text-tertiary font-bold">{{ $dateHuman }}</time>
+      </div>
+      {{ end }}
+    </header>
+
+    {{ if .Params.video }}
+      {{ $vid := resources.Get .Params.video }}
+      {{ $poster := resources.Get .Params.poster }}
+      <div class="w-full h-64 md:h-96 rounded-2xl overflow-hidden mb-8 elevation-2 relative group">
+        <video class="w-full h-full object-cover motion-reduce:hidden" 
+               src="{{ if $vid }}{{ $vid.RelPermalink }}{{ else }}{{ .Params.video }}{{ end }}" 
+               {{ if .Params.poster }}poster="{{ if $poster }}{{ $poster.RelPermalink }}{{ else }}{{ .Params.poster }}{{ end }}"{{ end }}
+               muted playsinline loop autoplay aria-label="{{ .Title }} hero video"></video>
+        {{ if .Params.poster }}
+        <img src="{{ if $poster }}{{ $poster.RelPermalink }}{{ else }}{{ .Params.poster }}{{ end }}" alt="{{ $.Title }} featured image" 
+             class="w-full h-full object-cover absolute inset-0 hidden motion-reduce:block">
+        {{ end }}
+      </div>
+    {{ else if or .Params.coverImage .Params.image }}
+      {{ $imageStr := .Params.coverImage | default .Params.image }}
+      {{/* Try to find it as a Page Resource (Leaf Bundle) */}}
+      {{ $img := .Resources.GetMatch (printf "*%s*" $imageStr) }}
+      {{/* If not found, try to find it as a Global Resource (assets) */}}
+      {{ if not $img }}
+        {{ $img = resources.GetMatch (printf "*%s*" $imageStr) }}
+      {{ end }}
+      
+      {{ if $img }}
+      <div class="w-full h-64 md:h-96 rounded-2xl overflow-hidden mb-8 elevation-2">
+        <img src="{{ $img.RelPermalink }}" alt="{{ $.Title }} featured image" class="w-full h-full object-cover">
+      </div>
+      {{ else }}
+      <!-- Fallback for external URLs or static folder images -->
+      <div class="w-full h-64 md:h-96 rounded-2xl overflow-hidden mb-8 elevation-2">
+        <img src="{{ $imageStr | relURL }}" alt="{{ $.Title }} featured image" class="w-full h-full object-cover">
+      </div>
+      {{ end }}
+    {{ end }}
+
+    <!-- 5. Article Body wrapped in secondary panel with on-secondary text -->
+    <div class="glass-panel-secondary p-6 sm:p-10 rounded-2xl">
+      <div class="prose prose-lg md:prose-xl max-w-none text-on-secondary
+                  prose-headings:text-primary prose-headings:font-display
+                  prose-p:text-on-secondary prose-p:font-body
+                  prose-a:text-tertiary prose-a:font-accent hover:prose-a:text-primary
+                  prose-strong:text-on-secondary prose-strong:font-bold
+                  prose-blockquote:border-l-accent prose-blockquote:text-on-secondary prose-blockquote:font-accent
+                  prose-li:text-on-secondary">
+        {{ .Content }}
+      </div>
+    </div>
+
+    <div class="mt-8">
+      {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+    </div>
+
+    <div class="mt-12 w-full">
+      {{ partial "organisms/butterfly.html" . }}
+    </div>
+  </article>
+</div>
+{{ end }}

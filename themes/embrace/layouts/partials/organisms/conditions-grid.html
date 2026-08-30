@@ -1,0 +1,69 @@
+{{/*
+@title Conditions We Treat Grid
+@description A bento grid displaying the main SEO hubs (headaches, shoulder).
+*/}}
+
+{{ $pages := slice }}
+{{ $title := .Title | default "Articles & Services" }}
+{{ $desc := .Description }}
+
+{{ if .IsHome }}
+  {{ $title = "Conditions We Treat" }}
+  {{ $desc = "Discover how our advanced bodywork targets the root causes of chronic pain." }}
+  {{ range slice "headaches" "shoulder-and-neck-pain" "low-back-pain" "mid-back-pain" "hip-pain" "fibromyalgia" "anxiety-and-depression" }}
+  {{ $cond := . }}
+    {{ with site.GetPage (printf "/conditions/%s/" $cond) }}
+      {{ $pages = $pages | append . }}
+    {{ end }}
+  {{ end }}
+{{ else }}
+  {{ $pages = .Pages }}
+{{ end }}
+
+<section class="w-full max-w-6xl mx-auto my-16 px-4">
+  <div class="text-center mb-8">
+    <h2 class="mb-4">{{ $title }}</h2>
+    {{ with $desc }}
+    <p class="max-w-2xl mx-auto">
+      {{ . }}
+    </p>
+    {{ end }}
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    {{ range $pages }}
+    {{ with . }}
+    <a href="{{ .RelPermalink }}" class="block group h-full">
+      <!-- Thematic wrapper based on frontmatter color-theme -->
+      <div class="{{ index .Params "color-theme" | default "theme-auntie-em" }} glass-panel-primary h-full p-8 rounded-2xl flex
+        flex-col justify-between transition-all duration-300 transform group-hover:-translate-y-2
+        relative overflow-hidden">
+
+        <!-- Icon -->
+        <div class="w-12 h-12 rounded-full glass-panel-secondary flex items-center justify-center mb-6">
+          {{ partial "atoms/icon.html" (dict "icon" (.Params.icon | default "healing") "class" "w-6 h-6 text-primary")
+          }}
+        </div>
+
+        <div>
+          <h3 class="mb-3">{{ .Title }}</h3>
+          <p>{{ .Description }}</p>
+        </div>
+
+        <!-- "Learn More" Arrow -->
+        <div class="mt-8 flex items-center text-primary font-bold tracking-wide uppercase text-sm">
+          Explore Articles
+          <span
+            class="material-symbols-outlined ml-2 transition-transform group-hover:translate-x-2">arrow_forward</span>
+        </div>
+
+        <!-- Subtle background mesh/texture if desired -->
+        <div
+          class="absolute -bottom-10 -right-10 w-40 h-40 bg-secondary/30 rounded-full blur-2xl opacity-50 group-hover:opacity-70 transition-opacity">
+        </div>
+      </div>
+    </a>
+    {{ end }}
+    {{ end }}
+  </div>
+</section>

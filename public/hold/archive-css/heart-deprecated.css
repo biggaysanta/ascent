@@ -1,0 +1,65 @@
+@theme heart
+{
+  --color-heart-primary: oklch(48.99% 0.078 280.40);
+  --color-heart-on-primary: oklch(98.34% 0.010 305.41);
+  --color-heart-secondary: oklch(48.62% 0.033 285.09);
+  --color-heart-on-secondary: oklch(98.34% 0.010 305.41);
+  --color-heart-tertiary: oklch(49.27% 0.070 320.06);
+  --color-heart-on-tertiary: oklch(98.34% 0.010 345.41);
+
+  --color-heart-primary-fill: oklch(84.02% 0.078 282.18);
+  --color-heart-primary-text: oklch(38.39% 0.078 279.23);
+  --color-heart-secondary-fill: oklch(91.51% 0.034 287.55);
+  --color-heart-secondary-text: oklch(43.82% 0.033 282.70);
+  --color-heart-tertiary-fill: oklch(90.44% 0.073 321.81);
+  --color-heart-tertiary-text: oklch(43.27% 0.068 319.67);
+
+  --color-heart-background: oklch(98.31% 0.009 308.36);
+  --color-heart-card: oklch(94.83% 0.014 299.80);
+  --color-heart-card-alt: oklch(93.24% 0.014 295.31);
+  --color-heart-elevated: oklch(91.48% 0.016 293.73);
+  --color-heart-border: oklch(58.37% 0.015 290.52);
+  --color-heart-subtle-border: oklch(76.46% 0.016 290.21);
+  --color-heart-text: oklch(32.08% 0.016 285.47);
+  --color-heart-muted-text: oklch(48.64% 0.016 290.39);
+
+  --color-heart-error: oklch(50.47% 0.149 13.46);
+  --color-heart-on-error: oklch(98.23% 0.009 17.30);
+  --color-heart-error-fill: oklch(71.93% 0.164 13.39);
+  --color-heart-error-text: oklch(34.56% 0.134 14.24);
+
+      
+    
+}
+
+@media (prefers-color-scheme: dark)
+{ .virture-heart
+  {
+  --color-heart-primary: oklch(75.65% 0.127 280.43);
+  --color-heart-on-primary: oklch(31.43% 0.143 272.20);
+  --color-heart-secondary: oklch(82.95% 0.056 283.98);
+  --color-heart-on-secondary: oklch(37.33% 0.056 280.62);
+  --color-heart-tertiary: oklch(88.09% 0.092 318.57);
+  --color-heart-on-tertiary: oklch(41.85% 0.110 315.32);
+
+  --color-heart-primary-fill: oklch(71.52% 0.131 279.64);
+  --color-heart-primary-text: oklch(26.99% 0.149 269.23);
+  --color-heart-secondary-fill: oklch(35.76% 0.055 280.46);
+  --color-heart-secondary-text: oklch(80.77% 0.056 283.94);
+  --color-heart-tertiary-fill: oklch(83.94% 0.114 317.53);
+  --color-heart-tertiary-text: oklch(38.48% 0.109 314.97);
+
+  --color-heart-background: oklch(16.62% 0.010 285.21);
+  --color-heart-card: oklch(21.61% 0.012 285.38);
+  --color-heart-card-alt: oklch(24.19% 0.011 285.52);
+  --color-heart-elevated: oklch(26.70% 0.011 285.63);
+  --color-heart-border: oklch(56.30% 0.011 299.08);
+  --color-heart-subtle-border: oklch(40.15% 0.012 292.43);
+  --color-heart-text: oklch(92.35% 0.011 303.10);
+  --color-heart-muted-text: oklch(74.18% 0.010 299.17);
+
+  --color-heart-error: oklch(71.82% 0.176 27.57);
+  --color-heart-on-error: oklch(25.72% 0.105 27.65);
+  --color-heart-error-fill: oklch(47.21% 0.187 27.54);
+  --color-heart-error-text: oklch(84.66% 0.084 26.20);
+}}

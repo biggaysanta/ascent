@@ -1,0 +1,352 @@
+/* ==========================================================================
+   EMBRACE THEME: GLASSMORPHISM SYSTEM (emb-glass.css)
+   Universal Design Standards:
+   - Opacity Presets: 10% base background, 20% base border
+   - State Transitions: Hover adds +10 to opacity, Active interactive subtracts -5
+   - Standard Blur: backdrop-blur-sm (consistent across all glass surfaces)
+   - Standard Elevation: Base 2, Hover 3, Active 1
+   ========================================================================== */
+
+/* ==========================================================================
+   1. PARAMETERIZED GLASS PANELS (@utility glass-panel-*)
+   ========================================================================== */
+
+@utility glass-panel-primary {
+  @apply bg-primary/10 border border-primary/20 backdrop-blur-sm elevation-2 transition-all duration-300;
+  &:hover {
+    @apply bg-primary/20 border-primary/30 elevation-3;
+  }
+  &:active {
+    @apply bg-primary/5 elevation-1;
+  }
+}
+
+@utility glass-panel-primary-fill {
+  @apply bg-primary-fill/10 border border-primary-fill/20 backdrop-blur-sm elevation-2 transition-all duration-300;
+  &:hover {
+    @apply bg-primary-fill/20 border-primary-fill/30 elevation-3;
+  }
+  &:active {
+    @apply bg-primary-fill/5 elevation-1;
+  }
+}
+
+@utility glass-panel-primary-text {
+  @apply bg-primary-text/10 border border-primary-text/20 backdrop-blur-sm elevation-2 transition-all duration-300;
+}
+
+@utility glass-panel-secondary {
+  @apply bg-secondary/10 border border-secondary/20 backdrop-blur-sm elevation-2 transition-all duration-300;
+  &:hover {
+    @apply bg-secondary/20 border-secondary/30 elevation-3;
+  }
+  &:active {
+    @apply bg-secondary/5 elevation-1;
+  }
+}
+
+@utility glass-panel-secondary-fill {
+  @apply bg-secondary-fill/10 border border-secondary-fill/20 backdrop-blur-sm elevation-2 transition-all duration-300;
+  &:hover {
+    @apply bg-secondary-fill/20 border-secondary-fill/30 elevation-3;
+  }
+  &:active {
+    @apply bg-secondary-fill/5 elevation-1;
+  }
+}
+
+@utility glass-panel-secondary-text {
+  @apply bg-secondary-text/10 border border-secondary-text/20 backdrop-blur-sm elevation-2 transition-all duration-300;
+}
+
+@utility glass-panel-tertiary {
+  @apply bg-tertiary/10 border border-tertiary/20 backdrop-blur-sm elevation-2 transition-all duration-300;
+  &:hover {
+    @apply bg-tertiary/20 border-tertiary/30 elevation-3;
+  }
+  &:active {
+    @apply bg-tertiary/5 elevation-1;
+  }
+}
+
+@utility glass-panel-tertiary-fill {
+  @apply bg-tertiary-fill/10 border border-tertiary-fill/20 backdrop-blur-sm elevation-2 transition-all duration-300;
+  &:hover {
+    @apply bg-tertiary-fill/20 border-tertiary-fill/30 elevation-3;
+  }
+  &:active {
+    @apply bg-tertiary-fill/5 elevation-1;
+  }
+}
+
+@utility glass-panel-tertiary-text {
+  @apply bg-tertiary-text/10 border border-tertiary-text/20 backdrop-blur-sm elevation-2 transition-all duration-300;
+}
+
+@utility glass-panel-card {
+  @apply bg-card/10 border border-border/20 backdrop-blur-sm elevation-2 transition-all duration-300;
+  &:hover {
+    @apply bg-card/20 border-border/30 elevation-3;
+  }
+  &:active {
+    @apply bg-card/5 elevation-1;
+  }
+}
+
+@utility glass-panel-card-alt {
+  @apply bg-card-alt/10 border border-subtle-border/20 backdrop-blur-sm elevation-2 transition-all duration-300;
+  &:hover {
+    @apply bg-card-alt/20 border-subtle-border/30 elevation-3;
+  }
+  &:active {
+    @apply bg-card-alt/5 elevation-1;
+  }
+}
+
+@utility glass-panel-elevated {
+  @apply bg-elevated/10 border border-border/20 backdrop-blur-sm elevation-3 transition-all duration-300;
+  &:hover {
+    @apply bg-elevated/20 border-border/30 elevation-4;
+  }
+}
+
+@utility glass-panel-background {
+  @apply bg-background/10 border border-border/20 backdrop-blur-sm elevation-2 transition-all duration-300;
+}
+
+/* ==========================================================================
+   2. PARAMETERIZED GLASS BUTTONS (@utility glass-button-*)
+   ========================================================================== */
+
+@utility glass-button-primary {
+  @apply px-2.5 py-1 text-xs font-medium bg-primary/10 border border-primary/20 backdrop-blur-sm elevation-2 transition-all duration-200 cursor-pointer;
+  &:hover {
+    @apply bg-primary/20 border-primary/30 elevation-3;
+  }
+  &:active {
+    @apply bg-primary/5 elevation-1 scale-95;
+  }
+}
+
+@utility glass-button-secondary {
+  @apply px-2.5 py-1 text-xs font-medium bg-secondary/10 border border-secondary/20 backdrop-blur-sm elevation-2 transition-all duration-200 cursor-pointer;
+  &:hover {
+    @apply bg-secondary/20 border-secondary/30 elevation-3;
+  }
+  &:active {
+    @apply bg-secondary/5 elevation-1 scale-95;
+  }
+}
+
+@utility glass-button-tertiary {
+  @apply px-2.5 py-1 text-xs font-medium bg-tertiary/10 border border-tertiary/20 backdrop-blur-sm elevation-2 transition-all duration-200 cursor-pointer;
+  &:hover {
+    @apply bg-tertiary/20 border-tertiary/30 elevation-3;
+  }
+  &:active {
+    @apply bg-tertiary/5 elevation-1 scale-95;
+  }
+}
+
+/* ==========================================================================
+   3. PARAMETERIZED GLASS TYPOGRAPHY (@utility glass-text-*)
+   ========================================================================== */
+
+/* Glass Typography: Primary */
+@utility glass-text-primary {
+  background-image: linear-gradient(
+    180deg,
+    color-mix(in oklch, var(--color-primary) 35%, white 15%) 0%,
+    color-mix(in oklch, var(--color-primary) 10%, transparent) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  -webkit-text-stroke: 1px color-mix(in oklch, var(--color-primary) 25%, white 15%);
+  paint-order: stroke fill;
+  filter: drop-shadow(0 4px 6px color-mix(in oklch, var(--color-shadow, var(--color-primary)) 25%, transparent))
+          drop-shadow(0 1px 2px color-mix(in oklch, var(--color-shadow, var(--color-primary)) 15%, transparent));
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-image: linear-gradient(
+      180deg,
+      color-mix(in oklch, var(--color-primary) 45%, white 25%) 0%,
+      color-mix(in oklch, var(--color-primary) 20%, transparent) 100%
+    );
+    -webkit-text-stroke: 1px color-mix(in oklch, var(--color-primary) 35%, white 25%);
+    filter: drop-shadow(0 10px 15px color-mix(in oklch, var(--color-shadow, var(--color-primary)) 35%, transparent))
+            drop-shadow(0 4px 6px color-mix(in oklch, var(--color-shadow, var(--color-primary)) 20%, transparent));
+  }
+}
+
+/* Glass Typography: Primary Text */
+@utility glass-text-primary-text {
+  background-image: linear-gradient(
+    180deg,
+    color-mix(in oklch, var(--color-primary-text) 35%, white 15%) 0%,
+    color-mix(in oklch, var(--color-primary-text) 10%, transparent) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  -webkit-text-stroke: 1px color-mix(in oklch, var(--color-primary-text) 25%, white 15%);
+  paint-order: stroke fill;
+  filter: drop-shadow(0 4px 6px color-mix(in oklch, var(--color-shadow, var(--color-primary-text)) 25%, transparent))
+          drop-shadow(0 1px 2px color-mix(in oklch, var(--color-shadow, var(--color-primary-text)) 15%, transparent));
+  transition: all 0.3s ease;
+}
+
+/* Glass Typography: Secondary */
+@utility glass-text-secondary {
+  background-image: linear-gradient(
+    180deg,
+    color-mix(in oklch, var(--color-secondary) 35%, white 15%) 0%,
+    color-mix(in oklch, var(--color-secondary) 10%, transparent) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  -webkit-text-stroke: 1px color-mix(in oklch, var(--color-secondary) 25%, white 15%);
+  paint-order: stroke fill;
+  filter: drop-shadow(0 4px 6px color-mix(in oklch, var(--color-shadow, var(--color-secondary)) 25%, transparent))
+          drop-shadow(0 1px 2px color-mix(in oklch, var(--color-shadow, var(--color-secondary)) 15%, transparent));
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-image: linear-gradient(
+      180deg,
+      color-mix(in oklch, var(--color-secondary) 45%, white 25%) 0%,
+      color-mix(in oklch, var(--color-secondary) 20%, transparent) 100%
+    );
+    -webkit-text-stroke: 1px color-mix(in oklch, var(--color-secondary) 35%, white 25%);
+    filter: drop-shadow(0 10px 15px color-mix(in oklch, var(--color-shadow, var(--color-secondary)) 35%, transparent))
+            drop-shadow(0 4px 6px color-mix(in oklch, var(--color-shadow, var(--color-secondary)) 20%, transparent));
+  }
+}
+
+/* Glass Typography: Secondary Text */
+@utility glass-text-secondary-text {
+  background-image: linear-gradient(
+    180deg,
+    color-mix(in oklch, var(--color-secondary-text) 35%, white 15%) 0%,
+    color-mix(in oklch, var(--color-secondary-text) 10%, transparent) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  -webkit-text-stroke: 1px color-mix(in oklch, var(--color-secondary-text) 25%, white 15%);
+  paint-order: stroke fill;
+  filter: drop-shadow(0 4px 6px color-mix(in oklch, var(--color-shadow, var(--color-secondary-text)) 25%, transparent))
+          drop-shadow(0 1px 2px color-mix(in oklch, var(--color-shadow, var(--color-secondary-text)) 15%, transparent));
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-image: linear-gradient(
+      180deg,
+      color-mix(in oklch, var(--color-secondary-text) 45%, white 25%) 0%,
+      color-mix(in oklch, var(--color-secondary-text) 20%, transparent) 100%
+    );
+    -webkit-text-stroke: 1px color-mix(in oklch, var(--color-secondary-text) 35%, white 25%);
+    filter: drop-shadow(0 10px 15px color-mix(in oklch, var(--color-shadow, var(--color-secondary-text)) 35%, transparent))
+            drop-shadow(0 4px 6px color-mix(in oklch, var(--color-shadow, var(--color-secondary-text)) 20%, transparent));
+  }
+}
+
+/* Glass Typography: Tertiary */
+@utility glass-text-tertiary {
+  background-image: linear-gradient(
+    180deg,
+    color-mix(in oklch, var(--color-tertiary) 35%, white 15%) 0%,
+    color-mix(in oklch, var(--color-tertiary) 10%, transparent) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  -webkit-text-stroke: 1px color-mix(in oklch, var(--color-tertiary) 25%, white 15%);
+  paint-order: stroke fill;
+  filter: drop-shadow(0 4px 6px color-mix(in oklch, var(--color-shadow, var(--color-tertiary)) 25%, transparent))
+          drop-shadow(0 1px 2px color-mix(in oklch, var(--color-shadow, var(--color-tertiary)) 15%, transparent));
+  transition: all 0.3s ease;
+}
+
+/* Glass Typography: Tertiary Text */
+@utility glass-text-tertiary-text {
+  background-image: linear-gradient(
+    180deg,
+    color-mix(in oklch, var(--color-tertiary-text) 35%, white 15%) 0%,
+    color-mix(in oklch, var(--color-tertiary-text) 10%, transparent) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  -webkit-text-stroke: 1px color-mix(in oklch, var(--color-tertiary-text) 25%, white 15%);
+  paint-order: stroke fill;
+  filter: drop-shadow(0 4px 6px color-mix(in oklch, var(--color-shadow, var(--color-tertiary-text)) 25%, transparent))
+          drop-shadow(0 1px 2px color-mix(in oklch, var(--color-shadow, var(--color-tertiary-text)) 15%, transparent));
+  transition: all 0.3s ease;
+}
+
+/* ==========================================================================
+   4. PARAMETERIZED GLASS BORDERS (@utility glass-border-*)
+   ========================================================================== */
+
+@utility glass-border-primary {
+  border-width: 1px;
+  border-color: color-mix(in oklch, var(--color-primary) 20%, transparent);
+  &:hover {
+    border-color: color-mix(in oklch, var(--color-primary) 30%, transparent);
+  }
+}
+
+@utility glass-border-secondary {
+  border-width: 1px;
+  border-color: color-mix(in oklch, var(--color-secondary) 20%, transparent);
+  &:hover {
+    border-color: color-mix(in oklch, var(--color-secondary) 30%, transparent);
+  }
+}
+
+@utility glass-border-tertiary {
+  border-width: 1px;
+  border-color: color-mix(in oklch, var(--color-tertiary) 20%, transparent);
+  &:hover {
+    border-color: color-mix(in oklch, var(--color-tertiary) 30%, transparent);
+  }
+}
+
+@utility glass-border-border {
+  border-width: 1px;
+  border-color: color-mix(in oklch, var(--color-border) 20%, transparent);
+}
+
+@utility glass-border-subtle {
+  border-width: 1px;
+  border-color: color-mix(in oklch, var(--color-subtle-border) 20%, transparent);
+}
+
+/* ==========================================================================
+   5. GLASS GRADIENT UTILITIES (@utility bg-glass-gradient)
+   ========================================================================== */
+
+@utility bg-glass-gradient {
+  background-image: linear-gradient(
+    to bottom,
+    color-mix(in oklch, var(--color-secondary) 30%, transparent) 0%,
+    color-mix(in oklch, var(--color-primary) 30%, transparent) 100%
+  );
+}
+
+@utility bg-glass-gradient-alt {
+  background-image: linear-gradient(
+    to bottom,
+    color-mix(in oklch, var(--color-tertiary) 30%, transparent) 0%,
+    color-mix(in oklch, var(--color-secondary) 30%, transparent) 100%
+  );
+}

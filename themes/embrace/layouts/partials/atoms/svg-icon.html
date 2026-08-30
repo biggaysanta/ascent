@@ -1,0 +1,20 @@
+{{/* Icon.html partial 
+
+@description This partial is used to render icons from the Google Material Symbols typeface.
+
+@usage {{ partial "icons.html" (dict "icon" "home" "class" "text-white p-2") }}
+@returns A span element with the appropriate styling and icon.
+
+*/}}
+{{ $icon := .icon | default "info" }}
+{{ if not (strings.HasSuffix $icon ".svg") }}{{ $icon = printf "%s.svg" $icon }}{{ end }}
+{{ warnf "icon found %s" $icon }}
+{{ $class := .class }}
+{{ $output := resources.Get (printf "svg/%s" $icon) }}
+{{ with $output }}
+<span class="inline-block shrink-0 w-5 h-5 current-color {{ $class }}">
+  {{ .Content | safeHTML }}
+</span>
+{{ else }}
+  {{ warnf "icon not found %s" $icon }}
+{{ end }}
