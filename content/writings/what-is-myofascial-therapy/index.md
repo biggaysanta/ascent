@@ -15,23 +15,24 @@ When Swedish Massage isn't specific enough, there are other options for getting 
 
 #### Setting
 
-Typically, MFT is performed on a [massage table](https://paulbrown.net/about-me/advanced-massage-table/)  that has been lowered more than it would normally be for a Swedish Massage.  This is to ensure that the MT's legs and hips can really provide more power to the hands.  I'll cover body mechanics for massage therapists in another post.  
+Typically, MFT is performed on an [advanced massage table](/about/advanced-table/) that has been adjusted to the ideal ergonomic height. This ensures that the therapist's body mechanics provide smooth, sustained leverage without jarring force.
 
 #### Warm-up
 
-Before performing the MFT strokes, it is necessary to warm up the tissues to be worked.  This can be done with a couple of strokes: friction circles, tissue compression, or the dreaded skin rolling.  I'm just joking about it being dreaded; some people actually enjoy it! (I'm not one of those people.)  But after several minutes of warm-up strokes, the main action can take place.
+Before performing the MFT strokes, it is necessary to warm up the tissues to be worked. This can be done with a couple of strokes: friction circles, tissue compression, or the dreaded skin rolling. I'm just joking about it being dreaded; some people actually enjoy it! (I'm not one of those people.) But after several minutes of warm-up strokes, the main action can take place.
 
 #### Longitudinal Release
 
-As its name suggests, longitudinal release works _with_ the direction of the muscle fibers, that is to say, lengthwise, or parallel to the muscle fibers.  Hands are vaulted and stacked for stability and support, and a "slack-sink-stroke" technique is employed.  Strokes are short but powerful, pressure should be at the perfect amount for client comfort.  LR will bring about a lengthening of the affected muscle to help improve range of motion.
+As its name suggests, longitudinal release works _with_ the direction of the muscle fibers, that is to say, lengthwise, or parallel to the muscle fibers. Hands are vaulted and stacked for stability and support, and a "slack-sink-stroke" technique is employed. Strokes are short but powerful, pressure should be at the perfect amount for client comfort. LR will bring about a lengthening of the affected muscle to help improve range of motion.
 
 #### Cross Fiber Friction
 
-The purpose of cross fiber friction is to reduce pain and adhesions through two strokes: slack-sink-stroke and sawing.  These strokes are performed with increased pressure, but still at the client's comfort level, perpendicular to the direction of muscle fibers.
+The purpose of cross fiber friction is to reduce pain and adhesions through two strokes: slack-sink-stroke and sawing. These strokes are performed with increased pressure, but still at the client's comfort level, perpendicular to the direction of muscle fibers. This is especially effective when resolving [burning pain between the shoulder blades](/conditions/shoulder-and-neck-pain/burning-pain-between-shoulder-blades/) and chronic postural adhesions.
 
 ##### Summary
 
-Using LR and CFF, a [well-trained](https://paulbrown.net/about-me/) massage therapist can effect great change to a client in a short amount of time.
+Using LR and CFF within our signature [Zero Point Advanced Myofascial Release](/services/pain-relief/), a [well-trained massage therapist](/about/) can effect great change in a short amount of time.
 
-If you are experiencing myofascial pain or discomfort, you can obtain great benefit through a session of Myofascial Therapy!  Call or Text 916-534-8772 to book your appointment today!
+If you are experiencing myofascial pain or discomfort, you can obtain great benefit through our [Pain Relief Myofascial Therapy](/services/pain-relief/)! Call or Text [916-534-8772](tel:9165348772) or [book your session online](https://vagaro.com/firelightstudio) today!
+
 

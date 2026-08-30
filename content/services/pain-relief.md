@@ -45,10 +45,11 @@ Imagine a piece of yarn. If you take the yarn in your hands and stretch it apart
 
 #### How it works
 
-When a patient puts the target muscle into the zero point, the tissue is as slack as it can be, and where the real power of myofascial release takes place. The MT coaches the patient into that place, and then applies the MFR hold to that tissue. That hold, alone or with assistance, will quickly resolve the fascial adhesion (knot, trigger, tightness, what have you), restoring tissue to its homeostatic state.
+When a patient puts the target muscle into the zero point, the tissue is as slack as it can be, and where the real power of myofascial release takes place. The MT coaches the patient into that place, and then applies the MFR hold to that tissue. That hold, alone or with assistance, will quickly resolve the fascial adhesion (knot, trigger, tightness, what have you), restoring tissue to its homeostatic state. Whether you are dealing with chronic [low back pain and gluteal strain](/conditions/low-back-pain/) or severe [neck and shoulder tension](/conditions/shoulder-and-neck-pain/), this method gets results quickly.
 
-A skilled therapist will detect the sometimes very faint signal from the tissue indicating unwinding, and move on to the next location for the work. Being sensitive to this subtle movement means tissue will not be overworked, and patient comfort is maintained and improved.
+A skilled therapist will detect the sometimes very faint signal from the tissue indicating unwinding, and move on to the next location for the work. Being sensitive to this subtle movement means tissue will not be overworked, and patient comfort is maintained and improved on our [custom ergonomic bodywork table](/about/advanced-table/).
 
-**_Zero Point AMFR_** makes work more efficient, collaborative, pain free, and long lasting.
+**_Zero Point AMFR_** makes work more efficient, collaborative, pain free, and long lasting. For a deeper look at the biomechanical science behind this technique, explore our article on [what you need to know about Zero Point Advanced Myofascial Release](/writings/what-you-need-to-kinow-zero-point-advanced-myofascial-release/).
 
 Paul Brown, CMT, is proud to offer this unique take on MFR, and invites you to experience its gentle power first hand.
+

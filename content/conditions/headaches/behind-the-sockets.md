@@ -75,15 +75,12 @@ trigger points in the SCM and suboccipital muscles reproduce referred pain in th
 patients (Alonso-Blanco et al., 2011). Additionally, research in Cephalalgia confirms that manual inactivation of these specific cervical trigger points
 reduces retro-orbital pain intensity (Fernández-de-las-Peñas et al., 2007).
 How Paul Brown, CMT, Releases Retro-Orbital Pressure
-Standard eye drops and dark rooms will not fix a shortened muscle in your neck that is projecting pain into your orbit. As Paul Brown, CMT,
-specializing in Advanced Myofascial Release (MFR), my clinical strategy pinpoints the exact fascial channels driving this referred pain:
-Targeted SCM Decompression: Applying precise, gentle pincer palpation and sustained fascial stretching along both heads of the SCM to
-clear orbital trigger points without irritating delicate anterior neck structures.
-Deep Suboccipital and Splenius Unwinding: Releasing the skull base to restore rotation and uncompress nerve roots referring pain to the
-eye.
-Facial and Sphenoid Fascial Mobilization: Gently releasing the fascial structures surrounding the zygomatic arch and temporal fossa to
-relieve local tension around the orbital margins.
-If you are experiencing persistent eye pain despite clear eye exams, visit my Sacramento studio at [PLACEHOLDER_BUSINESS_ADDRESS].
-For broader muscle-tension insights, explore our main article on Tension Headaches: Causes and Myofascial Relief. If your pain stems from neck
-movement, read Neck Massage for Cervicogenic Headache Relief.
-Clear the pressure behind your eyes. Book your clinical session online or gift relief with an eGift Card.
+Standard eye drops and dark rooms will not fix a shortened muscle in your neck that is projecting pain into your orbit. At The Firelight Studio, my clinical strategy pinpoints the exact fascial channels driving this referred pain:
+
+* **Targeted SCM Decompression**: Applying precise, gentle pincer palpation and sustained fascial stretching along both heads of the SCM to clear orbital trigger points without irritating delicate anterior neck structures.
+* **Deep Suboccipital and Splenius Unwinding**: Releasing the skull base through [unloading the upper cervical arch](/conditions/headaches/unloading-the-upper-arch/) to restore rotation and uncompress nerve roots referring pain to the eye.
+* **Facial, Scalp, and Sphenoid Fascial Mobilization**: Gently releasing the fascial structures surrounding the zygomatic arch, galea aponeurotica, and temporal fossa with dedicated [cranial and scalp massage protocols](/writings/scalp-massage-yes/) to relieve local tension around the orbital margins.
+
+If you are experiencing persistent eye pain despite clear eye exams, our Sacramento studio can help you find structural relief. For broader cervical and craniosacral insights, explore our specialized guide on [pain at the base of the skull and neck](/conditions/shoulder-and-neck-pain/pain-at-base-of-skull-and-neck/) or experience targeted [Zero Point Myofascial Relief](/services/pain-relief/).
+
+Clear the pressure behind your eyes. [Book your clinical session online](https://vagaro.com/firelightstudio) today!

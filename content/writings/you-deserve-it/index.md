@@ -7,7 +7,10 @@ categories:
 
 ![You Deserve It](images/You-Deserve-It-1024x1024.png)
 
-You deserve to be free from pain, to move freely, to be calm.  Book yourself a massage today!
+You deserve to be free from pain, to move freely, and to live with calm and ease. Remember: [you don't have to hurt](/writings/you-dont-have-to-hurt/). 
 
-[Book Now](https://noterro.com/clinics/view/9558b099cb217ae82923caf0d6941c69)
+Whether you need targeted [Zero Point Myofascial Pain Relief](/services/pain-relief/) or regular monthly self-care through our [Secret Handshake Club Membership](/services/discount-membership/), give yourself permission to feel better today.
+
+[Book Your Appointment](https://vagaro.com/firelightstudio)
+
 
