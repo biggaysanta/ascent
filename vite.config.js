@@ -9,6 +9,7 @@ export default defineConfig({
   },
   build: {
     outDir: "static",
+    emptyOutDir: false,
     lib: {
       entry: "themes/embrace/assets/js/main.js",
       name: "FirelightStudio",

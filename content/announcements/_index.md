@@ -1,6 +1,6 @@
 ---
 date: '2025-12-06T10:56:02-08:00'
-draft: true
+draft: false
 title: 'Announcements'
 layout: 'announcements'
 ---

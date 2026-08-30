@@ -80,9 +80,7 @@
     --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-red-100: oklch(93.6% .032 17.717);
     --color-red-600: oklch(57.7% .245 27.325);
-    --color-red-700: oklch(50.5% .213 27.518);
     --color-orange-300: oklch(83.7% .128 66.29);
     --color-amber-50: oklch(98.7% .022 95.277);
     --color-amber-200: oklch(92.4% .12 95.746);
@@ -95,35 +93,20 @@
     --color-emerald-400: oklch(76.5% .177 163.223);
     --color-emerald-500: oklch(69.6% .17 162.48);
     --color-emerald-600: oklch(59.6% .145 163.225);
-    --color-emerald-800: oklch(43.2% .095 166.913);
     --color-blue-50: oklch(97% .014 254.604);
-    --color-blue-100: oklch(93.2% .032 255.585);
     --color-blue-200: oklch(88.2% .059 254.128);
-    --color-blue-300: oklch(80.9% .105 251.813);
     --color-blue-500: oklch(62.3% .214 259.815);
     --color-blue-600: oklch(54.6% .245 262.881);
     --color-blue-700: oklch(48.8% .243 264.376);
-    --color-blue-800: oklch(42.4% .199 265.638);
-    --color-blue-950: oklch(28.2% .091 267.935);
     --color-rose-600: oklch(58.6% .253 17.585);
     --color-rose-800: oklch(45.5% .188 13.697);
-    --color-slate-50: oklch(98.4% .003 247.858);
     --color-slate-700: oklch(37.2% .044 257.287);
-    --color-slate-800: oklch(27.9% .041 260.031);
     --color-slate-900: oklch(20.8% .042 265.755);
     --color-slate-950: oklch(12.9% .042 264.695);
     --color-gray-50: oklch(98.5% .002 247.839);
     --color-gray-500: oklch(55.1% .027 264.364);
     --color-gray-600: oklch(44.6% .03 256.802);
-    --color-neutral-100: oklch(97% 0 none);
-    --color-neutral-200: oklch(92.2% 0 none);
-    --color-neutral-300: oklch(87% 0 none);
-    --color-neutral-400: oklch(70.8% 0 none);
     --color-neutral-500: oklch(55.6% 0 none);
-    --color-neutral-600: oklch(43.9% 0 none);
-    --color-neutral-700: oklch(37.1% 0 none);
-    --color-neutral-800: oklch(26.9% 0 none);
-    --color-neutral-900: oklch(20.5% 0 none);
     --color-black: #000;
     --color-white: #fff;
     --spacing: .25rem;
@@ -164,7 +147,6 @@
     --font-weight-extrabold: 800;
     --font-weight-black: 900;
     --tracking-tighter: -.05em;
-    --tracking-tight: -.025em;
     --tracking-wide: .025em;
     --tracking-wider: .05em;
     --tracking-widest: .1em;
@@ -187,7 +169,6 @@
     --animate-bounce: bounce 1s infinite;
     --blur-sm: 8px;
     --blur-md: 12px;
-    --blur-xl: 24px;
     --blur-2xl: 40px;
     --aspect-video: 16 / 9;
     --default-transition-duration: .15s;
@@ -4079,10 +4060,6 @@
   .select-none {
     -webkit-user-select: none;
     user-select: none;
-  }
-
-  .\[fw\:\13 �i\16 ��\] {
-    fw: �i��;
   }
 
   .\[perspective\:1000px\] {
