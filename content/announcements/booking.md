@@ -19,7 +19,7 @@ lastmod: 2026-02-07T03:10:38.540Z
 Request Your Appointment
 
 {{< qr >}}
-https://vagaro.com/firelightstudio/service/26506/zero-point-advanced-myofascial-release
+https://vagaro.com/firelightstudio/
 {{< /qr >}}
 
-{{< button "https://vagaro.com/firelightstudio/service/26506/zero-point-advanced-myofascial-release" >}}Book Now!{{< /button >}}
+{{< button "https://vagaro.com/firelightstudio/" >}}Book Now!{{< /button >}}
