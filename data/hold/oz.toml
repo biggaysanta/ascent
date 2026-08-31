@@ -1,0 +1,49 @@
+[[oz]]
+id = "release"
+line1 = "release"
+line2 = "HEAL PAIN"
+line3 = "Embrace freedom."
+line4 = "advanced bodywork"
+image = "release.svg"
+text = "book"
+url = "link to noterro zero point"
+
+[[oz]]
+id = "recharge"
+line1 = "recharge"
+line2 = "RECOVER FASTER"
+line3 = "Personal best."
+line4 = "winner's circle sports massage"
+image = "recharge.svg"
+text = "book"
+url = "link to noterro tidal wave"
+
+[[oz]]
+id = "refresh"
+line1 = "refresh"
+line2 = "THINK CLEARER"
+line3 = "Center self."
+line4 = "tidal wave relaxation massage"
+image = "refresh.svg"
+text = "book"
+url = "link to noterro tidal wave"
+
+[[oz]]
+id = "relate"
+line1 = "relate"
+line2 = "LEARN TOGETHER"
+line3 = "Grow closer."
+line4 = "couples massage workshop"
+image = "relate.svg"
+text = "book"
+url = "call 9165348772 to book"
+
+[[oz]]
+id = "receive"
+line1 = "receive"
+line2 = "NEW LIFE"
+line3 = "Welcome home."
+line4 = "universal miracle prenatal massage"
+image = "receive.svg"
+text = "book"
+url = "link to noterro universal miracle"

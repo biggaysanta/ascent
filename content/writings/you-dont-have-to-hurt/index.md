@@ -8,7 +8,11 @@ date: "2024-01-22"
 
 * * *
 
+<<<<<<< Updated upstream
 Since 2003, I have been passionate about providing the best massage therapy service in Sacramento. Whether you are looking for [Pain Relief](/services/pain-relief/), [Sports Massage](/services/sports/), [Prenatal Massage](/services/prenatal/), or [Deep Relaxation Massage](/services/relaxation/), you will receive the best Sacramento massage possible! Myofascial therapy massage is my **pain relief/medical massage offering**. Using slow, sustained holds, facilitated stretching, cross fiber friction, and joint mobilization, we will unwind your fascial tissue and eliminate your pain. **You don’t have to hurt**.
+=======
+Since 2003, I have been passionate about providing the best massage therapy service in Sacramento. Whether you are looking for Pain Relief, Sports Massage, [Prenatal Massage](/services/prenatal/), or Deep Relaxation Massage, you will r. eceive the best sacramento massage possible! Myofascial therapy massage is my **pain relief/medical massage offering**. Using slow, sustained holds, facilitated stretching, cross fiber friction, and joint mobilization, we will unwind your fascial tissue and _eliminate your pain._ **You don’t have to hurt**.
+>>>>>>> Stashed changes
 
 ##  Massage Therapy Services
 
@@ -29,7 +33,11 @@ Since 2003, I have been passionate about providing the best massage therapy serv
 > 
 > \-Me
 
+<<<<<<< Updated upstream
 The Tidal Wave is an Esalen-inspired [Swedish Relaxation Massage](/services/relaxation/). It incorporates long flowing strokes, kneading, and percussion. It also includes vibration and friction strokes. These techniques achieve a deep state of relaxation in your body. A tidal wave relaxation massage combines full body-length effleurage (open-handed stroke) in a very rhythmic manner. It also uses regional work to lull you into a state of deep relaxation. Due to the nature of this innovative relaxation massage work, I have developed a custom draping technique. This technique ensures client modesty. It also allows me to perform this Sacramento relaxation massage effectively and achieve great results. You can feel better.
+=======
+The Tidal Wave is an Esalen-inspired Swedish Massage. It incorporates long flowing strokes, kneading, and percussion. It also includes vibration and friction strokes. These techniques achieve a deep state of relaxation in your body. A [tidal wave relaxation massage](/services/relaxation/) combines full body-length effleurage (open-handed stroke) in a very rhythmic manner. It also uses regional work to lull you into a state of deep relaxation. Due to the nature of this innovative relaxation massage work, I have developed a custom draping technique. This technique ensures client modesty. It also allows me to perform this Sacramento relaxation massage effectively and achieve great results. You can feel better.
+>>>>>>> Stashed changes
 
 > Exceptionally knowledgeable when it came to addressing my long standing back issues and providing me the tools to help myself feel and stay better, besides being a great massage therapist.
 > 

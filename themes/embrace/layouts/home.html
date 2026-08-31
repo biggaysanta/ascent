@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 {{ define "main" }}
 <div class="w-full space-y-8">
   {{/* 1. Hero / Welcome Article */}}
@@ -63,3 +64,23 @@
   {{ end }}
 </div>
 {{ end }}
+=======
+{{ define "main" }} {{/* Home page template */}} {{/* This template is used for
+the home page and includes the main content as well as any additional sections
+such as announcements and services tabs. */}}
+<!-- Video Hero Section -->
+<section
+  class="relative w-full flex flex-row items-center justify-center overflow-hidden mb-12"
+>
+  <!-- Centered Content -->
+  <div
+    class="relative z-20 text-center px-4 max-w-4xl mx-auto text-white prose prose-invert prose-h2:text-white prose-h2:text-4xl md:prose-h2:text-6xl prose-h2:font-display drop-shadow-lg"
+  >
+    {{ .Content }}
+  </div>
+</section>
+{{ partial "organisms/services.tabs.html" . }}
+
+<!-- SEO Hubs: Conditions We Treat -->
+{{ partial "organisms/conditions-grid.html" . }} {{ end }}
+>>>>>>> Stashed changes

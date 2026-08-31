@@ -1,0 +1,931 @@
+archetypedir = 'archetypes'
+assetdir = 'assets'
+baseurl = 'https://paulbrown.net/'
+cachedir = '/Users/paulbrown/Library/Caches/hugo_cache'
+capitalizelisttitles = true
+contentdir = 'content'
+copyright = '2000-2026 Paul Brown. All rights reserved.'
+datadir = 'data'
+defaultcontentlanguage = 'en'
+defaultcontentrole = 'guest'
+defaultoutputformat = 'html'
+environment = 'production'
+i18ndir = 'i18n'
+ignorefiles = ['^/prompts/', '^/data/hold/']
+layoutdir = 'layouts'
+locale = 'en-us'
+mainsections = ['writings', 'about', 'announcements', 'services']
+pluralizelisttitles = true
+publishdir = 'public'
+resourcedir = 'resources'
+staticdir = ['static']
+summarylength = 70
+theme = ['embrace']
+themesdir = 'themes'
+timeout = '60s'
+title = 'The Firelight Studio'
+titlecasestyle = 'AP'
+workingdir = '/Users/paulbrown/Library/Mobile Documents/com~apple~CloudDocs/1-Projects/0-websites/ascent'
+
+[author]
+
+[build]
+  useresourcecachewhen = 'fallback'
+
+  [build.buildstats]
+    enable = true
+
+  [[build.cachebusters]]
+    source = 'assets/notwatching/hugo_stats\.json'
+    target = 'css'
+
+  [[build.cachebusters]]
+    source = '(postcss|tailwind)\.config\.js'
+    target = 'css'
+
+[caches]
+  [caches.assets]
+    dir = ':resourceDir/_gen'
+    maxage = -1
+
+  [caches.getresource]
+    dir = ':cacheDir/:project'
+    maxage = -1
+
+  [caches.images]
+    dir = ':resourceDir/_gen'
+    maxage = -1
+
+  [caches.misc]
+    dir = ':cacheDir/:project'
+    maxage = -1
+
+  [caches.modulegitinfo]
+    dir = ':cacheDir/modules'
+    maxage = '24h'
+
+  [caches.modulequeries]
+    dir = ':cacheDir/modules'
+    maxage = '24h'
+
+  [caches.modules]
+    dir = ':cacheDir/modules'
+    maxage = -1
+
+[contenttypes]
+  [contenttypes.'text/asciidoc']
+
+  [contenttypes.'text/html']
+
+  [contenttypes.'text/markdown']
+
+  [contenttypes.'text/org']
+
+  [contenttypes.'text/pandoc']
+
+  [contenttypes.'text/rst']
+
+[deployment]
+  invalidatecdn = true
+  maxdeletes = 256
+  workers = 10
+
+[frontmatter]
+  date = ['date', 'publishdate', 'pubdate', 'published', 'lastmod', 'modified']
+  expirydate = ['expirydate', 'unpublishdate']
+  lastmod = [':git', 'lastmod', 'modified', 'date', 'publishdate', 'pubdate', 'published']
+  publishdate = ['publishdate', 'pubdate', 'published', 'date']
+
+[httpcache]
+  respectcachecontrolnostoreinrequest = true
+
+  [httpcache.cache]
+    [httpcache.cache.for]
+      excludes = ['**']
+
+  [[httpcache.polls]]
+    disable = true
+    high = '0s'
+    low = '0s'
+
+    [httpcache.polls.for]
+      includes = ['**']
+
+[imaging]
+  anchor = 'smart'
+  bgcolor = 'ffffff'
+  compression = 'lossy'
+  quality = 75
+  resamplefilter = 'box'
+
+  [imaging.exif]
+    excludefields = 'GPS|Exif|Exposure[M|P|B]|Contrast|Resolution|Sharp|JPEG|Metering|Sensing|Saturation|ColorSpace|Flash|WhiteBalance'
+
+  [imaging.meta]
+    fields = ['! *{GPS,Exif,Exposure[MPB],Contrast,Resolution,Sharp,JPEG,Metering,Sensing,Saturation,ColorSpace,Flash,WhiteBalance}*']
+    sources = ['exif', 'iptc']
+
+  [imaging.webp]
+    hint = 'photo'
+    method = 2
+
+[languages]
+  [languages.en]
+    locale = 'en-us'
+
+[markup]
+  defaultmarkdownhandler = 'goldmark'
+
+  [markup.asciidocext]
+    backend = 'html5'
+    failurelevel = 'fatal'
+    noheaderorfooter = true
+    safemode = 'unsafe'
+
+    [markup.asciidocext.attributes]
+
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      definitionlist = true
+      linkify = true
+      linkifyprotocol = 'https'
+      strikethrough = true
+      table = true
+      tasklist = true
+
+      [markup.goldmark.extensions.cjk]
+        eastasianlinebreaksstyle = 'simple'
+
+      [markup.goldmark.extensions.extras]
+        [markup.goldmark.extensions.extras.delete]
+
+        [markup.goldmark.extensions.extras.insert]
+
+        [markup.goldmark.extensions.extras.mark]
+
+        [markup.goldmark.extensions.extras.subscript]
+
+        [markup.goldmark.extensions.extras.superscript]
+
+      [markup.goldmark.extensions.footnote]
+        backlinkhtml = '&#x21a9;&#xfe0e;'
+        enable = true
+
+      [markup.goldmark.extensions.passthrough]
+        [markup.goldmark.extensions.passthrough.delimiters]
+
+      [markup.goldmark.extensions.typographer]
+        apostrophe = '&rsquo;'
+        ellipsis = '&hellip;'
+        emdash = '&mdash;'
+        endash = '&ndash;'
+        leftanglequote = '&laquo;'
+        leftdoublequote = '&ldquo;'
+        leftsinglequote = '&lsquo;'
+        rightanglequote = '&raquo;'
+        rightdoublequote = '&rdquo;'
+        rightsinglequote = '&rsquo;'
+
+    [markup.goldmark.parser]
+      autoheadingid = true
+      autoidtype = 'github'
+      wrapstandaloneimagewithinparagraph = true
+
+      [markup.goldmark.parser.attribute]
+        title = true
+
+    [markup.goldmark.renderer]
+      unsafe = true
+
+    [markup.goldmark.renderhooks]
+      [markup.goldmark.renderhooks.image]
+        useembedded = 'auto'
+
+      [markup.goldmark.renderhooks.link]
+        useembedded = 'auto'
+
+  [markup.highlight]
+    codefences = true
+    linenostart = 1
+    linenumbersintable = true
+    noclasses = true
+    style = 'monokai'
+    tabwidth = 4
+    wrapperclass = 'highlight'
+
+  [markup.tableofcontents]
+    endlevel = 3
+    startlevel = 2
+
+[mediatypes]
+  [mediatypes.'application/json']
+    delimiter = '.'
+    suffixes = ['json']
+
+  [mediatypes.'application/manifest+json']
+    delimiter = '.'
+    suffixes = ['webmanifest']
+
+  [mediatypes.'application/octet-stream']
+    delimiter = '.'
+
+  [mediatypes.'application/pdf']
+    delimiter = '.'
+    suffixes = ['pdf']
+
+  [mediatypes.'application/rss+xml']
+    delimiter = '.'
+    suffixes = ['xml', 'rss']
+
+  [mediatypes.'application/toml']
+    delimiter = '.'
+    suffixes = ['toml']
+
+  [mediatypes.'application/wasm']
+    delimiter = '.'
+    suffixes = ['wasm']
+
+  [mediatypes.'application/xml']
+    delimiter = '.'
+    suffixes = ['xml']
+
+  [mediatypes.'application/yaml']
+    delimiter = '.'
+    suffixes = ['yaml', 'yml']
+
+  [mediatypes.'font/otf']
+    delimiter = '.'
+    suffixes = ['otf']
+
+  [mediatypes.'font/ttf']
+    delimiter = '.'
+    suffixes = ['ttf']
+
+  [mediatypes.'image/avif']
+    delimiter = '.'
+    suffixes = ['avif']
+
+  [mediatypes.'image/bmp']
+    delimiter = '.'
+    suffixes = ['bmp']
+
+  [mediatypes.'image/gif']
+    delimiter = '.'
+    suffixes = ['gif']
+
+  [mediatypes.'image/heic']
+    delimiter = '.'
+    suffixes = ['heic']
+
+  [mediatypes.'image/heif']
+    delimiter = '.'
+    suffixes = ['heif']
+
+  [mediatypes.'image/jpeg']
+    delimiter = '.'
+    suffixes = ['jpg', 'jpeg', 'jpe', 'jif', 'jfif']
+
+  [mediatypes.'image/png']
+    delimiter = '.'
+    suffixes = ['png']
+
+  [mediatypes.'image/svg+xml']
+    delimiter = '.'
+    suffixes = ['svg']
+
+  [mediatypes.'image/tiff']
+    delimiter = '.'
+    suffixes = ['tif', 'tiff']
+
+  [mediatypes.'image/webp']
+    delimiter = '.'
+    suffixes = ['webp']
+
+  [mediatypes.'text/asciidoc']
+    delimiter = '.'
+    suffixes = ['adoc', 'asciidoc', 'ad']
+
+  [mediatypes.'text/calendar']
+    delimiter = '.'
+    suffixes = ['ics']
+
+  [mediatypes.'text/css']
+    delimiter = '.'
+    suffixes = ['css']
+
+  [mediatypes.'text/csv']
+    delimiter = '.'
+    suffixes = ['csv']
+
+  [mediatypes.'text/html']
+    delimiter = '.'
+    suffixes = ['html', 'htm']
+
+  [mediatypes.'text/javascript']
+    delimiter = '.'
+    suffixes = ['js', 'jsm', 'mjs']
+
+  [mediatypes.'text/jsx']
+    delimiter = '.'
+    suffixes = ['jsx']
+
+  [mediatypes.'text/markdown']
+    delimiter = '.'
+    suffixes = ['md', 'mdown', 'markdown']
+
+  [mediatypes.'text/org']
+    delimiter = '.'
+    suffixes = ['org']
+
+  [mediatypes.'text/pandoc']
+    delimiter = '.'
+    suffixes = ['pandoc', 'pdc']
+
+  [mediatypes.'text/plain']
+    delimiter = '.'
+    suffixes = ['txt']
+
+  [mediatypes.'text/rst']
+    delimiter = '.'
+    suffixes = ['rst']
+
+  [mediatypes.'text/tsx']
+    delimiter = '.'
+    suffixes = ['tsx']
+
+  [mediatypes.'text/typescript']
+    delimiter = '.'
+    suffixes = ['ts']
+
+  [mediatypes.'text/x-gotmpl']
+    delimiter = '.'
+    suffixes = ['gotmpl']
+
+  [mediatypes.'text/x-sass']
+    delimiter = '.'
+    suffixes = ['sass']
+
+  [mediatypes.'text/x-scss']
+    delimiter = '.'
+    suffixes = ['scss']
+
+  [mediatypes.'video/3gpp']
+    delimiter = '.'
+    suffixes = ['3gpp', '3gp']
+
+  [mediatypes.'video/mp4']
+    delimiter = '.'
+    suffixes = ['mp4']
+
+  [mediatypes.'video/mpeg']
+    delimiter = '.'
+    suffixes = ['mpg', 'mpeg']
+
+  [mediatypes.'video/ogg']
+    delimiter = '.'
+    suffixes = ['ogv']
+
+  [mediatypes.'video/webm']
+    delimiter = '.'
+    suffixes = ['webm']
+
+  [mediatypes.'video/x-msvideo']
+    delimiter = '.'
+    suffixes = ['avi']
+
+[menus]
+  [[menus.cta]]
+    name = 'sms'
+    url = 'sms:9165348772'
+    weight = 1
+
+    [menus.cta.params]
+      class = 'cs-glass-green cs-glass-button cs-glass-border-1 cs-glass-rounded-[50%] cs-glass-border-white elevation-2 hover:elevation-3 hover:brightness-125'
+      icon = 'sms'
+
+  [[menus.cta]]
+    name = 'phone'
+    url = 'tel:9165348772'
+    weight = 2
+
+    [menus.cta.params]
+      class = 'cs-glass-button-primary  elevation-2 hover:elevation-3 hover:brightness-125'
+      icon = 'phone'
+
+  [[menus.main]]
+    name = 'Home'
+    url = '/'
+    weight = 10
+
+    [menus.main.params]
+      class = 'bg-background-blur-sm elevation-2 hover:bg-background-blur-md  hover:brightness-125 active:brightness-150 active:scale-90 active:elevation-1'
+      icon = 'home'
+
+  [[menus.main]]
+    name = 'Book Now'
+    url = 'https://vagaro.com/firelightstudio'
+    weight = 20
+
+    [menus.main.params]
+      class = 'cs-glass-primary scale-105 hover:brightness-150 hover:scale-125 elevation-3 cs-glass-shimmer font-bold italic bg-background-blur-xl font-semibold italic'
+      icon = 'event'
+
+  [[menus.main]]
+    name = 'eGift Cards'
+    url = 'https://app.squareup.com/gift/BGPPNS6KGJ7WM/order'
+    weight = 30
+
+    [menus.main.params]
+      class = 'cs-glass-secondary elevation-2 hover:cs-glass-glow-secondary font-semibold italic hover:brightness-150 hover:scale-125 hover:cs-glass-glow-primary active:scale-95 active:elevation-1 active:brightness-95'
+      icon = 'credit_card'
+      type = 'ms'
+
+  [[menus.main]]
+    identifier = 'services'
+    name = 'Services'
+    url = '/services'
+    weight = 35
+
+    [menus.main.params]
+      class = 'cs-glass-button  elevation-1'
+      icon = 'info'
+
+  [[menus.main]]
+    identifier = 'writings'
+    name = 'Writings'
+    url = '/writings'
+    weight = 40
+
+    [menus.main.params]
+      icon = 'book'
+
+  [[menus.main]]
+    identifier = 'about'
+    name = 'About'
+    weight = 50
+
+    [menus.main.params]
+      icon = 'question_answer'
+
+  [[menus.main]]
+    name = 'Meet Paul Brown, CMT'
+    parent = 'about'
+    url = '/about'
+    weight = 5
+
+    [menus.main.params]
+      class = 'hover:cs-anim-wiggle'
+      icon = 'person'
+
+  [[menus.main]]
+    name = 'How To Massage Prep'
+    parent = 'about'
+    url = '/about/massage-prep/'
+
+    [menus.main.params]
+      icon = 'question_answer'
+
+  [[menus.main]]
+    name = 'Free Massage'
+    parent = 'about'
+    url = '/about/free-massage/'
+
+    [menus.main.params]
+      class = 'hover:cs-anim-wiggle'
+      icon = 'question_answer'
+
+  [[menus.main]]
+    name = 'Advanced Table'
+    parent = 'about'
+    url = '/about/advanced-table'
+
+  [[menus.main]]
+    name = 'SMS Terms'
+    parent = 'about'
+    url = '/about/sms'
+
+    [menus.main.params]
+      icon = 'handshake'
+
+  [[menus.main]]
+    name = 'Terms of Service'
+    parent = 'about'
+    url = '/about/tos'
+
+    [menus.main.params]
+      icon = 'handshake'
+
+  [[menus.main]]
+    name = 'Appointment Policies'
+    parent = 'about'
+    url = '/about/appointment-policies'
+
+  [[menus.main]]
+    identifier = 'shoulder'
+    name = 'The Shoulder'
+    parent = 'writings'
+    url = '/shoulder'
+    weight = 10
+
+  [[menus.main]]
+    identifier = 'contact'
+    name = 'Reach Out'
+    title = 'Get in touch with Paul'
+    url = '/contact'
+    weight = 80
+
+    [menus.main.params]
+      icon = 'phone'
+
+  [[menus.main]]
+    identifier = 'location'
+    name = 'Location'
+    title = 'Where is Paul Located?'
+    url = '/location'
+    weight = 90
+
+    [menus.main.params]
+      icon = 'map'
+
+[minify]
+  [minify.tdewolff]
+    [minify.tdewolff.css]
+
+    [minify.tdewolff.html]
+      keepdefaultattrvals = true
+      keepdocumenttags = true
+      keependtags = true
+      keepspecialcomments = true
+      templatedelims = ['', '']
+
+    [minify.tdewolff.js]
+      version = 2022
+
+    [minify.tdewolff.json]
+
+    [minify.tdewolff.svg]
+      keepnamespaces = ['', 'x-bind']
+
+    [minify.tdewolff.xml]
+
+[module]
+  noproxy = 'none'
+  private = '*.*'
+  proxy = 'direct'
+  workspace = 'off'
+
+  [module.hugoversion]
+    extended = true
+    min = '0.146.0'
+
+  [[module.imports]]
+    path = 'embrace'
+
+  [[module.mounts]]
+    source = 'assets'
+    target = 'assets'
+
+    [module.mounts.sites]
+      [module.mounts.sites.complements]
+
+      [module.mounts.sites.matrix]
+
+  [[module.mounts]]
+    source = 'themes\embrace\assets'
+    target = 'assets'
+
+    [module.mounts.sites]
+      [module.mounts.sites.complements]
+
+      [module.mounts.sites.matrix]
+
+  [[module.mounts]]
+    source = 'node_modules/@material-design-icons/svg/round'
+    target = 'assets/svg'
+
+    [module.mounts.sites]
+      [module.mounts.sites.complements]
+
+      [module.mounts.sites.matrix]
+
+  [[module.mounts]]
+    source = 'package.json'
+    target = 'assets/_jsconfig/package.json'
+
+    [module.mounts.sites]
+      [module.mounts.sites.complements]
+
+      [module.mounts.sites.matrix]
+
+  [[module.mounts]]
+    source = 'content'
+    target = 'content'
+
+    [module.mounts.sites]
+      [module.mounts.sites.complements]
+
+      [module.mounts.sites.matrix]
+
+  [[module.mounts]]
+    source = 'data'
+    target = 'data'
+
+    [module.mounts.sites]
+      [module.mounts.sites.complements]
+
+      [module.mounts.sites.matrix]
+
+  [[module.mounts]]
+    source = 'layouts'
+    target = 'layouts'
+
+    [module.mounts.sites]
+      [module.mounts.sites.complements]
+
+      [module.mounts.sites.matrix]
+
+  [[module.mounts]]
+    source = 'i18n'
+    target = 'i18n'
+
+    [module.mounts.sites]
+      [module.mounts.sites.complements]
+
+      [module.mounts.sites.matrix]
+
+  [[module.mounts]]
+    source = 'archetypes'
+    target = 'archetypes'
+
+    [module.mounts.sites]
+      [module.mounts.sites.complements]
+
+      [module.mounts.sites.matrix]
+
+  [[module.mounts]]
+    source = 'static'
+    target = 'static'
+
+    [module.mounts.sites]
+      [module.mounts.sites.complements]
+
+      [module.mounts.sites.matrix]
+
+[outputformats]
+  [outputformats.404]
+    ishtml = true
+    mediatype = 'text/html'
+    notalternative = true
+    permalinkable = true
+    ugly = true
+
+  [outputformats.alias]
+    ishtml = true
+    mediatype = 'text/html'
+    ugly = true
+
+  [outputformats.amp]
+    basename = 'index'
+    ishtml = true
+    mediatype = 'text/html'
+    path = 'amp'
+    permalinkable = true
+    rel = 'amphtml'
+
+  [outputformats.calendar]
+    basename = 'index'
+    isplaintext = true
+    mediatype = 'text/calendar'
+    protocol = 'webcal://'
+    rel = 'alternate'
+
+  [outputformats.css]
+    basename = 'styles'
+    isplaintext = true
+    mediatype = 'text/css'
+    notalternative = true
+    rel = 'stylesheet'
+
+  [outputformats.csv]
+    basename = 'index'
+    isplaintext = true
+    mediatype = 'text/csv'
+    rel = 'alternate'
+
+  [outputformats.gotmpl]
+    isplaintext = true
+    mediatype = 'text/x-gotmpl'
+    notalternative = true
+
+  [outputformats.html]
+    basename = 'index'
+    ishtml = true
+    mediatype = 'text/html'
+    permalinkable = true
+    rel = 'canonical'
+    weight = 10
+
+  [outputformats.json]
+    basename = 'index'
+    isplaintext = true
+    mediatype = 'application/json'
+    rel = 'alternate'
+
+  [outputformats.markdown]
+    basename = 'index'
+    isplaintext = true
+    mediatype = 'text/markdown'
+    rel = 'alternate'
+
+  [outputformats.robots]
+    basename = 'robots'
+    isplaintext = true
+    mediatype = 'text/plain'
+    rel = 'alternate'
+    root = true
+
+  [outputformats.rss]
+    basename = 'index'
+    mediatype = 'application/rss+xml'
+    nougly = true
+    rel = 'alternate'
+
+  [outputformats.sitemap]
+    basename = 'sitemap'
+    mediatype = 'application/xml'
+    rel = 'sitemap'
+    ugly = true
+
+  [outputformats.sitemapindex]
+    basename = 'sitemap'
+    mediatype = 'application/xml'
+    rel = 'sitemap'
+    root = true
+    ugly = true
+
+  [outputformats.webappmanifest]
+    basename = 'manifest'
+    isplaintext = true
+    mediatype = 'application/manifest+json'
+    notalternative = true
+    rel = 'manifest'
+
+[outputs]
+  home = ['html', 'rss']
+  page = ['html']
+  rss = ['rss']
+  section = ['html', 'rss']
+  taxonomy = ['html', 'rss']
+  term = ['html', 'rss']
+
+[page]
+  nextprevinsectionsortorder = 'desc'
+  nextprevsortorder = 'desc'
+
+[pagination]
+  pagersize = 10
+  path = 'page'
+
+[params]
+  colormood = 'theme-relate'
+  description = 'Paul Brown, CMT is a licensed massage therapist in Sacramento, California specializing in medical massage therapy, myofascial release, and sports massage.'
+  subtitle = 'by Paul Brown Massage Therapy'
+  tagline = 'Expert Medical Massage Therapist in Arden-Arcade, Sacramento'
+
+  [params.business]
+    conditions = ['Back Pain', 'Neck Pain', 'Carpal Tunnel Syndrome', 'Fibromyalgia', 'Hip Pain', 'Anxiety', 'Depression', 'Frozen Shoulder', 'Plantar Fasciitis']
+    email = 'paul@paulbrown.net'
+    image = 'images/png/paul-brown-massage-therapy-logo.png'
+    name = 'The Firelight Studio at Paul Brown Massage Therapy'
+    paymentaccepted = ['Cash', 'Visa', 'Mastercard', 'Amex', 'HSA', 'FSA', 'Bitcoin', 'CashApp', 'PayPal', 'Venmo', 'Zelle', 'ACH']
+    pricerange = '$$'
+    telephone = '916-534-8772'
+    type = ['HealthAndBeautyBusiness', 'MedicalBusiness']
+
+    [params.business.address]
+      addresscountry = 'US'
+      addresslocality = 'Sacramento'
+      addressregion = 'CA'
+      postalcode = '95825'
+      streetaddress = '947 Enterprise Drive, Suite 20'
+
+    [params.business.geo]
+      latitude = 38.6037
+      longitude = -121.4045
+
+    [[params.business.openinghours]]
+      closes = '21:00'
+      days = ['Monday']
+      opens = '12:00'
+
+    [[params.business.openinghours]]
+      closes = '19:00'
+      days = ['Tuesday']
+      opens = '09:00'
+
+    [[params.business.openinghours]]
+      closes = '21:00'
+      days = ['Wednesday']
+      opens = '09:00'
+
+    [[params.business.openinghours]]
+      closes = '20:00'
+      days = ['Thursday']
+      opens = '10:00'
+
+    [[params.business.openinghours]]
+      closes = '20:00'
+      days = ['Friday']
+      opens = '10:00'
+
+    [[params.business.openinghours]]
+      closes = '20:00'
+      days = ['Saturday']
+      opens = '10:00'
+
+[permalinks]
+  [permalinks.page]
+
+  [permalinks.section]
+
+  [permalinks.taxonomy]
+
+  [permalinks.term]
+
+[privacy]
+  [privacy.disqus]
+
+  [privacy.googleanalytics]
+    respectdonottrack = true
+
+  [privacy.instagram]
+
+  [privacy.vimeo]
+
+  [privacy.x]
+
+  [privacy.youtube]
+
+[related]
+  threshold = 80
+
+  [[related.indices]]
+    name = 'keywords'
+    type = 'basic'
+    weight = 100
+
+  [[related.indices]]
+    name = 'date'
+    type = 'basic'
+    weight = 10
+
+  [[related.indices]]
+    name = 'tags'
+    type = 'basic'
+    weight = 80
+
+[roles]
+  [roles.guest]
+
+[security]
+  [security.exec]
+    allow = ['^(dart-)?sass(-embedded)?$', '^go$', '^git$', '^npx$', '^postcss$', '^tailwindcss$']
+    osenv = ['(?i)^((HTTPS?|NO)_PROXY|PATH(EXT)?|APPDATA|TE?MP|TERM|GO\w+|(XDG_CONFIG_)?HOME|USERPROFILE|SSH_AUTH_SOCK|DISPLAY|LANG|SYSTEMDRIVE|PROGRAMDATA)$']
+
+  [security.funcs]
+    getenv = ['^HUGO_', '^CI$']
+
+  [security.http]
+    methods = ['(?i)GET|POST']
+    urls = ['.*']
+
+[segments]
+
+[server]
+  [[server.redirects]]
+    from = '/**'
+    status = 404
+    to = '/404.html'
+
+[services]
+  [services.disqus]
+
+  [services.googleanalytics]
+
+  [services.rss]
+    limit = -1
+
+  [services.x]
+
+[sitemap]
+  filename = 'sitemap.xml'
+  priority = -1
+
+[taxonomies]
+  category = 'categories'
+  tag = 'tags'
+
+[uglyurls]
+
+[versions]
+  [versions.'v1.0.0']

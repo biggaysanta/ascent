@@ -1,7 +1,12 @@
 <!doctype html>
 <html
+<<<<<<< Updated upstream
   lang="{{ site.Language.Locale }}"
   dir="{{ or site.Language.Direction `ltr` }}"
+=======
+  lang="{{ site.Language.Locale  }}"
+  dir="{{ or site.Language.Direction `ltr`}}"
+>>>>>>> Stashed changes
   class="{{ site.Params.colorMood }}"
 >
   <head>
@@ -56,18 +61,90 @@
     </div>
 
     <header
+<<<<<<< Updated upstream
       class="relative glass-panel-background z-30 min-w-xs max-w-6xl mx-auto px-4"
       x-data="{ open: false }"
     >
       {{ partial "header.html" . }}
+=======
+      class="relative bg-on-background/20 backdrop-blur-sm elevation-1 z-30 min-w-xs max-w-6xl mx-auto px-4"
+      x-data="{ open: false }"
+    >
+      <div class="min-w-xs max-w-6xl mx-auto px-4">
+        <div
+          class="relative flex flex-col items-center justify-center py-6 border-b border-secondary bg-[url('/svg/logo.svg')] bg-left bg-no-repeat bg-contain"
+        >
+          <div class="w-auto isolate leading-5 text-center">
+            <a href="/">
+              <h1 class="relative elevation-3">{{ site.Title }}</h1>
+            </a>
+            <a href="/about" class="relative elevation-2">
+              <p>{{ site.Params.subtitle }}</p>
+            </a>
+            <p class="text-center text-tertiary elevation-2">
+              {{ site.Params.tagline }}
+            </p>
+          </div>
+          <button
+            type="button"
+            class="flex w-full mt-4 items-center justify-center border border-secondary bg-secondary/10 p-2 text-secondary md:hidden"
+            aria-label="Toggle navigation"
+            aria-expanded="false"
+            @click="open = !open; $el.setAttribute('aria-expanded', open)"
+          >
+            <svg
+              class="h-6 w-6"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+            >
+              <path x-show="!open" d="M3 6h18M3 12h18M3 18h18" />
+              <path
+                x-show="open"
+                d="M6 6l12 12M18 6L6 18"
+                style="display: none"
+                x-cloak
+              />
+            </svg>
+          </button>
+        </div>
+
+        <nav
+          id="main-nav"
+          class="hidden md:flex md:items-center md:justify-around md:gap-4 md:py-6 md:mb-2"
+        >
+          {{ partial "menu.html" (dict "menuID" "main" "pageID" .) }}
+        </nav>
+
+        <nav
+          id="main-nav-mobile"
+          x-show="open"
+          x-cloak
+          x-transition
+          class="md:hidden w-full pb-4"
+        >
+          <div
+            class="w-full rounded-xl border border-secondary/40 bg-background/20 p-3 backdrop-blur-sm elevation-3"
+          >
+            {{ partial "menu.html" (dict "menuID" "main" "pageID" .) }}
+          </div>
+        </nav>
+      </div>
+>>>>>>> Stashed changes
     </header>
 
     <main class="relative min-w-xs max-w-6xl mx-auto mt-4 px-4 py-4">
       <div class="content-shell">
+<<<<<<< Updated upstream
 <!-- Line 128 -->
 <div class="content-column" style="view-transition-name: main-content;">
   {{ block "main" . }}{{ end }}
 </div>
+=======
+        <div class="content-column">{{ block "main" . }}{{ end }}</div>
+>>>>>>> Stashed changes
 
         <div class="side-column" aria-hidden="true">
           <div class="side-column-block">
@@ -76,6 +153,12 @@
           <div class="side-column-block">
             {{ partial "organisms/categories-widget.html" . }}
           </div>
+<<<<<<< Updated upstream
+=======
+          <div class="side-column-block">
+            {{ partial "organisms/payments.html" . }}
+          </div>
+>>>>>>> Stashed changes
         </div>
       </div>
     </main>

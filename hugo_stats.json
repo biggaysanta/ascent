@@ -1,5 +1,6 @@
 {
   "htmlElements": {
+<<<<<<< Updated upstream
     "tags": [
       "a",
       "article",
@@ -660,5 +661,10 @@
       "youve-booked-your-first-massage-now-what",
       "zero-point-advanced-myofascial-release"
     ]
+=======
+    "tags": null,
+    "classes": null,
+    "ids": null
+>>>>>>> Stashed changes
   }
 }

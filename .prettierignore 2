@@ -1,0 +1,15 @@
+node_modules/
+public/
+resources/
+static/
+archive/
+themes/**/static/
+.hugo_build.lock
+hugo_stats.json
+*.log
+*-report.json
+*.pdf
+.antigravitycli/
+.git/
+.git-backup/
+.git_backup/

@@ -7,6 +7,7 @@
       <p class="text-secondary/90 text-sm max-w-xl mx-auto">Visit our tranquil studio located in Arden-Arcade, Sacramento.</p>
     </header>
 
+<<<<<<< Updated upstream
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
       <!-- Location Details Card -->
       <div class="glass-panel-secondary-fill p-6 sm:p-8 rounded-3xl flex flex-col justify-between">
@@ -63,3 +64,22 @@
   </div>
 </div>
 {{ end }}
+=======
+<section class="w-full grid gap-4">
+  <div
+    class="p-4 bg-tertiary/20 backdrop-blur-md rounded-lg elevation-2 cs-gradient-aurora overflow-hidden"
+  >
+    <h3 class="text-2xl text-secondary mb-4">The Firelight Studio</h3>
+    <p class="text-secondary">{{.Content}}</p>
+
+    <p class="text-secondary">947 Enterprise Dr.</p>
+    <p class="text-secondary">Suite 20</p>
+    <p class="text-secondary">Phone: (916) 534-8772</p>
+    <p class="text-secondary">Email: paul@paulbrown.net</p>
+  </div>
+  <div class="p-4 cs-glass-dark rounded-lg elevation-2">
+    {{ partial "molecules/map.html" . }}
+  </div>
+</section>
+{{end}}
+>>>>>>> Stashed changes
