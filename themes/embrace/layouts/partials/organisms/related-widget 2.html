@@ -1,0 +1,17 @@
+{{ $related := .Site.RegularPages.Related . | first 5 }}
+{{ with $related }}
+<aside class="widget-related-content">
+  <div class="widget-header">
+    <h3 class="widget-title">Related Content</h3>
+  </div>
+  <div class="widget-body">
+    <ul class="related-list">
+      {{ range . }}
+      <li class="related-item">
+        <a href="{{ .RelPermalink }}" class="related-link">{{ .Title }}</a>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+</aside>
+{{ end }}

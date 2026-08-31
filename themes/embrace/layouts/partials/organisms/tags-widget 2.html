@@ -1,0 +1,38 @@
+{{ if site.Taxonomies.tags }}
+<aside id="tags-widget" class="widget-tags w-full mb-6">
+  <div class="bg-secondary/10 border border-secondary/20 backdrop-blur-md rounded-2xl p-5 elevation-2">
+    <header class="widget-header mb-4 text-center">
+      <h2 class="widget-title mb-2 text-xl font-display text-primary">Tags</h2>
+    </header>
+    
+    <div class="widget-body flex flex-wrap gap-x-4 gap-y-2 justify-center items-baseline">
+      {{ $maxSize := 2.5 }}
+      {{ $minSize := 0.875 }}
+      
+      {{ $tags := site.Taxonomies.tags.ByCount }}
+      {{ $maxCount := 0 }}
+      {{ if len $tags }}
+        {{ $maxCount = (index $tags 0).Count }}
+      {{ end }}
+      
+      {{ range site.Taxonomies.tags.Alphabetical }}
+        {{ $weight := 0.0 }}
+        {{ if gt $maxCount 1 }}
+          {{/* Use Log math to calculate relative sizing between min and max */}}
+          {{ $weight = div (math.Log .Count) (math.Log $maxCount) }}
+        {{ else if eq $maxCount 1 }}
+          {{ $weight = 0.5 }}
+        {{ end }}
+        
+        {{ $size := add $minSize (mul $weight (sub $maxSize $minSize)) }}
+        
+        <a href="{{ .Page.RelPermalink }}" 
+           class="inline-block transition-all duration-300 text-on-background/80 hover:text-accent hover:scale-110 hover:-translate-y-1 hover:text-glow-accent" 
+           style="font-size: {{ $size }}rem; opacity: {{ add 0.5 (mul $weight 0.5) }}; line-height: 1;">
+          #{{ .Page.Title | lower }}
+        </a>
+      {{ end }}
+    </div>
+  </div>
+</aside>
+{{ end }}

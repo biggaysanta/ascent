@@ -1,5 +1,8 @@
 .theme-receive {
+<<<<<<< Updated upstream
   /* Brand/Core Colors */
+=======
+>>>>>>> Stashed changes
   --color-primary: oklch(49.48% 0.132 277.34);
   --color-on-primary: oklch(98.34% 0.010 305.41);
   --color-secondary: oklch(48.72% 0.056 281.56);
@@ -7,7 +10,10 @@
   --color-tertiary: oklch(49.82% 0.119 29.86);
   --color-on-tertiary: oklch(98.20% 0.009 26.02);
 
+<<<<<<< Updated upstream
   /* Fill/Text Variants */
+=======
+>>>>>>> Stashed changes
   --color-primary-fill: oklch(74.73% 0.131 279.85);
   --color-primary-text: oklch(30.75% 0.143 271.83);
   --color-secondary-fill: oklch(91.63% 0.042 285.54);
@@ -15,31 +21,46 @@
   --color-tertiary-fill: oklch(77.39% 0.133 29.90);
   --color-tertiary-text: oklch(32.38% 0.104 30.08);
 
+<<<<<<< Updated upstream
   /* Surfaces & Backgrounds */
+=======
+>>>>>>> Stashed changes
   --color-background: oklch(98.34% 0.010 305.41);
   --color-card: oklch(94.88% 0.013 306.03);
   --color-card-alt: oklch(93.26% 0.011 303.11);
   --color-elevated: oklch(91.44% 0.011 303.10);
   --color-border: oklch(58.27% 0.011 292.64);
   --color-subtle-border: oklch(76.41% 0.010 299.18);
+<<<<<<< Updated upstream
 
   /* Typography */
   --color-text: oklch(31.95% 0.011 285.79);
   --color-muted-text: oklch(48.53% 0.011 292.55);
 
   /* Semantic Error Colors */
+=======
+  --color-text: oklch(31.95% 0.011 285.79);
+  --color-muted-text: oklch(48.53% 0.011 292.55);
+
+>>>>>>> Stashed changes
   --color-error: oklch(50.86% 0.193 27.64);
   --color-on-error: oklch(98.20% 0.009 26.02);
   --color-error-fill: oklch(67.11% 0.214 27.69);
   --color-error-text: oklch(28.72% 0.117 27.53);
+<<<<<<< Updated upstream
   
   /* Shadows */
   --color-shadow: var(--color-ruby);
+=======
+>>>>>>> Stashed changes
 }
 
 @media (prefers-color-scheme: dark) { 
   .theme-receive {
+<<<<<<< Updated upstream
     /* Brand/Core Colors */
+=======
+>>>>>>> Stashed changes
     --color-primary: oklch(75.65% 0.127 280.43);
     --color-on-primary: oklch(31.43% 0.143 272.20);
     --color-secondary: oklch(82.95% 0.056 283.98);
@@ -47,7 +68,10 @@
     --color-tertiary: oklch(80.60% 0.111 29.23);
     --color-on-tertiary: oklch(35.56% 0.108 30.13);
 
+<<<<<<< Updated upstream
     /* Fill/Text Variants */
+=======
+>>>>>>> Stashed changes
     --color-primary-fill: oklch(71.52% 0.131 279.64);
     --color-primary-text: oklch(26.99% 0.149 269.23);
     --color-secondary-fill: oklch(35.76% 0.055 280.46);
@@ -55,25 +79,39 @@
     --color-tertiary-fill: oklch(76.49% 0.134 29.41);
     --color-tertiary-text: oklch(31.53% 0.103 30.21);
 
+<<<<<<< Updated upstream
     /* Surfaces & Backgrounds */
+=======
+>>>>>>> Stashed changes
     --color-background: oklch(16.62% 0.010 285.21);
     --color-card: oklch(21.61% 0.012 285.38);
     --color-card-alt: oklch(24.19% 0.011 285.52);
     --color-elevated: oklch(26.70% 0.011 285.63);
     --color-border: oklch(56.30% 0.011 299.08);
     --color-subtle-border: oklch(40.15% 0.012 292.43);
+<<<<<<< Updated upstream
 
     /* Typography */
     --color-text: oklch(92.35% 0.011 303.10);
     --color-muted-text: oklch(74.18% 0.010 299.17);
 
     /* Semantic Error Colors */
+=======
+    --color-text: oklch(92.35% 0.011 303.10);
+    --color-muted-text: oklch(74.18% 0.010 299.17);
+
+>>>>>>> Stashed changes
     --color-error: oklch(71.82% 0.176 27.57);
     --color-on-error: oklch(25.72% 0.105 27.65);
     --color-error-fill: oklch(47.21% 0.187 27.54);
     --color-error-text: oklch(84.66% 0.084 26.20);
+<<<<<<< Updated upstream
     
     /* Shadows */
     --color-shadow: var(--color-ruby);
   }
 }
+=======
+  }
+}
+>>>>>>> Stashed changes

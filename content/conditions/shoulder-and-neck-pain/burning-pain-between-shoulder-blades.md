@@ -26,8 +26,8 @@ While most interscapular burning is muscular, it is critical to screen for deepe
                                                  [True Rhomboid Ischemia & Burning]
 ```
 
-* **Cervical Disc Herniation (C5-C6 or C6-C7):** An injury to these lower cervical discs can irritate the nerve roots, projecting a deep, hot, burning ache along the medial border of the scapula. This can occur even if the patient feels little to no pain in the neck itself. To check for this neurological involvement, review the clinical diagnostic maps outlined in [pinched nerve in neck symptoms](/pinched-nerve-neck-symptoms).
-* **The Dorsal Scapular Nerve Entrapment:** This nerve innervates the rhomboids and levator scapulae. It can become entrapped as it passes through the middle scalene muscle in the neck, causing a persistent, intractable burning sensation between the shoulder blades that fails to respond to local mid-back massages. For a detailed look at how these unilateral structural neck strains operate, see our guide on [neck and shoulder pain on one side](/neck-shoulder-pain-one-side).
+* **Cervical Disc Herniation (C5-C6 or C6-C7):** An injury to these lower cervical discs can irritate the nerve roots, projecting a deep, hot, burning ache along the medial border of the scapula. This can occur even if the patient feels little to no pain in the neck itself. To check for this neurological involvement, review the clinical diagnostic maps outlined in [pinched nerve in neck symptoms](/conditions/shoulder-and-neck-pain/pinched-nerve-neck-symptoms/).
+* **The Dorsal Scapular Nerve Entrapment:** This nerve innervates the rhomboids and levator scapulae. It can become entrapped as it passes through the middle scalene muscle in the neck, causing a persistent, intractable burning sensation between the shoulder blades that fails to respond to local mid-back massages. For a detailed look at how these unilateral structural neck strains operate, see our guide on [neck and shoulder pain on one side](/conditions/shoulder-and-neck-pain/neck-shoulder-pain-one-side/).
 
 ## Evidence-Based Interscapular Relief Strategies
 
@@ -41,6 +41,11 @@ Use a firm foam roller placed horizontally across your mid-back. Support your he
 
 ## Localized Clinical Solutions in Sacramento
 
-For residents across Sacramento dealing with chronic desk-bound postural fatigue, specialized local clinical bodywork provides targeted relief. Local soft-tissue specialists focus on releasing the deep anterior scalenes and pectoralis minor muscles to open the chest structure, while applying focused myofascial release directly to the overstretched rhomboid fibers. 
+For residents across Sacramento dealing with chronic desk-bound postural fatigue, specialized local clinical bodywork provides targeted relief. Local soft-tissue specialists focus on releasing the deep anterior scalenes and pectoralis minor muscles to open the chest structure, while applying [Zero Point Advanced Myofascial Release](/services/pain-relief/#the-zero-point-defined) directly to the overstretched rhomboid fibers. 
 
-If your mid-back burning is accompanied by systemic upper-body tension or structural headaches, it is highly recommended to pair your recovery with the protocols found in [trapezius muscle pain relief](/trapezius-muscle-pain-relief). By addressing the complete kinetic chain, local clinical support helps you break free from postural exhaustion and build long-term spinal stability.
+If your mid-back burning is accompanied by systemic upper-body tension or structural headaches, it is highly recommended to pair your recovery with the protocols found in [trapezius muscle pain relief](/conditions/shoulder-and-neck-pain/trapezius-muscle-pain-relief/). By addressing the complete kinetic chain and remembering that [you don't have to hurt](/writings/you-dont-have-to-hurt/), local clinical support helps you break free from postural exhaustion and build long-term spinal stability.
+
+<<<<<<< Updated upstream:content/conditions/shoulder-and-neck-pain/burning-pain-between-shoulder-blades.md
+=======
+If your mid-back burning is accompanied by systemic upper-body tension or structural headaches, it is highly recommended to pair your recovery with the protocols found in [trapezius muscle pain relief](/trapezius-muscle-pain-relief). By addressing the complete kinetic chain, local clinical support helps you [break free from postural exhaustion](/writings/you-dont-have-to-hurt/) and build long-term spinal stability.
+>>>>>>> Stashed changes:content/shoulder/burning-pain-between-shoulder-blades.md

@@ -7,6 +7,7 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+
 node_modules
 dist
 dist-ssr
@@ -21,7 +22,16 @@ dist-ssr
 *.ntvs*
 *.njsproj
 *.sln
+<<<<<<< Updated upstream
 # Git backups
 .git_backup/
 .git-backup/
 .git*backup*/
+public/
+resources/_gen/
+=======
+*.sw?
+
+.git-backup/
+.git_backup/
+>>>>>>> Stashed changes

@@ -1,0 +1,81 @@
+/* Wizard of Oz: Brains (Scarecrow) Context */
+.theme-brains {
+  /* Brand/Core Colors */
+  --color-primary: oklch(60% 0.16 80);
+  --color-on-primary: oklch(15% 0.05 80);
+  --color-secondary: oklch(75% 0.08 75);
+  --color-on-secondary: oklch(20% 0.05 75);
+  --color-tertiary: oklch(45% 0.12 145);
+  --color-on-tertiary: oklch(95% 0.02 145);
+  
+  /* Fill/Text Variants */
+  --color-primary-fill: oklch(85% 0.15 85);
+  --color-primary-text: oklch(35% 0.12 80);
+  --color-secondary-fill: oklch(92% 0.05 75);
+  --color-secondary-text: oklch(40% 0.06 75);
+  --color-tertiary-fill: oklch(88% 0.08 145);
+  --color-tertiary-text: oklch(30% 0.10 145);
+  
+  /* Surfaces & Backgrounds */
+  --color-background: oklch(98% 0.01 80);
+  --color-card: oklch(95% 0.01 80);
+  --color-card-alt: oklch(93% 0.02 80);
+  --color-elevated: oklch(90% 0.03 80);
+  --color-border: oklch(65% 0.04 80);
+  --color-subtle-border: oklch(85% 0.02 80);
+  
+  /* Typography */
+  --color-text: oklch(25% 0.03 80);
+  --color-muted-text: oklch(50% 0.03 80);
+
+  /* Semantic Error Colors (Standardized) */
+  --color-error: oklch(50.86% 0.193 27.64);
+  --color-on-error: oklch(98.20% 0.009 26.02);
+  --color-error-fill: oklch(67.11% 0.214 27.69);
+  --color-error-text: oklch(28.72% 0.117 27.53);
+
+  /* Shadows */
+  --color-shadow: var(--color-topaz);
+}
+
+
+@media (prefers-color-scheme: dark) {
+  .theme-brains {
+    /* Brand/Core Colors */
+    --color-primary: oklch(85% 0.15 85);
+    --color-on-primary: oklch(25% 0.10 80);
+    --color-secondary: oklch(75% 0.08 75);
+    --color-on-secondary: oklch(20% 0.05 75);
+    --color-tertiary: oklch(75% 0.15 145);
+    --color-on-tertiary: oklch(20% 0.05 145);
+
+    /* Fill/Text Variants */
+    --color-primary-fill: oklch(40% 0.10 80);
+    --color-primary-text: oklch(88% 0.12 85);
+    --color-secondary-fill: oklch(35% 0.05 75);
+    --color-secondary-text: oklch(85% 0.06 75);
+    --color-tertiary-fill: oklch(30% 0.10 145);
+    --color-tertiary-text: oklch(88% 0.08 145);
+
+    /* Surfaces & Backgrounds */
+    --color-background: oklch(15% 0.01 80);
+    --color-card: oklch(20% 0.015 80);
+    --color-card-alt: oklch(23% 0.02 80);
+    --color-elevated: oklch(26% 0.02 80);
+    --color-border: oklch(45% 0.02 80);
+    --color-subtle-border: oklch(30% 0.015 80);
+
+    /* Typography */
+    --color-text: oklch(95% 0.01 80);
+    --color-muted-text: oklch(75% 0.01 80);
+
+    /* Semantic Error Colors (Standardized) */
+    --color-error: oklch(71.82% 0.176 27.57);
+    --color-on-error: oklch(25.72% 0.105 27.65);
+    --color-error-fill: oklch(47.21% 0.187 27.54);
+    --color-error-text: oklch(84.66% 0.084 26.20);
+    
+    /* Shadows */
+    --color-shadow: var(--color-topaz);
+  }
+}

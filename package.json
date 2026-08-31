@@ -6,7 +6,11 @@
   "scripts": {
     "dev": "npx concurrently \"hugo server -D\" vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "links:check": "node scripts/apply-cross-links.mjs",
+    "links:apply": "node scripts/apply-cross-links.mjs --apply"
   },
   "dependencies": {
     "@casoon/atlas": "^0.2.0",
@@ -19,9 +23,17 @@
     "nanostores": "^1.2.0"
   },
   "devDependencies": {
+<<<<<<< Updated upstream
     "@tailwindcss/cli": "^4.3.3",
     "@tailwindcss/typography": "^0.5.20",
     "tailwindcss": "^4.3.3",
+=======
+    "@tailwindcss/cli": "^4.2.2",
+    "@tailwindcss/typography": "^0.5.19",
+    "prettier": "^3.9.6",
+    "prettier-plugin-go-template": "^0.0.15",
+    "tailwindcss": "^4.2.2",
+>>>>>>> Stashed changes
     "vite": "^8.0.2"
   }
 }

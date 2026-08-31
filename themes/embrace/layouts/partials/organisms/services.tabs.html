@@ -36,7 +36,11 @@ service offerings. */}}
       id="service-{{ $id }}"
       role="tabpanel"
       aria-labelledby="tab-btn-{{ $id }}"
+<<<<<<< Updated upstream
       class="service-box {{ $colorTheme }} absolute inset-0 w-full mx-auto glass-panel-tertiary p-4 sm:p-6 flex flex-col justify-center items-center text-center rounded-xl transition-all duration-300 opacity-0 pointer-events-none scale-95 z-0 elevation-2 overflow-hidden"
+=======
+      class="{{ $colorTheme }} absolute inset-0 w-full mx-auto bg-tertiary/20 p-4 sm:p-6 flex flex-col justify-center items-center text-center rounded-xl transition-all duration-250 opacity-0 pointer-events-none scale-95 z-0 elevation-3 overflow-hidden"
+>>>>>>> Stashed changes
     >
       <!-- Background Video/Image -->
       {{ $vidUrl := .Params.videourl }}
@@ -54,17 +58,26 @@ service offerings. */}}
 
         <video
           class="bg-vid absolute inset-0 w-full h-full object-cover z-0 motion-reduce:hidden grayscale opacity-80"
+<<<<<<< Updated upstream
+=======
+          src="{{- if $vid }}{{ $vid.RelPermalink }}{{ else }}{{ $vidUrl | relURL }}{{ end -}}"
+>>>>>>> Stashed changes
           poster="{{- if $poster }}{{ $poster.RelPermalink }}{{ else if $posterUrl }}{{ $posterUrl | relURL }}{{ end -}}"
           muted
           playsinline
           loop
           autoplay
+<<<<<<< Updated upstream
           preload="auto"
           aria-hidden="true"
         >
           <source src="{{- if $vid }}{{ $vid.RelPermalink }}{{ else }}{{ $vidUrl | relURL }}{{ end -}}" type="video/mp4">
           <source src="{{- if $vid }}{{ $vid.RelPermalink }}{{ else }}{{ $vidUrl | relURL }}{{ end -}}" type="video/quicktime">
         </video>
+=======
+          aria-hidden="true"
+        ></video>
+>>>>>>> Stashed changes
 
         <!-- Motion Reduce Fallback Poster -->
         {{ if or $poster $posterUrl }}
@@ -85,7 +98,11 @@ service offerings. */}}
         />
       {{ end }}
 
+<<<<<<< Updated upstream
       <!-- Glass Overlay (10% bg opacity, standard blur) -->
+=======
+      <!-- Glass Overlay -->
+>>>>>>> Stashed changes
       <div
         class="absolute inset-0 z-10 bg-tertiary/10 backdrop-blur-sm pointer-events-none"
       ></div>
@@ -95,11 +112,16 @@ service offerings. */}}
         class="relative z-20 flex flex-col items-center justify-center h-full w-full max-w-lg mx-auto"
       >
         <h2
+<<<<<<< Updated upstream
           class="font-black uppercase tracking-wide text-primary mb-2 text-2xl md:text-4xl leading-tight drop-shadow-md"
+=======
+          class="font-black uppercase tracking-wide text-primary mb-2 text-3xl md:text-5xl leading-tight drop-shadow-md"
+>>>>>>> Stashed changes
         >
           {{ .Params.line1 }}
         </h2>
         <h3
+<<<<<<< Updated upstream
           class="uppercase tracking-widest text-primary font-semibold mb-2 sm:mb-3 text-xs sm:text-sm drop-shadow-md"
         >
           {{ .Params.line2 }}
@@ -108,6 +130,16 @@ service offerings. */}}
           “{{ .Params.line3 }}”
         </p>
         <p class="text-primary mb-6 text-sm sm:text-base font-bold drop-shadow-md">
+=======
+          class="uppercase tracking-widest text-primary font-semibold mb-2 sm:mb-4 text-sm md:text-base drop-shadow-md"
+        >
+          {{ .Params.line2 }}
+        </h3>
+        <p class="italic text-primary mb-6 text-xl drop-shadow-md">
+          “{{ .Params.line3 }}”
+        </p>
+        <p class="text-primary mb-8 text-2xl font-bold drop-shadow-md">
+>>>>>>> Stashed changes
           {{ .Params.line4 }}
         </p>
 
@@ -117,14 +149,22 @@ service offerings. */}}
           <a
             id="btn-learn-{{ $id }}"
             href="{{ .RelPermalink }}"
+<<<<<<< Updated upstream
             class="flex-1 glass-button-secondary text-secondary font-bold uppercase tracking-wider inline-block py-2 px-3 text-xs transition-all text-center rounded-lg"
+=======
+            class="flex-1 bg-transparent text-white border border-white/60 hover:bg-white/20 hover:anim-bounce  inline-block py-3 text-md font-bold uppercase tracking-wider transition-all text-center rounded-lg"
+>>>>>>> Stashed changes
           >
             Learn More
           </a>
           <a
             id="btn-book-{{ $id }}"
             href="{{ $bookUrl }}"
+<<<<<<< Updated upstream
             class="flex-1 glass-button-primary text-primary font-bold uppercase tracking-wider inline-block py-2 px-3 text-xs transition-all text-center rounded-lg"
+=======
+            class="flex-1 bg-white/20 text-white font-bold backdrop-blur-md border border-white/60 elevation-5 hover:anim-bounce inline-block py-3 text-md uppercase tracking-wider hover:bg-white/40 transition-all text-center rounded-lg"
+>>>>>>> Stashed changes
           >
             {{ $btnText }}
           </a>
@@ -143,12 +183,21 @@ service offerings. */}}
 
     function adjustHeight() {
       if (!deckContainer) return;
+<<<<<<< Updated upstream
       deckContainer.style.minHeight = "460px";
       deckContainer.style.height = "520px";
+=======
+      const rect = deckContainer.getBoundingClientRect();
+      const paddingBottom = 40;
+      let remainingHeight = window.innerHeight - rect.top - paddingBottom;
+      remainingHeight = Math.max(remainingHeight, 400);
+      deckContainer.style.height = remainingHeight + "px";
+>>>>>>> Stashed changes
     }
 
     window.addEventListener("resize", adjustHeight);
     adjustHeight();
+<<<<<<< Updated upstream
 
     function activateTab(targetId) {
       tabs.forEach((tab) => {
@@ -204,6 +253,63 @@ service offerings. */}}
       tab.addEventListener("click", function () {
         activateTab(this.getAttribute("data-target"));
       });
+=======
+
+    function activateTab(targetId) {
+      tabs.forEach((tab) => {
+        if (tab.getAttribute("data-target") === targetId) {
+          tab.classList.add("opacity-100", "scale-105");
+          tab.classList.remove("opacity-70");
+        } else {
+          tab.classList.remove("opacity-100", "scale-105");
+          tab.classList.add("opacity-70");
+        }
+      });
+
+      boxes.forEach((box) => {
+        if (box.id === targetId) {
+          box.classList.add(
+            "opacity-100",
+            "pointer-events-auto",
+            "scale-100",
+            "z-10",
+          );
+          box.classList.remove(
+            "opacity-0",
+            "pointer-events-none",
+            "scale-95",
+            "z-0",
+          );
+        } else {
+          box.classList.remove(
+            "opacity-100",
+            "pointer-events-auto",
+            "scale-100",
+            "z-10",
+          );
+          box.classList.add(
+            "opacity-0",
+            "pointer-events-none",
+            "scale-95",
+            "z-0",
+          );
+        }
+      });
+
+      setTimeout(adjustHeight, 50);
+    }
+
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", function () {
+        activateTab(this.getAttribute("data-target"));
+      });
+    });
+
+    activateTab("service-release");
+
+    document.querySelectorAll(".bg-vid").forEach((vid) => {
+      vid.playbackRate = 0.5;
+>>>>>>> Stashed changes
     });
 
     activateTab("service-release");
