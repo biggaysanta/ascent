@@ -22,16 +22,10 @@ dist-ssr
 *.ntvs*
 *.njsproj
 *.sln
-<<<<<<< Updated upstream
 # Git backups
 .git_backup/
 .git-backup/
 .git*backup*/
 public/
 resources/_gen/
-=======
 *.sw?
-
-.git-backup/
-.git_backup/
->>>>>>> Stashed changes

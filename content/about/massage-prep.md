@@ -1,15 +1,11 @@
 ---
 title: How to do a Good Massage Prep
-<<<<<<< Updated upstream
 author: 'Paul Brown'
 author_location: "Sacramento, CA"
 author_credentials: "CMT"
 license_type: "CMT"
 author_email: "paul@paulbrown.net"
 author_telephone: "9165348772"
-=======
-
->>>>>>> Stashed changes
 date: 2023-05-29
 lastmod: 2025-10-09T02:08:11.674Z
 image: /images/prep.jpg

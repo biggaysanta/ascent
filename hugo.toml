@@ -16,15 +16,10 @@ colorMood = "theme-dorothy"
 subtitle = "by Paul Brown Massage Therapy"
 tagline = 'Expert Medical Massage Therapist in Arden-Arcade, Sacramento'
 description = 'Paul Brown, CMT is a licensed massage therapist in Sacramento, California specializing in medical massage therapy, myofascial release, and sports massage.'
-
   [params.business]
   type = ['HealthAndBeautyBusiness', 'MedicalBusiness']
   name = 'The Firelight Studio at Paul Brown Massage Therapy'
-<<<<<<< Updated upstream
   image = 'images/png/paul-brown-massage-therapy-logo.png'
-=======
-  image="/images/zero-point-logo-no text-v1.0.png"
->>>>>>> Stashed changes
   email = 'paul@paulbrown.net'
   telephone = '916-534-8772'
   priceRange = '$$'
@@ -170,7 +165,7 @@ url="/services/couples-massage-workshop/"
 icon='diversity_1'
 
 [[menu.main]]
-name='Recharge: Winner\'s Circle Sports'
+name="Recharge: Winner's Circle Sport"
 identifier='recharge'
 parent='services'
 weight=40
@@ -263,5 +258,5 @@ weight=10
     source = 'assets/notwatching/hugo_stats\.json'
     target = 'css'
   [[build.cachebusters]]
-    source = '(postcss|tailwind)\.config\.js'
+    source = 'tailwind\.config\.js'
     target = 'css'

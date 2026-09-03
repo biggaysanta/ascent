@@ -45,7 +45,3 @@ For residents across Sacramento dealing with chronic desk-bound postural fatigue
 
 If your mid-back burning is accompanied by systemic upper-body tension or structural headaches, it is highly recommended to pair your recovery with the protocols found in [trapezius muscle pain relief](/conditions/shoulder-and-neck-pain/trapezius-muscle-pain-relief/). By addressing the complete kinetic chain and remembering that [you don't have to hurt](/writings/you-dont-have-to-hurt/), local clinical support helps you break free from postural exhaustion and build long-term spinal stability.
 
-<<<<<<< Updated upstream:content/conditions/shoulder-and-neck-pain/burning-pain-between-shoulder-blades.md
-=======
-If your mid-back burning is accompanied by systemic upper-body tension or structural headaches, it is highly recommended to pair your recovery with the protocols found in [trapezius muscle pain relief](/trapezius-muscle-pain-relief). By addressing the complete kinetic chain, local clinical support helps you [break free from postural exhaustion](/writings/you-dont-have-to-hurt/) and build long-term spinal stability.
->>>>>>> Stashed changes:content/shoulder/burning-pain-between-shoulder-blades.md

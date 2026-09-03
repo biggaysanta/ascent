@@ -23,17 +23,11 @@
     "nanostores": "^1.2.0"
   },
   "devDependencies": {
-<<<<<<< Updated upstream
     "@tailwindcss/cli": "^4.3.3",
     "@tailwindcss/typography": "^0.5.20",
-    "tailwindcss": "^4.3.3",
-=======
-    "@tailwindcss/cli": "^4.2.2",
-    "@tailwindcss/typography": "^0.5.19",
     "prettier": "^3.9.6",
     "prettier-plugin-go-template": "^0.0.15",
-    "tailwindcss": "^4.2.2",
->>>>>>> Stashed changes
+    "tailwindcss": "^4.3.3",
     "vite": "^8.0.2"
   }
 }

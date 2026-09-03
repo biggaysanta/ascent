@@ -16,7 +16,6 @@
 @import "./dorothy.css";
 @import "./emerald-city-variants.css";
 @import "./emb-animation.css";
-<<<<<<< Updated upstream
 @import "./emb-glass.css";
 
 @theme {
@@ -218,159 +217,6 @@
 }
 
 :focus-visible,
-=======
-
-@theme
-{
-  /* =========================================================
-     API VARIABLE MAPPINGS (Expose dynamic CSS vars to Tailwind)
-     ========================================================= */
-  --color-primary: var(--color-primary);
-  --color-on-primary: var(--color-on-primary);
-  --color-secondary: var(--color-secondary);
-  --color-on-secondary: var(--color-on-secondary);
-  --color-tertiary: var(--color-tertiary);
-  --color-on-tertiary: var(--color-on-tertiary);
-
-  --color-primary-fill: var(--color-primary-fill);
-  --color-primary-text: var(--color-primary-text);
-  --color-secondary-fill: var(--color-secondary-fill);
-  --color-secondary-text: var(--color-secondary-text);
-  --color-tertiary-fill: var(--color-tertiary-fill);
-  --color-tertiary-text: var(--color-tertiary-text);
-
-  --color-background: var(--color-background);
-  --color-card: var(--color-card);
-  --color-card-alt: var(--color-card-alt);
-  --color-elevated: var(--color-elevated);
-  --color-border: var(--color-border);
-  --color-subtle-border: var(--color-subtle-border);
-  --color-text: var(--color-text);
-  --color-muted-text: var(--color-muted-text);
-
-  --color-error: var(--color-error);
-  --color-on-error: var(--color-on-error);
-  --color-error-fill: var(--color-error-fill);
-  --color-error-text: var(--color-error-text);
-}
-
-/* =========================================================
-     NAVIGATION MENU COMPONENTS
-     ========================================================= */
-.nav-menu
-{
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  width: 100%;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-/* Responsive Main Menu (horizontal on tablet and up) */
-@media (min-width: 768px)
-{
-  .nav-menu
-  {
-    flex-direction: row;
-  }
-}
-
-.nav-item
-{
-  position: relative;
-  flex-shrink: 0;
-  overflow: visible;
-}
-
-.nav-submenu
-{
-  position: absolute;
-  top: 100%;
-  left: 0;
-  z-index: 50;
-  display: none;
-  /* controlled by active rules below */
-  flex-direction: column;
-  width: max-content;
-  gap: 0.5rem;
-  padding: 1rem;
-  border-radius: 0.75rem;
-  @apply bg-background/85 backdrop-blur-xl border border-border shadow-lg;
-  animation: atlas-dropdown-in 0.2s ease-out;
-}
-
-.nav-link
-{
-  @apply flex items-center gap-2 rounded-lg bg-primary/10 px-3 py-2 text-sm font-medium text-primary border border-primary/20 backdrop-blur-md transition-all active:bg-primary/20 active:scale-105 active:ring-2 active:ring-tertiary;
-}
-
-.nav-link.active
-{
-  @apply bg-secondary/20 font-bold text-secondary border-secondary/30;
-}
-
-.nav-link.ancestor
-{
-  @apply font-bold border-primary/30 active:ring-primary;
-}
-
-.service-tab-btn
-{
-  @apply flex items-center gap-2 rounded-lg bg-tertiary/20 px-3 py-2 text-sm font-medium text-tertiary border border-tertiary/40 backdrop-blur-md transition-all;
-}
-
-.service-tab-btn:hover
-{
-  @apply scale-110 brightness-125;
-}
-
-.service-tab-btn.active
-{
-  @apply text-secondary bg-secondary/20 border-secondary/40;
-  @apply scale-90 ring-2 ring-tertiary;
-}
-
-
-:root
-{
-  html
-  {
-    /* 1. The "Safety Net" (Solid Color) */
-    background-color: var(--color-background);
-  }
-
-  /* Ensure the transition container doesn't obscure the background */
-  ::view-transition
-  {
-    background-color: var(--color-background);
-  }
-}
-
-:focus-visible
-{
-  outline: 3px solid color-mix(in oklch, var(--color-tertiary) 75%, white);
-  outline-offset: 3px;
-  border-radius: 0.5rem;
-}
-
-.menu-item > .submenu
-{
-  display: none;
-
-
-}
-
-.menu-item:active > .submenu,
-.menu-item:focus-within > .submenu,
-.menu-item > a:active + .submenu,
-.menu-item > a:focus + .submenu
-{
-  display: flex;
-}
-
->>>>>>> Stashed changes
 button:focus-visible,
 a:focus-visible,
 input:focus-visible,
@@ -378,7 +224,6 @@ select:focus-visible,
 textarea:focus-visible,
 [role="button"]:focus-visible,
 [role="tab"]:focus-visible,
-<<<<<<< Updated upstream
 [role="link"]:focus-visible {
   outline: 2px solid color-mix(in oklch, var(--color-tertiary) 20%, transparent);
   outline-offset: 2px;
@@ -413,20 +258,6 @@ textarea:focus-visible:hover,
   *,
   *::before,
   *::after {
-=======
-[role="link"]:focus-visible
-{
-  outline: 3px solid var(--color-primary);
-}
-
-@media (prefers-reduced-motion: reduce)
-{
-
-  *,
-  *::before,
-  *::after
-  {
->>>>>>> Stashed changes
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
@@ -446,12 +277,8 @@ textarea:focus-visible:hover,
   min-width: 0;
 }
 
-<<<<<<< Updated upstream
-.side-column {
-=======
 .side-column
 {
->>>>>>> Stashed changes
   position: relative;
   z-index: 0;
 }
@@ -467,12 +294,8 @@ textarea:focus-visible:hover,
     align-items: start;
   }
 
-<<<<<<< Updated upstream
-  .side-column {
-=======
   .side-column
   {
->>>>>>> Stashed changes
     position: relative;
     min-height: 100%;
   }
@@ -480,15 +303,10 @@ textarea:focus-visible:hover,
 
 }
 
-<<<<<<< Updated upstream
-@media (max-width: 767px) {
-  .side-column {
-=======
 @media (max-width: 767px)
 {
   .side-column
   {
->>>>>>> Stashed changes
     position: relative;
     width: 100%;
   }
@@ -500,7 +318,6 @@ textarea:focus-visible:hover,
   }
 }
 
-<<<<<<< Updated upstream
 @theme {
   --color-scrim: oklch(0% 0 0 / 0.32);
 
@@ -553,83 +370,10 @@ textarea:focus-visible:hover,
     }
 
     to {
-=======
-@theme
-{
-  --color-scrim: oklch(0% 0 0 / 0.32);
-
-  /* elevation shadow variables */
-  --elevation-0: 0px;
-  --elevation-1: var(--drop-shadow-xs), var(--drop-shadow-sm), var(--drop-shadow-md);
-  --elevation-2: var(--drop-shadow-sm), var(--drop-shadow-md), var(--drop-shadow-lg);
-  --elevation-3: var(--drop-shadow-md), var(--drop-shadow-lg), var(--drop-shadow-xl);
-  --elevation-4: var(--drop-shadow-lg), var(--drop-shadow-xl), var(--drop-shadow-2xl);
-  --elevation-5: var(--drop-shadow-xl), var(--drop-shadow-2xl), box-shadow: 0px 34px 34px 0.18;
-
-
-
-  /* Fluid Text Scale (Min Viewport: 320px, Max Viewport: 1280px) */
-  --text-xs: clamp(0.75rem, 0.71rem + 0.2vw, 0.8rem);
-  --text-sm: clamp(0.8rem, 0.74rem + 0.3vw, 0.9rem);
-  --text-base: clamp(0.95rem, 0.88rem + 0.35vw, 1.1rem);
-  --text-lg: clamp(1.05rem, 0.95rem + 0.5vw, 1.25rem);
-  --text-xl: clamp(1.2rem, 1.05rem + 0.75vw, 1.5rem);
-  --text-2xl: clamp(1.4rem, 1.2rem + 1vw, 1.8rem);
-  --text-3xl: clamp(1.7rem, 1.4rem + 1.5vw, 2.25rem);
-  --text-4xl: clamp(2rem, 1.6rem + 2vw, 3rem);
-  --text-5xl: clamp(2.5rem, 1.8rem + 3.5vw, 4rem);
-  --text-6xl: clamp(3rem, 2rem + 5vw, 5rem);
-  --text-7xl: clamp(3.5rem, 2.2rem + 6.5vw, 6rem);
-  --text-8xl: clamp(4rem, 2.3rem + 8.5vw, 7.5rem);
-  --text-9xl: clamp(4.5rem, 2.5rem + 10vw, 9rem);
-  --font-display: 'Alegreya', sans-serif;
-  --font-body: 'Newsreader, PathwayExtreme', serif;
-  --font-accent: 'Luxurious Roman', serif;
-  --font-icons: 'Material Symbols Outlined', serif;
-  --font-italic: 'Newsreader-Italic', 'PathwayExtreme-Italic', 'Alegreya-Italic', serif;
-  --bg-image: url('/svg/bg-mesh.svg');
-
-  @keyframes shift-y
-  {
-    from
-    {
-      background-position: 0% 0%;
-    }
-
-    to
-    {
-      background-position: 0% 100%;
-    }
-  }
-
-  @keyframes shift-x
-  {
-    from
-    {
-      background-position: 0% 0%;
-    }
-
-    to
-    {
       background-position: 100% 0%;
     }
   }
 
-  @keyframes sideways-scroll
-  {
-    0%
-    {
-      background-position: 0% 0%;
-    }
-
-    100%
-    {
->>>>>>> Stashed changes
-      background-position: 100% 0%;
-    }
-  }
-
-<<<<<<< Updated upstream
   @keyframes sideways-scroll {
     0% {
       background-position: 0% 0%;
@@ -661,47 +405,12 @@ textarea:focus-visible:hover,
     to {
       transform: translateX(0),
         opacity: 1;
-=======
-  @keyframes slide-out-right
-  {
-    from
-    {
-      transform: translateX(0);
-      opacity: 1;
-
-    }
-
-    to
-    {
-      transform: translateX(100%);
-      opacity: 0;
-    }
-  }
-
-  @keyframes slide-in-left
-  {
-    from
-    {
-      transform: translateX(-100%);
-      opacity: 0;
-    }
-
-    to
-    {
-      transform: translateX(0);
-      opacity: 1;
->>>>>>> Stashed changes
     }
   }
 }
 
 /* Apply to the root so the browser "paints" this first */
-<<<<<<< Updated upstream
 html {
-=======
-html
-{
->>>>>>> Stashed changes
   /* Layer 1: The repeating texture. Layer 2: The gradient */
   background-image:
     var(--bg-image),
@@ -714,7 +423,6 @@ html
   background-attachment: fixed;
   /* Prevents texture from moving when scrolling */
   min-height: 100%;
-<<<<<<< Updated upstream
 }
 
 /* IMPORTANT: Make the transition container transparent */
@@ -734,31 +442,6 @@ html
 }
 
 .light-rays {
-=======
-}
-
-/* IMPORTANT: Make the transition container transparent */
-::view-transition
-{
-  background-image: linear-gradient(in oklch to top, var(--color-tertiary), var(--color-secondary));
-}
-
-/* In your CSS file */
-::view-transition-old(main-content)
-{
-  animation-delay: 0.25ms;
-  animation: 0.4s ease-in both slide-out-right;
-}
-
-::view-transition-new(main-content)
-{
-  animation-delay: 0.2ms;
-  animation: 0.4s ease-out both slide-in-left;
-}
-
-.light-rays
-{
->>>>>>> Stashed changes
   position: relative;
   overflow: hidden;
   isolation: isolate;
@@ -770,12 +453,7 @@ html
 }
 
 .light-rays::before,
-<<<<<<< Updated upstream
 .light-rays::after {
-=======
-.light-rays::after
-{
->>>>>>> Stashed changes
   content: "";
   position: absolute;
   top: -35%;
@@ -787,29 +465,18 @@ html
   pointer-events: none;
 }
 
-<<<<<<< Updated upstream
 .light-rays::before {
-=======
-.light-rays::before
-{
->>>>>>> Stashed changes
   background: linear-gradient(in oklch 180deg, var(--color-tertiary) 34%, transparent 72%);
   clip-path: polygon(48% 0, 52% 0, 100% 100%, 0 100%);
   animation: light-rays-sway var(--rays-speed, 14s) ease-in-out infinite;
 }
 
-<<<<<<< Updated upstream
 .light-rays::after {
-=======
-.light-rays::after
-{
->>>>>>> Stashed changes
   background: linear-gradient(in oklch 180deg, oklch(85% 0.1 230 / 0.26), transparent 76%);
   clip-path: polygon(43% 0, 57% 0, 88% 100%, 12% 100%);
   animation: light-rays-sway calc(var(--rays-speed, 14s) * 1.2) ease-in-out infinite reverse;
 }
 
-<<<<<<< Updated upstream
 @keyframes light-rays-sway {
 
   0%,
@@ -818,36 +485,14 @@ html
   }
 
   50% {
-=======
-@keyframes light-rays-sway
-{
-
-  0%,
-  100%
-  {
-    transform: translateX(-50%) rotate(-7deg);
-  }
-
-  50%
-  {
->>>>>>> Stashed changes
     transform: translateX(-50%) rotate(6deg);
   }
 }
 
-<<<<<<< Updated upstream
 @media (prefers-reduced-motion: reduce) {
 
   .light-rays::before,
   .light-rays::after {
-=======
-@media (prefers-reduced-motion: reduce)
-{
-
-  .light-rays::before,
-  .light-rays::after
-  {
->>>>>>> Stashed changes
     animation: none;
   }
 }
@@ -859,7 +504,6 @@ html
 
 
 
-<<<<<<< Updated upstream
 @utility elevation-0 {
   filter: drop-shadow(var(--elevation-0));
 }
@@ -963,120 +607,16 @@ html
 
   h5 {
     font-size: var(--text-sm);
-=======
-@utility elevation-0
-{
-  filter: drop-shadow(var(--elevation-0));
-}
-
-@utility elevation-1
-{
-  filter: drop-shadow(var(--elevation-1) var(--color-shadow, var(--color-ruby)));
-}
-
-@utility elevation-2
-{
-  filter: drop-shadow(var(--elevation-2) var(--color-shadow, var(--color-ruby)));
-}
-
-@utility elevation-3
-{
-  filter: drop-shadow(var(--elevation-3) var(--color-shadow, var(--color-ruby)));
-}
-
-@utility elevation-4
-{
-  filter: drop-shadow(var(--elevation-4) var(--color-shadow, var(--color-ruby)));
-}
-
-@utility elevation-5
-{
-  filter: drop-shadow(0px 34px 34px var(--color-shadow, var(--color-ruby)));
-  box-shadow: var(--elevation-5) var(--color-shadow, var(--color-ruby));
-}
-
-@layer base
-{
-  html
-  {
-    scroll-behavior: smooth;
-  }
-
-  [x-cloak]
-  {
-    display: none !important;
-  }
-
-  a
-  {
-    @apply active:rotate-x-360 active:rotate-y-360 active:scale-110 active:drop-shadow-sm active:drop-shadow-secondary;
-    @apply transition-all duration-125 ease-in-out;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6
-  {
-    font-family: var(--font-display);
-    @apply font-bold tracking-tighter leading-tight;
-    @apply text-secondary text-shadow-xs md:text-shadow-sm elevation-2;
-  }
-
-  h1
-  {
-    color: var(--color-primary);
-    font-size: var(--text-4xl);
-    line-height: 1.1;
-    font-weight: 700;
-  }
-
-  h2
-  {
-    color: var(--color-secondary);
-    font-size: var(--text-3xl);
-    line-height: 1.2;
-    font-weight: 700;
-  }
-
-  h3
-  {
-    color: var(--color-secondary);
-    font-size: var(--text-2xl);
-    line-height: 1.3;
-    font-weight: 600;
-  }
-
-  h4
-  {
-    font-size: var(--text-xl);
-    line-height: 1.4;
-    font-weight: 600;
-  }
-
-  h5
-  {
-    font-size: var(--text-xl);
->>>>>>> Stashed changes
     line-height: 1.5;
     font-weight: 600;
   }
 
-<<<<<<< Updated upstream
   h6 {
     font-size: var(--text-xs);
-=======
-  h6
-  {
-    font-size: var(--text-lg);
->>>>>>> Stashed changes
     line-height: 1.5;
     font-weight: 600;
   }
 
-<<<<<<< Updated upstream
   p {
     font-family: var(--font-body);
     @apply text-secondary;
@@ -1088,38 +628,17 @@ html
   aside {
     font-family: var(--font-accent);
     @apply glass-panel-card-alt;
-=======
-  p
-  {
-    font-family: var(--font-body);
-    @apply text-secondary;
-    @apply text-lg;
-    @apply mb-6 last:mb-0;
-  }
-
-  aside
-  {
-    font-family: var(--font-accent);
->>>>>>> Stashed changes
     @apply text-tertiary;
     @apply mb-1.5 last:mb-0;
   }
 }
 
-<<<<<<< Updated upstream
 @layer components {
   .pagination {
-=======
-@layer components
-{
-  .pagination
-  {
->>>>>>> Stashed changes
     display: flex;
     justify-content: center;
     align-items: center;
     flex-shrink: 2;
-<<<<<<< Updated upstream
     font-size: var(--text-2xs);
     line-height: var(--tw-leading, var(--text-sm--line-height));
 
@@ -1136,27 +655,6 @@ html
 }
 
 @view-transition {
-=======
-    font-size: var(--text-sm);
-    line-height: var(--tw-leading, var(--text-sm--line-height));
-
-  }
-
-  .page-item
-  {
-    @apply bg-primary/10 border border-primary/20 backdrop-blur-md px-3 py-2 rounded-lg active:bg-primary/20 transition-all elevation-2 active:elevation-3;
-  }
-
-  .disabled
-  {
-    @apply grayscale pointer-events-none;
-  }
-
-}
-
-@view-transition
-{
->>>>>>> Stashed changes
   navigation: auto;
 }
 
@@ -1169,7 +667,6 @@ html
   animation: 400ms cubic-bezier(0.4, 0, 0.2, 1) both slide-in-left;
 }
 
-<<<<<<< Updated upstream
 @layer components {
   .location {}
 
@@ -1178,31 +675,12 @@ html
   }
 
   .trapezoid {
-=======
-@layer components
-{
-  .location
-  {}
-
-  .glass-header
-  {
-    @apply bg-primary/10 border border-primary/20 backdrop-blur-md;
-  }
-
-  .trapezoid
-  {
->>>>>>> Stashed changes
     /* No commas between X and Y; only between the 4 points */
     clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
     @apply w-full max-w-4xl;
   }
 
-<<<<<<< Updated upstream
   .cycling-gradient {
-=======
-  .cycling-gradient
-  {
->>>>>>> Stashed changes
     /* 1. Define the gradient (doubled for a seamless loop) */
 
     background:
@@ -1222,31 +700,16 @@ html
 }
 
 /* Option 2: SVG Displacement */
-<<<<<<< Updated upstream
 @utility emb-glass-refract-wavy {
   backdrop-filter: blur(12px) url(#glass-refraction-wavy);
 }
 
 @utility emb-glass-refract-hammered {
-=======
-@utility emb-glass-refract-wavy
-{
-  backdrop-filter: blur(12px) url(#glass-refraction-wavy);
-}
-
-@utility emb-glass-refract-hammered
-{
->>>>>>> Stashed changes
   backdrop-filter: blur(12px) url(#glass-refraction-hammered);
 }
 
 /* Option 1: Optical Illusion */
-<<<<<<< Updated upstream
 @utility emb-glass-optical {
-=======
-@utility emb-glass-optical
-{
->>>>>>> Stashed changes
   background-attachment: fixed;
   background-position: 5px 5px;
   /* Slight shift to simulate refraction */
@@ -1254,19 +717,10 @@ html
 }
 
 /* Option 3: Edge Refraction Bevel */
-<<<<<<< Updated upstream
 @utility emb-glass-edge {
   position: relative;
 
   &::after {
-=======
-@utility emb-glass-edge
-{
-  position: relative;
-
-  &::after
-  {
->>>>>>> Stashed changes
     content: "";
     position: absolute;
     inset: 0;

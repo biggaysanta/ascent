@@ -1,5 +1,4 @@
 {{ define "main" }}
-<<<<<<< Updated upstream
 <div class="{{ index .Params "color-theme" | default "theme-auntie-em" }} w-full min-h-screen py-12 px-4 sm:px-6">
   <article class="glass-panel-secondary-fill max-w-4xl mx-auto p-6 sm:p-10 rounded-3xl mb-12">
     <header class="mb-8 text-center">
@@ -21,26 +20,12 @@
         <time datetime="{{ $dateMachine }}" class="text-xs uppercase tracking-wider text-tertiary font-bold">{{ $dateHuman }}</time>
       </div>
       {{ end }}
-=======
-<div class="{{ index .Params "color-theme" | default "theme-auntie-em" }} w-full min-h-screen py-12">
-  <article class="max-w-4xl mx-auto px-4 sm:px-6">
-    <header class="mb-12 text-center">
-      <h1 class="text-4xl md:text-6xl text-primary font-display mb-6">{{ .Title }}</h1>
-      {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
-      {{ $dateHuman := .Date | time.Format ":date_long" }}
-      <time datetime="{{ $dateMachine }}" class="text-tertiary uppercase tracking-widest text-sm font-bold">{{
-        $dateHuman }}</time>
->>>>>>> Stashed changes
     </header>
 
     {{ if .Params.video }}
       {{ $vid := resources.Get .Params.video }}
       {{ $poster := resources.Get .Params.poster }}
-<<<<<<< Updated upstream
       <div class="w-full h-64 md:h-96 rounded-2xl overflow-hidden mb-8 elevation-2 relative group">
-=======
-      <div class="w-full h-64 md:h-96 rounded-2xl overflow-hidden mb-12 elevation-2 relative group">
->>>>>>> Stashed changes
         <video class="w-full h-full object-cover motion-reduce:hidden" 
                src="{{ if $vid }}{{ $vid.RelPermalink }}{{ else }}{{ .Params.video }}{{ end }}" 
                {{ if .Params.poster }}poster="{{ if $poster }}{{ $poster.RelPermalink }}{{ else }}{{ .Params.poster }}{{ end }}"{{ end }}
@@ -60,26 +45,17 @@
       {{ end }}
       
       {{ if $img }}
-<<<<<<< Updated upstream
       <div class="w-full h-64 md:h-96 rounded-2xl overflow-hidden mb-8 elevation-2">
-=======
-      <div class="w-full h-64 md:h-96 rounded-2xl overflow-hidden mb-12 elevation-2">
->>>>>>> Stashed changes
         <img src="{{ $img.RelPermalink }}" alt="{{ $.Title }} featured image" class="w-full h-full object-cover">
       </div>
       {{ else }}
       <!-- Fallback for external URLs or static folder images -->
-<<<<<<< Updated upstream
       <div class="w-full h-64 md:h-96 rounded-2xl overflow-hidden mb-8 elevation-2">
-=======
-      <div class="w-full h-64 md:h-96 rounded-2xl overflow-hidden mb-12 elevation-2">
->>>>>>> Stashed changes
         <img src="{{ $imageStr | relURL }}" alt="{{ $.Title }} featured image" class="w-full h-full object-cover">
       </div>
       {{ end }}
     {{ end }}
 
-<<<<<<< Updated upstream
     <!-- 5. Article Body wrapped in secondary panel with on-secondary text -->
     <div class="glass-panel-secondary p-6 sm:p-10 rounded-2xl">
       <div class="prose prose-lg md:prose-xl max-w-none text-on-secondary
@@ -89,17 +65,6 @@
                   prose-strong:text-on-secondary prose-strong:font-bold
                   prose-blockquote:border-l-accent prose-blockquote:text-on-secondary prose-blockquote:font-accent
                   prose-li:text-on-secondary">
-=======
-    <div class="cs-glass-primary p-8 md:p-12 rounded-3xl elevation-2">
-      <!-- Prose Wrapper mapping colors to MD3 variables -->
-      <div class="prose prose-lg md:prose-xl max-w-none 
-                  prose-headings:text-primary prose-headings:font-display
-                  prose-p:text-secondary prose-p:font-body
-                  prose-a:text-accent prose-a:font-accent hover:prose-a:text-primary
-                  prose-strong:text-primary prose-strong:font-bold
-                  prose-blockquote:border-l-accent prose-blockquote:text-secondary prose-blockquote:font-accent
-                  prose-li:text-secondary">
->>>>>>> Stashed changes
         {{ .Content }}
       </div>
     </div>

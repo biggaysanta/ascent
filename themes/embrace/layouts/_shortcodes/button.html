@@ -1,9 +1,4 @@
 {{- $url := .Get 0 -}}
-<<<<<<< Updated upstream
 <a id="ctaTarget" href="{{ $url }}" class="nav-link">{{ partial "atoms/icon.html" (dict "icon" "info" "class" "current-color") }}
-=======
-<a id="ctaTarget" href="{{ $url }}"
-    class="w-auto mx-auto inline-block px-6 py-3 bg-linear-to-r from-green-600 to-100% to-blue-700 hover:bg-linear-to-l hover:outline-2 outline-green-600 cs-glass-pink-3d text-white font-semibold rounded-lg  transition-colors justify-center items-center">
->>>>>>> Stashed changes
     {{ with .Inner }}{{ . }}{{ else }}Book Now!{{ end }}
 </a>

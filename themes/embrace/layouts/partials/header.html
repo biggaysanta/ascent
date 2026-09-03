@@ -1,18 +1,10 @@
 <div class="min-w-xs max-w-6xl mx-auto px-4">
   <div
-<<<<<<< Updated upstream
     class="relative flex flex-col items-center justify-center py-6 border-b border-secondary/20"
   >
     <div class="relative inline-flex flex-col items-center justify-center py-4 px-8 rounded-2xl bg-[url('/svg/logo.svg')] bg-left bg-no-repeat bg-contain isolate leading-5 text-center">
       <a href="/">
         <h1 class="relative elevation-3 glass-text-primary">{{ site.Title }}</h1>
-=======
-    class="relative flex flex-col items-center justify-center py-6 border-b border-secondary bg-[url('/svg/logo.svg')] bg-left bg-no-repeat bg-contain"
-  >
-    <div class="w-auto isolate leading-5 text-center">
-      <a href="/">
-        <h1 class="relative elevation-3">{{ site.Title }}</h1>
->>>>>>> Stashed changes
       </a>
       <a href="/about" class="relative elevation-2">
         <p>{{ site.Params.subtitle }}</p>
@@ -23,11 +15,7 @@
     </div>
     <button
       type="button"
-<<<<<<< Updated upstream
       class="nav-toggle-btn flex w-full mt-4 items-center justify-center p-2 text-secondary md:hidden glass-button-secondary rounded-lg"
-=======
-      class="flex w-full mt-4 items-center justify-center border border-secondary bg-secondary/10 p-2 text-secondary md:hidden"
->>>>>>> Stashed changes
       aria-label="Toggle navigation"
       aria-expanded="false"
       @click="open = !open; $el.setAttribute('aria-expanded', open)"
@@ -53,11 +41,7 @@
 
   <nav
     id="main-nav"
-<<<<<<< Updated upstream
     class="hidden md:flex md:items-center md:justify-around md:gap-4 md:py-4 md:mb-2"
-=======
-    class="hidden md:flex md:items-center md:justify-around md:gap-4 md:py-6 md:mb-2"
->>>>>>> Stashed changes
   >
     {{ partial "menu.html" (dict "menuID" "main" "pageID" .) }}
   </nav>
@@ -70,11 +54,7 @@
     class="md:hidden w-full pb-4"
   >
     <div
-<<<<<<< Updated upstream
       class="w-full rounded-xl glass-panel-secondary p-3"
-=======
-      class="w-full rounded-xl border border-secondary/40 bg-background/20 p-3 backdrop-blur-md elevation-3"
->>>>>>> Stashed changes
     >
       {{ partial "menu.html" (dict "menuID" "main" "pageID" .) }}
     </div>

@@ -3,14 +3,13 @@
 @description A bento grid displaying the main SEO hubs (headaches, shoulder).
 */}}
 
-<<<<<<< Updated upstream
 {{ $pages := slice }}
 {{ $title := .Title | default "Articles & Services" }}
 {{ $desc := .Description }}
 
 {{ if .IsHome }}
-  {{ $title = "Conditions We Treat" }}
-  {{ $desc = "Discover how our advanced bodywork targets the root causes of chronic pain." }}
+  {{ $title = "Conditions I Treat" }}
+  {{ $desc = "Discover how my advanced bodywork targets the root causes of chronic pain." }}
   {{ range slice "headaches" "shoulder-and-neck-pain" "low-back-pain" "mid-back-pain" "hip-pain" "fibromyalgia" "anxiety-and-depression" }}
   {{ $cond := . }}
     {{ with site.GetPage (printf "/conditions/%s/" $cond) }}
@@ -42,40 +41,13 @@
 
         <!-- Icon -->
         <div class="w-12 h-12 rounded-full glass-panel-secondary flex items-center justify-center mb-6">
-=======
-<section class="w-full max-w-6xl mx-auto my-16 px-4">
-  <div class="text-center mb-8">
-    <h2 class="font-display mb-4">Conditions We Treat</h2>
-    <p class="text-secondary max-w-2xl mx-auto">
-      Discover how our advanced bodywork targets the root causes of chronic pain.
-    </p>
-  </div>
-
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-    {{ $conditions := slice "headaches" "shoulder" }}
-    {{ range $conditions }}
-    {{ with site.GetPage . }}
-    <a href="{{ .RelPermalink }}" class="block group h-full">
-      <!-- Thematic wrapper based on frontmatter color_theme -->
-      <div class="{{ .Params.color_theme | default " theme-neutral" }} cs-glass-primary h-full p-8 rounded-2xl flex
-        flex-col justify-between transition-all duration-300 transform group-hover:-translate-y-2
-        group-hover:cs-glass-elev-3 elevation-2 relative overflow-hidden">
-
-        <!-- Icon -->
-        <div class="w-12 h-12 rounded-full cs-glass-secondary flex items-center justify-center mb-6">
->>>>>>> Stashed changes
           {{ partial "atoms/icon.html" (dict "icon" (.Params.icon | default "healing") "class" "w-6 h-6 text-primary")
           }}
         </div>
 
         <div>
-<<<<<<< Updated upstream
-          <h3 class="mb-3">{{ .Title }}</h3>
-          <p>{{ .Description }}</p>
-=======
           <h3 class="text-3xl font-bold mb-3 text-primary">{{ .Title }}</h3>
           <p class="text-secondary text-lg">{{ .Description }}</p>
->>>>>>> Stashed changes
         </div>
 
         <!-- "Learn More" Arrow -->
@@ -87,11 +59,7 @@
 
         <!-- Subtle background mesh/texture if desired -->
         <div
-<<<<<<< Updated upstream
-          class="absolute -bottom-10 -right-10 w-40 h-40 bg-secondary/30 rounded-full blur-2xl opacity-50 group-hover:opacity-70 transition-opacity">
-=======
-          class="absolute -bottom-10 -right-10 w-40 h-40 cs-glass-secondary rounded-full blur-2xl opacity-50 group-hover:opacity-70 transition-opacity">
->>>>>>> Stashed changes
+          class="absolute -bottom-10 -right-10 w-40 h-40 cs-glass-secondary rounded-full  blur-2xl opacity-50 group-hover:opacity-70 transition-opacity">
         </div>
       </div>
     </a>
