@@ -14,6 +14,7 @@ tags:
   - "body-awareness"
 aliases:
   - /the-apple-test/
+  - /the-apple-test 
 ---
 
 ## What is The Apple Test?
