@@ -17,7 +17,8 @@
     {{ end }}
   {{ end }}
 {{ else }}
-  {{ $pages = .Pages }}
+  {{ $paginator := .Paginate .Pages 6 }}
+  {{ $pages = $paginator.Pages }}
 {{ end }}
 
 <section class="w-full max-w-6xl mx-auto my-16 px-4">
@@ -46,8 +47,10 @@
         </div>
 
         <div>
-          <h3 class="mb-3">{{ .Title }}</h3>
-          <p>{{ .Description }}</p>
+          <h3 class="text-3xl font-bold mb-3 text-primary">{{ .Title }}</h3>
+          {{ with or .Description .Summary }}
+          <p class="text-secondary text-base leading-relaxed">{{ . | plainify | htmlUnescape | truncate 130 }}</p>
+          {{ end }}
         </div>
 
         <!-- "Learn More" Arrow -->
@@ -59,11 +62,15 @@
 
         <!-- Subtle background mesh/texture if desired -->
         <div
-          class="absolute -bottom-10 -right-10 w-40 h-40 bg-secondary/30 rounded-full blur-2xl opacity-50 group-hover:opacity-70 transition-opacity">
+          class="absolute -bottom-10 -right-10 w-40 h-40 cs-glass-secondary rounded-full  blur-2xl opacity-50 group-hover:opacity-70 transition-opacity">
         </div>
       </div>
     </a>
     {{ end }}
     {{ end }}
   </div>
+
+  {{ if not .IsHome }}
+    {{ partial "molecules/pagination.html" . }}
+  {{ end }}
 </section>

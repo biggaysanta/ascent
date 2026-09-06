@@ -5,7 +5,11 @@ subtitle = "Advanced Myofascial Release"
 narrative_role = "The Cowardly Lion"
 description = "Unique and powerful yet gentle work to release your chronic pain and dysfunction."
 price = "from $150"
+<<<<<<< Updated upstream
 color-theme = "virtue-courage"
+=======
+color_theme = "virtue-courage"
+>>>>>>> Stashed changes
 cta_url = "https://vagaro.com/firelightstudio/services/zero-point"
 icon = "mountain"
 
@@ -16,7 +20,11 @@ subtitle = "Deep Relaxation"
 narrative_role = "Tin Woodsman"
 description = "'Relax your mind and body with this exclusive rhythmic relaxation work"
 price = "from $125"
+<<<<<<< Updated upstream
 color-theme = "virtue-heart"
+=======
+color_theme = "virtue-heart"
+>>>>>>> Stashed changes
 cta_url = "https://vagaro.com/firelightstudio/services/tidal-wave"
 icon = "waves"
 
@@ -27,7 +35,11 @@ subtitle = "Sports Massage"
 narrative_role = "Scarecrow"
 description = "Perform better, Recover faster, Feel great!"
 price = "from $139"
+<<<<<<< Updated upstream
 color-theme = "virtue-brain"
+=======
+color_theme = "virtue-brain"
+>>>>>>> Stashed changes
 cta_url = "https://vagaro.com/firelightstudio/services/winners-circle"
 icon = "trophy"
 
@@ -38,7 +50,11 @@ subtitle = "Prenatal/Postpartum Massage"
 narrative_role = "Auntie Em"
 description = "Because there's no place like home."
 price = "from $125"
+<<<<<<< Updated upstream
 color-theme = "virtue-home"
+=======
+color_theme = "virtue-home"
+>>>>>>> Stashed changes
 cta_url = "https://vagaro.com/firelightstudio/services/universal-miracle"
 icon = "home"
 
@@ -49,7 +65,11 @@ subtitle = "Monthly Discount Membership"
 narrative-role = "Glinda the Good Witch"
 description = "Monthly Subscription to save money and commit to self-care"
 price = "from $96/month"
+<<<<<<< Updated upstream
 color-theme = "carnation-pink"
+=======
+color_theme = "carnation-pink"
+>>>>>>> Stashed changes
 cta_url = "/secret-handshake-club"
 icon = "handshake"
 

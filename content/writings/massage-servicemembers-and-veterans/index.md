@@ -11,6 +11,8 @@ tags:
   - "veterans"
   - "war-wounds"
   - "wounded-warriors"
+aliases:
+  - /remembering-the-fallen/
 ---
 
 An area of practice I’ve been in for about a year now is providing massage and bodywork services to our military veterans. As a veteran myself (USN 1988 to 1993), I understand many of the unique stressors and conditions that our military veterans have experienced during their time of service.

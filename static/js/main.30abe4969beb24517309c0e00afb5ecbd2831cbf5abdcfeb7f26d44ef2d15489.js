@@ -2541,9 +2541,15 @@
 @utility cs-glass-gloss-top { position: relative; &::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 20%; background: linear-gradient(to bottom, rgba(255, 255, 255, 0.4), transparent); border-top-left-radius: inherit; border-top-right-radius: inherit; pointer-events: none; z-index: 2; mix-blend-mode: soft-light; } }
 @utility cs-glass-gloss-left { position: relative; &::before { content: ""; position: absolute; top: 0; bottom: 0; left: 0; width: 15%; background: linear-gradient(to right, rgba(255, 255, 255, 0.35), transparent); pointer-events: none; z-index: 2; mix-blend-mode: soft-light; } }
 @utility cs-glass-gloss-right { position: relative; &::before { content: ""; position: absolute; top: 0; bottom: 0; right: 0; width: 15%; background: linear-gradient(to left, rgba(255, 255, 255, 0.35), transparent); pointer-events: none; z-index: 2; mix-blend-mode: soft-light; } }
+<<<<<<< Updated upstream:static/js/main.30abe4969beb24517309c0e00afb5ecbd2831cbf5abdcfeb7f26d44ef2d15489.js
 @utility cs-glass-neon { --cs-glass-bg-light: rgba(58, 227, 255, 0.1); --cs-glass-border-medium: rgba(58, 227, 255, 0.25); --cs-glass-shadow-def: 0 8px 32px rgba(58, 227, 255, 0.25); --cs-glass-focus-ring: rgba(58, 227, 255, 0.6); }
 @utility cs-glass-carbon { --cs-glass-bg-light: rgba(30, 30, 30, 0.25); --cs-glass-border-medium: rgba(255, 255, 255, 0.08); --cs-glass-shadow-def: 0 8px 32px rgba(0, 0, 0, 0.4); --cs-glass-focus-ring: rgba(255, 255, 255, 0.3); }
 @utility cs-glass-pastel { --cs-glass-bg-light: rgba(255, 230, 250, 0.12); --cs-glass-border-medium: rgba(255, 230, 250, 0.25); --cs-glass-shadow-def: 0 8px 32px rgba(255, 230, 250, 0.25); --cs-glass-focus-ring: rgba(255, 230, 250, 0.6); }
+=======
+@utility cs-glass-theme-neon { --cs-glass-bg-light: rgba(58, 227, 255, 0.1); --cs-glass-border-medium: rgba(58, 227, 255, 0.25); --cs-glass-shadow-def: 0 8px 32px rgba(58, 227, 255, 0.25); --cs-glass-focus-ring: rgba(58, 227, 255, 0.6); }
+@utility cs-glass-theme-carbon { --cs-glass-bg-light: rgba(30, 30, 30, 0.25); --cs-glass-border-medium: rgba(255, 255, 255, 0.08); --cs-glass-shadow-def: 0 8px 32px rgba(0, 0, 0, 0.4); --cs-glass-focus-ring: rgba(255, 255, 255, 0.3); }
+@utility cs-glass-theme-pastel { --cs-glass-bg-light: rgba(255, 230, 250, 0.12); --cs-glass-border-medium: rgba(255, 230, 250, 0.25); --cs-glass-shadow-def: 0 8px 32px rgba(255, 230, 250, 0.25); --cs-glass-focus-ring: rgba(255, 230, 250, 0.6); }
+>>>>>>> Stashed changes:public/js/main.30abe4969beb24517309c0e00afb5ecbd2831cbf5abdcfeb7f26d44ef2d15489.js
 @utility cs-glass-responsive { background: var(--cs-glass-bg-light); border: 1px solid var(--cs-glass-border-medium); backdrop-filter: var(--cs-glass-blur-sm); -webkit-backdrop-filter: var(--cs-glass-blur-sm); background-clip: padding-box; @container (min-width: 320px) { backdrop-filter: var(--cs-glass-blur-sm); -webkit-backdrop-filter: var(--cs-glass-blur-sm); } @container (min-width: 640px) { backdrop-filter: var(--cs-glass-blur); -webkit-backdrop-filter: var(--cs-glass-blur); } @container (min-width: 1024px) { backdrop-filter: var(--cs-glass-blur-lg); -webkit-backdrop-filter: var(--cs-glass-blur-lg); } }
 @utility cs-glass-backdrop-clip { background-clip: padding-box; }
 @supports not ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
@@ -3427,7 +3433,11 @@
   --cs-acrylic-tint: rgba(255, 255, 255, 0.65);
   --cs-acrylic-border: rgba(0, 0, 0, 0.06);
 }
+<<<<<<< Updated upstream:static/js/main.30abe4969beb24517309c0e00afb5ecbd2831cbf5abdcfeb7f26d44ef2d15489.js
 .cs-light {
+=======
+.cs-theme-light {
+>>>>>>> Stashed changes:public/js/main.30abe4969beb24517309c0e00afb5ecbd2831cbf5abdcfeb7f26d44ef2d15489.js
   --cs-bg: oklch(49.064% 0.09274 166.708 / 0.529);
   --cs-surface: #f7f8fa;
   --cs-elev1: #ffffff;
@@ -3442,7 +3452,11 @@
   --cs-acrylic-tint: lch(66.55% 32.14 22.66 / 0.65);
   --cs-acrylic-border: rgba(0, 0, 0, 0.06);
 }
+<<<<<<< Updated upstream:static/js/main.30abe4969beb24517309c0e00afb5ecbd2831cbf5abdcfeb7f26d44ef2d15489.js
 .cs-dark {
+=======
+.cs-theme-dark {
+>>>>>>> Stashed changes:public/js/main.30abe4969beb24517309c0e00afb5ecbd2831cbf5abdcfeb7f26d44ef2d15489.js
   --cs-bg: #0b0c0f;
   --cs-surface: #14161a;
   --cs-elev1: #1b1e24;
@@ -3719,7 +3733,11 @@
   }
 }
 @supports (color: oklch(60% 0.2 250)) {
+<<<<<<< Updated upstream:static/js/main.30abe4969beb24517309c0e00afb5ecbd2831cbf5abdcfeb7f26d44ef2d15489.js
   .cs {
+=======
+  .cs-theme {
+>>>>>>> Stashed changes:public/js/main.30abe4969beb24517309c0e00afb5ecbd2831cbf5abdcfeb7f26d44ef2d15489.js
     --cs-brand-oklch: oklch(from var(--cs-brand) l c h);
   }
 }
@@ -3740,7 +3758,11 @@
   }
 }
 @media (prefers-contrast: high) {
+<<<<<<< Updated upstream:static/js/main.30abe4969beb24517309c0e00afb5ecbd2831cbf5abdcfeb7f26d44ef2d15489.js
   .cs {
+=======
+  .cs-theme {
+>>>>>>> Stashed changes:public/js/main.30abe4969beb24517309c0e00afb5ecbd2831cbf5abdcfeb7f26d44ef2d15489.js
     --cs-border: currentColor;
     --cs-text-muted: var(--cs-text);
   }
@@ -3980,9 +4002,15 @@
 @utility cs-glass-gloss-top { position: relative; &::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 20%; background: linear-gradient(to bottom, rgba(255, 255, 255, 0.4), transparent); border-top-left-radius: inherit; border-top-right-radius: inherit; pointer-events: none; z-index: 2; mix-blend-mode: soft-light; } }
 @utility cs-glass-gloss-left { position: relative; &::before { content: ""; position: absolute; top: 0; bottom: 0; left: 0; width: 15%; background: linear-gradient(to right, rgba(255, 255, 255, 0.35), transparent); pointer-events: none; z-index: 2; mix-blend-mode: soft-light; } }
 @utility cs-glass-gloss-right { position: relative; &::before { content: ""; position: absolute; top: 0; bottom: 0; right: 0; width: 15%; background: linear-gradient(to left, rgba(255, 255, 255, 0.35), transparent); pointer-events: none; z-index: 2; mix-blend-mode: soft-light; } }
+<<<<<<< Updated upstream:static/js/main.30abe4969beb24517309c0e00afb5ecbd2831cbf5abdcfeb7f26d44ef2d15489.js
 @utility cs-glass-neon { --cs-glass-bg-light: rgba(58, 227, 255, 0.1); --cs-glass-border-medium: rgba(58, 227, 255, 0.25); --cs-glass-shadow-def: 0 8px 32px rgba(58, 227, 255, 0.25); --cs-glass-focus-ring: rgba(58, 227, 255, 0.6); }
 @utility cs-glass-carbon { --cs-glass-bg-light: rgba(30, 30, 30, 0.25); --cs-glass-border-medium: rgba(255, 255, 255, 0.08); --cs-glass-shadow-def: 0 8px 32px rgba(0, 0, 0, 0.4); --cs-glass-focus-ring: rgba(255, 255, 255, 0.3); }
 @utility cs-glass-pastel { --cs-glass-bg-light: rgba(255, 230, 250, 0.12); --cs-glass-border-medium: rgba(255, 230, 250, 0.25); --cs-glass-shadow-def: 0 8px 32px rgba(255, 230, 250, 0.25); --cs-glass-focus-ring: rgba(255, 230, 250, 0.6); }
+=======
+@utility cs-glass-theme-neon { --cs-glass-bg-light: rgba(58, 227, 255, 0.1); --cs-glass-border-medium: rgba(58, 227, 255, 0.25); --cs-glass-shadow-def: 0 8px 32px rgba(58, 227, 255, 0.25); --cs-glass-focus-ring: rgba(58, 227, 255, 0.6); }
+@utility cs-glass-theme-carbon { --cs-glass-bg-light: rgba(30, 30, 30, 0.25); --cs-glass-border-medium: rgba(255, 255, 255, 0.08); --cs-glass-shadow-def: 0 8px 32px rgba(0, 0, 0, 0.4); --cs-glass-focus-ring: rgba(255, 255, 255, 0.3); }
+@utility cs-glass-theme-pastel { --cs-glass-bg-light: rgba(255, 230, 250, 0.12); --cs-glass-border-medium: rgba(255, 230, 250, 0.25); --cs-glass-shadow-def: 0 8px 32px rgba(255, 230, 250, 0.25); --cs-glass-focus-ring: rgba(255, 230, 250, 0.6); }
+>>>>>>> Stashed changes:public/js/main.30abe4969beb24517309c0e00afb5ecbd2831cbf5abdcfeb7f26d44ef2d15489.js
 @utility cs-glass-responsive { background: var(--cs-glass-bg-light); border: 1px solid var(--cs-glass-border-medium); backdrop-filter: var(--cs-glass-blur-sm); -webkit-backdrop-filter: var(--cs-glass-blur-sm); background-clip: padding-box; @container (min-width: 320px) { backdrop-filter: var(--cs-glass-blur-sm); -webkit-backdrop-filter: var(--cs-glass-blur-sm); } @container (min-width: 640px) { backdrop-filter: var(--cs-glass-blur); -webkit-backdrop-filter: var(--cs-glass-blur); } @container (min-width: 1024px) { backdrop-filter: var(--cs-glass-blur-lg); -webkit-backdrop-filter: var(--cs-glass-blur-lg); } }
 @utility cs-glass-backdrop-clip { background-clip: padding-box; }
 @supports not ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {

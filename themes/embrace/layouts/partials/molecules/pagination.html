@@ -1,0 +1,58 @@
+{{/*
+@title Pagination Molecule
+@description Accessible, glassmorphic pagination controls for Hugo list pages.
+@usage {{ partial "molecules/pagination.html" . }}
+*/}}
+
+{{- if and .Paginator (gt .Paginator.TotalPages 1) -}}
+{{- $paginator := .Paginator -}}
+<nav class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mt-12 mb-8 select-none" aria-label="Pagination Navigation">
+  {{/* Previous Page Button */}}
+  {{- if $paginator.HasPrev -}}
+  <a href="{{ $paginator.Prev.URL }}" 
+     class="glass-button-primary px-4 py-2 rounded-xl text-sm font-semibold flex items-center gap-1.5 elevation-2 hover:elevation-3 active:elevation-1 focus-visible:ring focus-visible:outline-offset-3 focus-visible:outline-tertiary/20 transition-all duration-200"
+     aria-label="Previous Page">
+    <span class="material-symbols-outlined text-base align-middle">chevron_left</span>
+    <span>Previous</span>
+  </a>
+  {{- else -}}
+  <span class="glass-panel-card px-4 py-2 rounded-xl text-sm font-semibold text-muted-text/50 flex items-center gap-1.5 cursor-not-allowed opacity-40 select-none" aria-disabled="true">
+    <span class="material-symbols-outlined text-base align-middle">chevron_left</span>
+    <span>Previous</span>
+  </span>
+  {{- end -}}
+
+  {{/* Page Number Links */}}
+  <div class="flex items-center gap-1 sm:gap-1.5">
+    {{- range $paginator.Pagers -}}
+      {{- if eq . $paginator -}}
+      <span aria-current="page" 
+            class="glass-panel-secondary px-3.5 py-2 rounded-xl text-sm font-bold text-primary elevation-1 border border-primary/30 select-none">
+        {{ .PageNumber }}
+      </span>
+      {{- else -}}
+      <a href="{{ .URL }}" 
+         class="glass-panel-primary hover:glass-panel-secondary px-3.5 py-2 rounded-xl text-sm font-semibold text-secondary hover:text-primary elevation-2 hover:elevation-3 active:elevation-1 focus-visible:ring focus-visible:outline-offset-3 focus-visible:outline-tertiary/20 transition-all duration-200"
+         aria-label="Go to Page {{ .PageNumber }}">
+        {{ .PageNumber }}
+      </a>
+      {{- end -}}
+    {{- end -}}
+  </div>
+
+  {{/* Next Page Button */}}
+  {{- if $paginator.HasNext -}}
+  <a href="{{ $paginator.Next.URL }}" 
+     class="glass-button-primary px-4 py-2 rounded-xl text-sm font-semibold flex items-center gap-1.5 elevation-2 hover:elevation-3 active:elevation-1 focus-visible:ring focus-visible:outline-offset-3 focus-visible:outline-tertiary/20 transition-all duration-200"
+     aria-label="Next Page">
+    <span>Next</span>
+    <span class="material-symbols-outlined text-base align-middle">chevron_right</span>
+  </a>
+  {{- else -}}
+  <span class="glass-panel-card px-4 py-2 rounded-xl text-sm font-semibold text-muted-text/50 flex items-center gap-1.5 cursor-not-allowed opacity-40 select-none" aria-disabled="true">
+    <span>Next</span>
+    <span class="material-symbols-outlined text-base align-middle">chevron_right</span>
+  </span>
+  {{- end -}}
+</nav>
+{{- end -}}

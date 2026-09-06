@@ -735,7 +735,11 @@ ${expression ? 'Expression: "' + expression + '"\n\n' : ""}`, el);
       if (name === value)
         value = "";
       let typeMatch = name.match(alpineAttributeRegex());
+<<<<<<< Updated upstream:static/js/main.d9fddbd91e35638c8d4e6fdb47f8e13af5588d69da588d8842c7ccec5c34e5f5.js
       let valueMatch = name.match(/:([a-zA-Z0-9\--:]+)/);
+=======
+      let valueMatch = name.match(/:([a-zA-Z0-9\-_:]+)/);
+>>>>>>> Stashed changes:public/js/main.d9fddbd91e35638c8d4e6fdb47f8e13af5588d69da588d8842c7ccec5c34e5f5.js
       let modifiers = name.match(/\.[^.\]]+(?=[^\]]*$)/g) || [];
       let original = originalAttributeOverride || transformedAttributeMap[name] || name;
       return {
@@ -1786,7 +1790,11 @@ ${expression ? 'Expression: "' + expression + '"\n\n' : ""}`, el);
   };
   var camelizeRE = /-(\w)/g;
   var camelize = cacheStringFunction((str) => {
+<<<<<<< Updated upstream:static/js/main.d9fddbd91e35638c8d4e6fdb47f8e13af5588d69da588d8842c7ccec5c34e5f5.js
     return str.replace(camelizeRE, (-, c) => c ? c.toUpperCase() : "");
+=======
+    return str.replace(camelizeRE, (_, c) => c ? c.toUpperCase() : "");
+>>>>>>> Stashed changes:public/js/main.d9fddbd91e35638c8d4e6fdb47f8e13af5588d69da588d8842c7ccec5c34e5f5.js
   });
   var hyphenateRE = /\B([A-Z])/g;
   var hyphenate = cacheStringFunction((str) => str.replace(hyphenateRE, "-$1").toLowerCase());
@@ -2739,11 +2747,19 @@ ${expression ? 'Expression: "' + expression + '"\n\n' : ""}`, el);
     return !Array.isArray(subject) && !isNaN(subject);
   }
   function kebabCase2(subject) {
+<<<<<<< Updated upstream:static/js/main.d9fddbd91e35638c8d4e6fdb47f8e13af5588d69da588d8842c7ccec5c34e5f5.js
     if ([" ", "-"].includes(
       subject
     ))
       return subject;
     return subject.replace(/([a-z])([A-Z])/g, "$1-$2").replace(/[-\s]/, "-").toLowerCase();
+=======
+    if ([" ", "_"].includes(
+      subject
+    ))
+      return subject;
+    return subject.replace(/([a-z])([A-Z])/g, "$1-$2").replace(/[_\s]/, "-").toLowerCase();
+>>>>>>> Stashed changes:public/js/main.d9fddbd91e35638c8d4e6fdb47f8e13af5588d69da588d8842c7ccec5c34e5f5.js
   }
   function isKeyEvent(event) {
     return ["keydown", "keyup"].includes(event);
@@ -2804,7 +2820,11 @@ ${expression ? 'Expression: "' + expression + '"\n\n' : ""}`, el);
       "comma": ",",
       "equal": "=",
       "minus": "-",
+<<<<<<< Updated upstream:static/js/main.d9fddbd91e35638c8d4e6fdb47f8e13af5588d69da588d8842c7ccec5c34e5f5.js
       "underscore": "-"
+=======
+      "underscore": "_"
+>>>>>>> Stashed changes:public/js/main.d9fddbd91e35638c8d4e6fdb47f8e13af5588d69da588d8842c7ccec5c34e5f5.js
     };
     modifierToKeyMap[key] = key;
     return Object.keys(modifierToKeyMap).map((modifier) => {
@@ -3199,7 +3219,11 @@ ${expression ? 'Expression: "' + expression + '"\n\n' : ""}`, el);
   function loop(templateEl, iteratorNames, evaluateItems, evaluateKey) {
     evaluateItems((items) => {
       if (isNumeric3(items))
+<<<<<<< Updated upstream:static/js/main.d9fddbd91e35638c8d4e6fdb47f8e13af5588d69da588d8842c7ccec5c34e5f5.js
         items = Array.from({ length: items }, (-, i) => i + 1);
+=======
+        items = Array.from({ length: items }, (_, i) => i + 1);
+>>>>>>> Stashed changes:public/js/main.d9fddbd91e35638c8d4e6fdb47f8e13af5588d69da588d8842c7ccec5c34e5f5.js
       if (items === void 0)
         items = [];
       if (items instanceof Set)
@@ -8209,7 +8233,11 @@ ${expression ? 'Expression: "' + expression + '"\n\n' : ""}`, el);
         return;
       }
       const equalSize = 100 / panelCount;
+<<<<<<< Updated upstream:static/js/main.d9fddbd91e35638c8d4e6fdb47f8e13af5588d69da588d8842c7ccec5c34e5f5.js
       sizes = panelEls.map((-, index) => {
+=======
+      sizes = panelEls.map((_, index) => {
+>>>>>>> Stashed changes:public/js/main.d9fddbd91e35638c8d4e6fdb47f8e13af5588d69da588d8842c7ccec5c34e5f5.js
         const config = panelConfigs[index];
         return config?.defaultSize ?? equalSize;
       });
@@ -8303,7 +8331,11 @@ ${expression ? 'Expression: "' + expression + '"\n\n' : ""}`, el);
       }
       sizes = [...newSizes];
       collapsedPanels.clear();
+<<<<<<< Updated upstream:static/js/main.d9fddbd91e35638c8d4e6fdb47f8e13af5588d69da588d8842c7ccec5c34e5f5.js
       panelEls.forEach((-, index) => {
+=======
+      panelEls.forEach((_, index) => {
+>>>>>>> Stashed changes:public/js/main.d9fddbd91e35638c8d4e6fdb47f8e13af5588d69da588d8842c7ccec5c34e5f5.js
         const config = panelConfigs[index] ?? {};
         const collapsedSize = config.collapsedSize ?? 0;
         if (config.collapsible && sizes[index] <= collapsedSize) {
@@ -18665,7 +18697,11 @@ ${expression ? 'Expression: "' + expression + '"\n\n' : ""}`, el);
      * Restores all styles for all managed elements.
      */
     restoreAll() {
+<<<<<<< Updated upstream:static/js/main.d9fddbd91e35638c8d4e6fdb47f8e13af5588d69da588d8842c7ccec5c34e5f5.js
       this.originalStyles.forEach((-, element) => {
+=======
+      this.originalStyles.forEach((_, element) => {
+>>>>>>> Stashed changes:public/js/main.d9fddbd91e35638c8d4e6fdb47f8e13af5588d69da588d8842c7ccec5c34e5f5.js
         this.restore(element);
       });
     }

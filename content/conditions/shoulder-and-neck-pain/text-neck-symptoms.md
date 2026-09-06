@@ -20,9 +20,9 @@ The human body adapts dynamically to chronic forces. When subjected to hours of 
 
 1.  **Ligamentous Creep:** Extended periods of forward bending cause the posterior longitudinal ligament and ligamentum flavum to lose their elastic snap, leading to micro-instability across cervical joint segments.
 2.  **Upper Crossed Syndrome:** The nervous system automatically adapts to this habit by shortening the upper trapezius, levator scapulae, and pectoralis groups, while simultaneously inhibiting and weakening the deep cervical flexors (longus colli) and the lower rhoboids.
-3.  **Chronic Base-of-Skull Pain:** The suboccipital muscles undergo continuous contraction to keep the eyes tracking horizontally, leading to severe localized tension. For targeted relief protocols for this specific cranial anchor point, see our specialized analysis on [pain at base of skull and neck](/pain-at-base-of-skull-and-neck).
+3.  **Chronic Base-of-Skull Pain:** The suboccipital muscles undergo continuous contraction to keep the eyes tracking horizontally, leading to severe localized tension and referral pain into the eyes. For targeted relief protocols for this cranial anchor point, see our specialized analysis on [pain at base of skull and neck](/conditions/shoulder-and-neck-pain/pain-at-base-of-skull-and-neck/) and [headaches behind the eye sockets](/conditions/headaches/behind-the-sockets/).
 
-As this postural degradation advances, the mechanical stress often concentrates onto individual nerve roots, manifesting as the sharp, radiating arm discomfort detailed in [shoulder pain radiating down arm](/shoulder-pain-radiating-down-arm).
+As this postural degradation advances, the mechanical stress often concentrates onto individual nerve roots, manifesting as the sharp, radiating arm discomfort detailed in [shoulder pain radiating down arm](/conditions/shoulder-and-neck-pain/shoulder-pain-radiating-down-arm/).
 
 ## Clinical Self-Correction and Ergonomic Protocols
 
@@ -45,4 +45,5 @@ When using a mobile device, raise your elbows to eye level rather than dropping 
 
 Text neck is a progressive condition that can lead to early cervical osteoarthritis and permanent flattening of the neck's natural curve if left unaddressed. For individuals living in Sacramento, local clinical bodywork offers an effective path to structural recovery. 
 
-Specialized soft-tissue clinics across the valley provide advanced posture assessments and targeted deep-tissue therapies designed to lengthen shortened anterior structures and activate inhibited posterior chains. If your forward-head posture has caused your neck to regularly lock up or catch when you move, incorporate the precise recovery drills found in [how to fix a stiff neck fast](/how-to-fix-stiff-neck-fast) and [neck pain when turning head](/neck-pain-when-turning-head). Investing in professional soft-tissue therapy and mindful ergonomic habits allows you to eliminate modern postural strain and protect your long-term spinal health.
+At The Firelight Studio, we provide advanced posture assessments and targeted [Zero Point Advanced Myofascial Release](/services/pain-relief/#how-it-works) designed to lengthen shortened anterior scalene and pectoral structures while releasing inhibited posterior chains. If your forward-head posture has caused your neck to regularly lock up or catch when you move, incorporate the precise recovery drills found in [how to fix a stiff neck fast](/conditions/shoulder-and-neck-pain/how-to-fix-stiff-neck-fast/) and [neck pain when turning head](/conditions/shoulder-and-neck-pain/neck-pain-when-turning-head/). Investing in professional soft-tissue therapy and mindful ergonomic habits allows you to eliminate modern postural strain and protect your long-term spinal health.
+

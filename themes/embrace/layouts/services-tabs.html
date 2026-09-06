@@ -1,21 +1,16 @@
 {{ define "main" }} 
-      <div class= "cs-glass-featured" id="serviceswrapper" >
-      <section id="services" class="cs-card cs-shimmer">
-      <ul>
-{{ range hugo.Data.services }}
+<div class="{{ index .Params "color-theme" | default "theme-auntie-em" }} w-full min-h-screen py-8 px-4 sm:px-6">
+  <div class="max-w-6xl mx-auto space-y-8" id="serviceswrapper">
+    <header class="text-center max-w-3xl mx-auto mb-8">
+      <h1 class="glass-text-primary text-3xl md:text-5xl font-display font-bold mb-3">{{ .Title | default "Services" }}</h1>
+      {{ with .Content }}
+      <div class="text-secondary/90 text-sm sm:text-base leading-relaxed">
+        {{ . }}
+      </div>
+      {{ end }}
+    </header>
 
-            <li id="{{ .id }}">{{ .name }} </li>
-            <ul>
-                  <li>{{ .subtitle }}</li>
-                  <li>{{ .narrative_role | default (index . "narrative-role") }}</li>
-                  <li>{{ .description }}</li>
-                  <li>{{ .price }}</li>
-                  <li>{{ index . "color-theme" }}</li>
-                  <li>{{ .cta_url }}</li>
-                  <li>{{ .icon }}</li>
-            </ul>
-       {{ end }}
-       </ul> 
-      </section>
+    {{ partial "organisms/services.tabs.html" . }}
+  </div>
 </div>
 {{ end }}

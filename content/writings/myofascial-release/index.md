@@ -11,6 +11,8 @@ tags:
   - "myofascial-release"
   - "parallel-motion"
 coverImage: "fascia-reach.png"
+aliases:
+  - /blog/myofascial-release/
 ---
 
 ## In a nutshell: fascia holds us together. Myofascial Release Therapy can help you: **You Don't Have to Hurt**

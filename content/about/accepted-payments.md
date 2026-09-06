@@ -5,6 +5,8 @@ description: "Information about payment methods accepted for massage therapy ses
 layout: "payments"
 date: 2026-08-30
 draft: false
+aliases:
+  - /tags/venmo/
 ---
 
 At The Firelight Studio, payment is due at the time services are rendered. We offer a wide variety of convenient payment options to make your checkout seamless, transparent, and flexible.

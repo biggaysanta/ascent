@@ -1,0 +1,40 @@
+{{- $imgSrc := .Params.image.src -}}
+{{- $imgAlt := .Params.image.alt | default .Title -}}
+{{- $caption := .Params.image.caption -}}
+{{- $width := .Params.image.width | default 1920 -}}
+{{- $height := .Params.image.height | default 1080 -}}
+
+{{- if $imgSrc -}}
+  {{- $resource := resources.Get $imgSrc -}}
+  <figure class="promotion-media">
+    <picture>
+      {{- if $resource -}}
+        {{- /* Process WebP modern format via Hugo Pipes */ -}}
+        {{- $webp := $resource.Resize (printf "%dx%d webp" $width $height) -}}
+        <source srcset="{{ $webp.RelPermalink }}" type="image/webp">
+        <img 
+          src="{{ $resource.RelPermalink }}" 
+          alt="{{ $imgAlt }}" 
+          width="{{ $width }}" 
+          height="{{ $height }}" 
+          loading="lazy" 
+          decoding="async">
+      {{- else -}}
+        {{- /* Static fallback if asset is stored in /static/ */ -}}
+        <img 
+          src="{{ $imgSrc | relURL }}" 
+          alt="{{ $imgAlt }}" 
+          width="{{ $width }}" 
+          height="{{ $height }}" 
+          loading="lazy" 
+          decoding="async">
+      {{- end -}}
+    </picture>
+
+    {{- with $caption -}}
+      <figcaption class="promotion-caption">
+        {{ . | markdownify }}
+      </figcaption>
+    {{- end -}}
+  </figure>
+{{- end -}}

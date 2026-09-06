@@ -1,0 +1,81 @@
+/* Wizard of Oz: Glinda (The Good Witch) Context */
+.theme-glinda {
+  /* Brand/Core Colors */
+  --color-primary: oklch(65% 0.20 350);
+  --color-on-primary: oklch(98% 0.02 350);
+  --color-secondary: oklch(75% 0.08 320);
+  --color-on-secondary: oklch(25% 0.05 320);
+  --color-tertiary: oklch(75% 0.15 85);
+  --color-on-tertiary: oklch(20% 0.05 85);
+  
+  /* Fill/Text Variants */
+  --color-primary-fill: oklch(92% 0.08 350);
+  --color-primary-text: oklch(40% 0.18 350);
+  --color-secondary-fill: oklch(94% 0.04 320);
+  --color-secondary-text: oklch(45% 0.10 320);
+  --color-tertiary-fill: oklch(90% 0.08 85);
+  --color-tertiary-text: oklch(40% 0.12 85);
+  
+  /* Surfaces & Backgrounds */
+  --color-background: oklch(99% 0.01 350);
+  --color-card: oklch(96% 0.02 350);
+  --color-card-alt: oklch(94% 0.03 350);
+  --color-elevated: oklch(92% 0.04 350);
+  --color-border: oklch(75% 0.06 350);
+  --color-subtle-border: oklch(88% 0.04 350);
+  
+  /* Typography */
+  --color-text: oklch(30% 0.05 350);
+  --color-muted-text: oklch(55% 0.05 350);
+
+  /* Semantic Error Colors (Standardized) */
+  --color-error: oklch(50.86% 0.193 27.64);
+  --color-on-error: oklch(98.20% 0.009 26.02);
+  --color-error-fill: oklch(67.11% 0.214 27.69);
+  --color-error-text: oklch(28.72% 0.117 27.53);
+
+  /* Shadows */
+  --color-shadow: var(--color-amethyst);
+}
+
+
+@media (prefers-color-scheme: dark) {
+  .theme-glinda {
+    /* Brand/Core Colors */
+    --color-primary: oklch(80% 0.18 350);
+    --color-on-primary: oklch(25% 0.15 350);
+    --color-secondary: oklch(85% 0.08 320);
+    --color-on-secondary: oklch(25% 0.10 320);
+    --color-tertiary: oklch(85% 0.15 85);
+    --color-on-tertiary: oklch(25% 0.10 85);
+
+    /* Fill/Text Variants */
+    --color-primary-fill: oklch(35% 0.15 350);
+    --color-primary-text: oklch(90% 0.10 350);
+    --color-secondary-fill: oklch(30% 0.10 320);
+    --color-secondary-text: oklch(90% 0.06 320);
+    --color-tertiary-fill: oklch(35% 0.10 85);
+    --color-tertiary-text: oklch(90% 0.10 85);
+
+    /* Surfaces & Backgrounds */
+    --color-background: oklch(15% 0.03 320);
+    --color-card: oklch(20% 0.04 320);
+    --color-card-alt: oklch(23% 0.05 320);
+    --color-elevated: oklch(26% 0.06 320);
+    --color-border: oklch(45% 0.08 320);
+    --color-subtle-border: oklch(30% 0.05 320);
+
+    /* Typography */
+    --color-text: oklch(95% 0.02 350);
+    --color-muted-text: oklch(75% 0.05 350);
+
+    /* Semantic Error Colors (Standardized) */
+    --color-error: oklch(71.82% 0.176 27.57);
+    --color-on-error: oklch(25.72% 0.105 27.65);
+    --color-error-fill: oklch(47.21% 0.187 27.54);
+    --color-error-text: oklch(84.66% 0.084 26.20);
+    
+    /* Shadows */
+    --color-shadow: var(--color-amethyst);
+  }
+}

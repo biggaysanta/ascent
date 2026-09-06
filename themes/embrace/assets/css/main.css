@@ -265,31 +265,37 @@ textarea:focus-visible:hover,
   }
 }
 
-.content-shell {
+.content-shell
+{
   display: block;
 }
 
-.content-column {
+.content-column
+{
   position: relative;
   z-index: 1;
   min-width: 0;
 }
 
-.side-column {
+.side-column
+{
   position: relative;
   z-index: 0;
 }
 
 
-@media (min-width: 768px) {
-  .content-shell {
+@media (min-width: 768px)
+{
+  .content-shell
+  {
     display: grid;
     grid-template-columns: minmax(0, 2fr) minmax(220px, 1fr);
     gap: 2rem;
     align-items: start;
   }
 
-  .side-column {
+  .side-column
+  {
     position: relative;
     min-height: 100%;
   }
@@ -297,13 +303,16 @@ textarea:focus-visible:hover,
 
 }
 
-@media (max-width: 767px) {
-  .side-column {
+@media (max-width: 767px)
+{
+  .side-column
+  {
     position: relative;
     width: 100%;
   }
 
-  .content-column {
+  .content-column
+  {
     position: relative;
     z-index: 1;
   }

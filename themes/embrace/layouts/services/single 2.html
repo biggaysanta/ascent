@@ -1,0 +1,89 @@
+{{ define "main" }}
+{{ $colorTheme := .Params.colortheme }}
+{{ printf "Color theme: %s" $colorTheme }}
+<div class="{{ $colorTheme | default "theme-auntie-em" }} w-full min-h-screen pb-12">
+  <!-- Hero Section -->
+  <header class="relative w-full h-[70vh] min-h-[600px] flex flex-col justify-center items-center overflow-hidden elevation-3 mb-12">
+    <!-- Background Video/Image -->
+    {{ $vidUrl := .Params.videourl }}
+    {{ $posterUrl := .Params.posterurl }}
+    {{ $imgUrl := .Params.imageurl }}
+    
+    {{ if $vidUrl }}
+      {{ $vidPath := strings.TrimPrefix "/" $vidUrl }}
+      {{ $vid := resources.Get $vidPath }}
+      
+      {{ $posterPath := "" }}
+      {{ if $posterUrl }}
+        {{ $posterPath = strings.TrimPrefix "/" $posterUrl }}
+      {{ end }}
+      {{ $poster := resources.Get $posterPath }}
+      
+      <video class="absolute inset-0 w-full h-full object-cover z-0 grayscale opacity-80" 
+             src="{{ if $vid }}{{ $vid.RelPermalink }}{{ else }}{{ $vidUrl | relURL }}{{ end }}" 
+             poster="{{ if $poster }}{{ $poster.RelPermalink }}{{ else if $posterUrl }}{{ $posterUrl | relURL }}{{ end }}" 
+             muted playsinline loop autoplay></video>
+    {{ else if or .Params.coverImage $imgUrl }}
+      {{ $imageStr := .Params.coverImage | default $imgUrl }}
+      {{ $imagePath := strings.TrimPrefix "/" $imageStr }}
+      {{ $img := .Resources.GetMatch (printf "*%s*" $imagePath) }}
+      {{ if not $img }}{{ $img = resources.GetMatch (printf "*%s*" $imagePath) }}{{ end }}
+      <img src="{{ if $img }}{{ $img.RelPermalink }}{{ else }}{{ $imageStr | relURL }}{{ end }}" 
+           alt="{{ .Title }} hero image" 
+           class="absolute inset-0 w-full h-full object-cover z-0 grayscale opacity-80" />
+    {{ end }}
+    
+    <!-- Blur Overlay -->
+    <div class="absolute inset-0 z-10 bg-primary/40 backdrop-blur-[35px]"></div>
+    
+    <!-- Hero Content -->
+    <div class="relative z-20 text-center px-4 max-w-4xl mx-auto flex flex-col items-center">
+      <!-- Fallback to Title if line1 is missing -->
+      <h1 class="text-5xl md:text-7xl text-white font-display mb-4 drop-shadow-lg uppercase">
+        {{ .Params.line1 | default .Title }}
+      </h1>
+      
+      {{ if .Params.line2 }}
+      <h2 class="text-xl md:text-2xl text-white font-semibold tracking-widest uppercase mb-4 drop-shadow-md">
+        {{ .Params.line2 }}
+      </h2>
+      {{ end }}
+      
+      {{ if .Params.line3 }}
+      <p class="text-3xl md:text-4xl text-white italic mb-6 drop-shadow-md font-serif">
+        “{{ .Params.line3 }}”
+      </p>
+      {{ end }}
+      
+      {{ if .Params.line4 }}
+      <p class="text-lg md:text-xl text-white/90 font-bold mb-10 drop-shadow-md max-w-2xl">
+        {{ .Params.line4 }}
+      </p>
+      {{ end }}
+      
+      {{ $bookUrl := .Params.bookingurl }}
+      {{ $btnText := .Params.buttontext | default "Book Now" }}
+      {{ if $bookUrl }}
+      <a href="{{ $bookUrl }}" class="bg-white/20 text-white font-bold backdrop-blur-md border border-white/60 elevation-5 hover:anim-bounce inline-block px-12 py-4 text-xl uppercase tracking-wider hover:bg-white/40 transition-all text-center rounded-xl">
+        {{ $btnText }}
+      </a>
+      {{ end }}
+    </div>
+  </header>
+
+  <!-- Prose Content -->
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 mb-16">
+    <div class="cs-glass-primary p-8 md:p-12 rounded-3xl elevation-2">
+      <div class="prose prose-lg md:prose-xl max-w-none 
+                  prose-headings:text-primary prose-headings:font-display
+                  prose-p:text-secondary prose-p:font-body
+                  prose-a:text-accent prose-a:font-accent hover:prose-a:text-primary
+                  prose-strong:text-primary prose-strong:font-bold
+                  prose-blockquote:border-l-accent prose-blockquote:text-secondary prose-blockquote:font-accent
+                  prose-li:text-secondary">
+        {{ .Content }}
+      </div>
+    </div>
+  </article>
+</div>
+{{ end }}

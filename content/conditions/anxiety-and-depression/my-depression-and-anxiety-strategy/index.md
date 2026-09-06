@@ -12,15 +12,15 @@ coverImage: "tumblr_pzaduscvIW1v208pio1_1280-1.jpg"
 
 I’ve been diagnosed with major depression disorder since 2015. Before I sought care, I used to allow myself to perform my mindless, default behaviors, especially avoidant behaviors - things like staying in bed for days at a time, canceling social plans last minute. I lost many of my social connections: people gave up on me, stopped asking me to participating in things. Avoidance is a killing blow to one’s friendships, to work life, to one’s value system.
 
-Eventually, things got so bad, I was on the verge of suicide; I sought out care at the VA, and was matched up with a therapist who specializes in depression and anxiety care. Through therapy, I learned several coping strategies to help manage my depression and anxiety:
+Eventually, things got so bad, I was on the verge of suicide; I sought out [care at the VA](/writings/massage-servicemembers-and-veterans/), and was matched up with a therapist who specializes in depression and anxiety care. Through therapy, I learned several coping strategies to help manage my depression and anxiety:
 
 ## **Body Scan**
 
-In this exercise, you sit with your hands resting on your lap or wherever is comfortable and close your eyes. Take a few breaths, then as you keep breathing, put your awareness in your feet. Notice how your feet feel, tension, discomfort, or pain? Don’t try to change or “fix” how you feel, just notice and acknowledge what you feel. Move your awareness up into your calves, and notice. Continue noticing and acknowledging the feelings and sensations in your body. The point of this exercise is to bring you into the present moment, to connect your mind and body.
+In this exercise, you sit with your hands resting on your lap or wherever is comfortable and close your eyes. Take a few breaths, then as you keep breathing, put your awareness in your feet. Notice how your feet feel, tension, discomfort, or pain? Don’t try to change or “fix” how you feel, just notice and acknowledge what you feel. Move your awareness up into your calves, and notice. Continue noticing and acknowledging the feelings and sensations in your body. The point of this exercise is to bring you into the present moment, to [connect your mind and body](/services/relaxation/) and gently down-regulate your central nervous system.
 
 ## Change Your Language
 
-It’s commonplace for people to use being verbs to describe their emotions: I’m depressed, I’m angry, i am hungry, etc. instead of using “I am” language, instead say “I have” or “I am feeling” hungry, angry, lonely, tired, whatever you are feeling. The purpose of this exercise is twofold: to recognize that you are not your emotions, you have emotions and thoughts, and they come and go like the water flowing down a river. Secondly, that separation of you from your emotions gives you a little room to manage your decision-making process. Which brings me to the next behavior
+It’s commonplace for people to use being verbs to describe their emotions: I’m depressed, I’m angry, i am hungry, etc. instead of using “I am” language, instead say “I have” or “I am feeling” hungry, angry, lonely, tired, whatever you are feeling. The purpose of this exercise is twofold: to [recognize that you are not your emotions](/writings/you-are-not-your-thoughts/), you have emotions and thoughts, and they come and go like the water flowing down a river. Secondly, that separation of you from your emotions gives you a little room to manage your decision-making process. Which brings me to the next behavior
 
 ## **Define your values**
 
@@ -67,7 +67,7 @@ Proper nutrition is crucial to maintaining brain health and function. If you nee
 
 ## **Enough Rest**
 
-our brain needs sleep to assimilate the activities of the day, reindex, and reset. Sleep is like doing CTRL-ALT-DELETE on your brain. Read more about sleep hygiene here.
+Our brain needs sleep to assimilate the activities of the day, reindex, and reset. Sleep is like [doing CTRL-ALT-DELETE on your brain](/writings/pulling-up-short-aka-ctrrl-alt-del/) to reset systemic overwhelm. Read more about somatic rest and self-care in our studio writings.
 
 - **Daily Routine**
 

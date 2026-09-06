@@ -25,9 +25,10 @@ A classic Swedish Massage consists of five strokes:
 
 A good Swedish massage practitioner gets into a rhythmic flow, and can induce a deeply relaxing state and feeling of well-being into the client. And more than just feeling good and relaxing, Swedish Massage can help clients recover from injury, chronic pain conditions, and more.  Notice that none of the five strokes include the elbows, or even the forearms.  That's because Swedish Massage can be done from light pressure all the way to "hurts-so-good" pressure.
 
-Most massage therapists use Swedish Massage for relaxation massage, and other techniques for deeper work, but here at [Paul Brown Massage Therapy](https://paulbrown.net), I use Swedish Massage for many purposes, and blend its classic strokes in with other powerful massage techniques to achieve the results the client needs, whether that is pain relief, relaxation, improved sports performance, or relief from the aches of pregnancy and childbirth.
+Most massage therapists use Swedish Massage for relaxation massage, and other techniques for deeper work, but here at [Paul Brown Massage Therapy](/about/), I use Swedish Massage for many purposes, and blend its classic strokes in with other powerful massage techniques to achieve the results you need—whether that is [Zero Point Pain Relief](/services/pain-relief/), our signature [Tidal Wave Relaxation Massage](/services/relaxation/), improved [sports recovery](/services/sports/), or soothing prenatal care.
 
-A Swedish Massage doesn't only have to be for relaxation!
+If you are getting ready for your first session, check our guide on [how to prepare for your massage](/about/massage-prep/) and review our [appointment policies](/about/appointment-policies/). A Swedish Massage doesn't only have to be for relaxation!
+
 
 ```
                 <a href="https://vagaro.com/firelightstudio">

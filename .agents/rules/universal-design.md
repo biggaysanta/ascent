@@ -18,13 +18,11 @@ title: Universal Design
 - Tone: [80 percent technical, 15 percent casual, 5 percent sassy]
 
 ## Target Audience
-
 - Primary: [sacramentans and surrounding cities, "35-65"]
 - Pain point: [they are solving back pain, neck pain, carpal tunnel, deep stress, body pain in general]
 - Decision drivers: [features, what's in it for them, pain relief, availability, trust, price is not a concern]
 
 ## Visual Direction
-
 - Style: [minimal sophisticated elegance, but a colorful restrained palette]
 - Color mood: [neutral most, but vibrant where important]
 - Primary color: There are twelve fully formed themes, each with its own primary color, and a palette of supporting colors.
@@ -39,7 +37,6 @@ title: Universal Design
 - Sections needed: [welcome, ask them how i can help, lead them throughhero, features, pricing, testimonials, cta, footer]
 - Priority content: [What should visitors see first?]
 - CTA goal: [signup / demo / purchase / contact]
-  d
 
 # Technical Constraints
 

@@ -5,6 +5,8 @@ categories:
   - "massage"
 tags: 
   - "fibromyalgia"
+aliases:
+  - /massage-and-fibromyalgia/
 ---
 
 Fibromyalgia syndrome, or fibro, is one of the most common, most difficult, most complex, and least understood health-related conditions ever seen.

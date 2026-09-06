@@ -5,6 +5,11 @@ title: 'Location'
 image: 'images/location.png'
 url: '/location'
 layout: location
+aliases:
+  - /tag/downtown/
+  - /tag/downtown-sacramento/
+  - /tag/downtownsac/
+  - /tags/downtownsac/
 ---
 And did I mention free parking?
 

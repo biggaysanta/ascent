@@ -4,6 +4,9 @@ slug: "pain-at-base-of-skull-and-neck"
 description: "Examine the anatomical drivers of pain at the base of the skull and neck, focusing on suboccipital trigger points and occipital neuralgia."
 seo-focus-keyword: "Pain at base of skull and neck"
 canonical: "https://paulbrown.net/blog/pain-at-base-of-skull-and-neck/"
+aliases:
+  - /the-scalenes-far-away-pain-of-the-hand-arm/
+  - /blog/pain-at-base-of-skull-and-neck/
 ---
 
 # Pain at the Base of the Skull and Neck: Suboccipital Tension

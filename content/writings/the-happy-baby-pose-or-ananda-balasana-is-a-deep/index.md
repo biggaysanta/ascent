@@ -9,6 +9,9 @@ tags:
   - "massage"
   - "stretching"
   - "yoga"
+aliases:
+  - /tag/yoga/
+  - /tag/stretching/
 ---
 
 The Happy Baby pose, or Ananda Balasana, is a deep hip opening for the adductors and also the back along the spine. It is an easy pose to get into and hold, and I recommend it as a very relaxing and comfortable posture. Watch the video and give it a try!

@@ -1,9 +1,8 @@
---
-title: Free Massage?
-author: Paul Brown, CMT
-summary: You can get a free massage!  It's true, refer three people who book a session, and you'll get a FREE 60-minute Tidal Wave Relaxation Massage!
+---
+title: "Free Massage?"
+author: "Paul Brown, CMT"
+summary: "You can get a free massage! It's true, refer three people who book a session, and you'll get a FREE 60-minute Tidal Wave Relaxation Massage!"
 url: "/how-to-get-a-free-massage/"
-start
 ---
 ### Refer Three, Get One Free!
 

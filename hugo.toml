@@ -11,7 +11,14 @@ ignoreFiles = ['^/prompts/', '^/data/hold/']
   [security.exec]
     allow = ['^(dart-)?sass$', '^go$', '^git$', '^node$', '^postcss$', '^tailwindcss$']
 
+[services]
+  [services.googleAnalytics]
+    id = 'G-TXTMX6EYGG'
+    ID = 'G-TXTMX6EYGG'
+
 [params]
+googleAnalytics = "G-TXTMX6EYGG"
+formspree-id = "d1e56c593add42fb956d7a42113c96bc"
 colorMood = "theme-dorothy"
 subtitle = "by Paul Brown Massage Therapy"
 tagline = 'Expert Medical Massage Therapist in Arden-Arcade, Sacramento'
@@ -138,6 +145,42 @@ url = '/services'
 icon = 'info'
 
 [[menu.main]]
+name="Release: Zero Point AMFR"
+identifier='release'
+parent='services'
+weight=10
+url="/services/pain-relief/"
+[menu.main.params]
+icon='clean_hands'
+
+[[menu.main]]
+name="Refresh: Tidal Wave Relaxation"
+identifier='refresh'
+parent='services'
+weight=20
+url="/services/relaxation/"
+[menu.main.params]
+icon='waves'
+
+[[menu.main]]
+name='Relate: Couples Massage Workshop'
+identifier='relate'
+parent='services'
+weight=30
+url="/services/couples-massage-workshop/"
+[menu.main.params]
+icon='diversity_1'
+
+[[menu.main]]
+name="Recharge: Winner's Circle Sport"
+identifier='recharge'
+parent='services'
+weight=40
+url="/services/sports-massage/"
+[menu.main.params]
+icon='directions_run'
+
+[[menu.main]]
 name = 'Writings'
 identifier = 'writings'
 weight = 40
@@ -222,5 +265,5 @@ weight=10
     source = 'assets/notwatching/hugo_stats\.json'
     target = 'css'
   [[build.cachebusters]]
-    source = '(postcss|tailwind)\.config\.js'
+    source = 'tailwind\.config\.js'
     target = 'css'

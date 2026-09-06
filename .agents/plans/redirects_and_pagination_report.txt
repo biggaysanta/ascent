@@ -1,0 +1,63 @@
+================================================================================
+EXPERT AGENT COORDINATOR REPORT: 404 REDIRECTS, APPLE TEST & PAGINATION
+================================================================================
+Date: 2026-09-06
+Status: COMPLETE & VERIFIED
+
+1. LEGACY 404 REDIRECTS (Hugo Aliases)
+--------------------------------------------------------------------------------
+- Analyzed 70 primary crawled URLs from .agents/plans/Table.csv
+- Configured 197 static alias redirect entry points across frontmatters:
+  * content/_index.md (/home/, /wp-login.php, /comments/feed/)
+  * content/writings/_index.md (/blog/, /blog-2/, placeholders, general tags)
+  * content/writings/what-you-need-to-kinow-zero-point-advanced-myofascial-release/index.md
+  * content/writings/back-pain-massage-myofascial-release/index.md
+  * content/writings/massage-boosts-immunity/index.md
+  * content/writings/myofascial-release/index.md
+  * content/writings/self-myofascial-release-helpful-or-a-waste-of-time/index.md
+  * content/writings/what-is-myofascial-therapy/index.md
+  * content/writings/massage-servicemembers-and-veterans/index.md
+  * content/writings/the-power-of-touch-especially-for-men/index.md
+  * content/writings/the-happy-baby-pose-or-ananda-balasana-is-a-deep/index.md
+  * content/writings/getting-your-steps-in/index.md
+  * content/conditions/hip-pain/the-overlooked-hipsters-the-adductors/index.md
+  * content/conditions/fibromyalgia/massage-and-fibromyalgia/index.md
+  * content/conditions/low-back-pain/no-more-low-back-pain.md
+  * content/conditions/shoulder-and-neck-pain/shoulder-pain-subscapularis.md
+  * content/conditions/shoulder-and-neck-pain/_index.md
+  * content/conditions/shoulder-and-neck-pain/pain-at-base-of-skull-and-neck.md
+  * content/conditions/headaches/_index.md
+  * content/about/_index.md
+  * content/about/advanced-table.md
+  * content/about/sms.md
+  * content/about/tos.md
+  * content/about/accepted-payments.md
+  * content/about/free-massage.md
+  * content/location/_index.md
+  * content/services/_index.md
+  * content/services/pain-relief.md
+  * content/services/sports.md
+  * content/contact/_index.md
+
+2. NEW ARTICLE: THE APPLE TEST
+--------------------------------------------------------------------------------
+- Created: content/writings/the-apple-test/index.md
+- Category: self-care, massage
+- Tags: self-care, mental-health, massage, mind-body, stress-relief, body-awareness
+- Alias: /the-apple-test/
+- Cross-links: You Are Not Your Thoughts, You Deserve It, The Power of Touch Especially for Men, Tidal Wave Relaxation, Zero Point AMFR.
+
+3. PAGINATION MOLECULE & LIST GRIDS
+--------------------------------------------------------------------------------
+- Created: themes/embrace/layouts/partials/molecules/pagination.html
+- Updated: themes/embrace/layouts/partials/organisms/conditions-grid.html
+- Paginates list/section/taxonomy pages (6 items/page).
+- Fully accessible with Previous, numbered pages, Next buttons, and glassmorphism styling tokens.
+
+4. BUILD VERIFICATION
+--------------------------------------------------------------------------------
+- Hugo Build Result: Success (0 fatal errors, 0 duplicate alias target warnings)
+- Pages: 355
+- Paginator Pages: 39
+- Aliases: 197
+================================================================================

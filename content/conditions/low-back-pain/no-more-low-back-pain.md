@@ -12,6 +12,8 @@ tags:
 categories:
     - about paul
 slug: no-more-pain-advanced-massage-table
+aliases:
+  - /no-more-low-back-pain/
 ---
 
 > 
