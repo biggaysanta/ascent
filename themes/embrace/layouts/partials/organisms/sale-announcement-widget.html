@@ -1,0 +1,51 @@
+<!-- Responsive Slide-In / Sticky Sale Widget -->
+<!-- Uses Alpine.js for state and sessionStorage to remember if dismissed -->
+<div 
+  x-data="{ 
+    showSaleBanner: false, 
+    dismissed: sessionStorage.getItem('saleBannerDismissed') === 'true',
+    firstView: sessionStorage.getItem('saleBannerSeen') !== 'true'
+  }" 
+  x-init="
+    if(!dismissed) { 
+      if(firstView) {
+        setTimeout(() => { showSaleBanner = true; sessionStorage.setItem('saleBannerSeen', 'true'); }, 2000) 
+      } else {
+        setTimeout(() => { showSaleBanner = true; }, 100) 
+      }
+    }
+  "
+  x-show="showSaleBanner"
+  x-transition:enter="transition ease-out duration-700"
+  x-transition:enter-start="translate-y-full opacity-0"
+  x-transition:enter-end="translate-y-0 opacity-100"
+  x-transition:leave="transition ease-in duration-300"
+  x-transition:leave-start="translate-y-0 opacity-100"
+  x-transition:leave-end="translate-y-full opacity-0"
+  class="fixed bottom-0 left-0 z-50 w-full rounded-none sm:bottom-4 sm:right-4 sm:left-auto sm:w-80 sm:rounded-lg"
+  style="display: none;"
+>
+  <div class="bg-tertiary/10 border border-tertiary/20 backdrop-blur-md shadow-lg rounded-none sm:rounded-lg p-5 flex flex-col gap-3 relative">
+    
+    <!-- Dismiss Button -->
+    <button 
+      @click="showSaleBanner = false; sessionStorage.setItem('saleBannerDismissed', 'true')" 
+      class="absolute top-2 right-2 p-1.5 rounded-full bg-tertiary/20 hover:bg-tertiary/30 border border-tertiary/30 backdrop-blur-md shadow-sm text-tertiary-text hover:text-text transition-all focus-visible:ring-2 focus-visible:outline-none focus-visible:ring-tertiary/50"
+      aria-label="Close sale announcement"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+    
+    <!-- Content -->
+    <h5 class="font-bold text-tertiary-text text-xl leading-tight pr-6">Exclusive Offer Inside</h5>
+    <p class="text-sm text-tertiary-text/80">Book your next massage and get 20% off.</p>
+    
+    <!-- CTA Action -->
+    <a href="#" class="mt-2 bg-tertiary text-on-tertiary px-4 py-2 rounded font-semibold shadow-md hover:shadow-lg active:shadow-sm transition-all self-start inline-block text-center">
+      Unlock Offer
+    </a>
+  </div>
+</div>

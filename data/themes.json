@@ -1,0 +1,14 @@
+[
+  { "class": "theme-auntie-em", "label": "Auntie Em" },
+  { "class": "theme-brains", "label": "Brains" },
+  { "class": "theme-courage", "label": "Courage" },
+  { "class": "theme-dorothy", "label": "Dorothy" },
+  { "class": "theme-glinda", "label": "Glinda" },
+  { "class": "theme-home", "label": "Home" },
+  { "class": "theme-receive", "label": "Receive" },
+  { "class": "theme-recharge", "label": "Recharge" },
+  { "class": "theme-refresh", "label": "Refresh" },
+  { "class": "theme-relate", "label": "Relate" },
+  { "class": "theme-release", "label": "Release" },
+  { "class": "theme-renew", "label": "Renew" }
+]

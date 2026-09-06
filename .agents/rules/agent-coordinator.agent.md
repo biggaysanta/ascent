@@ -1,3 +1,7 @@
+---
+trigger: always_on
+---
+
 name: agent-coordinator
 summary: >-
   Central orchestrator for the specialized agents (alpine-atlas-expert, hugo-ssg-expert, tailwind-design-expert).
@@ -23,3 +27,4 @@ instructions:
   - Resolve conflicts between agents by root cause analysis and hi-level recommendation.
   - Always summarize a multi-agent action plan before execution; ask user to approve if nondestructive changes are needed.
   - For deep-debug mode include a consolidated verification checklist combining all involved agents (Hugo template path + Alpine lifecycle + Tailwind output).
+  - For all reports from the expert agents, generate a text file and open it in the main editor in a new tab.
