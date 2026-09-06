@@ -12,7 +12,7 @@ ignoreFiles = ['^/prompts/', '^/data/hold/']
     allow = ['^(dart-)?sass$', '^go$', '^git$', '^node$', '^postcss$', '^tailwindcss$']
 
 [params]
-colorMood = "theme-woodsman"
+colorMood = "theme-dorothy"
 subtitle = "by Paul Brown Massage Therapy"
 tagline = 'Expert Medical Massage Therapist in Arden-Arcade, Sacramento'
 description = 'Paul Brown, CMT is a licensed massage therapist in Sacramento, California specializing in medical massage therapy, myofascial release, and sports massage.'
