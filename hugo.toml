@@ -18,7 +18,6 @@ ignoreFiles = ['^/prompts/', '^/data/hold/']
 
 [params]
 googleAnalytics = "G-TXTMX6EYGG"
-formspree-id = "d1e56c593add42fb956d7a42113c96bc"
 colorMood = "theme-dorothy"
 subtitle = "by Paul Brown Massage Therapy"
 tagline = 'Expert Medical Massage Therapist in Arden-Arcade, Sacramento'
