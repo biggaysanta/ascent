@@ -3,6 +3,9 @@ title: "The Power of Touch, Especially for Men"
 date: "2017-12-18"
 categories: 
   - "massage"
+aliases:
+  - /tag/hugs/
+  - /tag/hugs-are-healing/
 ---
 
 [The Power of Touch, Especially for Men](https://www.nytimes.com/2017/12/05/well/family/gender-men-touch.html)

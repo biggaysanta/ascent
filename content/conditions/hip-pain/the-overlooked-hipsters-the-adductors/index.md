@@ -13,6 +13,8 @@ tags:
   - "sports-massage"
   - "trigger-point-massage"
   - "trigger-points"
+aliases:
+  - /blog/the-overlooked-hipsters-the-adductors/
 ---
 
 When we think about the hips, the muscles we most often thing of are the glutes, hamstrings, and quads, right?  But there’s an other group of hip muscles we often overlook - the hip adductors.

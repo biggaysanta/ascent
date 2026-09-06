@@ -10,5 +10,7 @@ author_email: "paul@paulbrown.net"
 author_telephone: "9165348772"
 layout: contact
 url: /contact
+aliases:
+  - /cdn-cgi/l/email-protection/
 ---
 Reach out with your questions, comments, and concerns.  All messages are read and processed as necessary.

@@ -3,6 +3,8 @@ title: Terms of Service
 date: 2023-09-29
 
 lastmod: 2026-02-08T02:05:48.469Z
+aliases:
+  - /terms/
 ---
 
 **Last Updated: 29 September 2023**

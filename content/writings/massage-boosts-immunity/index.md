@@ -4,6 +4,9 @@ date = 2024-07-31
 categories = "research"
 tags = ["research","arden-arcade-sacramento-massage", "immune-system", "science", "swedish-massage"]
 coverImage = "AdobeStock_258323847-scaled.jpeg"
+aliases = [
+  "/blog/massage-boosts-immunity/"
+]
 
 +++
 

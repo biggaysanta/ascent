@@ -9,6 +9,9 @@ tags:
   - "deep-tissue-massage"
   - "massage"
 coverImage: "img_0744-e1684263628816.jpg"
+aliases:
+  - /what-is-myofascial-therapy/
+  - /myofascial-release-therapy/
 ---
 
 When Swedish Massage isn't specific enough, there are other options for getting into tissues.  One of them _Myofascial Therapy_.  myo- = muscle, and fascia = connective tissue.  MFT, as it's also called, is comprised of two main strokes: _longitudinal release_ and _deep transverse friction, or cross-fiber friction_.  These two powerful strokes can be very useful tools in a massage therapist's arsenal of strokes to effect change in soft tissues, reducing pain, and increasing range of motion for clients.

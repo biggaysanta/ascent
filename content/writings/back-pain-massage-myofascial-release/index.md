@@ -7,6 +7,9 @@ tags:
   - "back-pain"
   - "myofascial-release"
 coverImage: "Back-pain-man.png"
+aliases:
+  - /blog/back-pain-massage-myofascial-release/
+  - /back-pain-massage-myofascial-release/
 ---
 
 ## Back Pain Sucks! Let Paul Help! 

@@ -15,6 +15,9 @@ tags:
   - "shoulder-pain"
   - "subscapularis"
   - "trigger-point-massage"
+aliases:
+  - /shoulder-pain-subscapularis/
+  - /pages/shoulder/shoulder-pain-subscapularis/
 ---
 
 

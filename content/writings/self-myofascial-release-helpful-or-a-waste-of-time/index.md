@@ -8,6 +8,9 @@ categories:
 tags: 
   - "myofascial-release"
 coverImage: "pexels-photo-4587694.jpeg"
+aliases:
+  - /self-myofascial-release-helpful-or-a-waste-of-time/
+  - /tag/self-massage/
 ---
 
 # Self-Myofascial Release: Helpful or a Waste of Time?

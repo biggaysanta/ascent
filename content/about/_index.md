@@ -13,6 +13,12 @@ date: 2026-02-08
 lastmod: 2026-02-08T01:33:50.083Z
 layout: about
 url: "/about/"
+aliases:
+  - /about-me/
+  - /paul-brown-cmt-2/
+  - /colophon/
+  - /tag/bhalu/
+  - /tag/bariatric-chronicles/
 sections:
   - title: "Oh, look!  It's Paul"
     image: "images/happy-smiling-paul.png"

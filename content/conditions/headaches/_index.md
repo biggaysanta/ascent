@@ -6,6 +6,8 @@ cascade:
   color-theme: "theme-renew"
 icon: "psychiatry"
 weight: 1
+aliases:
+  - /tag/headache/
 ---
 
 If you suffer from chronic headaches, the solution often lies below the skull. We focus on unloading the upper arch and releasing the tension patterns that trigger your pain.

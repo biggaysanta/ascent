@@ -6,6 +6,9 @@ cascade:
   color-theme: "theme-release"
 icon: "front_hand"
 weight: 2
+aliases:
+  - /the-shoulder/
+  - /tag/shoulder-pain/
 ---
 
 Shoulder and neck pain are deeply connected. Our advanced bodywork approach unwinds the tension holding your joints captive, restoring your mobility and releasing trapped nerves.

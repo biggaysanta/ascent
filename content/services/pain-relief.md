@@ -19,6 +19,10 @@ videourl: "/media/release.mp4"
 colortheme: theme-release
 buttontext: book
 bookingurl: "https://www.vagaro.com/cl/EP-nfw6bYBST9WKRYoH8PP0Tclcwkq4h0JoS3EBNSIU="
+aliases:
+  - /tag/deep-tissue/
+  - /tag/deep-tissue-massage/
+  - /tag/trigger-points/
 ---
 
 ## Zero Point Advanced Myofascial Release

@@ -17,6 +17,10 @@ videourl: "/media/recharge.mp4"
 colortheme: theme-recharge
 buttontext: book
 bookingurl: "https://www.vagaro.com/cl/EhRsgJ64qTjDv9EAGKIYWT9DFRFW1R5-pf5EU2IP~A4="
+aliases:
+  - /tag/sports-massage/
+  - /tag/california-international-marathon/
+  - /tag/wheelchair-basketball/
 ---
 
 > Perform better, Recover *faster*, Feel _great_!

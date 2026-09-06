@@ -1,5 +1,5 @@
 ---
--title:  Zero Point Myofascial Release - What You Need to Know
+title: "Zero Point Myofascial Release - What You Need to Know"
 description: "You Don't Have to Hurt: advanced massage therapy to relieve neck pain, back pain, carpal tunnel, myofascial pain syndrome. "
 date: 2025-01-30T21:30:22.053Z
 preview: ""
@@ -7,6 +7,8 @@ tags: []
 categories: []
 keywords: []
 fmContentType: html
+aliases:
+  - /blog/what-you-need-to-kinow-zero-point-advanced-myofascial-release/
 ---
 ## What is Zero Point Myofascial Release
 

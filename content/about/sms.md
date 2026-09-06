@@ -3,7 +3,8 @@ title: SMS Terms of Service
 date: 2024-04-09
 draft: false
 lastmod: 2026-02-08T02:06:10.576Z
-
+aliases:
+  - /sms-terms-of-service/
 ---
 
 **Messaging Terms & Conditions**

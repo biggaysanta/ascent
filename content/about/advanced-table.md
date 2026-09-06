@@ -13,6 +13,8 @@ categories:
     about-paul
 params:
     image: 'images/table.png'
+aliases:
+  - /about-me/advanced-massage-table/
 ---
 
 {{< aside  >}}> 

@@ -5,6 +5,8 @@ categories:
 tags: 
   - "self-care"
   - "walking"
+aliases:
+  - /tag/walking/
 ---
 
  If you park at the far end of the parking lot, you get extra step in… this lot gave me 600 extra steps on my total for the day! Also, ironically, it can be faster than hunting for a close spot!
