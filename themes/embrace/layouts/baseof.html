@@ -11,7 +11,7 @@
   <body class="min-h-screen relative">
     <svg style="display: none" aria-hidden="true">
       <!-- Wavy Liquid Glass -->
-      <filter id="glass-refraction-wavy">
+      <filter id="glass-refraction-wavy" primitiveUnits="userSpaceOnUse">
         <feTurbulence
           type="fractalNoise"
           baseFrequency="0.01"
@@ -22,12 +22,12 @@
           in="SourceGraphic"
           in2="noise"
           scale="50"
-          xChannelSelector="B"
+          xChannelSelector="R"
           yChannelSelector="G"
         />
       </filter>
       <!-- Hammered Frosted Glass -->
-      <filter id="glass-refraction-hammered">
+      <filter id="glass-refraction-hammered" primitiveUnits="userSpaceOnUse">
         <feTurbulence
           type="fractalNoise"
           baseFrequency="0.4"
@@ -46,7 +46,7 @@
     <img
       src="/svg/ppvb-no-bckgrnd.svg"
       alt=""
-      class="fixed bottom-0 right-0 h-[15vh] w-auto z-1 pointer-events-none"
+      class="fixed bottom-0 right-0 h-[15vh] w-auto z-10 pointer-events-none"
       aria-hidden="true"
     />
     <div class="fixed top-2 right-2 z-50 flex items-center gap-2">
@@ -56,34 +56,29 @@
     </div>
 
     <header
-      class="relative glass-panel-background z-30 min-w-xs max-w-6xl mx-auto px-4"
-      x-data="{ open: false }"
+      class="relative glass-panel-wavy min-w-xs max-w-6xl mx-auto px-4 glass-panel-wavy-ruby-500"
     >
       {{ partial "header.html" . }}
     </header>
 
+
     <main class="relative min-w-xs max-w-6xl mx-auto mt-4 px-4 py-4">
       <div class="content-shell">
-<!-- Line 128 -->
-<div class="content-column" style="view-transition-name: main-content;">
-  {{ block "main" . }}{{ end }}
-</div>
+          <div class="content-column" style="view-transition-name: main-content;">
+            {{ block "main" . }}{{ end }}
+          </div> <!-- end content-column -->
 
-        <div class="side-column" aria-hidden="true">
-          <div class="side-column-block">
-            {{ partial "organisms/announcements-widget.html" . }}
-          </div>
-          <div class="side-column-block">
-            {{ partial "organisms/categories-widget.html" . }}
-          </div>
-
-        </div>
+    <div class="side-column" aria-hidden="true">
+      <div class="side-column-block">
+        {{ partial "organisms/announcements-widget.html" . }}
       </div>
-    </main>
-    {{ partial "organisms/vagaro-popup-widget.html" . }}
-    {{ partial "organisms/sale-announcement-widget.html" . }}
-    <footer class="min-w-xs max-w-6xl mx-auto px-4 py-8">
-      {{ partial "organisms/tags-widget.html" . }} {{ partial "footer.html" . }}
+      <div class="side-column-block">
+        {{ partial "organisms/categories-widget.html" . }}
+      </div>
+  </main>
+    <footer class="block min-w-xs max-w-6xl mx-auto px-4 py-8">
+    {{ partial "footer.html" . }}
+      {{ partial "organisms/tags-widget.html" . }} 
     </footer>
   </body>
 </html>

@@ -29,7 +29,7 @@ A person might experience pain in the upper buttock and lower back when walking,
 
 #### Gluteus Medius Massage
 
-Massage can release tight gluteus medius muscles, with especially tight spots responding well to both ischemic compression and deep transverse friction.  [Get a massage!](https://noterro.com/calendars/bookOnlineStepOne/338d9ed6026f869f67d76258ca704ea9)
+Massage can release tight gluteus medius muscles, with especially tight spots responding well to both ischemic compression and deep transverse friction. 
 
 Gluteus Medius Self-care
 

@@ -12,6 +12,3 @@ The only downside was the cost of treatment compared to primary care treatment (
 We need more quality studies on the effects of massage therapy on body pain.
 
 If you are suffering from low back or neck pain, massage therapy can be a significant helpful part of your treatment regimen!
-
-[Book Now!](https://noterro.com/calendars/bookOnlineStepOne/338d9ed6026f869f67d76258ca704ea9)
-

@@ -20,8 +20,8 @@ ignoreFiles = ['^/prompts/', '^/data/hold/']
 googleAnalytics = "G-TXTMX6EYGG"
 colorMood = "theme-dorothy"
 subtitle = "by Paul Brown Massage Therapy"
-tagline = 'Expert Medical Massage Therapist in Arden-Arcade, Sacramento'
-description = 'Paul Brown, CMT is a licensed massage therapist in Sacramento, California specializing in medical massage therapy, myofascial release, and sports massage.'
+tagline = 'Pain Relief Medical Massage Therapy Practice in Arden-Arcade, Sacramento'
+description = 'Paul Brown, CMT is the Pain Relief Specialist in Sacramento, California specializing in medical massage therapy, myofascial release, and sports massage.'
   [params.business]
   type = ['HealthAndBeautyBusiness', 'MedicalBusiness']
   name = 'The Firelight Studio at Paul Brown Massage Therapy'

@@ -1,0 +1,24 @@
+{{/* 
+    @name button.html
+    @description creates a button you can style how you like, and with full accessiblity.
+    @params id: a useful and descriptive button id (string)
+    @params url: the destination url of the button
+    @params tooltip: a helpful tooltip
+    @params icon: an icon to help explain the button
+    @params class: css styling
+    @params text: The text describing the action's result.'
+
+    @example {{ partial "atoms/button.html (dict "id" "A useful id" "url" "https://www.yahoo.com/" "class" "glass-button-accent text-on-accent" "tooltip" "visit Yahoo!" "text" "Come on now, really?  Yahoo?" "icon" "horse" ) }}
+*/}}
+
+{{ $id := .id }}
+{{ $url := .url }}
+{{ $tooltip := .tooltip }}
+{{ $icon := .icon | default "open-hand" }}
+{{ $class := .class | default "glass-button-accent" }}
+{{ $text := .text }}
+
+    <button type="button" @click="window.location.href='{{ $url }}'" id="{{$id}}" class="justify-between rounded-md gap-2 max-w-5xl mx-auto {{ $class }}" >
+    {{ partial "atoms/icon.html" (dict "icon" $icon "class" "rounded-full border border-primary/20 bg-primary/10 text-primary text-xl"  )}}
+    {{ $text }}
+    </button>

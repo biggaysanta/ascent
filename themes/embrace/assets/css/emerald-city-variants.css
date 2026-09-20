@@ -32,7 +32,7 @@
 
   /* Typography */
   --color-text: oklch(24% 0.025 150);
-  --color-muted-text: oklch(52% 0.02 150);
+  --color-muted: oklch(52% 0.02 150);
 
   /* Semantic Error Colors */
   --color-error: oklch(50.86% 0.193 27.64);
@@ -71,7 +71,7 @@
 
     /* Typography */
     --color-text: oklch(94% 0.01 150);
-    --color-muted-text: oklch(72% 0.015 150);
+    --color-muted: oklch(72% 0.015 150);
 
     /* Semantic Error Colors */
     --color-error: oklch(71.82% 0.176 27.57);
@@ -111,7 +111,7 @@
 
   /* Typography */
   --color-text: oklch(22% 0.03 148);
-  --color-muted-text: oklch(50% 0.025 148);
+  --color-muted: oklch(50% 0.025 148);
 
   /* Semantic Error Colors */
   --color-error: oklch(50.86% 0.193 27.64);
@@ -150,7 +150,7 @@
 
     /* Typography */
     --color-text: oklch(95% 0.015 148);
-    --color-muted-text: oklch(72% 0.02 148);
+    --color-muted: oklch(72% 0.02 148);
 
     /* Semantic Error Colors */
     --color-error: oklch(71.82% 0.176 27.57);
@@ -190,7 +190,7 @@
 
   /* Typography */
   --color-text: oklch(24% 0.02 155);
-  --color-muted-text: oklch(54% 0.015 155);
+  --color-muted: oklch(54% 0.015 155);
 
   /* Semantic Error Colors */
   --color-error: oklch(50.86% 0.193 27.64);
@@ -229,7 +229,7 @@
 
     /* Typography */
     --color-text: oklch(95% 0.008 155);
-    --color-muted-text: oklch(74% 0.01 155);
+    --color-muted: oklch(74% 0.01 155);
 
     /* Semantic Error Colors */
     --color-error: oklch(71.82% 0.176 27.57);

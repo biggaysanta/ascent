@@ -1,0 +1,1033 @@
+{{ define "main" }}
+<style>
+  /* =========================================================
+     1. GEMSTONE SWATCH CLASSES
+     ========================================================= */
+  .csw-gem-ruby { background-color: oklch(55% 0.25 25); color: #ffffff; }
+  .csw-gem-emerald { background-color: oklch(55% 0.15 155); color: #ffffff; }
+  .csw-gem-gold { background-color: oklch(85% 0.18 65); color: #000000; }
+  .csw-gem-aquamarine { background-color: oklch(75% 0.10 215); color: #000000; }
+  .csw-gem-amethyst { background-color: oklch(60% 0.16 300); color: #ffffff; }
+  .csw-gem-sapphire { background-color: oklch(45% 0.14 270); color: #ffffff; }
+  .csw-gem-steel { background-color: oklch(55% 0.04 250); color: #ffffff; }
+  .csw-gem-onyx { background-color: oklch(35% 0.02 270); color: #ffffff; }
+  .csw-gem-cobalt { background-color: oklch(50% 0.16 260); color: #ffffff; }
+  .csw-gem-bronze { background-color: oklch(55% 0.14 45); color: #ffffff; }
+  .csw-gem-topaz { background-color: oklch(60% 0.16 75); color: #000000; }
+  .csw-gem-jade { background-color: oklch(55% 0.11 150); color: #ffffff; }
+
+  /* =========================================================
+     2. MONOCHROMES & SEMANTIC ERROR
+     ========================================================= */
+  .csw-mono-snow { background-color: oklch(100% 0 0); color: #000000; }
+  .csw-mono-ebon { background-color: oklch(0% 0 0); color: #ffffff; }
+  .csw-mono-charcoal { background-color: oklch(25% 0 0); color: #ffffff; }
+  .csw-mono-scrim { background-color: rgba(0, 0, 0, 0.45); color: #ffffff; }
+  .csw-err-l-base { background-color: oklch(50.86% 0.193 27.64); color: #ffffff; }
+  .csw-err-l-on { background-color: oklch(98.20% 0.009 26.02); color: #000000; }
+  .csw-err-l-fill { background-color: oklch(67.11% 0.214 27.69); color: #000000; }
+  .csw-err-l-text { background-color: oklch(28.72% 0.117 27.53); color: #ffffff; }
+  .csw-err-d-base { background-color: oklch(71.82% 0.176 27.57); color: #000000; }
+  .csw-err-d-on { background-color: oklch(25.72% 0.105 27.65); color: #ffffff; }
+  .csw-err-d-fill { background-color: oklch(47.21% 0.187 27.54); color: #ffffff; }
+  .csw-err-d-text { background-color: oklch(84.66% 0.084 26.20); color: #000000; }
+
+  /* =========================================================
+     3. THEME 1: AUNTIE EM (MASTER DEFAULT)
+     ========================================================= */
+  .csw-auntie-em-l-pri { background-color: oklch(55% 0.05 60); color: #ffffff; }
+  .csw-auntie-em-l-on-pri { background-color: oklch(98% 0.01 60); color: #000000; }
+  .csw-auntie-em-l-sec { background-color: oklch(65% 0.02 250); color: #ffffff; }
+  .csw-auntie-em-l-on-sec { background-color: oklch(25% 0.02 250); color: #ffffff; }
+  .csw-auntie-em-l-ter { background-color: oklch(45% 0.04 70); color: #ffffff; }
+  .csw-auntie-em-l-on-ter { background-color: oklch(95% 0.01 70); color: #000000; }
+  .csw-auntie-em-l-pfill { background-color: oklch(90% 0.03 60); color: #000000; }
+  .csw-auntie-em-l-ptext { background-color: oklch(35% 0.04 60); color: #ffffff; }
+  .csw-auntie-em-l-sfill { background-color: oklch(92% 0.01 250); color: #000000; }
+  .csw-auntie-em-l-stext { background-color: oklch(40% 0.02 250); color: #ffffff; }
+  .csw-auntie-em-l-tfill { background-color: oklch(88% 0.02 70); color: #000000; }
+  .csw-auntie-em-l-ttext { background-color: oklch(30% 0.04 70); color: #ffffff; }
+  .csw-auntie-em-l-bg { background-color: oklch(98% 0.005 60); color: #000000; }
+  .csw-auntie-em-l-card { background-color: oklch(95% 0.005 60); color: #000000; }
+  .csw-auntie-em-l-elev { background-color: oklch(90% 0.005 60); color: #000000; }
+  .csw-auntie-em-l-border { background-color: oklch(75% 0.01 60); color: #000000; }
+  .csw-auntie-em-l-text { background-color: oklch(25% 0.01 60); color: #ffffff; }
+  .csw-auntie-em-l-muted { background-color: oklch(50% 0.01 60); color: #ffffff; }
+  .csw-auntie-em-l-shd { background-color: oklch(55% 0.04 250); color: #ffffff; }
+
+  .csw-auntie-em-d-pri { background-color: oklch(80% 0.04 60); color: #000000; }
+  .csw-auntie-em-d-on-pri { background-color: oklch(25% 0.04 60); color: #ffffff; }
+  .csw-auntie-em-d-sec { background-color: oklch(80% 0.02 250); color: #000000; }
+  .csw-auntie-em-d-on-sec { background-color: oklch(25% 0.02 250); color: #ffffff; }
+  .csw-auntie-em-d-ter { background-color: oklch(75% 0.04 70); color: #000000; }
+  .csw-auntie-em-d-on-ter { background-color: oklch(20% 0.04 70); color: #ffffff; }
+  .csw-auntie-em-d-pfill { background-color: oklch(35% 0.04 60); color: #ffffff; }
+  .csw-auntie-em-d-ptext { background-color: oklch(88% 0.03 60); color: #000000; }
+  .csw-auntie-em-d-sfill { background-color: oklch(30% 0.02 250); color: #ffffff; }
+  .csw-auntie-em-d-stext { background-color: oklch(85% 0.02 250); color: #000000; }
+  .csw-auntie-em-d-tfill { background-color: oklch(35% 0.04 70); color: #ffffff; }
+  .csw-auntie-em-d-ttext { background-color: oklch(85% 0.03 70); color: #000000; }
+  .csw-auntie-em-d-bg { background-color: oklch(18% 0.005 250); color: #ffffff; }
+  .csw-auntie-em-d-card { background-color: oklch(22% 0.005 250); color: #ffffff; }
+  .csw-auntie-em-d-elev { background-color: oklch(28% 0.005 250); color: #ffffff; }
+  .csw-auntie-em-d-border { background-color: oklch(45% 0.005 250); color: #ffffff; }
+  .csw-auntie-em-d-text { background-color: oklch(92% 0.005 60); color: #000000; }
+  .csw-auntie-em-d-muted { background-color: oklch(70% 0.005 60); color: #000000; }
+  .csw-auntie-em-d-shd { background-color: oklch(55% 0.04 250); color: #ffffff; }
+
+  /* =========================================================
+     4. THEME 2: DOROTHY
+     ========================================================= */
+  .csw-dorothy-l-pri { background-color: oklch(55% 0.22 25); color: #ffffff; }
+  .csw-dorothy-l-on-pri { background-color: oklch(98% 0.01 25); color: #000000; }
+  .csw-dorothy-l-sec { background-color: oklch(60% 0.12 245); color: #ffffff; }
+  .csw-dorothy-l-on-sec { background-color: oklch(20% 0.05 245); color: #ffffff; }
+  .csw-dorothy-l-ter { background-color: oklch(80% 0.16 95); color: #000000; }
+  .csw-dorothy-l-on-ter { background-color: oklch(25% 0.05 95); color: #ffffff; }
+  .csw-dorothy-l-pfill { background-color: oklch(90% 0.08 25); color: #000000; }
+  .csw-dorothy-l-ptext { background-color: oklch(35% 0.14 25); color: #ffffff; }
+  .csw-dorothy-l-sfill { background-color: oklch(92% 0.05 245); color: #000000; }
+  .csw-dorothy-l-stext { background-color: oklch(40% 0.08 245); color: #ffffff; }
+  .csw-dorothy-l-tfill { background-color: oklch(94% 0.08 95); color: #000000; }
+  .csw-dorothy-l-ttext { background-color: oklch(40% 0.12 95); color: #ffffff; }
+  .csw-dorothy-l-bg { background-color: oklch(99% 0.005 245); color: #000000; }
+  .csw-dorothy-l-card { background-color: oklch(96% 0.01 245); color: #000000; }
+  .csw-dorothy-l-elev { background-color: oklch(92% 0.015 245); color: #000000; }
+  .csw-dorothy-l-border { background-color: oklch(75% 0.02 245); color: #000000; }
+  .csw-dorothy-l-text { background-color: oklch(25% 0.02 245); color: #ffffff; }
+  .csw-dorothy-l-muted { background-color: oklch(50% 0.02 245); color: #ffffff; }
+  .csw-dorothy-l-shd { background-color: oklch(55% 0.25 25); color: #ffffff; }
+
+  .csw-dorothy-d-pri { background-color: oklch(65% 0.22 25); color: #ffffff; }
+  .csw-dorothy-d-on-pri { background-color: oklch(20% 0.10 25); color: #ffffff; }
+  .csw-dorothy-d-sec { background-color: oklch(75% 0.10 245); color: #000000; }
+  .csw-dorothy-d-on-sec { background-color: oklch(20% 0.05 245); color: #ffffff; }
+  .csw-dorothy-d-ter { background-color: oklch(85% 0.16 95); color: #000000; }
+  .csw-dorothy-d-on-ter { background-color: oklch(25% 0.08 95); color: #ffffff; }
+  .csw-dorothy-d-pfill { background-color: oklch(35% 0.14 25); color: #ffffff; }
+  .csw-dorothy-d-ptext { background-color: oklch(88% 0.10 25); color: #000000; }
+  .csw-dorothy-d-sfill { background-color: oklch(30% 0.06 245); color: #ffffff; }
+  .csw-dorothy-d-stext { background-color: oklch(88% 0.05 245); color: #000000; }
+  .csw-dorothy-d-tfill { background-color: oklch(35% 0.08 95); color: #ffffff; }
+  .csw-dorothy-d-ttext { background-color: oklch(90% 0.10 95); color: #000000; }
+  .csw-dorothy-d-bg { background-color: oklch(15% 0.01 245); color: #ffffff; }
+  .csw-dorothy-d-card { background-color: oklch(20% 0.015 245); color: #ffffff; }
+  .csw-dorothy-d-elev { background-color: oklch(26% 0.02 245); color: #ffffff; }
+  .csw-dorothy-d-border { background-color: oklch(45% 0.02 245); color: #ffffff; }
+  .csw-dorothy-d-text { background-color: oklch(95% 0.01 245); color: #000000; }
+  .csw-dorothy-d-muted { background-color: oklch(75% 0.01 245); color: #000000; }
+  .csw-dorothy-d-shd { background-color: oklch(55% 0.25 25); color: #ffffff; }
+
+  /* =========================================================
+     5. THEME 3: BRAINS (SCARECROW)
+     ========================================================= */
+  .csw-brains-l-pri { background-color: oklch(60% 0.16 80); color: #000000; }
+  .csw-brains-l-on-pri { background-color: oklch(15% 0.05 80); color: #ffffff; }
+  .csw-brains-l-sec { background-color: oklch(75% 0.08 75); color: #000000; }
+  .csw-brains-l-on-sec { background-color: oklch(20% 0.05 75); color: #ffffff; }
+  .csw-brains-l-ter { background-color: oklch(45% 0.12 145); color: #ffffff; }
+  .csw-brains-l-on-ter { background-color: oklch(95% 0.02 145); color: #000000; }
+  .csw-brains-l-pfill { background-color: oklch(85% 0.15 85); color: #000000; }
+  .csw-brains-l-ptext { background-color: oklch(35% 0.12 80); color: #ffffff; }
+  .csw-brains-l-sfill { background-color: oklch(92% 0.05 75); color: #000000; }
+  .csw-brains-l-stext { background-color: oklch(40% 0.06 75); color: #ffffff; }
+  .csw-brains-l-tfill { background-color: oklch(88% 0.08 145); color: #000000; }
+  .csw-brains-l-ttext { background-color: oklch(30% 0.10 145); color: #ffffff; }
+  .csw-brains-l-bg { background-color: oklch(98% 0.01 80); color: #000000; }
+  .csw-brains-l-card { background-color: oklch(95% 0.01 80); color: #000000; }
+  .csw-brains-l-elev { background-color: oklch(90% 0.03 80); color: #000000; }
+  .csw-brains-l-border { background-color: oklch(65% 0.04 80); color: #000000; }
+  .csw-brains-l-text { background-color: oklch(25% 0.03 80); color: #ffffff; }
+  .csw-brains-l-muted { background-color: oklch(50% 0.03 80); color: #ffffff; }
+  .csw-brains-l-shd { background-color: oklch(60% 0.16 75); color: #000000; }
+
+  .csw-brains-d-pri { background-color: oklch(85% 0.15 85); color: #000000; }
+  .csw-brains-d-on-pri { background-color: oklch(25% 0.10 80); color: #ffffff; }
+  .csw-brains-d-sec { background-color: oklch(75% 0.08 75); color: #000000; }
+  .csw-brains-d-on-sec { background-color: oklch(20% 0.05 75); color: #ffffff; }
+  .csw-brains-d-ter { background-color: oklch(75% 0.15 145); color: #000000; }
+  .csw-brains-d-on-ter { background-color: oklch(20% 0.05 145); color: #ffffff; }
+  .csw-brains-d-pfill { background-color: oklch(40% 0.10 80); color: #ffffff; }
+  .csw-brains-d-ptext { background-color: oklch(88% 0.12 85); color: #000000; }
+  .csw-brains-d-sfill { background-color: oklch(35% 0.05 75); color: #ffffff; }
+  .csw-brains-d-stext { background-color: oklch(85% 0.06 75); color: #000000; }
+  .csw-brains-d-tfill { background-color: oklch(30% 0.10 145); color: #ffffff; }
+  .csw-brains-d-ttext { background-color: oklch(88% 0.08 145); color: #000000; }
+  .csw-brains-d-bg { background-color: oklch(15% 0.01 80); color: #ffffff; }
+  .csw-brains-d-card { background-color: oklch(20% 0.015 80); color: #ffffff; }
+  .csw-brains-d-elev { background-color: oklch(26% 0.02 80); color: #ffffff; }
+  .csw-brains-d-border { background-color: oklch(45% 0.02 80); color: #ffffff; }
+  .csw-brains-d-text { background-color: oklch(95% 0.01 80); color: #000000; }
+  .csw-brains-d-muted { background-color: oklch(75% 0.01 80); color: #000000; }
+  .csw-brains-d-shd { background-color: oklch(60% 0.16 75); color: #000000; }
+
+  /* =========================================================
+     6. THEME 4: COURAGE (THE LION)
+     ========================================================= */
+  .csw-courage-l-pri { background-color: oklch(65% 0.15 65); color: #000000; }
+  .csw-courage-l-on-pri { background-color: oklch(15% 0.05 65); color: #ffffff; }
+  .csw-courage-l-sec { background-color: oklch(45% 0.05 130); color: #ffffff; }
+  .csw-courage-l-on-sec { background-color: oklch(95% 0.02 130); color: #000000; }
+  .csw-courage-l-ter { background-color: oklch(55% 0.18 25); color: #ffffff; }
+  .csw-courage-l-on-ter { background-color: oklch(98% 0.01 25); color: #000000; }
+  .csw-courage-l-pfill { background-color: oklch(88% 0.08 65); color: #000000; }
+  .csw-courage-l-ptext { background-color: oklch(35% 0.10 65); color: #ffffff; }
+  .csw-courage-l-sfill { background-color: oklch(90% 0.04 130); color: #000000; }
+  .csw-courage-l-stext { background-color: oklch(30% 0.06 130); color: #ffffff; }
+  .csw-courage-l-tfill { background-color: oklch(88% 0.10 25); color: #000000; }
+  .csw-courage-l-ttext { background-color: oklch(35% 0.14 25); color: #ffffff; }
+  .csw-courage-l-bg { background-color: oklch(98% 0.01 65); color: #000000; }
+  .csw-courage-l-card { background-color: oklch(95% 0.015 65); color: #000000; }
+  .csw-courage-l-elev { background-color: oklch(90% 0.025 65); color: #000000; }
+  .csw-courage-l-border { background-color: oklch(70% 0.03 65); color: #000000; }
+  .csw-courage-l-text { background-color: oklch(25% 0.02 65); color: #ffffff; }
+  .csw-courage-l-muted { background-color: oklch(50% 0.02 65); color: #ffffff; }
+  .csw-courage-l-shd { background-color: oklch(35% 0.02 270); color: #ffffff; }
+
+  .csw-courage-d-pri { background-color: oklch(75% 0.12 65); color: #000000; }
+  .csw-courage-d-on-pri { background-color: oklch(20% 0.08 65); color: #ffffff; }
+  .csw-courage-d-sec { background-color: oklch(75% 0.05 130); color: #000000; }
+  .csw-courage-d-on-sec { background-color: oklch(20% 0.05 130); color: #ffffff; }
+  .csw-courage-d-ter { background-color: oklch(65% 0.16 25); color: #ffffff; }
+  .csw-courage-d-on-ter { background-color: oklch(20% 0.10 25); color: #ffffff; }
+  .csw-courage-d-pfill { background-color: oklch(35% 0.10 65); color: #ffffff; }
+  .csw-courage-d-ptext { background-color: oklch(88% 0.08 65); color: #000000; }
+  .csw-courage-d-sfill { background-color: oklch(30% 0.05 130); color: #ffffff; }
+  .csw-courage-d-stext { background-color: oklch(85% 0.04 130); color: #000000; }
+  .csw-courage-d-tfill { background-color: oklch(35% 0.12 25); color: #ffffff; }
+  .csw-courage-d-ttext { background-color: oklch(88% 0.10 25); color: #000000; }
+  .csw-courage-d-bg { background-color: oklch(15% 0.01 65); color: #ffffff; }
+  .csw-courage-d-card { background-color: oklch(20% 0.015 65); color: #ffffff; }
+  .csw-courage-d-elev { background-color: oklch(26% 0.02 65); color: #ffffff; }
+  .csw-courage-d-border { background-color: oklch(45% 0.02 65); color: #ffffff; }
+  .csw-courage-d-text { background-color: oklch(95% 0.01 65); color: #000000; }
+  .csw-courage-d-muted { background-color: oklch(75% 0.01 65); color: #000000; }
+  .csw-courage-d-shd { background-color: oklch(35% 0.02 270); color: #ffffff; }
+
+  /* =========================================================
+     7. THEME 5: GLINDA
+     ========================================================= */
+  .csw-glinda-l-pri { background-color: oklch(65% 0.20 350); color: #ffffff; }
+  .csw-glinda-l-on-pri { background-color: oklch(98% 0.02 350); color: #000000; }
+  .csw-glinda-l-sec { background-color: oklch(75% 0.08 320); color: #000000; }
+  .csw-glinda-l-on-sec { background-color: oklch(25% 0.05 320); color: #ffffff; }
+  .csw-glinda-l-ter { background-color: oklch(75% 0.15 85); color: #000000; }
+  .csw-glinda-l-on-ter { background-color: oklch(20% 0.05 85); color: #ffffff; }
+  .csw-glinda-l-pfill { background-color: oklch(92% 0.08 350); color: #000000; }
+  .csw-glinda-l-ptext { background-color: oklch(40% 0.18 350); color: #ffffff; }
+  .csw-glinda-l-sfill { background-color: oklch(94% 0.04 320); color: #000000; }
+  .csw-glinda-l-stext { background-color: oklch(45% 0.10 320); color: #ffffff; }
+  .csw-glinda-l-tfill { background-color: oklch(90% 0.08 85); color: #000000; }
+  .csw-glinda-l-ttext { background-color: oklch(40% 0.12 85); color: #ffffff; }
+  .csw-glinda-l-bg { background-color: oklch(99% 0.01 350); color: #000000; }
+  .csw-glinda-l-card { background-color: oklch(96% 0.02 350); color: #000000; }
+  .csw-glinda-l-elev { background-color: oklch(92% 0.04 350); color: #000000; }
+  .csw-glinda-l-border { background-color: oklch(75% 0.06 350); color: #000000; }
+  .csw-glinda-l-text { background-color: oklch(30% 0.05 350); color: #ffffff; }
+  .csw-glinda-l-muted { background-color: oklch(55% 0.05 350); color: #ffffff; }
+  .csw-glinda-l-shd { background-color: oklch(60% 0.16 300); color: #ffffff; }
+
+  .csw-glinda-d-pri { background-color: oklch(80% 0.18 350); color: #000000; }
+  .csw-glinda-d-on-pri { background-color: oklch(25% 0.15 350); color: #ffffff; }
+  .csw-glinda-d-sec { background-color: oklch(85% 0.08 320); color: #000000; }
+  .csw-glinda-d-on-sec { background-color: oklch(25% 0.10 320); color: #ffffff; }
+  .csw-glinda-d-ter { background-color: oklch(85% 0.15 85); color: #000000; }
+  .csw-glinda-d-on-ter { background-color: oklch(25% 0.10 85); color: #ffffff; }
+  .csw-glinda-d-pfill { background-color: oklch(35% 0.15 350); color: #ffffff; }
+  .csw-glinda-d-ptext { background-color: oklch(90% 0.10 350); color: #000000; }
+  .csw-glinda-d-sfill { background-color: oklch(30% 0.10 320); color: #ffffff; }
+  .csw-glinda-d-stext { background-color: oklch(90% 0.06 320); color: #000000; }
+  .csw-glinda-d-tfill { background-color: oklch(35% 0.10 85); color: #ffffff; }
+  .csw-glinda-d-ttext { background-color: oklch(90% 0.10 85); color: #000000; }
+  .csw-glinda-d-bg { background-color: oklch(15% 0.03 320); color: #ffffff; }
+  .csw-glinda-d-card { background-color: oklch(20% 0.04 320); color: #ffffff; }
+  .csw-glinda-d-elev { background-color: oklch(26% 0.06 320); color: #ffffff; }
+  .csw-glinda-d-border { background-color: oklch(45% 0.08 320); color: #ffffff; }
+  .csw-glinda-d-text { background-color: oklch(95% 0.02 350); color: #000000; }
+  .csw-glinda-d-muted { background-color: oklch(75% 0.05 350); color: #000000; }
+  .csw-glinda-d-shd { background-color: oklch(60% 0.16 300); color: #ffffff; }
+
+  /* =========================================================
+     8. THEME 6: HOME
+     ========================================================= */
+  .csw-home-l-pri { background-color: oklch(55% 0.16 45); color: #ffffff; }
+  .csw-home-l-on-pri { background-color: oklch(98% 0.01 45); color: #000000; }
+  .csw-home-l-sec { background-color: oklch(65% 0.12 55); color: #000000; }
+  .csw-home-l-on-sec { background-color: oklch(20% 0.05 55); color: #ffffff; }
+  .csw-home-l-ter { background-color: oklch(75% 0.12 85); color: #000000; }
+  .csw-home-l-on-ter { background-color: oklch(25% 0.05 85); color: #ffffff; }
+  .csw-home-l-pfill { background-color: oklch(88% 0.06 45); color: #000000; }
+  .csw-home-l-ptext { background-color: oklch(35% 0.12 45); color: #ffffff; }
+  .csw-home-l-sfill { background-color: oklch(90% 0.04 55); color: #000000; }
+  .csw-home-l-stext { background-color: oklch(40% 0.08 55); color: #ffffff; }
+  .csw-home-l-tfill { background-color: oklch(92% 0.05 85); color: #000000; }
+  .csw-home-l-ttext { background-color: oklch(45% 0.08 85); color: #ffffff; }
+  .csw-home-l-bg { background-color: oklch(98.5% 0.01 55); color: #000000; }
+  .csw-home-l-card { background-color: oklch(96% 0.015 55); color: #000000; }
+  .csw-home-l-elev { background-color: oklch(92% 0.025 55); color: #000000; }
+  .csw-home-l-border { background-color: oklch(70% 0.03 55); color: #000000; }
+  .csw-home-l-text { background-color: oklch(30% 0.02 55); color: #ffffff; }
+  .csw-home-l-muted { background-color: oklch(50% 0.02 55); color: #ffffff; }
+  .csw-home-l-shd { background-color: oklch(55% 0.14 45); color: #ffffff; }
+
+  .csw-home-d-pri { background-color: oklch(70% 0.14 45); color: #000000; }
+  .csw-home-d-on-pri { background-color: oklch(25% 0.10 45); color: #ffffff; }
+  .csw-home-d-sec { background-color: oklch(75% 0.10 55); color: #000000; }
+  .csw-home-d-on-sec { background-color: oklch(25% 0.08 55); color: #ffffff; }
+  .csw-home-d-ter { background-color: oklch(85% 0.10 85); color: #000000; }
+  .csw-home-d-on-ter { background-color: oklch(35% 0.08 85); color: #ffffff; }
+  .csw-home-d-pfill { background-color: oklch(40% 0.10 45); color: #ffffff; }
+  .csw-home-d-ptext { background-color: oklch(88% 0.06 45); color: #000000; }
+  .csw-home-d-sfill { background-color: oklch(45% 0.08 55); color: #ffffff; }
+  .csw-home-d-stext { background-color: oklch(90% 0.04 55); color: #000000; }
+  .csw-home-d-tfill { background-color: oklch(50% 0.08 85); color: #ffffff; }
+  .csw-home-d-ttext { background-color: oklch(92% 0.05 85); color: #000000; }
+  .csw-home-d-bg { background-color: oklch(18% 0.01 55); color: #ffffff; }
+  .csw-home-d-card { background-color: oklch(22% 0.015 55); color: #ffffff; }
+  .csw-home-d-elev { background-color: oklch(28% 0.025 55); color: #ffffff; }
+  .csw-home-d-border { background-color: oklch(45% 0.02 55); color: #ffffff; }
+  .csw-home-d-text { background-color: oklch(92% 0.01 55); color: #000000; }
+  .csw-home-d-muted { background-color: oklch(75% 0.01 55); color: #000000; }
+  .csw-home-d-shd { background-color: oklch(55% 0.14 45); color: #ffffff; }
+
+  /* =========================================================
+     9. THEME 7: REFRESH (TIDAL WAVE)
+     ========================================================= */
+  .csw-refresh-l-pri { background-color: oklch(48.99% 0.078 280.40); color: #ffffff; }
+  .csw-refresh-l-on-pri { background-color: oklch(98.34% 0.010 305.41); color: #000000; }
+  .csw-refresh-l-sec { background-color: oklch(48.62% 0.033 285.09); color: #ffffff; }
+  .csw-refresh-l-on-sec { background-color: oklch(98.34% 0.010 305.41); color: #000000; }
+  .csw-refresh-l-ter { background-color: oklch(49.27% 0.070 320.06); color: #ffffff; }
+  .csw-refresh-l-on-ter { background-color: oklch(98.34% 0.010 345.41); color: #000000; }
+  .csw-refresh-l-pfill { background-color: oklch(84.02% 0.078 282.18); color: #000000; }
+  .csw-refresh-l-ptext { background-color: oklch(38.39% 0.078 279.23); color: #ffffff; }
+  .csw-refresh-l-sfill { background-color: oklch(91.51% 0.034 287.55); color: #000000; }
+  .csw-refresh-l-stext { background-color: oklch(43.82% 0.033 282.70); color: #ffffff; }
+  .csw-refresh-l-tfill { background-color: oklch(90.44% 0.073 321.81); color: #000000; }
+  .csw-refresh-l-ttext { background-color: oklch(43.27% 0.068 319.67); color: #ffffff; }
+  .csw-refresh-l-bg { background-color: oklch(98.31% 0.009 308.36); color: #000000; }
+  .csw-refresh-l-card { background-color: oklch(94.83% 0.014 299.80); color: #000000; }
+  .csw-refresh-l-elev { background-color: oklch(91.48% 0.016 293.73); color: #000000; }
+  .csw-refresh-l-border { background-color: oklch(58.37% 0.015 290.52); color: #ffffff; }
+  .csw-refresh-l-text { background-color: oklch(32.08% 0.016 285.47); color: #ffffff; }
+  .csw-refresh-l-muted { background-color: oklch(48.64% 0.016 290.39); color: #ffffff; }
+  .csw-refresh-l-shd { background-color: oklch(55% 0.15 155); color: #ffffff; }
+
+  .csw-refresh-d-pri { background-color: oklch(83.06% 0.060 283.96); color: #000000; }
+  .csw-refresh-d-on-pri { background-color: oklch(37.50% 0.061 280.56); color: #ffffff; }
+  .csw-refresh-d-sec { background-color: oklch(82.90% 0.035 287.45); color: #000000; }
+  .csw-refresh-d-on-sec { background-color: oklch(37.46% 0.032 282.35); color: #ffffff; }
+  .csw-refresh-d-ter { background-color: oklch(94.51% 0.046 323.74); color: #000000; }
+  .csw-refresh-d-on-ter { background-color: oklch(46.29% 0.069 319.87); color: #ffffff; }
+  .csw-refresh-d-pfill { background-color: oklch(44.17% 0.061 281.22); color: #ffffff; }
+  .csw-refresh-d-ptext { background-color: oklch(91.90% 0.041 285.57); color: #000000; }
+  .csw-refresh-d-sfill { background-color: oklch(35.55% 0.033 282.23); color: #ffffff; }
+  .csw-refresh-d-stext { background-color: oklch(80.67% 0.034 287.53); color: #000000; }
+  .csw-refresh-d-tfill { background-color: oklch(90.44% 0.073 321.81); color: #000000; }
+  .csw-refresh-d-ttext { background-color: oklch(43.27% 0.068 319.67); color: #ffffff; }
+  .csw-refresh-d-bg { background-color: oklch(16.57% 0.008 285.46); color: #ffffff; }
+  .csw-refresh-d-card { background-color: oklch(21.66% 0.014 285.21); color: #ffffff; }
+  .csw-refresh-d-elev { background-color: oklch(26.84% 0.017 285.23); color: #ffffff; }
+  .csw-refresh-d-border { background-color: oklch(56.36% 0.017 290.03); color: #ffffff; }
+  .csw-refresh-d-text { background-color: oklch(92.39% 0.016 293.74); color: #000000; }
+  .csw-refresh-d-muted { background-color: oklch(74.23% 0.016 290.20); color: #000000; }
+  .csw-refresh-d-shd { background-color: oklch(55% 0.15 155); color: #ffffff; }
+
+  /* =========================================================
+     10. THEME 8: RELEASE & RENEW (ZERO-POINT AMFR)
+     ========================================================= */
+  .csw-release-l-pri { background-color: oklch(49.48% 0.132 277.34); color: #ffffff; }
+  .csw-release-l-on-pri { background-color: oklch(98.34% 0.010 305.41); color: #000000; }
+  .csw-release-l-sec { background-color: oklch(48.27% 0.088 123.38); color: #ffffff; }
+  .csw-release-l-on-sec { background-color: oklch(97.35% 0.053 121.36); color: #000000; }
+  .csw-release-l-ter { background-color: oklch(48.81% 0.132 121.94); color: #ffffff; }
+  .csw-release-l-on-ter { background-color: oklch(97.10% 0.059 119.53); color: #000000; }
+  .csw-release-l-pfill { background-color: oklch(77.53% 0.091 280.20); color: #000000; }
+  .csw-release-l-ptext { background-color: oklch(37.56% 0.133 277.67); color: #ffffff; }
+  .csw-release-l-sfill { background-color: oklch(94.27% 0.076 123.00); color: #000000; }
+  .csw-release-l-stext { background-color: oklch(45.54% 0.083 123.33); color: #ffffff; }
+  .csw-release-l-tfill { background-color: oklch(93.99% 0.147 120.91); color: #000000; }
+  .csw-release-l-ttext { background-color: oklch(45.92% 0.126 121.94); color: #ffffff; }
+  .csw-release-l-bg { background-color: oklch(98.34% 0.009 311.16); color: #000000; }
+  .csw-release-l-card { background-color: oklch(93.58% 0.024 295.31); color: #000000; }
+  .csw-release-l-elev { background-color: oklch(89.87% 0.028 295.31); color: #000000; }
+  .csw-release-l-border { background-color: oklch(55.67% 0.057 291.56); color: #ffffff; }
+  .csw-release-l-text { background-color: oklch(30.63% 0.055 285.54); color: #ffffff; }
+  .csw-release-l-muted { background-color: oklch(46.99% 0.053 285.54); color: #ffffff; }
+  .csw-release-l-shd { background-color: oklch(35% 0.02 270); color: #ffffff; }
+
+  .csw-release-d-pri { background-color: oklch(81.99% 0.080 279.80); color: #000000; }
+  .csw-release-d-on-pri { background-color: oklch(37.89% 0.126 274.67); color: #ffffff; }
+  .csw-release-d-sec { background-color: oklch(81.82% 0.048 119.56); color: #000000; }
+  .csw-release-d-on-sec { background-color: oklch(36.19% 0.051 119.56); color: #ffffff; }
+  .csw-release-d-ter { background-color: oklch(96.11% 0.063 118.06); color: #000000; }
+  .csw-release-d-on-ter { background-color: oklch(47.93% 0.118 120.06); color: #ffffff; }
+  .csw-release-d-pfill { background-color: oklch(77.53% 0.091 280.20); color: #000000; }
+  .csw-release-d-ptext { background-color: oklch(33.00% 0.121 275.00); color: #ffffff; }
+  .csw-release-d-sfill { background-color: oklch(21.43% 0.038 119.56); color: #ffffff; }
+  .csw-release-d-stext { background-color: oklch(70.12% 0.035 119.56); color: #000000; }
+  .csw-release-d-tfill { background-color: oklch(91.10% 0.134 119.06); color: #000000; }
+  .csw-release-d-ttext { background-color: oklch(45.92% 0.126 121.94); color: #ffffff; }
+  .csw-release-d-bg { background-color: oklch(14.43% 0.023 288.54); color: #ffffff; }
+  .csw-release-d-card { background-color: oklch(18.43% 0.035 288.54); color: #ffffff; }
+  .csw-release-d-elev { background-color: oklch(22.43% 0.035 288.54); color: #ffffff; }
+  .csw-release-d-border { background-color: oklch(52.67% 0.057 291.56); color: #ffffff; }
+  .csw-release-d-text { background-color: oklch(90.63% 0.055 285.54); color: #000000; }
+  .csw-release-d-muted { background-color: oklch(70.99% 0.053 285.54); color: #000000; }
+  .csw-release-d-shd { background-color: oklch(35% 0.02 270); color: #ffffff; }
+
+  /* =========================================================
+     11. THEME 9: RECHARGE & REPEAT
+     ========================================================= */
+  .csw-recharge-l-pri { background-color: oklch(49.32% 0.237 271.65); color: #ffffff; }
+  .csw-recharge-l-on-pri { background-color: oklch(96.37% 0.019 292.61); color: #000000; }
+  .csw-recharge-l-sec { background-color: oklch(48.76% 0.160 286.28); color: #ffffff; }
+  .csw-recharge-l-on-sec { background-color: oklch(96.41% 0.021 304.04); color: #000000; }
+  .csw-recharge-l-ter { background-color: oklch(49.12% 0.148 341.14); color: #ffffff; }
+  .csw-recharge-l-on-ter { background-color: oklch(96.45% 0.020 350.54); color: #000000; }
+  .csw-recharge-l-pfill { background-color: oklch(71.55% 0.150 278.95); color: #ffffff; }
+  .csw-recharge-l-ptext { background-color: oklch(27.57% 0.191 264.05); color: #ffffff; }
+  .csw-recharge-l-sfill { background-color: oklch(86.65% 0.072 292.77); color: #000000; }
+  .csw-recharge-l-stext { background-color: oklch(41.47% 0.162 284.69); color: #ffffff; }
+  .csw-recharge-l-tfill { background-color: oklch(78.68% 0.157 342.36); color: #000000; }
+  .csw-recharge-l-ttext { background-color: oklch(33.78% 0.141 340.40); color: #ffffff; }
+  .csw-recharge-l-bg { background-color: oklch(97.49% 0.016 310.11); color: #000000; }
+  .csw-recharge-l-card { background-color: oklch(93.44% 0.035 296.28); color: #000000; }
+  .csw-recharge-l-elev { background-color: oklch(90.08% 0.054 294.71); color: #000000; }
+  .csw-recharge-l-border { background-color: oklch(57.19% 0.067 291.41); color: #ffffff; }
+  .csw-recharge-l-text { background-color: oklch(30.80% 0.069 288.77); color: #ffffff; }
+  .csw-recharge-l-muted { background-color: oklch(47.64% 0.067 290.15); color: #ffffff; }
+  .csw-recharge-l-shd { background-color: oklch(60% 0.16 75); color: #000000; }
+
+  .csw-recharge-d-pri { background-color: oklch(75.65% 0.127 280.43); color: #000000; }
+  .csw-recharge-d-on-pri { background-color: oklch(32.78% 0.227 264.05); color: #ffffff; }
+  .csw-recharge-d-sec { background-color: oklch(71.10% 0.157 288.41); color: #000000; }
+  .csw-recharge-d-on-sec { background-color: oklch(26.53% 0.162 279.04); color: #ffffff; }
+  .csw-recharge-d-ter { background-color: oklch(82.71% 0.125 342.86); color: #000000; }
+  .csw-recharge-d-on-ter { background-color: oklch(37.70% 0.144 340.64); color: #ffffff; }
+  .csw-recharge-d-pfill { background-color: oklch(71.55% 0.150 278.95); color: #ffffff; }
+  .csw-recharge-d-ptext { background-color: oklch(27.57% 0.191 264.05); color: #ffffff; }
+  .csw-recharge-d-sfill { background-color: oklch(41.23% 0.163 284.40); color: #ffffff; }
+  .csw-recharge-d-stext { background-color: oklch(86.38% 0.073 292.58); color: #000000; }
+  .csw-recharge-d-tfill { background-color: oklch(78.68% 0.157 342.36); color: #000000; }
+  .csw-recharge-d-ttext { background-color: oklch(33.78% 0.141 340.40); color: #ffffff; }
+  .csw-recharge-d-bg { background-color: oklch(17.18% 0.074 283.92); color: #ffffff; }
+  .csw-recharge-d-card { background-color: oklch(22.20% 0.085 284.88); color: #ffffff; }
+  .csw-recharge-d-elev { background-color: oklch(27.70% 0.096 285.81); color: #ffffff; }
+  .csw-recharge-d-border { background-color: oklch(56.85% 0.067 291.39); color: #ffffff; }
+  .csw-recharge-d-text { background-color: oklch(92.63% 0.040 295.10); color: #000000; }
+  .csw-recharge-d-muted { background-color: oklch(74.49% 0.067 292.48); color: #000000; }
+  .csw-recharge-d-shd { background-color: oklch(60% 0.16 75); color: #000000; }
+
+  /* =========================================================
+     12. THEME 10: RELATE & RECEIVE
+     ========================================================= */
+  .csw-relate-l-pri { background-color: oklch(49.48% 0.132 277.34); color: #ffffff; }
+  .csw-relate-l-on-pri { background-color: oklch(98.34% 0.010 305.41); color: #000000; }
+  .csw-relate-l-sec { background-color: oklch(48.72% 0.056 281.56); color: #ffffff; }
+  .csw-relate-l-on-sec { background-color: oklch(98.34% 0.010 305.41); color: #000000; }
+  .csw-relate-l-ter { background-color: oklch(49.82% 0.119 29.86); color: #ffffff; }
+  .csw-relate-l-on-ter { background-color: oklch(98.20% 0.009 26.02); color: #000000; }
+  .csw-relate-l-pfill { background-color: oklch(74.73% 0.131 279.85); color: #000000; }
+  .csw-relate-l-ptext { background-color: oklch(30.75% 0.143 271.83); color: #ffffff; }
+  .csw-relate-l-sfill { background-color: oklch(91.63% 0.042 285.54); color: #000000; }
+  .csw-relate-l-stext { background-color: oklch(44.02% 0.056 281.24); color: #ffffff; }
+  .csw-relate-l-tfill { background-color: oklch(77.39% 0.133 29.90); color: #000000; }
+  .csw-relate-l-ttext { background-color: oklch(32.38% 0.104 30.08); color: #ffffff; }
+  .csw-relate-l-bg { background-color: oklch(98.34% 0.010 305.41); color: #000000; }
+  .csw-relate-l-card { background-color: oklch(94.88% 0.013 306.03); color: #000000; }
+  .csw-relate-l-elev { background-color: oklch(91.44% 0.011 303.10); color: #000000; }
+  .csw-relate-l-border { background-color: oklch(58.27% 0.011 292.64); color: #ffffff; }
+  .csw-relate-l-text { background-color: oklch(31.95% 0.011 285.79); color: #ffffff; }
+  .csw-relate-l-muted { background-color: oklch(48.53% 0.011 292.55); color: #ffffff; }
+  .csw-relate-l-shd { background-color: oklch(75% 0.10 215); color: #000000; }
+
+  .csw-relate-d-pri { background-color: oklch(75.65% 0.127 280.43); color: #000000; }
+  .csw-relate-d-on-pri { background-color: oklch(31.43% 0.143 272.20); color: #ffffff; }
+  .csw-relate-d-sec { background-color: oklch(82.95% 0.056 283.98); color: #000000; }
+  .csw-relate-d-on-sec { background-color: oklch(37.33% 0.056 280.62); color: #ffffff; }
+  .csw-relate-d-ter { background-color: oklch(80.60% 0.111 29.23); color: #000000; }
+  .csw-relate-d-on-ter { background-color: oklch(35.56% 0.108 30.13); color: #ffffff; }
+  .csw-relate-d-pfill { background-color: oklch(71.52% 0.131 279.64); color: #ffffff; }
+  .csw-relate-d-ptext { background-color: oklch(26.99% 0.149 269.23); color: #ffffff; }
+  .csw-relate-d-sfill { background-color: oklch(35.76% 0.055 280.46); color: #ffffff; }
+  .csw-relate-d-stext { background-color: oklch(80.77% 0.056 283.94); color: #000000; }
+  .csw-relate-d-tfill { background-color: oklch(76.49% 0.134 29.41); color: #000000; }
+  .csw-relate-d-ttext { background-color: oklch(31.53% 0.103 30.21); color: #ffffff; }
+  .csw-relate-d-bg { background-color: oklch(16.62% 0.010 285.21); color: #ffffff; }
+  .csw-relate-d-card { background-color: oklch(21.61% 0.012 285.38); color: #ffffff; }
+  .csw-relate-d-elev { background-color: oklch(26.70% 0.011 285.63); color: #ffffff; }
+  .csw-relate-d-border { background-color: oklch(56.30% 0.011 299.08); color: #ffffff; }
+  .csw-relate-d-text { background-color: oklch(92.35% 0.011 303.10); color: #000000; }
+  .csw-relate-d-muted { background-color: oklch(74.18% 0.010 299.17); color: #000000; }
+  .csw-relate-d-shd { background-color: oklch(75% 0.10 215); color: #000000; }
+
+  /* =========================================================
+     13. THEME 11: EMERALD CLASSIC
+     ========================================================= */
+  .csw-emerald-l-pri { background-color: oklch(48% 0.08 152); color: #ffffff; }
+  .csw-emerald-l-on-pri { background-color: oklch(98% 0.01 152); color: #000000; }
+  .csw-emerald-l-sec { background-color: oklch(74% 0.045 85); color: #000000; }
+  .csw-emerald-l-on-sec { background-color: oklch(22% 0.03 85); color: #ffffff; }
+  .csw-emerald-l-ter { background-color: oklch(45% 0.04 165); color: #ffffff; }
+  .csw-emerald-l-on-ter { background-color: oklch(96% 0.01 165); color: #000000; }
+  .csw-emerald-l-pfill { background-color: oklch(92% 0.03 152); color: #000000; }
+  .csw-emerald-l-ptext { background-color: oklch(32% 0.06 152); color: #ffffff; }
+  .csw-emerald-l-sfill { background-color: oklch(93% 0.025 85); color: #000000; }
+  .csw-emerald-l-stext { background-color: oklch(32% 0.04 85); color: #ffffff; }
+  .csw-emerald-l-tfill { background-color: oklch(92% 0.02 165); color: #000000; }
+  .csw-emerald-l-ttext { background-color: oklch(30% 0.03 165); color: #ffffff; }
+  .csw-emerald-l-bg { background-color: oklch(98.5% 0.008 150); color: #000000; }
+  .csw-emerald-l-card { background-color: oklch(96% 0.012 150); color: #000000; }
+  .csw-emerald-l-elev { background-color: oklch(90% 0.02 150); color: #000000; }
+  .csw-emerald-l-border { background-color: oklch(78% 0.02 150); color: #000000; }
+  .csw-emerald-l-text { background-color: oklch(24% 0.025 150); color: #ffffff; }
+  .csw-emerald-l-muted { background-color: oklch(52% 0.02 150); color: #ffffff; }
+  .csw-emerald-l-shd { background-color: oklch(35% 0.02 270); color: #ffffff; }
+
+  .csw-emerald-d-pri { background-color: oklch(70% 0.09 152); color: #000000; }
+  .csw-emerald-d-on-pri { background-color: oklch(14% 0.03 152); color: #ffffff; }
+  .csw-emerald-d-sec { background-color: oklch(78% 0.05 85); color: #000000; }
+  .csw-emerald-d-on-sec { background-color: oklch(14% 0.03 85); color: #ffffff; }
+  .csw-emerald-d-ter { background-color: oklch(64% 0.05 165); color: #000000; }
+  .csw-emerald-d-on-ter { background-color: oklch(14% 0.02 165); color: #ffffff; }
+  .csw-emerald-d-pfill { background-color: oklch(26% 0.04 152); color: #ffffff; }
+  .csw-emerald-d-ptext { background-color: oklch(88% 0.05 152); color: #000000; }
+  .csw-emerald-d-sfill { background-color: oklch(28% 0.03 85); color: #ffffff; }
+  .csw-emerald-d-stext { background-color: oklch(88% 0.04 85); color: #000000; }
+  .csw-emerald-d-tfill { background-color: oklch(25% 0.03 165); color: #ffffff; }
+  .csw-emerald-d-ttext { background-color: oklch(86% 0.03 165); color: #000000; }
+  .csw-emerald-d-bg { background-color: oklch(14% 0.015 150); color: #ffffff; }
+  .csw-emerald-d-card { background-color: oklch(18% 0.02 150); color: #ffffff; }
+  .csw-emerald-d-elev { background-color: oklch(26% 0.03 150); color: #ffffff; }
+  .csw-emerald-d-border { background-color: oklch(42% 0.02 150); color: #ffffff; }
+  .csw-emerald-d-text { background-color: oklch(94% 0.01 150); color: #000000; }
+  .csw-emerald-d-muted { background-color: oklch(72% 0.015 150); color: #000000; }
+  .csw-emerald-d-shd { background-color: oklch(35% 0.02 270); color: #ffffff; }
+</style>
+
+<div class="w-full py-8 px-4 sm:px-6 space-y-12 font-sans bg-slate-950 text-slate-100 min-h-screen">
+  
+  <!-- Header -->
+  <header class="border-b border-slate-800 pb-6">
+    <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
+      <h1 class="text-2xl sm:text-4xl font-bold tracking-tight text-white">{{ .Title }}</h1>
+      <span class="text-xs font-mono uppercase tracking-widest text-emerald-400 bg-emerald-950/80 border border-emerald-700 px-3 py-1 rounded-full">Complete Chromatic Swatch Catalog</span>
+    </div>
+    <p class="text-sm text-slate-400 mt-2 max-w-4xl">
+      Every custom color, semantic role (on-colors, fills, surfaces, borders, shadows, errors), and exact OKLCH values in the Embrace design system with high-contrast label typography.
+    </p>
+  </header>
+
+  <!-- SECTION 1: CORE 12 GEMSTONES -->
+  <section class="space-y-4">
+    <div class="flex items-center justify-between border-b border-onyx pb-2">
+      <h2 class="text-lg font-mono font-bold uppercase tracking-wider text-amber-400">1. Core Gemstones (12 Gem Tones)</h2>
+      <span class="text-xs font-mono text-slate-400">colors.css</span>
+    </div>
+    
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
+      {{ $gems := slice 
+        (dict "name" "Ruby" "var" "--color-ruby" "cls" "csw-gem-ruby" "oklch" "oklch(55% 0.25 25)")
+        (dict "name" "Emerald" "var" "--color-emerald" "cls" "csw-gem-emerald" "oklch" "oklch(55% 0.15 155)")
+        (dict "name" "Gold" "var" "--color-gold" "cls" "csw-gem-gold" "oklch" "oklch(85% 0.18 65)")
+        (dict "name" "Aquamarine" "var" "--color-aquamarine" "cls" "csw-gem-aquamarine" "oklch" "oklch(75% 0.10 215)")
+        (dict "name" "Amethyst" "var" "--color-amethyst" "cls" "csw-gem-amethyst" "oklch" "oklch(60% 0.16 300)")
+        (dict "name" "Sapphire" "var" "--color-sapphire" "cls" "csw-gem-sapphire" "oklch" "oklch(45% 0.14 270)")
+        (dict "name" "Steel" "var" "--color-steel" "cls" "csw-gem-steel" "oklch" "oklch(55% 0.04 250)")
+        (dict "name" "Onyx" "var" "--color-onyx" "cls" "csw-gem-onyx" "oklch" "oklch(35% 0.02 270)")
+        (dict "name" "Cobalt" "var" "--color-cobalt" "cls" "csw-gem-cobalt" "oklch" "oklch(50% 0.16 260)")
+        (dict "name" "Bronze" "var" "--color-bronze" "cls" "csw-gem-bronze" "oklch" "oklch(55% 0.14 45)")
+        (dict "name" "Topaz" "var" "--color-topaz" "cls" "csw-gem-topaz" "oklch" "oklch(60% 0.16 75)")
+        (dict "name" "Jade" "var" "--color-jade" "cls" "csw-gem-jade" "oklch" "oklch(55% 0.11 150)")
+      }}
+      {{ range $gems }}
+        <div class="rounded-lg border border-onyx overflow-hidden bg-ebon shadow-md">
+          <div class="h-20 w-full flex items-end justify-between p-2.5 shadow-inner {{ .cls }}">
+            <span class="text-xs font-bold drop-shadow-md">{{ .name }}</span>
+            <span class="text-[10px] font-mono opacity-90 drop-shadow-sm">Gem</span>
+          </div>
+          <div class="p-2.5 space-y-1 bg-[onyx] border-t border-ebon">
+            <p class="font-mono text-[11px] font-bold text-white truncate">{{ .var }}</p>
+            <p class="font-mono text-[10px] text-emerald-400 font-semibold truncate">{{ .oklch }}</p>
+          </div>
+        </div>
+      {{ end }}
+    </div>
+  </section>
+
+  <!-- SECTION 2: SYSTEM MONOCHROMES & SEMANTIC ERRORS -->
+  <section class="space-y-4">
+    <div class="flex items-center justify-between border-b border-slate-800 pb-2">
+      <h2 class="text-lg font-mono font-bold uppercase tracking-wider text-amber-400">2. System Monochromes & Semantic Error States</h2>
+      <span class="text-xs font-mono text-slate-400">colors.css & standardized themes</span>
+    </div>
+    
+    <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-8 gap-3">
+      {{ $monos := slice 
+        (dict "name" "Snow (White)" "var" "--color-snow" "cls" "csw-mono-snow" "oklch" "oklch(100% 0 0)" "border" true)
+        (dict "name" "Ebon (Black)" "var" "--color-ebon" "cls" "csw-mono-ebon" "oklch" "oklch(0% 0 0)")
+        (dict "name" "Charcoal" "var" "--color-charcoal" "cls" "csw-mono-charcoal" "oklch" "oklch(25% 0 0)")
+        (dict "name" "Scrim (Backdrop)" "var" "--color-scrim" "cls" "csw-mono-scrim" "oklch" "oklch(0% 0 0 / 0.32)")
+        (dict "name" "Error (Light)" "var" "--color-error" "cls" "csw-err-l-base" "oklch" "oklch(50.86% 0.193 27.64)")
+        (dict "name" "On-Error (Light)" "var" "--color-on-error" "cls" "csw-err-l-on" "oklch" "oklch(98.20% 0.009 26.02)")
+        (dict "name" "Error Fill (Light)" "var" "--color-error-fill" "cls" "csw-err-l-fill" "oklch" "oklch(67.11% 0.214 27.69)")
+        (dict "name" "Error Text (Light)" "var" "--color-error-text" "cls" "csw-err-l-text" "oklch" "oklch(28.72% 0.117 27.53)")
+      }}
+      {{ range $monos }}
+        <div class="rounded-lg border border-slate-700 overflow-hidden bg-slate-900 shadow-md">
+          <div class="h-16 w-full flex items-end p-2 {{ .cls }} {{ if .border }}border-b border-slate-400{{ end }}">
+            <span class="text-[11px] font-bold drop-shadow-sm">{{ .name }}</span>
+          </div>
+          <div class="p-2 space-y-0.5 bg-slate-900 border-t border-slate-800">
+            <p class="font-mono text-[10px] font-bold text-white truncate">{{ .name }}</p>
+            <p class="font-mono text-[9px] text-emerald-400 font-semibold truncate">{{ .oklch }}</p>
+          </div>
+        </div>
+      {{ end }}
+    </div>
+  </section>
+
+  <!-- SECTION 3: THE 12 THEMES (FULL SEMANTIC PALETTE MATRICES) -->
+  <section class="space-y-10">
+    <div class="flex items-center justify-between border-b border-slate-800 pb-2">
+      <h2 class="text-lg font-mono font-bold uppercase tracking-wider text-amber-400">3. Complete 12 Theme Palettes (All Semantic Tokens & OKLCH Values)</h2>
+      <span class="text-xs font-mono text-slate-400">Light & Dark Full Spectrum</span>
+    </div>
+
+    {{ $themes := slice 
+      (dict "id" "theme-auntie-em" "name" "Auntie Em (Master Default)" "badge" "Default" "desc" "Sepia Brown / Slate Blue / Ochre Neutral" "pfx" "auntie-em"
+        "l_pri" "oklch(55% 0.05 60)" "l_on_pri" "oklch(98% 0.01 60)" "l_sec" "oklch(65% 0.02 250)" "l_on_sec" "oklch(25% 0.02 250)" "l_ter" "oklch(45% 0.04 70)" "l_on_ter" "oklch(95% 0.01 70)" "l_pfill" "oklch(90% 0.03 60)" "l_ptext" "oklch(35% 0.04 60)" "l_sfill" "oklch(92% 0.01 250)" "l_stext" "oklch(40% 0.02 250)" "l_tfill" "oklch(88% 0.02 70)" "l_ttext" "oklch(30% 0.04 70)" "l_bg" "oklch(98% 0.005 60)" "l_card" "oklch(95% 0.005 60)" "l_elev" "oklch(90% 0.005 60)" "l_border" "oklch(75% 0.01 60)" "l_text" "oklch(25% 0.01 60)" "l_muted" "oklch(50% 0.01 60)" "l_shd" "oklch(55% 0.04 250)"
+        "d_pri" "oklch(80% 0.04 60)" "d_on_pri" "oklch(25% 0.04 60)" "d_sec" "oklch(80% 0.02 250)" "d_on_sec" "oklch(25% 0.02 250)" "d_ter" "oklch(75% 0.04 70)" "d_on_ter" "oklch(20% 0.04 70)" "d_pfill" "oklch(35% 0.04 60)" "d_ptext" "oklch(88% 0.03 60)" "d_sfill" "oklch(30% 0.02 250)" "d_stext" "oklch(85% 0.02 250)" "d_tfill" "oklch(35% 0.04 70)" "d_ttext" "oklch(85% 0.03 70)" "d_bg" "oklch(18% 0.005 250)" "d_card" "oklch(22% 0.005 250)" "d_elev" "oklch(28% 0.005 250)" "d_border" "oklch(45% 0.005 250)" "d_text" "oklch(92% 0.005 60)" "d_muted" "oklch(70% 0.005 60)" "d_shd" "oklch(55% 0.04 250)"
+      )
+      (dict "id" "theme-dorothy" "name" "Dorothy" "badge" "Unique" "desc" "Ruby Red / Sky Blue / Yellow Gold" "pfx" "dorothy"
+        "l_pri" "oklch(55% 0.22 25)" "l_on_pri" "oklch(98% 0.01 25)" "l_sec" "oklch(60% 0.12 245)" "l_on_sec" "oklch(20% 0.05 245)" "l_ter" "oklch(80% 0.16 95)" "l_on_ter" "oklch(25% 0.05 95)" "l_pfill" "oklch(90% 0.08 25)" "l_ptext" "oklch(35% 0.14 25)" "l_sfill" "oklch(92% 0.05 245)" "l_stext" "oklch(40% 0.08 245)" "l_tfill" "oklch(94% 0.08 95)" "l_ttext" "oklch(40% 0.12 95)" "l_bg" "oklch(99% 0.005 245)" "l_card" "oklch(96% 0.01 245)" "l_elev" "oklch(92% 0.015 245)" "l_border" "oklch(75% 0.02 245)" "l_text" "oklch(25% 0.02 245)" "l_muted" "oklch(50% 0.02 245)" "l_shd" "oklch(55% 0.25 25)"
+        "d_pri" "oklch(65% 0.22 25)" "d_on_pri" "oklch(20% 0.10 25)" "d_sec" "oklch(75% 0.10 245)" "d_on_sec" "oklch(20% 0.05 245)" "d_ter" "oklch(85% 0.16 95)" "d_on_ter" "oklch(25% 0.08 95)" "d_pfill" "oklch(35% 0.14 25)" "d_ptext" "oklch(88% 0.10 25)" "d_sfill" "oklch(30% 0.06 245)" "d_stext" "oklch(88% 0.05 245)" "d_tfill" "oklch(35% 0.08 95)" "d_ttext" "oklch(90% 0.10 95)" "d_bg" "oklch(15% 0.01 245)" "d_card" "oklch(20% 0.015 245)" "d_elev" "oklch(26% 0.02 245)" "d_border" "oklch(45% 0.02 245)" "d_text" "oklch(95% 0.01 245)" "d_muted" "oklch(75% 0.01 245)" "d_shd" "oklch(55% 0.25 25)"
+      )
+      (dict "id" "theme-brains" "name" "Brains (Scarecrow)" "badge" "Unique" "desc" "Topaz Amber / Straw Yellow / Forest Jade" "pfx" "brains"
+        "l_pri" "oklch(60% 0.16 80)" "l_on_pri" "oklch(15% 0.05 80)" "l_sec" "oklch(75% 0.08 75)" "l_on_sec" "oklch(20% 0.05 75)" "l_ter" "oklch(45% 0.12 145)" "l_on_ter" "oklch(95% 0.02 145)" "l_pfill" "oklch(85% 0.15 85)" "l_ptext" "oklch(35% 0.12 80)" "l_sfill" "oklch(92% 0.05 75)" "l_stext" "oklch(40% 0.06 75)" "l_tfill" "oklch(88% 0.08 145)" "l_ttext" "oklch(30% 0.10 145)" "l_bg" "oklch(98% 0.01 80)" "l_card" "oklch(95% 0.01 80)" "l_elev" "oklch(90% 0.03 80)" "l_border" "oklch(65% 0.04 80)" "l_text" "oklch(25% 0.03 80)" "l_muted" "oklch(50% 0.03 80)" "l_shd" "oklch(60% 0.16 75)"
+        "d_pri" "oklch(85% 0.15 85)" "d_on_pri" "oklch(25% 0.10 80)" "d_sec" "oklch(75% 0.08 75)" "d_on_sec" "oklch(20% 0.05 75)" "d_ter" "oklch(75% 0.15 145)" "d_on_ter" "oklch(20% 0.05 145)" "d_pfill" "oklch(40% 0.10 80)" "d_ptext" "oklch(88% 0.12 85)" "d_sfill" "oklch(35% 0.05 75)" "d_stext" "oklch(85% 0.06 75)" "d_tfill" "oklch(30% 0.10 145)" "d_ttext" "oklch(88% 0.08 145)" "d_bg" "oklch(15% 0.01 80)" "d_card" "oklch(20% 0.015 80)" "d_elev" "oklch(26% 0.02 80)" "d_border" "oklch(45% 0.02 80)" "d_text" "oklch(95% 0.01 80)" "d_muted" "oklch(75% 0.01 80)" "d_shd" "oklch(60% 0.16 75)"
+      )
+      (dict "id" "theme-courage" "name" "Courage (The Lion)" "badge" "Unique" "desc" "Lion Gold / Moss Olive / Poppy Red" "pfx" "courage"
+        "l_pri" "oklch(65% 0.15 65)" "l_on_pri" "oklch(15% 0.05 65)" "l_sec" "oklch(45% 0.05 130)" "l_on_sec" "oklch(95% 0.02 130)" "l_ter" "oklch(55% 0.18 25)" "l_on_ter" "oklch(98% 0.01 25)" "l_pfill" "oklch(88% 0.08 65)" "l_ptext" "oklch(35% 0.10 65)" "l_sfill" "oklch(90% 0.04 130)" "l_stext" "oklch(30% 0.06 130)" "l_tfill" "oklch(88% 0.10 25)" "l_ttext" "oklch(35% 0.14 25)" "l_bg" "oklch(98% 0.01 65)" "l_card" "oklch(95% 0.015 65)" "l_elev" "oklch(90% 0.025 65)" "l_border" "oklch(70% 0.03 65)" "l_text" "oklch(25% 0.02 65)" "l_muted" "oklch(50% 0.02 65)" "l_shd" "oklch(35% 0.02 270)"
+        "d_pri" "oklch(75% 0.12 65)" "d_on_pri" "oklch(20% 0.08 65)" "d_sec" "oklch(75% 0.05 130)" "d_on_sec" "oklch(20% 0.05 130)" "d_ter" "oklch(65% 0.16 25)" "d_on_ter" "oklch(20% 0.10 25)" "d_pfill" "oklch(35% 0.10 65)" "d_ptext" "oklch(88% 0.08 65)" "d_sfill" "oklch(30% 0.05 130)" "d_stext" "oklch(85% 0.04 130)" "d_tfill" "oklch(35% 0.12 25)" "d_ttext" "oklch(88% 0.10 25)" "d_bg" "oklch(15% 0.01 65)" "d_card" "oklch(20% 0.015 65)" "d_elev" "oklch(26% 0.02 65)" "d_border" "oklch(45% 0.02 65)" "d_text" "oklch(95% 0.01 65)" "d_muted" "oklch(75% 0.01 65)" "d_shd" "oklch(35% 0.02 270)"
+      )
+      (dict "id" "theme-glinda" "name" "Glinda" "badge" "Unique" "desc" "Rose Pink / Lavender Orchid / Sunshine Gold" "pfx" "glinda"
+        "l_pri" "oklch(65% 0.20 350)" "l_on_pri" "oklch(98% 0.02 350)" "l_sec" "oklch(75% 0.08 320)" "l_on_sec" "oklch(25% 0.05 320)" "l_ter" "oklch(75% 0.15 85)" "l_on_ter" "oklch(20% 0.05 85)" "l_pfill" "oklch(92% 0.08 350)" "l_ptext" "oklch(40% 0.18 350)" "l_sfill" "oklch(94% 0.04 320)" "l_stext" "oklch(45% 0.10 320)" "l_tfill" "oklch(90% 0.08 85)" "l_ttext" "oklch(40% 0.12 85)" "l_bg" "oklch(99% 0.01 350)" "l_card" "oklch(96% 0.02 350)" "l_elev" "oklch(92% 0.04 350)" "l_border" "oklch(75% 0.06 350)" "l_text" "oklch(30% 0.05 350)" "l_muted" "oklch(55% 0.05 350)" "l_shd" "oklch(60% 0.16 300)"
+        "d_pri" "oklch(80% 0.18 350)" "d_on_pri" "oklch(25% 0.15 350)" "d_sec" "oklch(85% 0.08 320)" "d_on_sec" "oklch(25% 0.10 320)" "d_ter" "oklch(85% 0.15 85)" "d_on_ter" "oklch(25% 0.10 85)" "d_pfill" "oklch(35% 0.15 350)" "d_ptext" "oklch(90% 0.10 350)" "d_sfill" "oklch(30% 0.10 320)" "d_stext" "oklch(90% 0.06 320)" "d_tfill" "oklch(35% 0.10 85)" "d_ttext" "oklch(90% 0.10 85)" "d_bg" "oklch(15% 0.03 320)" "d_card" "oklch(20% 0.04 320)" "d_elev" "oklch(26% 0.06 320)" "d_border" "oklch(45% 0.08 320)" "d_text" "oklch(95% 0.02 350)" "d_muted" "oklch(75% 0.05 350)" "d_shd" "oklch(60% 0.16 300)"
+      )
+      (dict "id" "theme-home" "name" "Home" "badge" "Unique" "desc" "Bronze / Warm Sienna / Sunlit Wheat" "pfx" "home"
+        "l_pri" "oklch(55% 0.16 45)" "l_on_pri" "oklch(98% 0.01 45)" "l_sec" "oklch(65% 0.12 55)" "l_on_sec" "oklch(20% 0.05 55)" "l_ter" "oklch(75% 0.12 85)" "l_on_ter" "oklch(25% 0.05 85)" "l_pfill" "oklch(88% 0.06 45)" "l_ptext" "oklch(35% 0.12 45)" "l_sfill" "oklch(90% 0.04 55)" "l_stext" "oklch(40% 0.08 55)" "l_tfill" "oklch(92% 0.05 85)" "l_ttext" "oklch(45% 0.08 85)" "l_bg" "oklch(98.5% 0.01 55)" "l_card" "oklch(96% 0.015 55)" "l_elev" "oklch(92% 0.025 55)" "l_border" "oklch(70% 0.03 55)" "l_text" "oklch(30% 0.02 55)" "l_muted" "oklch(50% 0.02 55)" "l_shd" "oklch(55% 0.14 45)"
+        "d_pri" "oklch(70% 0.14 45)" "d_on_pri" "oklch(25% 0.10 45)" "d_sec" "oklch(75% 0.10 55)" "d_on_sec" "oklch(25% 0.08 55)" "d_ter" "oklch(85% 0.10 85)" "d_on_ter" "oklch(35% 0.08 85)" "d_pfill" "oklch(40% 0.10 45)" "d_ptext" "oklch(88% 0.06 45)" "d_sfill" "oklch(45% 0.08 55)" "d_stext" "oklch(90% 0.04 55)" "d_tfill" "oklch(50% 0.08 85)" "d_ttext" "oklch(92% 0.05 85)" "d_bg" "oklch(18% 0.01 55)" "d_card" "oklch(22% 0.015 55)" "d_elev" "oklch(28% 0.025 55)" "d_border" "oklch(45% 0.02 55)" "d_text" "oklch(92% 0.01 55)" "d_muted" "oklch(75% 0.01 55)" "d_shd" "oklch(55% 0.14 45)"
+      )
+      (dict "id" "theme-refresh" "name" "Refresh (Tidal Wave)" "badge" "Unique" "desc" "Tidal Slate Blue / Cool Mist / Soft Magenta" "pfx" "refresh"
+        "l_pri" "oklch(48.99% 0.078 280.40)" "l_on_pri" "oklch(98.34% 0.010 305.41)" "l_sec" "oklch(48.62% 0.033 285.09)" "l_on_sec" "oklch(98.34% 0.010 305.41)" "l_ter" "oklch(49.27% 0.070 320.06)" "l_on_ter" "oklch(98.34% 0.010 345.41)" "l_pfill" "oklch(84.02% 0.078 282.18)" "l_ptext" "oklch(38.39% 0.078 279.23)" "l_sfill" "oklch(91.51% 0.034 287.55)" "l_stext" "oklch(43.82% 0.033 282.70)" "l_tfill" "oklch(90.44% 0.073 321.81)" "l_ttext" "oklch(43.27% 0.068 319.67)" "l_bg" "oklch(98.31% 0.009 308.36)" "l_card" "oklch(94.83% 0.014 299.80)" "l_elev" "oklch(91.48% 0.016 293.73)" "l_border" "oklch(58.37% 0.015 290.52)" "l_text" "oklch(32.08% 0.016 285.47)" "l_muted" "oklch(48.64% 0.016 290.39)" "l_shd" "oklch(55% 0.15 155)"
+        "d_pri" "oklch(83.06% 0.060 283.96)" "d_on_pri" "oklch(37.50% 0.061 280.56)" "d_sec" "oklch(82.90% 0.035 287.45)" "d_on_sec" "oklch(37.46% 0.032 282.35)" "d_ter" "oklch(94.51% 0.046 323.74)" "d_on_ter" "oklch(46.29% 0.069 319.87)" "d_pfill" "oklch(44.17% 0.061 281.22)" "d_ptext" "oklch(91.90% 0.041 285.57)" "d_sfill" "oklch(35.55% 0.033 282.23)" "d_stext" "oklch(80.67% 0.034 287.53)" "d_tfill" "oklch(90.44% 0.073 321.81)" "d_ttext" "oklch(43.27% 0.068 319.67)" "d_bg" "oklch(16.57% 0.008 285.46)" "d_card" "oklch(21.66% 0.014 285.21)" "d_elev" "oklch(26.84% 0.017 285.23)" "d_border" "oklch(56.36% 0.017 290.03)" "d_text" "oklch(92.39% 0.016 293.74)" "d_muted" "oklch(74.23% 0.016 290.20)" "d_shd" "oklch(55% 0.15 155)"
+      )
+      (dict "id" "theme-release" "name" "Release (Zero-Point AMFR)" "badge" "Duplicated by Renew" "desc" "Deep Indigo / Olive Sage / Chartreuse" "pfx" "release"
+        "l_pri" "oklch(49.48% 0.132 277.34)" "l_on_pri" "oklch(98.34% 0.010 305.41)" "l_sec" "oklch(48.27% 0.088 123.38)" "l_on_sec" "oklch(97.35% 0.053 121.36)" "l_ter" "oklch(48.81% 0.132 121.94)" "l_on_ter" "oklch(97.10% 0.059 119.53)" "l_pfill" "oklch(77.53% 0.091 280.20)" "l_ptext" "oklch(37.56% 0.133 277.67)" "l_sfill" "oklch(94.27% 0.076 123.00)" "l_stext" "oklch(45.54% 0.083 123.33)" "l_tfill" "oklch(93.99% 0.147 120.91)" "l_ttext" "oklch(45.92% 0.126 121.94)" "l_bg" "oklch(98.34% 0.009 311.16)" "l_card" "oklch(93.58% 0.024 295.31)" "l_elev" "oklch(89.87% 0.028 295.31)" "l_border" "oklch(55.67% 0.057 291.56)" "l_text" "oklch(30.63% 0.055 285.54)" "l_muted" "oklch(46.99% 0.053 285.54)" "l_shd" "oklch(35% 0.02 270)"
+        "d_pri" "oklch(81.99% 0.080 279.80)" "d_on_pri" "oklch(37.89% 0.126 274.67)" "d_sec" "oklch(81.82% 0.048 119.56)" "d_on_sec" "oklch(36.19% 0.051 119.56)" "d_ter" "oklch(96.11% 0.063 118.06)" "d_on_ter" "oklch(47.93% 0.118 120.06)" "d_pfill" "oklch(77.53% 0.091 280.20)" "d_ptext" "oklch(33.00% 0.121 275.00)" "d_sfill" "oklch(21.43% 0.038 119.56)" "d_stext" "oklch(70.12% 0.035 119.56)" "d_tfill" "oklch(91.10% 0.134 119.06)" "d_ttext" "oklch(45.92% 0.126 121.94)" "d_bg" "oklch(14.43% 0.023 288.54)" "d_card" "oklch(18.43% 0.035 288.54)" "d_elev" "oklch(22.43% 0.035 288.54)" "d_border" "oklch(52.67% 0.057 291.56)" "d_text" "oklch(90.63% 0.055 285.54)" "d_muted" "oklch(70.99% 0.053 285.54)" "d_shd" "oklch(35% 0.02 270)"
+      )
+      (dict "id" "theme-renew" "name" "Renew" "badge" "DUPLICATE OF RELEASE" "desc" "Exact clone of Release (Indigo / Sage / Chartreuse)" "pfx" "release"
+        "l_pri" "oklch(49.48% 0.132 277.34)" "l_on_pri" "oklch(98.34% 0.010 305.41)" "l_sec" "oklch(48.27% 0.088 123.38)" "l_on_sec" "oklch(97.35% 0.053 121.36)" "l_ter" "oklch(48.81% 0.132 121.94)" "l_on_ter" "oklch(97.10% 0.059 119.53)" "l_pfill" "oklch(77.53% 0.091 280.20)" "l_ptext" "oklch(37.56% 0.133 277.67)" "l_sfill" "oklch(94.27% 0.076 123.00)" "l_stext" "oklch(45.54% 0.083 123.33)" "l_tfill" "oklch(93.99% 0.147 120.91)" "l_ttext" "oklch(45.92% 0.126 121.94)" "l_bg" "oklch(98.34% 0.009 311.16)" "l_card" "oklch(93.58% 0.024 295.31)" "l_elev" "oklch(89.87% 0.028 295.31)" "l_border" "oklch(55.67% 0.057 291.56)" "l_text" "oklch(30.63% 0.055 285.54)" "l_muted" "oklch(46.99% 0.053 285.54)" "l_shd" "oklch(55% 0.11 150)"
+        "d_pri" "oklch(81.99% 0.080 279.80)" "d_on_pri" "oklch(37.89% 0.126 274.67)" "d_sec" "oklch(81.82% 0.048 119.56)" "d_on_sec" "oklch(36.19% 0.051 119.56)" "d_ter" "oklch(96.11% 0.063 118.06)" "d_on_ter" "oklch(47.93% 0.118 120.06)" "d_pfill" "oklch(77.53% 0.091 280.20)" "d_ptext" "oklch(33.00% 0.121 275.00)" "d_sfill" "oklch(21.43% 0.038 119.56)" "d_stext" "oklch(70.12% 0.035 119.56)" "d_tfill" "oklch(91.10% 0.134 119.06)" "d_ttext" "oklch(45.92% 0.126 121.94)" "d_bg" "oklch(14.43% 0.023 288.54)" "d_card" "oklch(18.43% 0.035 288.54)" "d_elev" "oklch(22.43% 0.035 288.54)" "d_border" "oklch(52.67% 0.057 291.56)" "d_text" "oklch(90.63% 0.055 285.54)" "d_muted" "oklch(70.99% 0.053 285.54)" "d_shd" "oklch(55% 0.11 150)"
+      )
+      (dict "id" "theme-recharge" "name" "Recharge" "badge" "Duplicated by Repeat" "desc" "Royal Violet / Magenta / Deep Berry" "pfx" "recharge"
+        "l_pri" "oklch(49.32% 0.237 271.65)" "l_on_pri" "oklch(96.37% 0.019 292.61)" "l_sec" "oklch(48.76% 0.160 286.28)" "l_on_sec" "oklch(96.41% 0.021 304.04)" "l_ter" "oklch(49.12% 0.148 341.14)" "l_on_ter" "oklch(96.45% 0.020 350.54)" "l_pfill" "oklch(71.55% 0.150 278.95)" "l_ptext" "oklch(27.57% 0.191 264.05)" "l_sfill" "oklch(86.65% 0.072 292.77)" "l_stext" "oklch(41.47% 0.162 284.69)" "l_tfill" "oklch(78.68% 0.157 342.36)" "l_ttext" "oklch(33.78% 0.141 340.40)" "l_bg" "oklch(97.49% 0.016 310.11)" "l_card" "oklch(93.44% 0.035 296.28)" "l_elev" "oklch(90.08% 0.054 294.71)" "l_border" "oklch(57.19% 0.067 291.41)" "l_text" "oklch(30.80% 0.069 288.77)" "l_muted" "oklch(47.64% 0.067 290.15)" "l_shd" "oklch(60% 0.16 75)"
+        "d_pri" "oklch(75.65% 0.127 280.43)" "d_on_pri" "oklch(32.78% 0.227 264.05)" "d_sec" "oklch(71.10% 0.157 288.41)" "d_on_sec" "oklch(26.53% 0.162 279.04)" "d_ter" "oklch(82.71% 0.125 342.86)" "d_on_ter" "oklch(37.70% 0.144 340.64)" "d_pfill" "oklch(71.55% 0.150 278.95)" "d_ptext" "oklch(27.57% 0.191 264.05)" "d_sfill" "oklch(41.23% 0.163 284.40)" "d_stext" "oklch(86.38% 0.073 292.58)" "d_tfill" "oklch(78.68% 0.157 342.36)" "d_ttext" "oklch(33.78% 0.141 340.40)" "d_bg" "oklch(17.18% 0.074 283.92)" "d_card" "oklch(22.20% 0.085 284.88)" "d_elev" "oklch(27.70% 0.096 285.81)" "d_border" "oklch(56.85% 0.067 291.39)" "d_text" "oklch(92.63% 0.040 295.10)" "d_muted" "oklch(74.49% 0.067 292.48)" "d_shd" "oklch(60% 0.16 75)"
+      )
+      (dict "id" "theme-repeat" "name" "Repeat" "badge" "DUPLICATE OF RECHARGE" "desc" "Exact clone of Recharge (Royal Violet / Magenta / Deep Berry)" "pfx" "recharge"
+        "l_pri" "oklch(49.32% 0.237 271.65)" "l_on_pri" "oklch(96.37% 0.019 292.61)" "l_sec" "oklch(48.76% 0.160 286.28)" "l_on_sec" "oklch(96.41% 0.021 304.04)" "l_ter" "oklch(49.12% 0.148 341.14)" "l_on_ter" "oklch(96.45% 0.020 350.54)" "l_pfill" "oklch(71.55% 0.150 278.95)" "l_ptext" "oklch(27.57% 0.191 264.05)" "l_sfill" "oklch(86.65% 0.072 292.77)" "l_stext" "oklch(41.47% 0.162 284.69)" "l_tfill" "oklch(78.68% 0.157 342.36)" "l_ttext" "oklch(33.78% 0.141 340.40)" "l_bg" "oklch(97.49% 0.016 310.11)" "l_card" "oklch(93.44% 0.035 296.28)" "l_elev" "oklch(90.08% 0.054 294.71)" "l_border" "oklch(57.19% 0.067 291.41)" "l_text" "oklch(30.80% 0.069 288.77)" "l_muted" "oklch(47.64% 0.067 290.15)" "l_shd" "oklch(60% 0.16 300)"
+        "d_pri" "oklch(75.65% 0.127 280.43)" "d_on_pri" "oklch(32.78% 0.227 264.05)" "d_sec" "oklch(71.10% 0.157 288.41)" "d_on_sec" "oklch(26.53% 0.162 279.04)" "d_ter" "oklch(82.71% 0.125 342.86)" "d_on_ter" "oklch(37.70% 0.144 340.64)" "d_pfill" "oklch(71.55% 0.150 278.95)" "d_ptext" "oklch(27.57% 0.191 264.05)" "d_sfill" "oklch(41.23% 0.163 284.40)" "d_stext" "oklch(86.38% 0.073 292.58)" "d_tfill" "oklch(78.68% 0.157 342.36)" "d_ttext" "oklch(33.78% 0.141 340.40)" "d_bg" "oklch(17.18% 0.074 283.92)" "d_card" "oklch(22.20% 0.085 284.88)" "d_elev" "oklch(27.70% 0.096 285.81)" "d_border" "oklch(56.85% 0.067 291.39)" "d_text" "oklch(92.63% 0.040 295.10)" "d_muted" "oklch(74.49% 0.067 292.48)" "d_shd" "oklch(60% 0.16 300)"
+      )
+      (dict "id" "theme-relate" "name" "Relate" "badge" "Duplicated by Receive" "desc" "Deep Indigo (#5157ab) / Purple / Coral" "pfx" "relate"
+        "l_pri" "oklch(49.48% 0.132 277.34)" "l_on_pri" "oklch(98.34% 0.010 305.41)" "l_sec" "oklch(48.72% 0.056 281.56)" "l_on_sec" "oklch(98.34% 0.010 305.41)" "l_ter" "oklch(49.82% 0.119 29.86)" "l_on_ter" "oklch(98.20% 0.009 26.02)" "l_pfill" "oklch(74.73% 0.131 279.85)" "l_ptext" "oklch(30.75% 0.143 271.83)" "l_sfill" "oklch(91.63% 0.042 285.54)" "l_stext" "oklch(44.02% 0.056 281.24)" "l_tfill" "oklch(77.39% 0.133 29.90)" "l_ttext" "oklch(32.38% 0.104 30.08)" "l_bg" "oklch(98.34% 0.010 305.41)" "l_card" "oklch(94.88% 0.013 306.03)" "l_elev" "oklch(91.44% 0.011 303.10)" "l_border" "oklch(58.27% 0.011 292.64)" "l_text" "oklch(31.95% 0.011 285.79)" "l_muted" "oklch(48.53% 0.011 292.55)" "l_shd" "oklch(75% 0.10 215)"
+        "d_pri" "oklch(75.65% 0.127 280.43)" "d_on_pri" "oklch(31.43% 0.143 272.20)" "d_sec" "oklch(82.95% 0.056 283.98)" "d_on_sec" "oklch(37.33% 0.056 280.62)" "d_ter" "oklch(80.60% 0.111 29.23)" "d_on_ter" "oklch(35.56% 0.108 30.13)" "d_pfill" "oklch(71.52% 0.131 279.64)" "d_ptext" "oklch(26.99% 0.149 269.23)" "d_sfill" "oklch(35.76% 0.055 280.46)" "d_stext" "oklch(80.77% 0.056 283.94)" "d_tfill" "oklch(76.49% 0.134 29.41)" "d_ttext" "oklch(31.53% 0.103 30.21)" "d_bg" "oklch(16.62% 0.010 285.21)" "d_card" "oklch(21.61% 0.012 285.38)" "d_elev" "oklch(26.70% 0.011 285.63)" "d_border" "oklch(56.30% 0.011 299.08)" "d_text" "oklch(92.35% 0.011 303.10)" "d_muted" "oklch(74.18% 0.010 299.17)" "d_shd" "oklch(75% 0.10 215)"
+      )
+      (dict "id" "theme-receive" "name" "Receive" "badge" "DUPLICATE OF RELATE" "desc" "Exact clone of Relate (Retired service - ready for reassignment)" "pfx" "relate"
+        "l_pri" "oklch(49.48% 0.132 277.34)" "l_on_pri" "oklch(98.34% 0.010 305.41)" "l_sec" "oklch(48.72% 0.056 281.56)" "l_on_sec" "oklch(98.34% 0.010 305.41)" "l_ter" "oklch(49.82% 0.119 29.86)" "l_on_ter" "oklch(98.20% 0.009 26.02)" "l_pfill" "oklch(74.73% 0.131 279.85)" "l_ptext" "oklch(30.75% 0.143 271.83)" "l_sfill" "oklch(91.63% 0.042 285.54)" "l_stext" "oklch(44.02% 0.056 281.24)" "l_tfill" "oklch(77.39% 0.133 29.90)" "l_ttext" "oklch(32.38% 0.104 30.08)" "l_bg" "oklch(98.34% 0.010 305.41)" "l_card" "oklch(94.88% 0.013 306.03)" "l_elev" "oklch(91.44% 0.011 303.10)" "l_border" "oklch(58.27% 0.011 292.64)" "l_text" "oklch(31.95% 0.011 285.79)" "l_muted" "oklch(48.53% 0.011 292.55)" "l_shd" "oklch(55% 0.25 25)"
+        "d_pri" "oklch(75.65% 0.127 280.43)" "d_on_pri" "oklch(31.43% 0.143 272.20)" "d_sec" "oklch(82.95% 0.056 283.98)" "d_on_sec" "oklch(37.33% 0.056 280.62)" "d_ter" "oklch(80.60% 0.111 29.23)" "d_on_ter" "oklch(35.56% 0.108 30.13)" "d_pfill" "oklch(71.52% 0.131 279.64)" "d_ptext" "oklch(26.99% 0.149 269.23)" "d_sfill" "oklch(35.76% 0.055 280.46)" "d_stext" "oklch(80.77% 0.056 283.94)" "d_tfill" "oklch(76.49% 0.134 29.41)" "d_ttext" "oklch(31.53% 0.103 30.21)" "d_bg" "oklch(16.62% 0.010 285.21)" "d_card" "oklch(21.61% 0.012 285.38)" "d_elev" "oklch(26.70% 0.011 285.63)" "d_border" "oklch(56.30% 0.011 299.08)" "d_text" "oklch(92.35% 0.011 303.10)" "d_muted" "oklch(74.18% 0.010 299.17)" "d_shd" "oklch(55% 0.25 25)"
+      )
+      (dict "id" "theme-emerald-classic" "name" "Emerald Classic" "badge" "Emerald Variant" "desc" "Imperial Emerald / Pale Brass / Mint" "pfx" "emerald"
+        "l_pri" "oklch(48% 0.08 152)" "l_on_pri" "oklch(98% 0.01 152)" "l_sec" "oklch(74% 0.045 85)" "l_on_sec" "oklch(22% 0.03 85)" "l_ter" "oklch(45% 0.04 165)" "l_on_ter" "oklch(96% 0.01 165)" "l_pfill" "oklch(92% 0.03 152)" "l_ptext" "oklch(32% 0.06 152)" "l_sfill" "oklch(93% 0.025 85)" "l_stext" "oklch(32% 0.04 85)" "l_tfill" "oklch(92% 0.02 165)" "l_ttext" "oklch(30% 0.03 165)" "l_bg" "oklch(98.5% 0.008 150)" "l_card" "oklch(96% 0.012 150)" "l_elev" "oklch(90% 0.02 150)" "l_border" "oklch(78% 0.02 150)" "l_text" "oklch(24% 0.025 150)" "l_muted" "oklch(52% 0.02 150)" "l_shd" "oklch(35% 0.02 270)"
+        "d_pri" "oklch(70% 0.09 152)" "d_on_pri" "oklch(14% 0.03 152)" "d_sec" "oklch(78% 0.05 85)" "d_on_sec" "oklch(14% 0.03 85)" "d_ter" "oklch(64% 0.05 165)" "d_on_ter" "oklch(14% 0.02 165)" "d_pfill" "oklch(26% 0.04 152)" "d_ptext" "oklch(88% 0.05 152)" "d_sfill" "oklch(28% 0.03 85)" "d_stext" "oklch(88% 0.04 85)" "d_tfill" "oklch(25% 0.03 165)" "d_ttext" "oklch(86% 0.03 165)" "d_bg" "oklch(14% 0.015 150)" "d_card" "oklch(18% 0.02 150)" "d_elev" "oklch(26% 0.03 150)" "d_border" "oklch(42% 0.02 150)" "d_text" "oklch(94% 0.01 150)" "d_muted" "oklch(72% 0.015 150)" "d_shd" "oklch(35% 0.02 270)"
+      )
+    }}
+
+    <div class="space-y-10">
+      {{ range $themes }}
+        <div class="border border-slate-700 rounded-2xl p-6 space-y-6 bg-slate-900 shadow-xl">
+          
+          <!-- Theme Header -->
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800 pb-4">
+            <div>
+              <div class="flex items-center gap-3">
+                <h3 class="text-xl font-mono font-bold text-white tracking-wide">{{ .name }}</h3>
+                <span class="text-xs font-mono px-2.5 py-0.5 rounded border {{ if in .badge "DUPLICATE" }}border-rose-600 bg-rose-950 text-rose-300 font-bold{{ else }}border-slate-600 bg-slate-800 text-slate-300{{ end }}">{{ .badge }}</span>
+              </div>
+              <p class="text-xs text-slate-400 mt-1">{{ .desc }}</p>
+            </div>
+            <code class="text-xs font-mono text-emerald-300 bg-slate-950 px-3 py-1.5 rounded-lg border border-slate-800 self-start sm:self-auto">{{ .id }}</code>
+          </div>
+
+          <!-- LIGHT MODE MATRIX -->
+          <div class="space-y-3 p-4 rounded-xl border border-slate-700/80 bg-slate-950">
+            <div class="flex items-center justify-between border-b border-slate-800 pb-2">
+              <span class="text-xs font-mono font-bold uppercase tracking-wider text-amber-300">☀️ Light Mode Semantic Palette</span>
+              <span class="text-[11px] font-mono text-slate-400">Surface Backing: <code class="text-emerald-400 font-semibold">{{ .l_bg }}</code></span>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2.5">
+              
+              <!-- Primary & On-Primary -->
+              <div class="rounded border border-slate-700 overflow-hidden bg-slate-900">
+                <div class="h-10 w-full flex items-center justify-center font-bold text-xs shadow-inner csw-{{ .pfx }}-l-pri">
+                  Primary
+                </div>
+                <div class="p-2 space-y-0.5 bg-slate-900 text-slate-200 border-t border-slate-800">
+                  <span class="font-mono text-[10px] font-bold text-white block">--color-primary</span>
+                  <span class="font-mono text-[9px] text-emerald-400 block truncate">{{ .l_pri }}</span>
+                </div>
+              </div>
+
+              <div class="rounded border border-slate-700 overflow-hidden bg-slate-900">
+                <div class="h-10 w-full flex items-center justify-center font-bold text-xs shadow-inner csw-{{ .pfx }}-l-on-pri">
+                  On-Primary
+                </div>
+                <div class="p-2 space-y-0.5 bg-slate-900 text-slate-200 border-t border-slate-800">
+                  <span class="font-mono text-[10px] font-bold text-white block">--color-on-primary</span>
+                  <span class="font-mono text-[9px] text-emerald-400 block truncate">{{ .l_on_pri }}</span>
+                </div>
+              </div>
+
+              <!-- Secondary & On-Secondary -->
+              <div class="rounded border border-slate-700 overflow-hidden bg-slate-900">
+                <div class="h-10 w-full flex items-center justify-center font-bold text-xs shadow-inner csw-{{ .pfx }}-l-sec">
+                  Secondary
+                </div>
+                <div class="p-2 space-y-0.5 bg-slate-900 text-slate-200 border-t border-slate-800">
+                  <span class="font-mono text-[10px] font-bold text-white block">--color-secondary</span>
+                  <span class="font-mono text-[9px] text-emerald-400 block truncate">{{ .l_sec }}</span>
+                </div>
+              </div>
+
+              <div class="rounded border border-slate-700 overflow-hidden bg-slate-900">
+                <div class="h-10 w-full flex items-center justify-center font-bold text-xs shadow-inner csw-{{ .pfx }}-l-on-sec">
+                  On-Secondary
+                </div>
+                <div class="p-2 space-y-0.5 bg-slate-900 text-slate-200 border-t border-slate-800">
+                  <span class="font-mono text-[10px] font-bold text-white block">--color-on-secondary</span>
+                  <span class="font-mono text-[9px] text-emerald-400 block truncate">{{ .l_on_sec }}</span>
+                </div>
+              </div>
+
+              <!-- Tertiary & On-Tertiary -->
+              <div class="rounded border border-slate-700 overflow-hidden bg-slate-900">
+                <div class="h-10 w-full flex items-center justify-center font-bold text-xs shadow-inner csw-{{ .pfx }}-l-ter">
+                  Tertiary
+                </div>
+                <div class="p-2 space-y-0.5 bg-slate-900 text-slate-200 border-t border-slate-800">
+                  <span class="font-mono text-[10px] font-bold text-white block">--color-tertiary</span>
+                  <span class="font-mono text-[9px] text-emerald-400 block truncate">{{ .l_ter }}</span>
+                </div>
+              </div>
+
+              <div class="rounded border border-slate-700 overflow-hidden bg-slate-900">
+                <div class="h-10 w-full flex items-center justify-center font-bold text-xs shadow-inner csw-{{ .pfx }}-l-on-ter">
+                  On-Tertiary
+                </div>
+                <div class="p-2 space-y-0.5 bg-slate-900 text-slate-200 border-t border-slate-800">
+                  <span class="font-mono text-[10px] font-bold text-white block">--color-on-tertiary</span>
+                  <span class="font-mono text-[9px] text-emerald-400 block truncate">{{ .l_on_ter }}</span>
+                </div>
+              </div>
+
+              <!-- Fills & Texts -->
+              <div class="rounded border border-slate-700 overflow-hidden bg-slate-900">
+                <div class="h-10 w-full flex items-center justify-center font-bold text-xs shadow-inner csw-{{ .pfx }}-l-pfill">
+                  Pri-Fill
+                </div>
+                <div class="p-2 space-y-0.5 bg-slate-900 text-slate-200 border-t border-slate-800">
+                  <span class="font-mono text-[10px] font-bold text-white block">--color-primary-fill</span>
+                  <span class="font-mono text-[9px] text-emerald-400 block truncate">{{ .l_pfill }}</span>
+                </div>
+              </div>
+
+              <div class="rounded border border-slate-700 overflow-hidden bg-slate-900">
+                <div class="h-10 w-full flex items-center justify-center font-bold text-xs shadow-inner csw-{{ .pfx }}-l-ptext">
+                  Pri-Text
+                </div>
+                <div class="p-2 space-y-0.5 bg-slate-900 text-slate-200 border-t border-slate-800">
+                  <span class="font-mono text-[10px] font-bold text-white block">--color-primary-text</span>
+                  <span class="font-mono text-[9px] text-emerald-400 block truncate">{{ .l_ptext }}</span>
+                </div>
+              </div>
+
+              <div class="rounded border border-slate-700 overflow-hidden bg-slate-900">
+                <div class="h-10 w-full flex items-center justify-center font-bold text-xs shadow-inner csw-{{ .pfx }}-l-sfill">
+                  Sec-Fill
+                </div>
+                <div class="p-2 space-y-0.5 bg-slate-900 text-slate-200 border-t border-slate-800">
+                  <span class="font-mono text-[10px] font-bold text-white block">--color-secondary-fill</span>
+                  <span class="font-mono text-[9px] text-emerald-400 block truncate">{{ .l_sfill }}</span>
+                </div>
+              </div>
+
+              <div class="rounded border border-slate-700 overflow-hidden bg-slate-900">
+                <div class="h-10 w-full flex items-center justify-center font-bold text-xs shadow-inner csw-{{ .pfx }}-l-stext">
+                  Sec-Text
+                </div>
+                <div class="p-2 space-y-0.5 bg-slate-900 text-slate-200 border-t border-slate-800">
+                  <span class="font-mono text-[10px] font-bold text-white block">--color-secondary-text</span>
+                  <span class="font-mono text-[9px] text-emerald-400 block truncate">{{ .l_stext }}</span>
+                </div>
+              </div>
+
+              <!-- Surface & Borders -->
+              <div class="rounded border border-slate-700 overflow-hidden bg-slate-900">
+                <div class="h-10 w-full flex items-center justify-center font-bold text-xs shadow-inner csw-{{ .pfx }}-l-bg">
+                  Background
+                </div>
+                <div class="p-2 space-y-0.5 bg-slate-900 text-slate-200 border-t border-slate-800">
+                  <span class="font-mono text-[10px] font-bold text-white block">--color-background</span>
+                  <span class="font-mono text-[9px] text-emerald-400 block truncate">{{ .l_bg }}</span>
+                </div>
+              </div>
+
+              <div class="rounded border border-slate-700 overflow-hidden bg-slate-900">
+                <div class="h-10 w-full flex items-center justify-center font-bold text-xs shadow-inner csw-{{ .pfx }}-l-card">
+                  Card
+                </div>
+                <div class="p-2 space-y-0.5 bg-slate-900 text-slate-200 border-t border-slate-800">
+                  <span class="font-mono text-[10px] font-bold text-white block">--color-card</span>
+                  <span class="font-mono text-[9px] text-emerald-400 block truncate">{{ .l_card }}</span>
+                </div>
+              </div>
+
+              <div class="rounded border border-slate-700 overflow-hidden bg-slate-900">
+                <div class="h-10 w-full flex items-center justify-center font-bold text-xs shadow-inner csw-{{ .pfx }}-l-elev">
+                  Elevated
+                </div>
+                <div class="p-2 space-y-0.5 bg-slate-900 text-slate-200 border-t border-slate-800">
+                  <span class="font-mono text-[10px] font-bold text-white block">--color-elevated</span>
+                  <span class="font-mono text-[9px] text-emerald-400 block truncate">{{ .l_elev }}</span>
+                </div>
+              </div>
+
+              <div class="rounded border border-slate-700 overflow-hidden bg-slate-900">
+                <div class="h-10 w-full flex items-center justify-center font-bold text-xs shadow-inner csw-{{ .pfx }}-l-border">
+                  Border
+                </div>
+                <div class="p-2 space-y-0.5 bg-slate-900 text-slate-200 border-t border-slate-800">
+                  <span class="font-mono text-[10px] font-bold text-white block">--color-border</span>
+                  <span class="font-mono text-[9px] text-emerald-400 block truncate">{{ .l_border }}</span>
+                </div>
+              </div>
+
+              <div class="rounded border border-slate-700 overflow-hidden bg-slate-900">
+                <div class="h-10 w-full flex items-center justify-center font-bold text-xs shadow-inner csw-{{ .pfx }}-l-text">
+                  Text
+                </div>
+                <div class="p-2 space-y-0.5 bg-slate-900 text-slate-200 border-t border-slate-800">
+                  <span class="font-mono text-[10px] font-bold text-white block">--color-text</span>
+                  <span class="font-mono text-[9px] text-emerald-400 block truncate">{{ .l_text }}</span>
+                </div>
+              </div>
+
+              <div class="rounded border border-slate-700 overflow-hidden bg-slate-900">
+                <div class="h-10 w-full flex items-center justify-center font-bold text-xs shadow-inner csw-{{ .pfx }}-l-shd">
+                  Shadow
+                </div>
+                <div class="p-2 space-y-0.5 bg-slate-900 text-slate-200 border-t border-slate-800">
+                  <span class="font-mono text-[10px] font-bold text-white block">--color-shadow</span>
+                  <span class="font-mono text-[9px] text-emerald-400 block truncate">{{ .l_shd }}</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- DARK MODE MATRIX -->
+          <div class="space-y-3 p-4 rounded-xl border border-slate-700/80 bg-slate-950">
+            <div class="flex items-center justify-between border-b border-slate-800 pb-2">
+              <span class="text-xs font-mono font-bold uppercase tracking-wider text-cyan-300">🌙 Dark Mode Semantic Palette</span>
+              <span class="text-[11px] font-mono text-slate-400">Surface Backing: <code class="text-emerald-400 font-semibold">{{ .d_bg }}</code></span>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2.5">
+              
+              <!-- Primary & On-Primary -->
+              <div class="rounded border border-slate-700 overflow-hidden bg-slate-900">
+                <div class="h-10 w-full flex items-center justify-center font-bold text-xs shadow-inner csw-{{ .pfx }}-d-pri">
+                  Primary
+                </div>
+                <div class="p-2 space-y-0.5 bg-slate-900 text-slate-200 border-t border-slate-800">
+                  <span class="font-mono text-[10px] font-bold text-white block">--color-primary</span>
+                  <span class="font-mono text-[9px] text-emerald-400 block truncate">{{ .d_pri }}</span>
+                </div>
+              </div>
+
+              <div class="rounded border border-slate-700 overflow-hidden bg-slate-900">
+                <div class="h-10 w-full flex items-center justify-center font-bold text-xs shadow-inner csw-{{ .pfx }}-d-on-pri">
+                  On-Primary
+                </div>
+                <div class="p-2 space-y-0.5 bg-slate-900 text-slate-200 border-t border-slate-800">
+                  <span class="font-mono text-[10px] font-bold text-white block">--color-on-primary</span>
+                  <span class="font-mono text-[9px] text-emerald-400 block truncate">{{ .d_on_pri }}</span>
+                </div>
+              </div>
+
+              <!-- Secondary & On-Secondary -->
+              <div class="rounded border border-slate-700 overflow-hidden bg-slate-900">
+                <div class="h-10 w-full flex items-center justify-center font-bold text-xs shadow-inner csw-{{ .pfx }}-d-sec">
+                  Secondary
+                </div>
+                <div class="p-2 space-y-0.5 bg-slate-900 text-slate-200 border-t border-slate-800">
+                  <span class="font-mono text-[10px] font-bold text-white block">--color-secondary</span>
+                  <span class="font-mono text-[9px] text-emerald-400 block truncate">{{ .d_sec }}</span>
+                </div>
+              </div>
+
+              <div class="rounded border border-slate-700 overflow-hidden bg-slate-900">
+                <div class="h-10 w-full flex items-center justify-center font-bold text-xs shadow-inner csw-{{ .pfx }}-d-on-sec">
+                  On-Secondary
+                </div>
+                <div class="p-2 space-y-0.5 bg-slate-900 text-slate-200 border-t border-slate-800">
+                  <span class="font-mono text-[10px] font-bold text-white block">--color-on-secondary</span>
+                  <span class="font-mono text-[9px] text-emerald-400 block truncate">{{ .d_on_sec }}</span>
+                </div>
+              </div>
+
+              <!-- Tertiary & On-Tertiary -->
+              <div class="rounded border border-slate-700 overflow-hidden bg-slate-900">
+                <div class="h-10 w-full flex items-center justify-center font-bold text-xs shadow-inner csw-{{ .pfx }}-d-ter">
+                  Tertiary
+                </div>
+                <div class="p-2 space-y-0.5 bg-slate-900 text-slate-200 border-t border-slate-800">
+                  <span class="font-mono text-[10px] font-bold text-white block">--color-tertiary</span>
+                  <span class="font-mono text-[9px] text-emerald-400 block truncate">{{ .d_ter }}</span>
+                </div>
+              </div>
+
+              <div class="rounded border border-slate-700 overflow-hidden bg-slate-900">
+                <div class="h-10 w-full flex items-center justify-center font-bold text-xs shadow-inner csw-{{ .pfx }}-d-on-ter">
+                  On-Tertiary
+                </div>
+                <div class="p-2 space-y-0.5 bg-slate-900 text-slate-200 border-t border-slate-800">
+                  <span class="font-mono text-[10px] font-bold text-white block">--color-on-tertiary</span>
+                  <span class="font-mono text-[9px] text-emerald-400 block truncate">{{ .d_on_ter }}</span>
+                </div>
+              </div>
+
+              <!-- Fills & Texts -->
+              <div class="rounded border border-slate-700 overflow-hidden bg-slate-900">
+                <div class="h-10 w-full flex items-center justify-center font-bold text-xs shadow-inner csw-{{ .pfx }}-d-pfill">
+                  Pri-Fill
+                </div>
+                <div class="p-2 space-y-0.5 bg-slate-900 text-slate-200 border-t border-slate-800">
+                  <span class="font-mono text-[10px] font-bold text-white block">--color-primary-fill</span>
+                  <span class="font-mono text-[9px] text-emerald-400 block truncate">{{ .d_pfill }}</span>
+                </div>
+              </div>
+
+              <div class="rounded border border-slate-700 overflow-hidden bg-slate-900">
+                <div class="h-10 w-full flex items-center justify-center font-bold text-xs shadow-inner csw-{{ .pfx }}-d-ptext">
+                  Pri-Text
+                </div>
+                <div class="p-2 space-y-0.5 bg-slate-900 text-slate-200 border-t border-slate-800">
+                  <span class="font-mono text-[10px] font-bold text-white block">--color-primary-text</span>
+                  <span class="font-mono text-[9px] text-emerald-400 block truncate">{{ .d_ptext }}</span>
+                </div>
+              </div>
+
+              <div class="rounded border border-slate-700 overflow-hidden bg-slate-900">
+                <div class="h-10 w-full flex items-center justify-center font-bold text-xs shadow-inner csw-{{ .pfx }}-d-sfill">
+                  Sec-Fill
+                </div>
+                <div class="p-2 space-y-0.5 bg-slate-900 text-slate-200 border-t border-slate-800">
+                  <span class="font-mono text-[10px] font-bold text-white block">--color-secondary-fill</span>
+                  <span class="font-mono text-[9px] text-emerald-400 block truncate">{{ .d_sfill }}</span>
+                </div>
+              </div>
+
+              <div class="rounded border border-slate-700 overflow-hidden bg-slate-900">
+                <div class="h-10 w-full flex items-center justify-center font-bold text-xs shadow-inner csw-{{ .pfx }}-d-stext">
+                  Sec-Text
+                </div>
+                <div class="p-2 space-y-0.5 bg-slate-900 text-slate-200 border-t border-slate-800">
+                  <span class="font-mono text-[10px] font-bold text-white block">--color-secondary-text</span>
+                  <span class="font-mono text-[9px] text-emerald-400 block truncate">{{ .d_stext }}</span>
+                </div>
+              </div>
+
+              <!-- Surface & Borders -->
+              <div class="rounded border border-slate-700 overflow-hidden bg-slate-900">
+                <div class="h-10 w-full flex items-center justify-center font-bold text-xs shadow-inner csw-{{ .pfx }}-d-bg">
+                  Background
+                </div>
+                <div class="p-2 space-y-0.5 bg-slate-900 text-slate-200 border-t border-slate-800">
+                  <span class="font-mono text-[10px] font-bold text-white block">--color-background</span>
+                  <span class="font-mono text-[9px] text-emerald-400 block truncate">{{ .d_bg }}</span>
+                </div>
+              </div>
+
+              <div class="rounded border border-slate-700 overflow-hidden bg-slate-900">
+                <div class="h-10 w-full flex items-center justify-center font-bold text-xs shadow-inner csw-{{ .pfx }}-d-card">
+                  Card
+                </div>
+                <div class="p-2 space-y-0.5 bg-slate-900 text-slate-200 border-t border-slate-800">
+                  <span class="font-mono text-[10px] font-bold text-white block">--color-card</span>
+                  <span class="font-mono text-[9px] text-emerald-400 block truncate">{{ .d_card }}</span>
+                </div>
+              </div>
+
+              <div class="rounded border border-slate-700 overflow-hidden bg-slate-900">
+                <div class="h-10 w-full flex items-center justify-center font-bold text-xs shadow-inner csw-{{ .pfx }}-d-elev">
+                  Elevated
+                </div>
+                <div class="p-2 space-y-0.5 bg-slate-900 text-slate-200 border-t border-slate-800">
+                  <span class="font-mono text-[10px] font-bold text-white block">--color-elevated</span>
+                  <span class="font-mono text-[9px] text-emerald-400 block truncate">{{ .d_elev }}</span>
+                </div>
+              </div>
+
+              <div class="rounded border border-slate-700 overflow-hidden bg-slate-900">
+                <div class="h-10 w-full flex items-center justify-center font-bold text-xs shadow-inner csw-{{ .pfx }}-d-border">
+                  Border
+                </div>
+                <div class="p-2 space-y-0.5 bg-slate-900 text-slate-200 border-t border-slate-800">
+                  <span class="font-mono text-[10px] font-bold text-white block">--color-border</span>
+                  <span class="font-mono text-[9px] text-emerald-400 block truncate">{{ .d_border }}</span>
+                </div>
+              </div>
+
+              <div class="rounded border border-slate-700 overflow-hidden bg-slate-900">
+                <div class="h-10 w-full flex items-center justify-center font-bold text-xs shadow-inner csw-{{ .pfx }}-d-text">
+                  Text
+                </div>
+                <div class="p-2 space-y-0.5 bg-slate-900 text-slate-200 border-t border-slate-800">
+                  <span class="font-mono text-[10px] font-bold text-white block">--color-text</span>
+                  <span class="font-mono text-[9px] text-emerald-400 block truncate">{{ .d_text }}</span>
+                </div>
+              </div>
+
+              <div class="rounded border border-slate-700 overflow-hidden bg-slate-900">
+                <div class="h-10 w-full flex items-center justify-center font-bold text-xs shadow-inner csw-{{ .pfx }}-d-shd">
+                  Shadow
+                </div>
+                <div class="p-2 space-y-0.5 bg-slate-900 text-slate-200 border-t border-slate-800">
+                  <span class="font-mono text-[10px] font-bold text-white block">--color-shadow</span>
+                  <span class="font-mono text-[9px] text-emerald-400 block truncate">{{ .d_shd }}</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      {{ end }}
+    </div>
+  </section>
+
+</div>
+{{ end }}

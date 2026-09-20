@@ -45,5 +45,3 @@ Still, the results of the study to tend to confirm other similar studies in the 
 **_Make frequent immunity boosting massage therapy an important part of your health regime. Sign up for my [Secret Handshake Club](https://paulbrown.net/secret-handshake-club/) discount massage program and save 20% on your massage!-**
 
 ## Immune System Boost? Book Today!
-
-[Book Now!](http://https/paulbrown.noterro.com)

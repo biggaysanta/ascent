@@ -1,4 +1,5 @@
 {{- $url := .Get 0 -}}
-<a id="ctaTarget" href="{{ $url }}" class="nav-link">{{ partial "atoms/icon.html" (dict "icon" "info" "class" "current-color") }}
+{{- $icon := .Get 1 | default "info" -}}
+<a id="ctaTarget" href="{{ $url }}" class="nav-link">{{ partial "atoms/icon.html" (dict "icon" $icon "class" "current-color") }}
     {{ with .Inner }}{{ . }}{{ else }}Book Now!{{ end }}
 </a>

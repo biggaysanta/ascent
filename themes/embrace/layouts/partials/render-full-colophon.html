@@ -1,0 +1,95 @@
+
+<div class="w-full py-8 px-4 sm:px-6 space-y-12 font-sans bg-slate-950 text-slate-100 min-h-screen">
+  
+  <!-- Header -->
+  <header class="border-b border-slate-800 pb-6">
+    <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
+      <h1 class="text-2xl sm:text-4xl font-bold tracking-tight text-white">Embrace Design System Reference Colophon</h1>
+      <span class="text-xs font-mono uppercase tracking-widest text-emerald-400 bg-emerald-950/80 border border-emerald-700 px-3 py-1 rounded-full">Self-Contained Full Catalog</span>
+    </div>
+    <p class="text-sm text-slate-400 mt-2 max-w-4xl">
+      Complete reference catalog displaying all 12 gemstone families across 50–950 stops evaluated against Snow (White), Ebon (Black), and 50% Neutral backgrounds.
+    </p>
+  </header>
+
+  {{ $stops := slice "50" "100" "200" "300" "400" "500" "600" "700" "800" "900" "950" }}
+  {{ $gems := slice 
+    (dict "name" "Ruby" "prefix" "ruby")
+    (dict "name" "Emerald" "prefix" "emerald")
+    (dict "name" "Gold" "prefix" "gold")
+    (dict "name" "Aquamarine" "prefix" "aquamarine")
+    (dict "name" "Amethyst" "prefix" "amethyst")
+    (dict "name" "Sapphire" "prefix" "sapphire")
+    (dict "name" "Steel" "prefix" "steel")
+    (dict "name" "Onyx" "prefix" "onyx")
+    (dict "name" "Cobalt" "prefix" "cobalt")
+    (dict "name" "Bronze" "prefix" "bronze")
+    (dict "name" "Topaz" "prefix" "topaz")
+    (dict "name" "Jade" "prefix" "jade")
+  }}
+
+  <!-- GEMSTONE MATRIX SECTION -->
+  <section class="space-y-8">
+    <div class="border-b border-slate-800 pb-2">
+      <h2 class="text-lg font-mono font-bold uppercase tracking-wider text-amber-400">Core Gemstones — Triple Background Contrast Grids</h2>
+    </div>
+
+    <div class="grid grid-cols-1 gap-6">
+      {{ range $gems }}
+        {{ $name := .name }}
+        {{ $prefix := .prefix }}
+
+        <div class="rounded-lg border border-slate-700 overflow-hidden bg-slate-900 p-4 space-y-4 shadow-md">
+          <div class="flex items-center justify-between border-b border-slate-800 pb-2">
+            <h3 class="font-mono text-sm font-bold text-white">{{ $name }}</h3>
+            <span class="text-xs font-mono text-emerald-400">--color-{{ $prefix }}-*</span>
+          </div>
+
+          <!-- 1. Snow Background (White 100% L) -->
+          <div class="p-3 rounded bg-white text-black space-y-2 shadow-sm">
+            <div class="flex justify-between items-center">
+              <span class="text-[10px] font-mono font-bold uppercase tracking-wider text-slate-700">On Snow Background (White)</span>
+              <span class="text-[9px] font-mono text-slate-500">Light Contrast</span>
+            </div>
+            <div class="grid grid-cols-11 gap-1.5">
+              {{ range $stops }}
+<div class="h-14 rounded flex flex-col justify-between p-1 border border-black/10 shadow-xs" style="background-color: var(--color-{{ $prefix }}-{{ . }});">                  <span class="text-[9px] font-mono font-bold text-slate-900 drop-shadow-xs">{{ . }}</span>
+                </div>
+              {{ end }}
+            </div>
+          </div>
+
+          <!-- 2. Ebon Background (Black 0% L) -->
+          <div class="p-3 rounded bg-black text-white space-y-2 shadow-sm border border-slate-800">
+            <div class="flex justify-between items-center">
+              <span class="text-[10px] font-mono font-bold uppercase tracking-wider text-slate-300">On Ebon Background (Black)</span>
+              <span class="text-[9px] font-mono text-slate-500">Dark Contrast</span>
+            </div>
+            <div class="grid grid-cols-11 gap-1.5">
+              {{ range $stops }}
+<div class="h-14 rounded flex flex-col justify-between p-1 border border-black/10 shadow-xs" style="background-color: var(--color-{{ $prefix }}-{{ . }});">                  <span class="text-[9px] font-mono font-bold text-white drop-shadow-sm">{{ . }}</span>
+                </div>
+              {{ end }}
+            </div>
+          </div>
+
+          <!-- 3. 50% Neutral Background (Mid-Gray oklch 50% 0 0) -->
+          <div class="p-3 rounded bg-[oklch(50%_0_0)] text-white space-y-2 shadow-sm border border-slate-700">
+            <div class="flex justify-between items-center">
+              <span class="text-[10px] font-mono font-bold uppercase tracking-wider text-slate-100">On 50% Neutral Background (oklch 50% 0 0)</span>
+              <span class="text-[9px] font-mono text-slate-200">Mid-Tone Contrast</span>
+            </div>
+            <div class="grid grid-cols-11 gap-1.5">
+              {{ range $stops }}
+<div class="h-14 rounded flex flex-col justify-between p-1 border border-black/10 shadow-xs" style="background-color: var(--color-{{ $prefix }}-{{ . }});">                  <span class="text-[9px] font-mono font-bold text-white drop-shadow-md">{{ . }}</span>
+                </div>
+              {{ end }}
+            </div>
+          </div>
+        </div>
+
+      {{ end }}
+    </div>
+  </section>
+
+</div>

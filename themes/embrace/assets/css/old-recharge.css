@@ -1,5 +1,5 @@
 /* virtue-brains context */
-.theme-repeat {
+.theme-recharge {
   /* Brand/Core Colors */
   --color-primary: oklch(49.32% 0.237 271.65);
   --color-on-primary: oklch(96.37% 0.019 292.61);
@@ -35,11 +35,12 @@
   --color-error-text: oklch(28.72% 0.117 27.53);
 
   /* Shadows */
-  --color-shadow: var(--color-amethyst);
+  --color-shadow: var(--color-topaz);
 }
 
+
 @media (prefers-color-scheme: dark) {
-  .theme-repeat {
+  .theme-recharge {
     /* Brand/Core Colors */
     --color-primary: oklch(75.65% 0.127 280.43);
     --color-on-primary: oklch(32.78% 0.227 264.05);
@@ -73,8 +74,8 @@
     --color-on-error: oklch(25.72% 0.105 27.65);
     --color-error-fill: oklch(47.21% 0.187 27.54);
     --color-error-text: oklch(84.66% 0.084 26.20);
-    
+
     /* Shadows */
-    --color-shadow: var(--color-amethyst);
+    --color-shadow: var(--color-topaz);
   }
 }

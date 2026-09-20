@@ -16,20 +16,23 @@ line4: "advanced bodywork"
 icon: massage
 imageurl: "/images/png/ppvb-no-bckgrnd.png"
 videourl: "/media/release.mp4"
-colortheme: theme-release
+colortheme: theme-courage
 buttontext: book
 bookingurl: "https://www.vagaro.com/cl/EP-nfw6bYBST9WKRYoH8PP0Tclcwkq4h0JoS3EBNSIU="
 aliases:
   - /tag/deep-tissue/
   - /tag/deep-tissue-massage/
   - /tag/trigger-points/
+  - /tag/myofascial-release/
 ---
 
 ## Zero Point Advanced Myofascial Release
 
-> Exceptionally knowledgeable when it came to addressing my long standing back issues and providing me the tools to help myself feel and stay better, besides being a great massage therapist.
+{{< aside >}}
+Exceptionally knowledgeable when it came to addressing my long standing back issues and providing me the tools to help myself feel and stay better, besides being a great massage therapist.
 >
 > Brian S., Sacramento
+{{< /aside >}}
 
 Zero Point Advanced Myofascial Release is a form of bodywork based upon the principles and techniques of MFR; that fascia is a tissue that requires slow, sustained holds to induce the fascia to unwind, that is to say, release restricted portions of itself to effect change in its tension, reducing pain, improving range of motion. So, ok we all know about that, but what is this Zero Point thing?
 

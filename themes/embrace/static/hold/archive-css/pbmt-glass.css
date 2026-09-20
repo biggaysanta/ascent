@@ -7,546 +7,546 @@
   /* =========================================================
      BASE OZIAN COLOR TOKENS
      ========================================================= */
-  --cs-glass-ruby: oklch(55% 0.25 25);
-  --cs-glass-emerald: oklch(55% 0.15 155);
-  --cs-glass-gold: oklch(85% 0.18 65);
-  --cs-glass-aqua: oklch(75% 0.10 215);
-  --cs-glass-amethyst: oklch(60% 0.16 300);
-  --cs-glass-sapphire: oklch(45% 0.14 270);
-  --cs-glass-platinum: oklch(85% 0.02 250);
-  --cs-glass-pearl: oklch(91.5% 0.045 95);
+  --pb-glass-ruby: oklch(55% 0.25 25);
+  --pb-glass-emerald: oklch(55% 0.15 155);
+  --pb-glass-gold: oklch(85% 0.18 65);
+  --pb-glass-aqua: oklch(75% 0.10 215);
+  --pb-glass-amethyst: oklch(60% 0.16 300);
+  --pb-glass-sapphire: oklch(45% 0.14 270);
+  --pb-glass-platinum: oklch(85% 0.02 250);
+  --pb-glass-pearl: oklch(91.5% 0.045 95);
 
   /* =========================================================
      OPACITY SCALES (LIGHT & DARK), BORDERS & SHADOWS
      ========================================================= */
 
   /* --- RUBY --- */
-  --cs-glass-bg-ruby: var(--cs-glass-ruby)/0.1;
-  --cs-glass-border-ruby: var(--cs-glass-ruby)/0.2;
-  --cs-glass-bg-ruby-fallback: var(--cs-glass-ruby)/0.25;
-  --cs-glass-shadow-ruby: 0 8px 32px var(--cs-glass-ruby)/0.25;
-  --cs-glass-bg-dark-ruby: var(--cs-glass-ruby)/0.15;
+  --pb-glass-bg-ruby: var(--pb-glass-ruby)/0.1;
+  --pb-glass-border-ruby: var(--pb-glass-ruby)/0.2;
+  --pb-glass-bg-ruby-fallback: var(--pb-glass-ruby)/0.25;
+  --pb-glass-shadow-ruby: 0 8px 32px var(--pb-glass-ruby)/0.25;
+  --pb-glass-bg-dark-ruby: var(--pb-glass-ruby)/0.15;
 
-  --cs-glass-bg-ruby-xs: var(--cs-glass-ruby)/0.02;
-  --cs-glass-bg-ruby-sm: var(--cs-glass-ruby)/0.07;
-  --cs-glass-bg-ruby-md: var(--cs-glass-ruby)/0.12;
-  --cs-glass-bg-ruby-lg: var(--cs-glass-ruby)/0.18;
-  --cs-glass-bg-ruby-xl: var(--cs-glass-ruby)/0.25;
-  --cs-glass-bg-ruby-2xl: var(--cs-glass-ruby)/0.35;
-  --cs-glass-bg-ruby-3xl: var(--cs-glass-ruby)/0.45;
-  --cs-glass-bg-ruby-4xl: var(--cs-glass-ruby)/0.6;
-  --cs-glass-bg-ruby-5xl: var(--cs-glass-ruby)/0.75;
+  --pb-glass-bg-ruby-xs: var(--pb-glass-ruby)/0.02;
+  --pb-glass-bg-ruby-sm: var(--pb-glass-ruby)/0.07;
+  --pb-glass-bg-ruby-md: var(--pb-glass-ruby)/0.12;
+  --pb-glass-bg-ruby-lg: var(--pb-glass-ruby)/0.18;
+  --pb-glass-bg-ruby-xl: var(--pb-glass-ruby)/0.25;
+  --pb-glass-bg-ruby-2xl: var(--pb-glass-ruby)/0.35;
+  --pb-glass-bg-ruby-3xl: var(--pb-glass-ruby)/0.45;
+  --pb-glass-bg-ruby-4xl: var(--pb-glass-ruby)/0.6;
+  --pb-glass-bg-ruby-5xl: var(--pb-glass-ruby)/0.75;
 
-  --cs-glass-bg-dark-ruby-xs: var(--cs-glass-ruby)/0.03;
-  --cs-glass-bg-dark-ruby-sm: var(--cs-glass-ruby)/0.09;
-  --cs-glass-bg-dark-ruby-md: var(--cs-glass-ruby)/0.15;
-  --cs-glass-bg-dark-ruby-lg: var(--cs-glass-ruby)/0.22;
-  --cs-glass-bg-dark-ruby-xl: var(--cs-glass-ruby)/0.30;
-  --cs-glass-bg-dark-ruby-2xl: var(--cs-glass-ruby)/0.40;
-  --cs-glass-bg-dark-ruby-3xl: var(--cs-glass-ruby)/0.50;
-  --cs-glass-bg-dark-ruby-4xl: var(--cs-glass-ruby)/0.65;
-  --cs-glass-bg-dark-ruby-5xl: var(--cs-glass-ruby)/0.80;
+  --pb-glass-bg-dark-ruby-xs: var(--pb-glass-ruby)/0.03;
+  --pb-glass-bg-dark-ruby-sm: var(--pb-glass-ruby)/0.09;
+  --pb-glass-bg-dark-ruby-md: var(--pb-glass-ruby)/0.15;
+  --pb-glass-bg-dark-ruby-lg: var(--pb-glass-ruby)/0.22;
+  --pb-glass-bg-dark-ruby-xl: var(--pb-glass-ruby)/0.30;
+  --pb-glass-bg-dark-ruby-2xl: var(--pb-glass-ruby)/0.40;
+  --pb-glass-bg-dark-ruby-3xl: var(--pb-glass-ruby)/0.50;
+  --pb-glass-bg-dark-ruby-4xl: var(--pb-glass-ruby)/0.65;
+  --pb-glass-bg-dark-ruby-5xl: var(--pb-glass-ruby)/0.80;
 
   /* --- EMERALD --- */
-  --cs-glass-bg-emerald: var(--cs-glass-emerald)/0.1;
-  --cs-glass-border-emerald: var(--cs-glass-emerald)/0.2;
-  --cs-glass-bg-emerald-fallback: var(--cs-glass-emerald)/0.25;
-  --cs-glass-shadow-emerald: 0 8px 32px var(--cs-glass-emerald)/0.25;
-  --cs-glass-bg-dark-emerald: var(--cs-glass-emerald)/0.15;
+  --pb-glass-bg-emerald: var(--pb-glass-emerald)/0.1;
+  --pb-glass-border-emerald: var(--pb-glass-emerald)/0.2;
+  --pb-glass-bg-emerald-fallback: var(--pb-glass-emerald)/0.25;
+  --pb-glass-shadow-emerald: 0 8px 32px var(--pb-glass-emerald)/0.25;
+  --pb-glass-bg-dark-emerald: var(--pb-glass-emerald)/0.15;
 
-  --cs-glass-bg-emerald-xs: var(--cs-glass-emerald)/0.02;
-  --cs-glass-bg-emerald-sm: var(--cs-glass-emerald)/0.07;
-  --cs-glass-bg-emerald-md: var(--cs-glass-emerald)/0.12;
-  --cs-glass-bg-emerald-lg: var(--cs-glass-emerald)/0.18;
-  --cs-glass-bg-emerald-xl: var(--cs-glass-emerald)/0.25;
-  --cs-glass-bg-emerald-2xl: var(--cs-glass-emerald)/0.35;
-  --cs-glass-bg-emerald-3xl: var(--cs-glass-emerald)/0.45;
-  --cs-glass-bg-emerald-4xl: var(--cs-glass-emerald)/0.6;
-  --cs-glass-bg-emerald-5xl: var(--cs-glass-emerald)/0.75;
+  --pb-glass-bg-emerald-xs: var(--pb-glass-emerald)/0.02;
+  --pb-glass-bg-emerald-sm: var(--pb-glass-emerald)/0.07;
+  --pb-glass-bg-emerald-md: var(--pb-glass-emerald)/0.12;
+  --pb-glass-bg-emerald-lg: var(--pb-glass-emerald)/0.18;
+  --pb-glass-bg-emerald-xl: var(--pb-glass-emerald)/0.25;
+  --pb-glass-bg-emerald-2xl: var(--pb-glass-emerald)/0.35;
+  --pb-glass-bg-emerald-3xl: var(--pb-glass-emerald)/0.45;
+  --pb-glass-bg-emerald-4xl: var(--pb-glass-emerald)/0.6;
+  --pb-glass-bg-emerald-5xl: var(--pb-glass-emerald)/0.75;
 
-  --cs-glass-bg-dark-emerald-xs: var(--cs-glass-emerald)/0.03;
-  --cs-glass-bg-dark-emerald-sm: var(--cs-glass-emerald)/0.09;
-  --cs-glass-bg-dark-emerald-md: var(--cs-glass-emerald)/0.15;
-  --cs-glass-bg-dark-emerald-lg: var(--cs-glass-emerald)/0.22;
-  --cs-glass-bg-dark-emerald-xl: var(--cs-glass-emerald)/0.30;
-  --cs-glass-bg-dark-emerald-2xl: var(--cs-glass-emerald)/0.40;
-  --cs-glass-bg-dark-emerald-3xl: var(--cs-glass-emerald)/0.50;
-  --cs-glass-bg-dark-emerald-4xl: var(--cs-glass-emerald)/0.65;
-  --cs-glass-bg-dark-emerald-5xl: var(--cs-glass-emerald)/0.80;
+  --pb-glass-bg-dark-emerald-xs: var(--pb-glass-emerald)/0.03;
+  --pb-glass-bg-dark-emerald-sm: var(--pb-glass-emerald)/0.09;
+  --pb-glass-bg-dark-emerald-md: var(--pb-glass-emerald)/0.15;
+  --pb-glass-bg-dark-emerald-lg: var(--pb-glass-emerald)/0.22;
+  --pb-glass-bg-dark-emerald-xl: var(--pb-glass-emerald)/0.30;
+  --pb-glass-bg-dark-emerald-2xl: var(--pb-glass-emerald)/0.40;
+  --pb-glass-bg-dark-emerald-3xl: var(--pb-glass-emerald)/0.50;
+  --pb-glass-bg-dark-emerald-4xl: var(--pb-glass-emerald)/0.65;
+  --pb-glass-bg-dark-emerald-5xl: var(--pb-glass-emerald)/0.80;
 
   /* --- GOLD --- */
-  --cs-glass-bg-gold: var(--cs-glass-gold)/0.1;
-  --cs-glass-border-gold: var(--cs-glass-gold)/0.2;
-  --cs-glass-bg-gold-fallback: var(--cs-glass-gold)/0.25;
-  --cs-glass-shadow-gold: 0 8px 32px var(--cs-glass-gold)/0.25;
-  --cs-glass-bg-dark-gold: var(--cs-glass-gold)/0.15;
+  --pb-glass-bg-gold: var(--pb-glass-gold)/0.1;
+  --pb-glass-border-gold: var(--pb-glass-gold)/0.2;
+  --pb-glass-bg-gold-fallback: var(--pb-glass-gold)/0.25;
+  --pb-glass-shadow-gold: 0 8px 32px var(--pb-glass-gold)/0.25;
+  --pb-glass-bg-dark-gold: var(--pb-glass-gold)/0.15;
 
-  --cs-glass-bg-gold-xs: var(--cs-glass-gold)/0.02;
-  --cs-glass-bg-gold-sm: var(--cs-glass-gold)/0.07;
-  --cs-glass-bg-gold-md: var(--cs-glass-gold)/0.12;
-  --cs-glass-bg-gold-lg: var(--cs-glass-gold)/0.18;
-  --cs-glass-bg-gold-xl: var(--cs-glass-gold)/0.25;
-  --cs-glass-bg-gold-2xl: var(--cs-glass-gold)/0.35;
-  --cs-glass-bg-gold-3xl: var(--cs-glass-gold)/0.45;
-  --cs-glass-bg-gold-4xl: var(--cs-glass-gold)/0.6;
-  --cs-glass-bg-gold-5xl: var(--cs-glass-gold)/0.75;
+  --pb-glass-bg-gold-xs: var(--pb-glass-gold)/0.02;
+  --pb-glass-bg-gold-sm: var(--pb-glass-gold)/0.07;
+  --pb-glass-bg-gold-md: var(--pb-glass-gold)/0.12;
+  --pb-glass-bg-gold-lg: var(--pb-glass-gold)/0.18;
+  --pb-glass-bg-gold-xl: var(--pb-glass-gold)/0.25;
+  --pb-glass-bg-gold-2xl: var(--pb-glass-gold)/0.35;
+  --pb-glass-bg-gold-3xl: var(--pb-glass-gold)/0.45;
+  --pb-glass-bg-gold-4xl: var(--pb-glass-gold)/0.6;
+  --pb-glass-bg-gold-5xl: var(--pb-glass-gold)/0.75;
 
-  --cs-glass-bg-dark-gold-xs: var(--cs-glass-gold)/0.03;
-  --cs-glass-bg-dark-gold-sm: var(--cs-glass-gold)/0.09;
-  --cs-glass-bg-dark-gold-md: var(--cs-glass-gold)/0.15;
-  --cs-glass-bg-dark-gold-lg: var(--cs-glass-gold)/0.22;
-  --cs-glass-bg-dark-gold-xl: var(--cs-glass-gold)/0.30;
-  --cs-glass-bg-dark-gold-2xl: var(--cs-glass-gold)/0.40;
-  --cs-glass-bg-dark-gold-3xl: var(--cs-glass-gold)/0.50;
-  --cs-glass-bg-dark-gold-4xl: var(--cs-glass-gold)/0.65;
-  --cs-glass-bg-dark-gold-5xl: var(--cs-glass-gold)/0.80;
+  --pb-glass-bg-dark-gold-xs: var(--pb-glass-gold)/0.03;
+  --pb-glass-bg-dark-gold-sm: var(--pb-glass-gold)/0.09;
+  --pb-glass-bg-dark-gold-md: var(--pb-glass-gold)/0.15;
+  --pb-glass-bg-dark-gold-lg: var(--pb-glass-gold)/0.22;
+  --pb-glass-bg-dark-gold-xl: var(--pb-glass-gold)/0.30;
+  --pb-glass-bg-dark-gold-2xl: var(--pb-glass-gold)/0.40;
+  --pb-glass-bg-dark-gold-3xl: var(--pb-glass-gold)/0.50;
+  --pb-glass-bg-dark-gold-4xl: var(--pb-glass-gold)/0.65;
+  --pb-glass-bg-dark-gold-5xl: var(--pb-glass-gold)/0.80;
 
   /* --- AQUA --- */
-  --cs-glass-bg-aqua: var(--cs-glass-aqua)/0.1;
-  --cs-glass-border-aqua: var(--cs-glass-aqua)/0.2;
-  --cs-glass-bg-aqua-fallback: var(--cs-glass-aqua)/0.25;
-  --cs-glass-shadow-aqua: 0 8px 32px var(--cs-glass-aqua)/0.25;
-  --cs-glass-bg-dark-aqua: var(--cs-glass-aqua)/0.15;
+  --pb-glass-bg-aqua: var(--pb-glass-aqua)/0.1;
+  --pb-glass-border-aqua: var(--pb-glass-aqua)/0.2;
+  --pb-glass-bg-aqua-fallback: var(--pb-glass-aqua)/0.25;
+  --pb-glass-shadow-aqua: 0 8px 32px var(--pb-glass-aqua)/0.25;
+  --pb-glass-bg-dark-aqua: var(--pb-glass-aqua)/0.15;
 
-  --cs-glass-bg-aqua-xs: var(--cs-glass-aqua)/0.02;
-  --cs-glass-bg-aqua-sm: var(--cs-glass-aqua)/0.07;
-  --cs-glass-bg-aqua-md: var(--cs-glass-aqua)/0.12;
-  --cs-glass-bg-aqua-lg: var(--cs-glass-aqua)/0.18;
-  --cs-glass-bg-aqua-xl: var(--cs-glass-aqua)/0.25;
-  --cs-glass-bg-aqua-2xl: var(--cs-glass-aqua)/0.35;
-  --cs-glass-bg-aqua-3xl: var(--cs-glass-aqua)/0.45;
-  --cs-glass-bg-aqua-4xl: var(--cs-glass-aqua)/0.6;
-  --cs-glass-bg-aqua-5xl: var(--cs-glass-aqua)/0.75;
+  --pb-glass-bg-aqua-xs: var(--pb-glass-aqua)/0.02;
+  --pb-glass-bg-aqua-sm: var(--pb-glass-aqua)/0.07;
+  --pb-glass-bg-aqua-md: var(--pb-glass-aqua)/0.12;
+  --pb-glass-bg-aqua-lg: var(--pb-glass-aqua)/0.18;
+  --pb-glass-bg-aqua-xl: var(--pb-glass-aqua)/0.25;
+  --pb-glass-bg-aqua-2xl: var(--pb-glass-aqua)/0.35;
+  --pb-glass-bg-aqua-3xl: var(--pb-glass-aqua)/0.45;
+  --pb-glass-bg-aqua-4xl: var(--pb-glass-aqua)/0.6;
+  --pb-glass-bg-aqua-5xl: var(--pb-glass-aqua)/0.75;
 
-  --cs-glass-bg-dark-aqua-xs: var(--cs-glass-aqua)/0.03;
-  --cs-glass-bg-dark-aqua-sm: var(--cs-glass-aqua)/0.09;
-  --cs-glass-bg-dark-aqua-md: var(--cs-glass-aqua)/0.15;
-  --cs-glass-bg-dark-aqua-lg: var(--cs-glass-aqua)/0.22;
-  --cs-glass-bg-dark-aqua-xl: var(--cs-glass-aqua)/0.30;
-  --cs-glass-bg-dark-aqua-2xl: var(--cs-glass-aqua)/0.40;
-  --cs-glass-bg-dark-aqua-3xl: var(--cs-glass-aqua)/0.50;
-  --cs-glass-bg-dark-aqua-4xl: var(--cs-glass-aqua)/0.65;
-  --cs-glass-bg-dark-aqua-5xl: var(--cs-glass-aqua)/0.80;
+  --pb-glass-bg-dark-aqua-xs: var(--pb-glass-aqua)/0.03;
+  --pb-glass-bg-dark-aqua-sm: var(--pb-glass-aqua)/0.09;
+  --pb-glass-bg-dark-aqua-md: var(--pb-glass-aqua)/0.15;
+  --pb-glass-bg-dark-aqua-lg: var(--pb-glass-aqua)/0.22;
+  --pb-glass-bg-dark-aqua-xl: var(--pb-glass-aqua)/0.30;
+  --pb-glass-bg-dark-aqua-2xl: var(--pb-glass-aqua)/0.40;
+  --pb-glass-bg-dark-aqua-3xl: var(--pb-glass-aqua)/0.50;
+  --pb-glass-bg-dark-aqua-4xl: var(--pb-glass-aqua)/0.65;
+  --pb-glass-bg-dark-aqua-5xl: var(--pb-glass-aqua)/0.80;
 
   /* --- AMETHYST --- */
-  --cs-glass-bg-amethyst: var(--cs-glass-amethyst)/0.1;
-  --cs-glass-border-amethyst: var(--cs-glass-amethyst)/0.2;
-  --cs-glass-bg-amethyst-fallback: var(--cs-glass-amethyst)/0.25;
-  --cs-glass-shadow-amethyst: 0 8px 32px var(--cs-glass-amethyst)/0.25;
-  --cs-glass-bg-dark-amethyst: var(--cs-glass-amethyst)/0.15;
+  --pb-glass-bg-amethyst: var(--pb-glass-amethyst)/0.1;
+  --pb-glass-border-amethyst: var(--pb-glass-amethyst)/0.2;
+  --pb-glass-bg-amethyst-fallback: var(--pb-glass-amethyst)/0.25;
+  --pb-glass-shadow-amethyst: 0 8px 32px var(--pb-glass-amethyst)/0.25;
+  --pb-glass-bg-dark-amethyst: var(--pb-glass-amethyst)/0.15;
 
-  --cs-glass-bg-amethyst-xs: var(--cs-glass-amethyst)/0.02;
-  --cs-glass-bg-amethyst-sm: var(--cs-glass-amethyst)/0.07;
-  --cs-glass-bg-amethyst-md: var(--cs-glass-amethyst)/0.12;
-  --cs-glass-bg-amethyst-lg: var(--cs-glass-amethyst)/0.18;
-  --cs-glass-bg-amethyst-xl: var(--cs-glass-amethyst)/0.25;
-  --cs-glass-bg-amethyst-2xl: var(--cs-glass-amethyst)/0.35;
-  --cs-glass-bg-amethyst-3xl: var(--cs-glass-amethyst)/0.45;
-  --cs-glass-bg-amethyst-4xl: var(--cs-glass-amethyst)/0.6;
-  --cs-glass-bg-amethyst-5xl: var(--cs-glass-amethyst)/0.75;
+  --pb-glass-bg-amethyst-xs: var(--pb-glass-amethyst)/0.02;
+  --pb-glass-bg-amethyst-sm: var(--pb-glass-amethyst)/0.07;
+  --pb-glass-bg-amethyst-md: var(--pb-glass-amethyst)/0.12;
+  --pb-glass-bg-amethyst-lg: var(--pb-glass-amethyst)/0.18;
+  --pb-glass-bg-amethyst-xl: var(--pb-glass-amethyst)/0.25;
+  --pb-glass-bg-amethyst-2xl: var(--pb-glass-amethyst)/0.35;
+  --pb-glass-bg-amethyst-3xl: var(--pb-glass-amethyst)/0.45;
+  --pb-glass-bg-amethyst-4xl: var(--pb-glass-amethyst)/0.6;
+  --pb-glass-bg-amethyst-5xl: var(--pb-glass-amethyst)/0.75;
 
-  --cs-glass-bg-dark-amethyst-xs: var(--cs-glass-amethyst)/0.03;
-  --cs-glass-bg-dark-amethyst-sm: var(--cs-glass-amethyst)/0.09;
-  --cs-glass-bg-dark-amethyst-md: var(--cs-glass-amethyst)/0.15;
-  --cs-glass-bg-dark-amethyst-lg: var(--cs-glass-amethyst)/0.22;
-  --cs-glass-bg-dark-amethyst-xl: var(--cs-glass-amethyst)/0.30;
-  --cs-glass-bg-dark-amethyst-2xl: var(--cs-glass-amethyst)/0.40;
-  --cs-glass-bg-dark-amethyst-3xl: var(--cs-glass-amethyst)/0.50;
-  --cs-glass-bg-dark-amethyst-4xl: var(--cs-glass-amethyst)/0.65;
-  --cs-glass-bg-dark-amethyst-5xl: var(--cs-glass-amethyst)/0.80;
+  --pb-glass-bg-dark-amethyst-xs: var(--pb-glass-amethyst)/0.03;
+  --pb-glass-bg-dark-amethyst-sm: var(--pb-glass-amethyst)/0.09;
+  --pb-glass-bg-dark-amethyst-md: var(--pb-glass-amethyst)/0.15;
+  --pb-glass-bg-dark-amethyst-lg: var(--pb-glass-amethyst)/0.22;
+  --pb-glass-bg-dark-amethyst-xl: var(--pb-glass-amethyst)/0.30;
+  --pb-glass-bg-dark-amethyst-2xl: var(--pb-glass-amethyst)/0.40;
+  --pb-glass-bg-dark-amethyst-3xl: var(--pb-glass-amethyst)/0.50;
+  --pb-glass-bg-dark-amethyst-4xl: var(--pb-glass-amethyst)/0.65;
+  --pb-glass-bg-dark-amethyst-5xl: var(--pb-glass-amethyst)/0.80;
 
   /* --- SAPPHIRE --- */
-  --cs-glass-bg-sapphire: var(--cs-glass-sapphire)/0.1;
-  --cs-glass-border-sapphire: var(--cs-glass-sapphire)/0.2;
-  --cs-glass-bg-sapphire-fallback: var(--cs-glass-sapphire)/0.25;
-  --cs-glass-shadow-sapphire: 0 8px 32px var(--cs-glass-sapphire)/0.25;
-  --cs-glass-bg-dark-sapphire: var(--cs-glass-sapphire)/0.15;
+  --pb-glass-bg-sapphire: var(--pb-glass-sapphire)/0.1;
+  --pb-glass-border-sapphire: var(--pb-glass-sapphire)/0.2;
+  --pb-glass-bg-sapphire-fallback: var(--pb-glass-sapphire)/0.25;
+  --pb-glass-shadow-sapphire: 0 8px 32px var(--pb-glass-sapphire)/0.25;
+  --pb-glass-bg-dark-sapphire: var(--pb-glass-sapphire)/0.15;
 
-  --cs-glass-bg-sapphire-xs: var(--cs-glass-sapphire)/0.02;
-  --cs-glass-bg-sapphire-sm: var(--cs-glass-sapphire)/0.07;
-  --cs-glass-bg-sapphire-md: var(--cs-glass-sapphire)/0.12;
-  --cs-glass-bg-sapphire-lg: var(--cs-glass-sapphire)/0.18;
-  --cs-glass-bg-sapphire-xl: var(--cs-glass-sapphire)/0.25;
-  --cs-glass-bg-sapphire-2xl: var(--cs-glass-sapphire)/0.35;
-  --cs-glass-bg-sapphire-3xl: var(--cs-glass-sapphire)/0.45;
-  --cs-glass-bg-sapphire-4xl: var(--cs-glass-sapphire)/0.6;
-  --cs-glass-bg-sapphire-5xl: var(--cs-glass-sapphire)/0.75;
+  --pb-glass-bg-sapphire-xs: var(--pb-glass-sapphire)/0.02;
+  --pb-glass-bg-sapphire-sm: var(--pb-glass-sapphire)/0.07;
+  --pb-glass-bg-sapphire-md: var(--pb-glass-sapphire)/0.12;
+  --pb-glass-bg-sapphire-lg: var(--pb-glass-sapphire)/0.18;
+  --pb-glass-bg-sapphire-xl: var(--pb-glass-sapphire)/0.25;
+  --pb-glass-bg-sapphire-2xl: var(--pb-glass-sapphire)/0.35;
+  --pb-glass-bg-sapphire-3xl: var(--pb-glass-sapphire)/0.45;
+  --pb-glass-bg-sapphire-4xl: var(--pb-glass-sapphire)/0.6;
+  --pb-glass-bg-sapphire-5xl: var(--pb-glass-sapphire)/0.75;
 
-  --cs-glass-bg-dark-sapphire-xs: var(--cs-glass-sapphire)/0.03;
-  --cs-glass-bg-dark-sapphire-sm: var(--cs-glass-sapphire)/0.09;
-  --cs-glass-bg-dark-sapphire-md: var(--cs-glass-sapphire)/0.15;
-  --cs-glass-bg-dark-sapphire-lg: var(--cs-glass-sapphire)/0.22;
-  --cs-glass-bg-dark-sapphire-xl: var(--cs-glass-sapphire)/0.30;
-  --cs-glass-bg-dark-sapphire-2xl: var(--cs-glass-sapphire)/0.40;
-  --cs-glass-bg-dark-sapphire-3xl: var(--cs-glass-sapphire)/0.50;
-  --cs-glass-bg-dark-sapphire-4xl: var(--cs-glass-sapphire)/0.65;
-  --cs-glass-bg-dark-sapphire-5xl: var(--cs-glass-sapphire)/0.80;
+  --pb-glass-bg-dark-sapphire-xs: var(--pb-glass-sapphire)/0.03;
+  --pb-glass-bg-dark-sapphire-sm: var(--pb-glass-sapphire)/0.09;
+  --pb-glass-bg-dark-sapphire-md: var(--pb-glass-sapphire)/0.15;
+  --pb-glass-bg-dark-sapphire-lg: var(--pb-glass-sapphire)/0.22;
+  --pb-glass-bg-dark-sapphire-xl: var(--pb-glass-sapphire)/0.30;
+  --pb-glass-bg-dark-sapphire-2xl: var(--pb-glass-sapphire)/0.40;
+  --pb-glass-bg-dark-sapphire-3xl: var(--pb-glass-sapphire)/0.50;
+  --pb-glass-bg-dark-sapphire-4xl: var(--pb-glass-sapphire)/0.65;
+  --pb-glass-bg-dark-sapphire-5xl: var(--pb-glass-sapphire)/0.80;
 
   /* --- PLATINUM --- */
-  --cs-glass-bg-platinum: var(--cs-glass-platinum)/0.1;
-  --cs-glass-border-platinum: var(--cs-glass-platinum)/0.2;
-  --cs-glass-bg-platinum-fallback: var(--cs-glass-platinum)/0.25;
-  --cs-glass-shadow-platinum: 0 8px 32px var(--cs-glass-platinum)/0.25;
-  --cs-glass-bg-dark-platinum: var(--cs-glass-platinum)/0.15;
+  --pb-glass-bg-platinum: var(--pb-glass-platinum)/0.1;
+  --pb-glass-border-platinum: var(--pb-glass-platinum)/0.2;
+  --pb-glass-bg-platinum-fallback: var(--pb-glass-platinum)/0.25;
+  --pb-glass-shadow-platinum: 0 8px 32px var(--pb-glass-platinum)/0.25;
+  --pb-glass-bg-dark-platinum: var(--pb-glass-platinum)/0.15;
 
-  --cs-glass-bg-platinum-xs: var(--cs-glass-platinum)/0.02;
-  --cs-glass-bg-platinum-sm: var(--cs-glass-platinum)/0.07;
-  --cs-glass-bg-platinum-md: var(--cs-glass-platinum)/0.12;
-  --cs-glass-bg-platinum-lg: var(--cs-glass-platinum)/0.18;
-  --cs-glass-bg-platinum-xl: var(--cs-glass-platinum)/0.25;
-  --cs-glass-bg-platinum-2xl: var(--cs-glass-platinum)/0.35;
-  --cs-glass-bg-platinum-3xl: var(--cs-glass-platinum)/0.45;
-  --cs-glass-bg-platinum-4xl: var(--cs-glass-platinum)/0.6;
-  --cs-glass-bg-platinum-5xl: var(--cs-glass-platinum)/0.75;
+  --pb-glass-bg-platinum-xs: var(--pb-glass-platinum)/0.02;
+  --pb-glass-bg-platinum-sm: var(--pb-glass-platinum)/0.07;
+  --pb-glass-bg-platinum-md: var(--pb-glass-platinum)/0.12;
+  --pb-glass-bg-platinum-lg: var(--pb-glass-platinum)/0.18;
+  --pb-glass-bg-platinum-xl: var(--pb-glass-platinum)/0.25;
+  --pb-glass-bg-platinum-2xl: var(--pb-glass-platinum)/0.35;
+  --pb-glass-bg-platinum-3xl: var(--pb-glass-platinum)/0.45;
+  --pb-glass-bg-platinum-4xl: var(--pb-glass-platinum)/0.6;
+  --pb-glass-bg-platinum-5xl: var(--pb-glass-platinum)/0.75;
 
-  --cs-glass-bg-dark-platinum-xs: var(--cs-glass-platinum)/0.03;
-  --cs-glass-bg-dark-platinum-sm: var(--cs-glass-platinum)/0.09;
-  --cs-glass-bg-dark-platinum-md: var(--cs-glass-platinum)/0.15;
-  --cs-glass-bg-dark-platinum-lg: var(--cs-glass-platinum)/0.22;
-  --cs-glass-bg-dark-platinum-xl: var(--cs-glass-platinum)/0.30;
-  --cs-glass-bg-dark-platinum-2xl: var(--cs-glass-platinum)/0.40;
-  --cs-glass-bg-dark-platinum-3xl: var(--cs-glass-platinum)/0.50;
-  --cs-glass-bg-dark-platinum-4xl: var(--cs-glass-platinum)/0.65;
-  --cs-glass-bg-dark-platinum-5xl: var(--cs-glass-platinum)/0.80;
+  --pb-glass-bg-dark-platinum-xs: var(--pb-glass-platinum)/0.03;
+  --pb-glass-bg-dark-platinum-sm: var(--pb-glass-platinum)/0.09;
+  --pb-glass-bg-dark-platinum-md: var(--pb-glass-platinum)/0.15;
+  --pb-glass-bg-dark-platinum-lg: var(--pb-glass-platinum)/0.22;
+  --pb-glass-bg-dark-platinum-xl: var(--pb-glass-platinum)/0.30;
+  --pb-glass-bg-dark-platinum-2xl: var(--pb-glass-platinum)/0.40;
+  --pb-glass-bg-dark-platinum-3xl: var(--pb-glass-platinum)/0.50;
+  --pb-glass-bg-dark-platinum-4xl: var(--pb-glass-platinum)/0.65;
+  --pb-glass-bg-dark-platinum-5xl: var(--pb-glass-platinum)/0.80;
 
   /* --- PEARL --- */
-  --cs-glass-bg-pearl: var(--cs-glass-pearl)/0.1;
-  --cs-glass-border-pearl: var(--cs-glass-pearl)/0.2;
-  --cs-glass-bg-pearl-fallback: var(--cs-glass-pearl)/0.25;
-  --cs-glass-shadow-pearl: 0 8px 32px var(--cs-glass-pearl)/0.25;
-  --cs-glass-bg-dark-pearl: var(--cs-glass-pearl)/0.15;
+  --pb-glass-bg-pearl: var(--pb-glass-pearl)/0.1;
+  --pb-glass-border-pearl: var(--pb-glass-pearl)/0.2;
+  --pb-glass-bg-pearl-fallback: var(--pb-glass-pearl)/0.25;
+  --pb-glass-shadow-pearl: 0 8px 32px var(--pb-glass-pearl)/0.25;
+  --pb-glass-bg-dark-pearl: var(--pb-glass-pearl)/0.15;
 
-  --cs-glass-bg-pearl-xs: var(--cs-glass-pearl)/0.02;
-  --cs-glass-bg-pearl-sm: var(--cs-glass-pearl)/0.07;
-  --cs-glass-bg-pearl-md: var(--cs-glass-pearl)/0.12;
-  --cs-glass-bg-pearl-lg: var(--cs-glass-pearl)/0.18;
-  --cs-glass-bg-pearl-xl: var(--cs-glass-pearl)/0.25;
-  --cs-glass-bg-pearl-2xl: var(--cs-glass-pearl)/0.35;
-  --cs-glass-bg-pearl-3xl: var(--cs-glass-pearl)/0.45;
-  --cs-glass-bg-pearl-4xl: var(--cs-glass-pearl)/0.6;
-  --cs-glass-bg-pearl-5xl: var(--cs-glass-pearl)/0.75;
+  --pb-glass-bg-pearl-xs: var(--pb-glass-pearl)/0.02;
+  --pb-glass-bg-pearl-sm: var(--pb-glass-pearl)/0.07;
+  --pb-glass-bg-pearl-md: var(--pb-glass-pearl)/0.12;
+  --pb-glass-bg-pearl-lg: var(--pb-glass-pearl)/0.18;
+  --pb-glass-bg-pearl-xl: var(--pb-glass-pearl)/0.25;
+  --pb-glass-bg-pearl-2xl: var(--pb-glass-pearl)/0.35;
+  --pb-glass-bg-pearl-3xl: var(--pb-glass-pearl)/0.45;
+  --pb-glass-bg-pearl-4xl: var(--pb-glass-pearl)/0.6;
+  --pb-glass-bg-pearl-5xl: var(--pb-glass-pearl)/0.75;
 
-  --cs-glass-bg-dark-pearl-xs: var(--cs-glass-pearl)/0.03;
-  --cs-glass-bg-dark-pearl-sm: var(--cs-glass-pearl)/0.09;
-  --cs-glass-bg-dark-pearl-md: var(--cs-glass-pearl)/0.15;
-  --cs-glass-bg-dark-pearl-lg: var(--cs-glass-pearl)/0.22;
-  --cs-glass-bg-dark-pearl-xl: var(--cs-glass-pearl)/0.30;
-  --cs-glass-bg-dark-pearl-2xl: var(--cs-glass-pearl)/0.40;
-  --cs-glass-bg-dark-pearl-3xl: var(--cs-glass-pearl)/0.50;
-  --cs-glass-bg-dark-pearl-4xl: var(--cs-glass-pearl)/0.65;
-  --cs-glass-bg-dark-pearl-5xl: var(--cs-glass-pearl)/0.80;
+  --pb-glass-bg-dark-pearl-xs: var(--pb-glass-pearl)/0.03;
+  --pb-glass-bg-dark-pearl-sm: var(--pb-glass-pearl)/0.09;
+  --pb-glass-bg-dark-pearl-md: var(--pb-glass-pearl)/0.15;
+  --pb-glass-bg-dark-pearl-lg: var(--pb-glass-pearl)/0.22;
+  --pb-glass-bg-dark-pearl-xl: var(--pb-glass-pearl)/0.30;
+  --pb-glass-bg-dark-pearl-2xl: var(--pb-glass-pearl)/0.40;
+  --pb-glass-bg-dark-pearl-3xl: var(--pb-glass-pearl)/0.50;
+  --pb-glass-bg-dark-pearl-4xl: var(--pb-glass-pearl)/0.65;
+  --pb-glass-bg-dark-pearl-5xl: var(--pb-glass-pearl)/0.80;
 }
 
 :root {
   /* Exposing base variables for programmatic access if needed */
-  --cs-glass-ruby: oklch(55% 0.25 25);
-  --cs-glass-emerald: oklch(55% 0.15 155);
-  --cs-glass-gold: oklch(85% 0.18 65);
-  --cs-glass-aqua: oklch(75% 0.10 215);
-  --cs-glass-amethyst: oklch(60% 0.16 300);
-  --cs-glass-sapphire: oklch(45% 0.14 270);
-  --cs-glass-platinum: oklch(85% 0.02 250);
-  --cs-glass-pearl: oklch(91.5% 0.045 95);
+  --pb-glass-ruby: oklch(55% 0.25 25);
+  --pb-glass-emerald: oklch(55% 0.15 155);
+  --pb-glass-gold: oklch(85% 0.18 65);
+  --pb-glass-aqua: oklch(75% 0.10 215);
+  --pb-glass-amethyst: oklch(60% 0.16 300);
+  --pb-glass-sapphire: oklch(45% 0.14 270);
+  --pb-glass-platinum: oklch(85% 0.02 250);
+  --pb-glass-pearl: oklch(91.5% 0.045 95);
 }
 
 /* =========================================================
    GRANULAR UTILITIES (BACKGROUNDS)
    ========================================================= */
 
-@utility cs-glass-bg-ruby { background: var(--cs-glass-bg-ruby); }
-@utility cs-glass-bg-ruby-xs { background: var(--cs-glass-bg-ruby-xs); }
-@utility cs-glass-bg-ruby-sm { background: var(--cs-glass-bg-ruby-sm); }
-@utility cs-glass-bg-ruby-md { background: var(--cs-glass-bg-ruby-md); }
-@utility cs-glass-bg-ruby-lg { background: var(--cs-glass-bg-ruby-lg); }
-@utility cs-glass-bg-ruby-xl { background: var(--cs-glass-bg-ruby-xl); }
-@utility cs-glass-bg-ruby-2xl { background: var(--cs-glass-bg-ruby-2xl); }
-@utility cs-glass-bg-ruby-3xl { background: var(--cs-glass-bg-ruby-3xl); }
-@utility cs-glass-bg-ruby-4xl { background: var(--cs-glass-bg-ruby-4xl); }
-@utility cs-glass-bg-ruby-5xl { background: var(--cs-glass-bg-ruby-5xl); }
-@utility cs-glass-bg-dark-ruby { background: var(--cs-glass-bg-dark-ruby); }
-@utility cs-glass-bg-dark-ruby-xs { background: var(--cs-glass-bg-dark-ruby-xs); }
-@utility cs-glass-bg-dark-ruby-sm { background: var(--cs-glass-bg-dark-ruby-sm); }
-@utility cs-glass-bg-dark-ruby-md { background: var(--cs-glass-bg-dark-ruby-md); }
-@utility cs-glass-bg-dark-ruby-lg { background: var(--cs-glass-bg-dark-ruby-lg); }
-@utility cs-glass-bg-dark-ruby-xl { background: var(--cs-glass-bg-dark-ruby-xl); }
-@utility cs-glass-bg-dark-ruby-2xl { background: var(--cs-glass-bg-dark-ruby-2xl); }
-@utility cs-glass-bg-dark-ruby-3xl { background: var(--cs-glass-bg-dark-ruby-3xl); }
-@utility cs-glass-bg-dark-ruby-4xl { background: var(--cs-glass-bg-dark-ruby-4xl); }
-@utility cs-glass-bg-dark-ruby-5xl { background: var(--cs-glass-bg-dark-ruby-5xl); }
+@utility pb-glass-bg-ruby { background: var(--pb-glass-bg-ruby); }
+@utility pb-glass-bg-ruby-xs { background: var(--pb-glass-bg-ruby-xs); }
+@utility pb-glass-bg-ruby-sm { background: var(--pb-glass-bg-ruby-sm); }
+@utility pb-glass-bg-ruby-md { background: var(--pb-glass-bg-ruby-md); }
+@utility pb-glass-bg-ruby-lg { background: var(--pb-glass-bg-ruby-lg); }
+@utility pb-glass-bg-ruby-xl { background: var(--pb-glass-bg-ruby-xl); }
+@utility pb-glass-bg-ruby-2xl { background: var(--pb-glass-bg-ruby-2xl); }
+@utility pb-glass-bg-ruby-3xl { background: var(--pb-glass-bg-ruby-3xl); }
+@utility pb-glass-bg-ruby-4xl { background: var(--pb-glass-bg-ruby-4xl); }
+@utility pb-glass-bg-ruby-5xl { background: var(--pb-glass-bg-ruby-5xl); }
+@utility pb-glass-bg-dark-ruby { background: var(--pb-glass-bg-dark-ruby); }
+@utility pb-glass-bg-dark-ruby-xs { background: var(--pb-glass-bg-dark-ruby-xs); }
+@utility pb-glass-bg-dark-ruby-sm { background: var(--pb-glass-bg-dark-ruby-sm); }
+@utility pb-glass-bg-dark-ruby-md { background: var(--pb-glass-bg-dark-ruby-md); }
+@utility pb-glass-bg-dark-ruby-lg { background: var(--pb-glass-bg-dark-ruby-lg); }
+@utility pb-glass-bg-dark-ruby-xl { background: var(--pb-glass-bg-dark-ruby-xl); }
+@utility pb-glass-bg-dark-ruby-2xl { background: var(--pb-glass-bg-dark-ruby-2xl); }
+@utility pb-glass-bg-dark-ruby-3xl { background: var(--pb-glass-bg-dark-ruby-3xl); }
+@utility pb-glass-bg-dark-ruby-4xl { background: var(--pb-glass-bg-dark-ruby-4xl); }
+@utility pb-glass-bg-dark-ruby-5xl { background: var(--pb-glass-bg-dark-ruby-5xl); }
 
-@utility cs-glass-bg-emerald { background: var(--cs-glass-bg-emerald); }
-@utility cs-glass-bg-emerald-xs { background: var(--cs-glass-bg-emerald-xs); }
-@utility cs-glass-bg-emerald-sm { background: var(--cs-glass-bg-emerald-sm); }
-@utility cs-glass-bg-emerald-md { background: var(--cs-glass-bg-emerald-md); }
-@utility cs-glass-bg-emerald-lg { background: var(--cs-glass-bg-emerald-lg); }
-@utility cs-glass-bg-emerald-xl { background: var(--cs-glass-bg-emerald-xl); }
-@utility cs-glass-bg-emerald-2xl { background: var(--cs-glass-bg-emerald-2xl); }
-@utility cs-glass-bg-emerald-3xl { background: var(--cs-glass-bg-emerald-3xl); }
-@utility cs-glass-bg-emerald-4xl { background: var(--cs-glass-bg-emerald-4xl); }
-@utility cs-glass-bg-emerald-5xl { background: var(--cs-glass-bg-emerald-5xl); }
-@utility cs-glass-bg-dark-emerald { background: var(--cs-glass-bg-dark-emerald); }
-@utility cs-glass-bg-dark-emerald-xs { background: var(--cs-glass-bg-dark-emerald-xs); }
-@utility cs-glass-bg-dark-emerald-sm { background: var(--cs-glass-bg-dark-emerald-sm); }
-@utility cs-glass-bg-dark-emerald-md { background: var(--cs-glass-bg-dark-emerald-md); }
-@utility cs-glass-bg-dark-emerald-lg { background: var(--cs-glass-bg-dark-emerald-lg); }
-@utility cs-glass-bg-dark-emerald-xl { background: var(--cs-glass-bg-dark-emerald-xl); }
-@utility cs-glass-bg-dark-emerald-2xl { background: var(--cs-glass-bg-dark-emerald-2xl); }
-@utility cs-glass-bg-dark-emerald-3xl { background: var(--cs-glass-bg-dark-emerald-3xl); }
-@utility cs-glass-bg-dark-emerald-4xl { background: var(--cs-glass-bg-dark-emerald-4xl); }
-@utility cs-glass-bg-dark-emerald-5xl { background: var(--cs-glass-bg-dark-emerald-5xl); }
+@utility pb-glass-bg-emerald { background: var(--pb-glass-bg-emerald); }
+@utility pb-glass-bg-emerald-xs { background: var(--pb-glass-bg-emerald-xs); }
+@utility pb-glass-bg-emerald-sm { background: var(--pb-glass-bg-emerald-sm); }
+@utility pb-glass-bg-emerald-md { background: var(--pb-glass-bg-emerald-md); }
+@utility pb-glass-bg-emerald-lg { background: var(--pb-glass-bg-emerald-lg); }
+@utility pb-glass-bg-emerald-xl { background: var(--pb-glass-bg-emerald-xl); }
+@utility pb-glass-bg-emerald-2xl { background: var(--pb-glass-bg-emerald-2xl); }
+@utility pb-glass-bg-emerald-3xl { background: var(--pb-glass-bg-emerald-3xl); }
+@utility pb-glass-bg-emerald-4xl { background: var(--pb-glass-bg-emerald-4xl); }
+@utility pb-glass-bg-emerald-5xl { background: var(--pb-glass-bg-emerald-5xl); }
+@utility pb-glass-bg-dark-emerald { background: var(--pb-glass-bg-dark-emerald); }
+@utility pb-glass-bg-dark-emerald-xs { background: var(--pb-glass-bg-dark-emerald-xs); }
+@utility pb-glass-bg-dark-emerald-sm { background: var(--pb-glass-bg-dark-emerald-sm); }
+@utility pb-glass-bg-dark-emerald-md { background: var(--pb-glass-bg-dark-emerald-md); }
+@utility pb-glass-bg-dark-emerald-lg { background: var(--pb-glass-bg-dark-emerald-lg); }
+@utility pb-glass-bg-dark-emerald-xl { background: var(--pb-glass-bg-dark-emerald-xl); }
+@utility pb-glass-bg-dark-emerald-2xl { background: var(--pb-glass-bg-dark-emerald-2xl); }
+@utility pb-glass-bg-dark-emerald-3xl { background: var(--pb-glass-bg-dark-emerald-3xl); }
+@utility pb-glass-bg-dark-emerald-4xl { background: var(--pb-glass-bg-dark-emerald-4xl); }
+@utility pb-glass-bg-dark-emerald-5xl { background: var(--pb-glass-bg-dark-emerald-5xl); }
 
-@utility cs-glass-bg-gold { background: var(--cs-glass-bg-gold); }
-@utility cs-glass-bg-gold-xs { background: var(--cs-glass-bg-gold-xs); }
-@utility cs-glass-bg-gold-sm { background: var(--cs-glass-bg-gold-sm); }
-@utility cs-glass-bg-gold-md { background: var(--cs-glass-bg-gold-md); }
-@utility cs-glass-bg-gold-lg { background: var(--cs-glass-bg-gold-lg); }
-@utility cs-glass-bg-gold-xl { background: var(--cs-glass-bg-gold-xl); }
-@utility cs-glass-bg-gold-2xl { background: var(--cs-glass-bg-gold-2xl); }
-@utility cs-glass-bg-gold-3xl { background: var(--cs-glass-bg-gold-3xl); }
-@utility cs-glass-bg-gold-4xl { background: var(--cs-glass-bg-gold-4xl); }
-@utility cs-glass-bg-gold-5xl { background: var(--cs-glass-bg-gold-5xl); }
-@utility cs-glass-bg-dark-gold { background: var(--cs-glass-bg-dark-gold); }
-@utility cs-glass-bg-dark-gold-xs { background: var(--cs-glass-bg-dark-gold-xs); }
-@utility cs-glass-bg-dark-gold-sm { background: var(--cs-glass-bg-dark-gold-sm); }
-@utility cs-glass-bg-dark-gold-md { background: var(--cs-glass-bg-dark-gold-md); }
-@utility cs-glass-bg-dark-gold-lg { background: var(--cs-glass-bg-dark-gold-lg); }
-@utility cs-glass-bg-dark-gold-xl { background: var(--cs-glass-bg-dark-gold-xl); }
-@utility cs-glass-bg-dark-gold-2xl { background: var(--cs-glass-bg-dark-gold-2xl); }
-@utility cs-glass-bg-dark-gold-3xl { background: var(--cs-glass-bg-dark-gold-3xl); }
-@utility cs-glass-bg-dark-gold-4xl { background: var(--cs-glass-bg-dark-gold-4xl); }
-@utility cs-glass-bg-dark-gold-5xl { background: var(--cs-glass-bg-dark-gold-5xl); }
+@utility pb-glass-bg-gold { background: var(--pb-glass-bg-gold); }
+@utility pb-glass-bg-gold-xs { background: var(--pb-glass-bg-gold-xs); }
+@utility pb-glass-bg-gold-sm { background: var(--pb-glass-bg-gold-sm); }
+@utility pb-glass-bg-gold-md { background: var(--pb-glass-bg-gold-md); }
+@utility pb-glass-bg-gold-lg { background: var(--pb-glass-bg-gold-lg); }
+@utility pb-glass-bg-gold-xl { background: var(--pb-glass-bg-gold-xl); }
+@utility pb-glass-bg-gold-2xl { background: var(--pb-glass-bg-gold-2xl); }
+@utility pb-glass-bg-gold-3xl { background: var(--pb-glass-bg-gold-3xl); }
+@utility pb-glass-bg-gold-4xl { background: var(--pb-glass-bg-gold-4xl); }
+@utility pb-glass-bg-gold-5xl { background: var(--pb-glass-bg-gold-5xl); }
+@utility pb-glass-bg-dark-gold { background: var(--pb-glass-bg-dark-gold); }
+@utility pb-glass-bg-dark-gold-xs { background: var(--pb-glass-bg-dark-gold-xs); }
+@utility pb-glass-bg-dark-gold-sm { background: var(--pb-glass-bg-dark-gold-sm); }
+@utility pb-glass-bg-dark-gold-md { background: var(--pb-glass-bg-dark-gold-md); }
+@utility pb-glass-bg-dark-gold-lg { background: var(--pb-glass-bg-dark-gold-lg); }
+@utility pb-glass-bg-dark-gold-xl { background: var(--pb-glass-bg-dark-gold-xl); }
+@utility pb-glass-bg-dark-gold-2xl { background: var(--pb-glass-bg-dark-gold-2xl); }
+@utility pb-glass-bg-dark-gold-3xl { background: var(--pb-glass-bg-dark-gold-3xl); }
+@utility pb-glass-bg-dark-gold-4xl { background: var(--pb-glass-bg-dark-gold-4xl); }
+@utility pb-glass-bg-dark-gold-5xl { background: var(--pb-glass-bg-dark-gold-5xl); }
 
-@utility cs-glass-bg-aqua { background: var(--cs-glass-bg-aqua); }
-@utility cs-glass-bg-aqua-xs { background: var(--cs-glass-bg-aqua-xs); }
-@utility cs-glass-bg-aqua-sm { background: var(--cs-glass-bg-aqua-sm); }
-@utility cs-glass-bg-aqua-md { background: var(--cs-glass-bg-aqua-md); }
-@utility cs-glass-bg-aqua-lg { background: var(--cs-glass-bg-aqua-lg); }
-@utility cs-glass-bg-aqua-xl { background: var(--cs-glass-bg-aqua-xl); }
-@utility cs-glass-bg-aqua-2xl { background: var(--cs-glass-bg-aqua-2xl); }
-@utility cs-glass-bg-aqua-3xl { background: var(--cs-glass-bg-aqua-3xl); }
-@utility cs-glass-bg-aqua-4xl { background: var(--cs-glass-bg-aqua-4xl); }
-@utility cs-glass-bg-aqua-5xl { background: var(--cs-glass-bg-aqua-5xl); }
-@utility cs-glass-bg-dark-aqua { background: var(--cs-glass-bg-dark-aqua); }
-@utility cs-glass-bg-dark-aqua-xs { background: var(--cs-glass-bg-dark-aqua-xs); }
-@utility cs-glass-bg-dark-aqua-sm { background: var(--cs-glass-bg-dark-aqua-sm); }
-@utility cs-glass-bg-dark-aqua-md { background: var(--cs-glass-bg-dark-aqua-md); }
-@utility cs-glass-bg-dark-aqua-lg { background: var(--cs-glass-bg-dark-aqua-lg); }
-@utility cs-glass-bg-dark-aqua-xl { background: var(--cs-glass-bg-dark-aqua-xl); }
-@utility cs-glass-bg-dark-aqua-2xl { background: var(--cs-glass-bg-dark-aqua-2xl); }
-@utility cs-glass-bg-dark-aqua-3xl { background: var(--cs-glass-bg-dark-aqua-3xl); }
-@utility cs-glass-bg-dark-aqua-4xl { background: var(--cs-glass-bg-dark-aqua-4xl); }
-@utility cs-glass-bg-dark-aqua-5xl { background: var(--cs-glass-bg-dark-aqua-5xl); }
+@utility pb-glass-bg-aqua { background: var(--pb-glass-bg-aqua); }
+@utility pb-glass-bg-aqua-xs { background: var(--pb-glass-bg-aqua-xs); }
+@utility pb-glass-bg-aqua-sm { background: var(--pb-glass-bg-aqua-sm); }
+@utility pb-glass-bg-aqua-md { background: var(--pb-glass-bg-aqua-md); }
+@utility pb-glass-bg-aqua-lg { background: var(--pb-glass-bg-aqua-lg); }
+@utility pb-glass-bg-aqua-xl { background: var(--pb-glass-bg-aqua-xl); }
+@utility pb-glass-bg-aqua-2xl { background: var(--pb-glass-bg-aqua-2xl); }
+@utility pb-glass-bg-aqua-3xl { background: var(--pb-glass-bg-aqua-3xl); }
+@utility pb-glass-bg-aqua-4xl { background: var(--pb-glass-bg-aqua-4xl); }
+@utility pb-glass-bg-aqua-5xl { background: var(--pb-glass-bg-aqua-5xl); }
+@utility pb-glass-bg-dark-aqua { background: var(--pb-glass-bg-dark-aqua); }
+@utility pb-glass-bg-dark-aqua-xs { background: var(--pb-glass-bg-dark-aqua-xs); }
+@utility pb-glass-bg-dark-aqua-sm { background: var(--pb-glass-bg-dark-aqua-sm); }
+@utility pb-glass-bg-dark-aqua-md { background: var(--pb-glass-bg-dark-aqua-md); }
+@utility pb-glass-bg-dark-aqua-lg { background: var(--pb-glass-bg-dark-aqua-lg); }
+@utility pb-glass-bg-dark-aqua-xl { background: var(--pb-glass-bg-dark-aqua-xl); }
+@utility pb-glass-bg-dark-aqua-2xl { background: var(--pb-glass-bg-dark-aqua-2xl); }
+@utility pb-glass-bg-dark-aqua-3xl { background: var(--pb-glass-bg-dark-aqua-3xl); }
+@utility pb-glass-bg-dark-aqua-4xl { background: var(--pb-glass-bg-dark-aqua-4xl); }
+@utility pb-glass-bg-dark-aqua-5xl { background: var(--pb-glass-bg-dark-aqua-5xl); }
 
-@utility cs-glass-bg-amethyst { background: var(--cs-glass-bg-amethyst); }
-@utility cs-glass-bg-amethyst-xs { background: var(--cs-glass-bg-amethyst-xs); }
-@utility cs-glass-bg-amethyst-sm { background: var(--cs-glass-bg-amethyst-sm); }
-@utility cs-glass-bg-amethyst-md { background: var(--cs-glass-bg-amethyst-md); }
-@utility cs-glass-bg-amethyst-lg { background: var(--cs-glass-bg-amethyst-lg); }
-@utility cs-glass-bg-amethyst-xl { background: var(--cs-glass-bg-amethyst-xl); }
-@utility cs-glass-bg-amethyst-2xl { background: var(--cs-glass-bg-amethyst-2xl); }
-@utility cs-glass-bg-amethyst-3xl { background: var(--cs-glass-bg-amethyst-3xl); }
-@utility cs-glass-bg-amethyst-4xl { background: var(--cs-glass-bg-amethyst-4xl); }
-@utility cs-glass-bg-amethyst-5xl { background: var(--cs-glass-bg-amethyst-5xl); }
-@utility cs-glass-bg-dark-amethyst { background: var(--cs-glass-bg-dark-amethyst); }
-@utility cs-glass-bg-dark-amethyst-xs { background: var(--cs-glass-bg-dark-amethyst-xs); }
-@utility cs-glass-bg-dark-amethyst-sm { background: var(--cs-glass-bg-dark-amethyst-sm); }
-@utility cs-glass-bg-dark-amethyst-md { background: var(--cs-glass-bg-dark-amethyst-md); }
-@utility cs-glass-bg-dark-amethyst-lg { background: var(--cs-glass-bg-dark-amethyst-lg); }
-@utility cs-glass-bg-dark-amethyst-xl { background: var(--cs-glass-bg-dark-amethyst-xl); }
-@utility cs-glass-bg-dark-amethyst-2xl { background: var(--cs-glass-bg-dark-amethyst-2xl); }
-@utility cs-glass-bg-dark-amethyst-3xl { background: var(--cs-glass-bg-dark-amethyst-3xl); }
-@utility cs-glass-bg-dark-amethyst-4xl { background: var(--cs-glass-bg-dark-amethyst-4xl); }
-@utility cs-glass-bg-dark-amethyst-5xl { background: var(--cs-glass-bg-dark-amethyst-5xl); }
+@utility pb-glass-bg-amethyst { background: var(--pb-glass-bg-amethyst); }
+@utility pb-glass-bg-amethyst-xs { background: var(--pb-glass-bg-amethyst-xs); }
+@utility pb-glass-bg-amethyst-sm { background: var(--pb-glass-bg-amethyst-sm); }
+@utility pb-glass-bg-amethyst-md { background: var(--pb-glass-bg-amethyst-md); }
+@utility pb-glass-bg-amethyst-lg { background: var(--pb-glass-bg-amethyst-lg); }
+@utility pb-glass-bg-amethyst-xl { background: var(--pb-glass-bg-amethyst-xl); }
+@utility pb-glass-bg-amethyst-2xl { background: var(--pb-glass-bg-amethyst-2xl); }
+@utility pb-glass-bg-amethyst-3xl { background: var(--pb-glass-bg-amethyst-3xl); }
+@utility pb-glass-bg-amethyst-4xl { background: var(--pb-glass-bg-amethyst-4xl); }
+@utility pb-glass-bg-amethyst-5xl { background: var(--pb-glass-bg-amethyst-5xl); }
+@utility pb-glass-bg-dark-amethyst { background: var(--pb-glass-bg-dark-amethyst); }
+@utility pb-glass-bg-dark-amethyst-xs { background: var(--pb-glass-bg-dark-amethyst-xs); }
+@utility pb-glass-bg-dark-amethyst-sm { background: var(--pb-glass-bg-dark-amethyst-sm); }
+@utility pb-glass-bg-dark-amethyst-md { background: var(--pb-glass-bg-dark-amethyst-md); }
+@utility pb-glass-bg-dark-amethyst-lg { background: var(--pb-glass-bg-dark-amethyst-lg); }
+@utility pb-glass-bg-dark-amethyst-xl { background: var(--pb-glass-bg-dark-amethyst-xl); }
+@utility pb-glass-bg-dark-amethyst-2xl { background: var(--pb-glass-bg-dark-amethyst-2xl); }
+@utility pb-glass-bg-dark-amethyst-3xl { background: var(--pb-glass-bg-dark-amethyst-3xl); }
+@utility pb-glass-bg-dark-amethyst-4xl { background: var(--pb-glass-bg-dark-amethyst-4xl); }
+@utility pb-glass-bg-dark-amethyst-5xl { background: var(--pb-glass-bg-dark-amethyst-5xl); }
 
-@utility cs-glass-bg-sapphire { background: var(--cs-glass-bg-sapphire); }
-@utility cs-glass-bg-sapphire-xs { background: var(--cs-glass-bg-sapphire-xs); }
-@utility cs-glass-bg-sapphire-sm { background: var(--cs-glass-bg-sapphire-sm); }
-@utility cs-glass-bg-sapphire-md { background: var(--cs-glass-bg-sapphire-md); }
-@utility cs-glass-bg-sapphire-lg { background: var(--cs-glass-bg-sapphire-lg); }
-@utility cs-glass-bg-sapphire-xl { background: var(--cs-glass-bg-sapphire-xl); }
-@utility cs-glass-bg-sapphire-2xl { background: var(--cs-glass-bg-sapphire-2xl); }
-@utility cs-glass-bg-sapphire-3xl { background: var(--cs-glass-bg-sapphire-3xl); }
-@utility cs-glass-bg-sapphire-4xl { background: var(--cs-glass-bg-sapphire-4xl); }
-@utility cs-glass-bg-sapphire-5xl { background: var(--cs-glass-bg-sapphire-5xl); }
-@utility cs-glass-bg-dark-sapphire { background: var(--cs-glass-bg-dark-sapphire); }
-@utility cs-glass-bg-dark-sapphire-xs { background: var(--cs-glass-bg-dark-sapphire-xs); }
-@utility cs-glass-bg-dark-sapphire-sm { background: var(--cs-glass-bg-dark-sapphire-sm); }
-@utility cs-glass-bg-dark-sapphire-md { background: var(--cs-glass-bg-dark-sapphire-md); }
-@utility cs-glass-bg-dark-sapphire-lg { background: var(--cs-glass-bg-dark-sapphire-lg); }
-@utility cs-glass-bg-dark-sapphire-xl { background: var(--cs-glass-bg-dark-sapphire-xl); }
-@utility cs-glass-bg-dark-sapphire-2xl { background: var(--cs-glass-bg-dark-sapphire-2xl); }
-@utility cs-glass-bg-dark-sapphire-3xl { background: var(--cs-glass-bg-dark-sapphire-3xl); }
-@utility cs-glass-bg-dark-sapphire-4xl { background: var(--cs-glass-bg-dark-sapphire-4xl); }
-@utility cs-glass-bg-dark-sapphire-5xl { background: var(--cs-glass-bg-dark-sapphire-5xl); }
+@utility pb-glass-bg-sapphire { background: var(--pb-glass-bg-sapphire); }
+@utility pb-glass-bg-sapphire-xs { background: var(--pb-glass-bg-sapphire-xs); }
+@utility pb-glass-bg-sapphire-sm { background: var(--pb-glass-bg-sapphire-sm); }
+@utility pb-glass-bg-sapphire-md { background: var(--pb-glass-bg-sapphire-md); }
+@utility pb-glass-bg-sapphire-lg { background: var(--pb-glass-bg-sapphire-lg); }
+@utility pb-glass-bg-sapphire-xl { background: var(--pb-glass-bg-sapphire-xl); }
+@utility pb-glass-bg-sapphire-2xl { background: var(--pb-glass-bg-sapphire-2xl); }
+@utility pb-glass-bg-sapphire-3xl { background: var(--pb-glass-bg-sapphire-3xl); }
+@utility pb-glass-bg-sapphire-4xl { background: var(--pb-glass-bg-sapphire-4xl); }
+@utility pb-glass-bg-sapphire-5xl { background: var(--pb-glass-bg-sapphire-5xl); }
+@utility pb-glass-bg-dark-sapphire { background: var(--pb-glass-bg-dark-sapphire); }
+@utility pb-glass-bg-dark-sapphire-xs { background: var(--pb-glass-bg-dark-sapphire-xs); }
+@utility pb-glass-bg-dark-sapphire-sm { background: var(--pb-glass-bg-dark-sapphire-sm); }
+@utility pb-glass-bg-dark-sapphire-md { background: var(--pb-glass-bg-dark-sapphire-md); }
+@utility pb-glass-bg-dark-sapphire-lg { background: var(--pb-glass-bg-dark-sapphire-lg); }
+@utility pb-glass-bg-dark-sapphire-xl { background: var(--pb-glass-bg-dark-sapphire-xl); }
+@utility pb-glass-bg-dark-sapphire-2xl { background: var(--pb-glass-bg-dark-sapphire-2xl); }
+@utility pb-glass-bg-dark-sapphire-3xl { background: var(--pb-glass-bg-dark-sapphire-3xl); }
+@utility pb-glass-bg-dark-sapphire-4xl { background: var(--pb-glass-bg-dark-sapphire-4xl); }
+@utility pb-glass-bg-dark-sapphire-5xl { background: var(--pb-glass-bg-dark-sapphire-5xl); }
 
-@utility cs-glass-bg-platinum { background: var(--cs-glass-bg-platinum); }
-@utility cs-glass-bg-platinum-xs { background: var(--cs-glass-bg-platinum-xs); }
-@utility cs-glass-bg-platinum-sm { background: var(--cs-glass-bg-platinum-sm); }
-@utility cs-glass-bg-platinum-md { background: var(--cs-glass-bg-platinum-md); }
-@utility cs-glass-bg-platinum-lg { background: var(--cs-glass-bg-platinum-lg); }
-@utility cs-glass-bg-platinum-xl { background: var(--cs-glass-bg-platinum-xl); }
-@utility cs-glass-bg-platinum-2xl { background: var(--cs-glass-bg-platinum-2xl); }
-@utility cs-glass-bg-platinum-3xl { background: var(--cs-glass-bg-platinum-3xl); }
-@utility cs-glass-bg-platinum-4xl { background: var(--cs-glass-bg-platinum-4xl); }
-@utility cs-glass-bg-platinum-5xl { background: var(--cs-glass-bg-platinum-5xl); }
-@utility cs-glass-bg-dark-platinum { background: var(--cs-glass-bg-dark-platinum); }
-@utility cs-glass-bg-dark-platinum-xs { background: var(--cs-glass-bg-dark-platinum-xs); }
-@utility cs-glass-bg-dark-platinum-sm { background: var(--cs-glass-bg-dark-platinum-sm); }
-@utility cs-glass-bg-dark-platinum-md { background: var(--cs-glass-bg-dark-platinum-md); }
-@utility cs-glass-bg-dark-platinum-lg { background: var(--cs-glass-bg-dark-platinum-lg); }
-@utility cs-glass-bg-dark-platinum-xl { background: var(--cs-glass-bg-dark-platinum-xl); }
-@utility cs-glass-bg-dark-platinum-2xl { background: var(--cs-glass-bg-dark-platinum-2xl); }
-@utility cs-glass-bg-dark-platinum-3xl { background: var(--cs-glass-bg-dark-platinum-3xl); }
-@utility cs-glass-bg-dark-platinum-4xl { background: var(--cs-glass-bg-dark-platinum-4xl); }
-@utility cs-glass-bg-dark-platinum-5xl { background: var(--cs-glass-bg-dark-platinum-5xl); }
+@utility pb-glass-bg-platinum { background: var(--pb-glass-bg-platinum); }
+@utility pb-glass-bg-platinum-xs { background: var(--pb-glass-bg-platinum-xs); }
+@utility pb-glass-bg-platinum-sm { background: var(--pb-glass-bg-platinum-sm); }
+@utility pb-glass-bg-platinum-md { background: var(--pb-glass-bg-platinum-md); }
+@utility pb-glass-bg-platinum-lg { background: var(--pb-glass-bg-platinum-lg); }
+@utility pb-glass-bg-platinum-xl { background: var(--pb-glass-bg-platinum-xl); }
+@utility pb-glass-bg-platinum-2xl { background: var(--pb-glass-bg-platinum-2xl); }
+@utility pb-glass-bg-platinum-3xl { background: var(--pb-glass-bg-platinum-3xl); }
+@utility pb-glass-bg-platinum-4xl { background: var(--pb-glass-bg-platinum-4xl); }
+@utility pb-glass-bg-platinum-5xl { background: var(--pb-glass-bg-platinum-5xl); }
+@utility pb-glass-bg-dark-platinum { background: var(--pb-glass-bg-dark-platinum); }
+@utility pb-glass-bg-dark-platinum-xs { background: var(--pb-glass-bg-dark-platinum-xs); }
+@utility pb-glass-bg-dark-platinum-sm { background: var(--pb-glass-bg-dark-platinum-sm); }
+@utility pb-glass-bg-dark-platinum-md { background: var(--pb-glass-bg-dark-platinum-md); }
+@utility pb-glass-bg-dark-platinum-lg { background: var(--pb-glass-bg-dark-platinum-lg); }
+@utility pb-glass-bg-dark-platinum-xl { background: var(--pb-glass-bg-dark-platinum-xl); }
+@utility pb-glass-bg-dark-platinum-2xl { background: var(--pb-glass-bg-dark-platinum-2xl); }
+@utility pb-glass-bg-dark-platinum-3xl { background: var(--pb-glass-bg-dark-platinum-3xl); }
+@utility pb-glass-bg-dark-platinum-4xl { background: var(--pb-glass-bg-dark-platinum-4xl); }
+@utility pb-glass-bg-dark-platinum-5xl { background: var(--pb-glass-bg-dark-platinum-5xl); }
 
-@utility cs-glass-bg-pearl { background: var(--cs-glass-bg-pearl); }
-@utility cs-glass-bg-pearl-xs { background: var(--cs-glass-bg-pearl-xs); }
-@utility cs-glass-bg-pearl-sm { background: var(--cs-glass-bg-pearl-sm); }
-@utility cs-glass-bg-pearl-md { background: var(--cs-glass-bg-pearl-md); }
-@utility cs-glass-bg-pearl-lg { background: var(--cs-glass-bg-pearl-lg); }
-@utility cs-glass-bg-pearl-xl { background: var(--cs-glass-bg-pearl-xl); }
-@utility cs-glass-bg-pearl-2xl { background: var(--cs-glass-bg-pearl-2xl); }
-@utility cs-glass-bg-pearl-3xl { background: var(--cs-glass-bg-pearl-3xl); }
-@utility cs-glass-bg-pearl-4xl { background: var(--cs-glass-bg-pearl-4xl); }
-@utility cs-glass-bg-pearl-5xl { background: var(--cs-glass-bg-pearl-5xl); }
-@utility cs-glass-bg-dark-pearl { background: var(--cs-glass-bg-dark-pearl); }
-@utility cs-glass-bg-dark-pearl-xs { background: var(--cs-glass-bg-dark-pearl-xs); }
-@utility cs-glass-bg-dark-pearl-sm { background: var(--cs-glass-bg-dark-pearl-sm); }
-@utility cs-glass-bg-dark-pearl-md { background: var(--cs-glass-bg-dark-pearl-md); }
-@utility cs-glass-bg-dark-pearl-lg { background: var(--cs-glass-bg-dark-pearl-lg); }
-@utility cs-glass-bg-dark-pearl-xl { background: var(--cs-glass-bg-dark-pearl-xl); }
-@utility cs-glass-bg-dark-pearl-2xl { background: var(--cs-glass-bg-dark-pearl-2xl); }
-@utility cs-glass-bg-dark-pearl-3xl { background: var(--cs-glass-bg-dark-pearl-3xl); }
-@utility cs-glass-bg-dark-pearl-4xl { background: var(--cs-glass-bg-dark-pearl-4xl); }
-@utility cs-glass-bg-dark-pearl-5xl { background: var(--cs-glass-bg-dark-pearl-5xl); }
+@utility pb-glass-bg-pearl { background: var(--pb-glass-bg-pearl); }
+@utility pb-glass-bg-pearl-xs { background: var(--pb-glass-bg-pearl-xs); }
+@utility pb-glass-bg-pearl-sm { background: var(--pb-glass-bg-pearl-sm); }
+@utility pb-glass-bg-pearl-md { background: var(--pb-glass-bg-pearl-md); }
+@utility pb-glass-bg-pearl-lg { background: var(--pb-glass-bg-pearl-lg); }
+@utility pb-glass-bg-pearl-xl { background: var(--pb-glass-bg-pearl-xl); }
+@utility pb-glass-bg-pearl-2xl { background: var(--pb-glass-bg-pearl-2xl); }
+@utility pb-glass-bg-pearl-3xl { background: var(--pb-glass-bg-pearl-3xl); }
+@utility pb-glass-bg-pearl-4xl { background: var(--pb-glass-bg-pearl-4xl); }
+@utility pb-glass-bg-pearl-5xl { background: var(--pb-glass-bg-pearl-5xl); }
+@utility pb-glass-bg-dark-pearl { background: var(--pb-glass-bg-dark-pearl); }
+@utility pb-glass-bg-dark-pearl-xs { background: var(--pb-glass-bg-dark-pearl-xs); }
+@utility pb-glass-bg-dark-pearl-sm { background: var(--pb-glass-bg-dark-pearl-sm); }
+@utility pb-glass-bg-dark-pearl-md { background: var(--pb-glass-bg-dark-pearl-md); }
+@utility pb-glass-bg-dark-pearl-lg { background: var(--pb-glass-bg-dark-pearl-lg); }
+@utility pb-glass-bg-dark-pearl-xl { background: var(--pb-glass-bg-dark-pearl-xl); }
+@utility pb-glass-bg-dark-pearl-2xl { background: var(--pb-glass-bg-dark-pearl-2xl); }
+@utility pb-glass-bg-dark-pearl-3xl { background: var(--pb-glass-bg-dark-pearl-3xl); }
+@utility pb-glass-bg-dark-pearl-4xl { background: var(--pb-glass-bg-dark-pearl-4xl); }
+@utility pb-glass-bg-dark-pearl-5xl { background: var(--pb-glass-bg-dark-pearl-5xl); }
 
 /* =========================================================
    GRANULAR UTILITIES (BORDERS)
    ========================================================= */
-@utility cs-glass-border-ruby { border-color: var(--cs-glass-border-ruby); }
-@utility cs-glass-border-emerald { border-color: var(--cs-glass-border-emerald); }
-@utility cs-glass-border-gold { border-color: var(--cs-glass-border-gold); }
-@utility cs-glass-border-aqua { border-color: var(--cs-glass-border-aqua); }
-@utility cs-glass-border-amethyst { border-color: var(--cs-glass-border-amethyst); }
-@utility cs-glass-border-sapphire { border-color: var(--cs-glass-border-sapphire); }
-@utility cs-glass-border-platinum { border-color: var(--cs-glass-border-platinum); }
-@utility cs-glass-border-pearl { border-color: var(--cs-glass-border-pearl); }
+@utility pb-glass-border-ruby { border-color: var(--pb-glass-border-ruby); }
+@utility pb-glass-border-emerald { border-color: var(--pb-glass-border-emerald); }
+@utility pb-glass-border-gold { border-color: var(--pb-glass-border-gold); }
+@utility pb-glass-border-aqua { border-color: var(--pb-glass-border-aqua); }
+@utility pb-glass-border-amethyst { border-color: var(--pb-glass-border-amethyst); }
+@utility pb-glass-border-sapphire { border-color: var(--pb-glass-border-sapphire); }
+@utility pb-glass-border-platinum { border-color: var(--pb-glass-border-platinum); }
+@utility pb-glass-border-pearl { border-color: var(--pb-glass-border-pearl); }
 
 /* =========================================================
    GRANULAR UTILITIES (COLORED BOX-SHADOWS)
    ========================================================= */
-@utility cs-glass-shadow-ruby { box-shadow: var(--cs-glass-shadow-ruby); }
-@utility cs-glass-shadow-emerald { box-shadow: var(--cs-glass-shadow-emerald); }
-@utility cs-glass-shadow-gold { box-shadow: var(--cs-glass-shadow-gold); }
-@utility cs-glass-shadow-aqua { box-shadow: var(--cs-glass-shadow-aqua); }
-@utility cs-glass-shadow-amethyst { box-shadow: var(--cs-glass-shadow-amethyst); }
-@utility cs-glass-shadow-sapphire { box-shadow: var(--cs-glass-shadow-sapphire); }
-@utility cs-glass-shadow-platinum { box-shadow: var(--cs-glass-shadow-platinum); }
-@utility cs-glass-shadow-pearl { box-shadow: var(--cs-glass-shadow-pearl); }
+@utility pb-glass-shadow-ruby { box-shadow: var(--pb-glass-shadow-ruby); }
+@utility pb-glass-shadow-emerald { box-shadow: var(--pb-glass-shadow-emerald); }
+@utility pb-glass-shadow-gold { box-shadow: var(--pb-glass-shadow-gold); }
+@utility pb-glass-shadow-aqua { box-shadow: var(--pb-glass-shadow-aqua); }
+@utility pb-glass-shadow-amethyst { box-shadow: var(--pb-glass-shadow-amethyst); }
+@utility pb-glass-shadow-sapphire { box-shadow: var(--pb-glass-shadow-sapphire); }
+@utility pb-glass-shadow-platinum { box-shadow: var(--pb-glass-shadow-platinum); }
+@utility pb-glass-shadow-pearl { box-shadow: var(--pb-glass-shadow-pearl); }
 
 /* =========================================================
    COMPOSITE GLASS UTILITIES (THE MASTER CLASSES)
    ========================================================= */
 
-@utility cs-glass-ruby {
-  background: var(--cs-glass-bg-ruby);
-  border: 1px solid var(--cs-glass-border-ruby);
-  border-radius: var(--cs-glass-radius-lg, 0.75rem);
-  backdrop-filter: var(--cs-glass-blur, blur(16px));
-  -webkit-backdrop-filter: var(--cs-glass-blur, blur(16px));
-  color: var(--cs-glass-ruby);
-  box-shadow: var(--cs-glass-shadow-ruby);
-  transition: all var(--cs-glass-transition, 0.3s) ease;
+@utility pb-glass-ruby {
+  background: var(--pb-glass-bg-ruby);
+  border: 1px solid var(--pb-glass-border-ruby);
+  border-radius: var(--pb-glass-radius-lg, 0.75rem);
+  backdrop-filter: var(--pb-glass-blur, blur(16px));
+  -webkit-backdrop-filter: var(--pb-glass-blur, blur(16px));
+  color: var(--pb-glass-ruby);
+  box-shadow: var(--pb-glass-shadow-ruby);
+  transition: all var(--pb-glass-transition, 0.3s) ease;
 }
 
-@utility cs-glass-emerald {
-  background: var(--cs-glass-bg-emerald);
-  border: 1px solid var(--cs-glass-border-emerald);
-  border-radius: var(--cs-glass-radius-lg, 0.75rem);
-  backdrop-filter: var(--cs-glass-blur, blur(16px));
-  -webkit-backdrop-filter: var(--cs-glass-blur, blur(16px));
-  color: var(--cs-glass-emerald);
-  box-shadow: var(--cs-glass-shadow-emerald);
-  transition: all var(--cs-glass-transition, 0.3s) ease;
+@utility pb-glass-emerald {
+  background: var(--pb-glass-bg-emerald);
+  border: 1px solid var(--pb-glass-border-emerald);
+  border-radius: var(--pb-glass-radius-lg, 0.75rem);
+  backdrop-filter: var(--pb-glass-blur, blur(16px));
+  -webkit-backdrop-filter: var(--pb-glass-blur, blur(16px));
+  color: var(--pb-glass-emerald);
+  box-shadow: var(--pb-glass-shadow-emerald);
+  transition: all var(--pb-glass-transition, 0.3s) ease;
 }
 
-@utility cs-glass-gold {
-  background: var(--cs-glass-bg-gold);
-  border: 1px solid var(--cs-glass-border-gold);
-  border-radius: var(--cs-glass-radius-lg, 0.75rem);
-  backdrop-filter: var(--cs-glass-blur, blur(16px));
-  -webkit-backdrop-filter: var(--cs-glass-blur, blur(16px));
-  color: var(--cs-glass-sapphire); /* Contrasting dark text for light gem */
-  box-shadow: var(--cs-glass-shadow-gold);
-  transition: all var(--cs-glass-transition, 0.3s) ease;
+@utility pb-glass-gold {
+  background: var(--pb-glass-bg-gold);
+  border: 1px solid var(--pb-glass-border-gold);
+  border-radius: var(--pb-glass-radius-lg, 0.75rem);
+  backdrop-filter: var(--pb-glass-blur, blur(16px));
+  -webkit-backdrop-filter: var(--pb-glass-blur, blur(16px));
+  color: var(--pb-glass-sapphire); /* Contrasting dark text for light gem */
+  box-shadow: var(--pb-glass-shadow-gold);
+  transition: all var(--pb-glass-transition, 0.3s) ease;
 }
 
-@utility cs-glass-aqua {
-  background: var(--cs-glass-bg-aqua);
-  border: 1px solid var(--cs-glass-border-aqua);
-  border-radius: var(--cs-glass-radius-lg, 0.75rem);
-  backdrop-filter: var(--cs-glass-blur, blur(16px));
-  -webkit-backdrop-filter: var(--cs-glass-blur, blur(16px));
-  color: var(--cs-glass-sapphire); /* Contrasting dark text for light gem */
-  box-shadow: var(--cs-glass-shadow-aqua);
-  transition: all var(--cs-glass-transition, 0.3s) ease;
+@utility pb-glass-aqua {
+  background: var(--pb-glass-bg-aqua);
+  border: 1px solid var(--pb-glass-border-aqua);
+  border-radius: var(--pb-glass-radius-lg, 0.75rem);
+  backdrop-filter: var(--pb-glass-blur, blur(16px));
+  -webkit-backdrop-filter: var(--pb-glass-blur, blur(16px));
+  color: var(--pb-glass-sapphire); /* Contrasting dark text for light gem */
+  box-shadow: var(--pb-glass-shadow-aqua);
+  transition: all var(--pb-glass-transition, 0.3s) ease;
 }
 
-@utility cs-glass-amethyst {
-  background: var(--cs-glass-bg-amethyst);
-  border: 1px solid var(--cs-glass-border-amethyst);
-  border-radius: var(--cs-glass-radius-lg, 0.75rem);
-  backdrop-filter: var(--cs-glass-blur, blur(16px));
-  -webkit-backdrop-filter: var(--cs-glass-blur, blur(16px));
-  color: var(--cs-glass-amethyst);
-  box-shadow: var(--cs-glass-shadow-amethyst);
-  transition: all var(--cs-glass-transition, 0.3s) ease;
+@utility pb-glass-amethyst {
+  background: var(--pb-glass-bg-amethyst);
+  border: 1px solid var(--pb-glass-border-amethyst);
+  border-radius: var(--pb-glass-radius-lg, 0.75rem);
+  backdrop-filter: var(--pb-glass-blur, blur(16px));
+  -webkit-backdrop-filter: var(--pb-glass-blur, blur(16px));
+  color: var(--pb-glass-amethyst);
+  box-shadow: var(--pb-glass-shadow-amethyst);
+  transition: all var(--pb-glass-transition, 0.3s) ease;
 }
 
-@utility cs-glass-sapphire {
-  background: var(--cs-glass-bg-sapphire);
-  border: 1px solid var(--cs-glass-border-sapphire);
-  border-radius: var(--cs-glass-radius-lg, 0.75rem);
-  backdrop-filter: var(--cs-glass-blur, blur(16px));
-  -webkit-backdrop-filter: var(--cs-glass-blur, blur(16px));
-  color: var(--cs-glass-sapphire);
-  box-shadow: var(--cs-glass-shadow-sapphire);
-  transition: all var(--cs-glass-transition, 0.3s) ease;
+@utility pb-glass-sapphire {
+  background: var(--pb-glass-bg-sapphire);
+  border: 1px solid var(--pb-glass-border-sapphire);
+  border-radius: var(--pb-glass-radius-lg, 0.75rem);
+  backdrop-filter: var(--pb-glass-blur, blur(16px));
+  -webkit-backdrop-filter: var(--pb-glass-blur, blur(16px));
+  color: var(--pb-glass-sapphire);
+  box-shadow: var(--pb-glass-shadow-sapphire);
+  transition: all var(--pb-glass-transition, 0.3s) ease;
 }
 
-@utility cs-glass-platinum {
-  background: var(--cs-glass-bg-platinum);
-  border: 1px solid var(--cs-glass-border-platinum);
-  border-radius: var(--cs-glass-radius-lg, 0.75rem);
-  backdrop-filter: var(--cs-glass-blur, blur(16px));
-  -webkit-backdrop-filter: var(--cs-glass-blur, blur(16px));
-  color: var(--cs-glass-sapphire); /* Contrasting dark text for light gem */
-  box-shadow: var(--cs-glass-shadow-platinum);
-  transition: all var(--cs-glass-transition, 0.3s) ease;
+@utility pb-glass-platinum {
+  background: var(--pb-glass-bg-platinum);
+  border: 1px solid var(--pb-glass-border-platinum);
+  border-radius: var(--pb-glass-radius-lg, 0.75rem);
+  backdrop-filter: var(--pb-glass-blur, blur(16px));
+  -webkit-backdrop-filter: var(--pb-glass-blur, blur(16px));
+  color: var(--pb-glass-sapphire); /* Contrasting dark text for light gem */
+  box-shadow: var(--pb-glass-shadow-platinum);
+  transition: all var(--pb-glass-transition, 0.3s) ease;
 }
 
-@utility cs-glass-pearl {
-  background: var(--cs-glass-bg-pearl);
-  border: 1px solid var(--cs-glass-border-pearl);
-  border-radius: var(--cs-glass-radius-lg, 0.75rem);
-  backdrop-filter: var(--cs-glass-blur, blur(16px));
-  -webkit-backdrop-filter: var(--cs-glass-blur, blur(16px));
-  color: var(--cs-glass-sapphire); /* Contrasting dark text for light gem */
-  box-shadow: var(--cs-glass-shadow-pearl);
-  transition: all var(--cs-glass-transition, 0.3s) ease;
+@utility pb-glass-pearl {
+  background: var(--pb-glass-bg-pearl);
+  border: 1px solid var(--pb-glass-border-pearl);
+  border-radius: var(--pb-glass-radius-lg, 0.75rem);
+  backdrop-filter: var(--pb-glass-blur, blur(16px));
+  -webkit-backdrop-filter: var(--pb-glass-blur, blur(16px));
+  color: var(--pb-glass-sapphire); /* Contrasting dark text for light gem */
+  box-shadow: var(--pb-glass-shadow-pearl);
+  transition: all var(--pb-glass-transition, 0.3s) ease;
 }
 
 /* --- DARK MODE FLIP FOR MASTER CLASSES --- */
 @media (prefers-color-scheme: dark) {
-  .cs-glass-ruby { background: var(--cs-glass-bg-dark-ruby); color: var(--cs-glass-pearl); }
-  .cs-glass-emerald { background: var(--cs-glass-bg-dark-emerald); color: var(--cs-glass-pearl); }
-  .cs-glass-gold { background: var(--cs-glass-bg-dark-gold); color: var(--cs-glass-pearl); }
-  .cs-glass-aqua { background: var(--cs-glass-bg-dark-aqua); color: var(--cs-glass-pearl); }
-  .cs-glass-amethyst { background: var(--cs-glass-bg-dark-amethyst); color: var(--cs-glass-pearl); }
-  .cs-glass-sapphire { background: var(--cs-glass-bg-dark-sapphire); color: var(--cs-glass-pearl); }
-  .cs-glass-platinum { background: var(--cs-glass-bg-dark-platinum); color: var(--cs-glass-pearl); }
-  .cs-glass-pearl { background: var(--cs-glass-bg-dark-pearl); color: var(--cs-glass-pearl); }
+  .pb-glass-ruby { background: var(--pb-glass-bg-dark-ruby); color: var(--pb-glass-pearl); }
+  .pb-glass-emerald { background: var(--pb-glass-bg-dark-emerald); color: var(--pb-glass-pearl); }
+  .pb-glass-gold { background: var(--pb-glass-bg-dark-gold); color: var(--pb-glass-pearl); }
+  .pb-glass-aqua { background: var(--pb-glass-bg-dark-aqua); color: var(--pb-glass-pearl); }
+  .pb-glass-amethyst { background: var(--pb-glass-bg-dark-amethyst); color: var(--pb-glass-pearl); }
+  .pb-glass-sapphire { background: var(--pb-glass-bg-dark-sapphire); color: var(--pb-glass-pearl); }
+  .pb-glass-platinum { background: var(--pb-glass-bg-dark-platinum); color: var(--pb-glass-pearl); }
+  .pb-glass-pearl { background: var(--pb-glass-bg-dark-pearl); color: var(--pb-glass-pearl); }
 }
 
 /* =========================================================
@@ -555,23 +555,23 @@
 @supports not (
   (-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))
 ) {
-  .cs-glass-ruby { background: var(--cs-glass-bg-ruby-fallback); }
-  .cs-glass-emerald { background: var(--cs-glass-bg-emerald-fallback); }
-  .cs-glass-gold { background: var(--cs-glass-bg-gold-fallback); }
-  .cs-glass-aqua { background: var(--cs-glass-bg-aqua-fallback); }
-  .cs-glass-amethyst { background: var(--cs-glass-bg-amethyst-fallback); }
-  .cs-glass-sapphire { background: var(--cs-glass-bg-sapphire-fallback); }
-  .cs-glass-platinum { background: var(--cs-glass-bg-platinum-fallback); }
-  .cs-glass-pearl { background: var(--cs-glass-bg-pearl-fallback); }
+  .pb-glass-ruby { background: var(--pb-glass-bg-ruby-fallback); }
+  .pb-glass-emerald { background: var(--pb-glass-bg-emerald-fallback); }
+  .pb-glass-gold { background: var(--pb-glass-bg-gold-fallback); }
+  .pb-glass-aqua { background: var(--pb-glass-bg-aqua-fallback); }
+  .pb-glass-amethyst { background: var(--pb-glass-bg-amethyst-fallback); }
+  .pb-glass-sapphire { background: var(--pb-glass-bg-sapphire-fallback); }
+  .pb-glass-platinum { background: var(--pb-glass-bg-platinum-fallback); }
+  .pb-glass-pearl { background: var(--pb-glass-bg-pearl-fallback); }
 
   @media (prefers-color-scheme: dark) {
-    .cs-glass-ruby { background: var(--cs-glass-bg-dark-ruby); }
-    .cs-glass-emerald { background: var(--cs-glass-bg-dark-emerald); }
-    .cs-glass-gold { background: var(--cs-glass-bg-dark-gold); }
-    .cs-glass-aqua { background: var(--cs-glass-bg-dark-aqua); }
-    .cs-glass-amethyst { background: var(--cs-glass-bg-dark-amethyst); }
-    .cs-glass-sapphire { background: var(--cs-glass-bg-dark-sapphire); }
-    .cs-glass-platinum { background: var(--cs-glass-bg-dark-platinum); }
-    .cs-glass-pearl { background: var(--cs-glass-bg-dark-pearl); }
+    .pb-glass-ruby { background: var(--pb-glass-bg-dark-ruby); }
+    .pb-glass-emerald { background: var(--pb-glass-bg-dark-emerald); }
+    .pb-glass-gold { background: var(--pb-glass-bg-dark-gold); }
+    .pb-glass-aqua { background: var(--pb-glass-bg-dark-aqua); }
+    .pb-glass-amethyst { background: var(--pb-glass-bg-dark-amethyst); }
+    .pb-glass-sapphire { background: var(--pb-glass-bg-dark-sapphire); }
+    .pb-glass-platinum { background: var(--pb-glass-bg-dark-platinum); }
+    .pb-glass-pearl { background: var(--pb-glass-bg-dark-pearl); }
   }
 }

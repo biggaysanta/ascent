@@ -7,6 +7,7 @@ author_credentials: "CMT"
 license_type: "CMT"
 author_email: "paul@paulbrown.net"
 author_telephone: "9165348772"
+colorTheme: "theme-brains"
 
 draft: false
 date: 2026-02-08

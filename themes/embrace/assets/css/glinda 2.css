@@ -26,7 +26,7 @@
   
   /* Typography */
   --color-text: oklch(30% 0.05 350);
-  --color-muted-text: oklch(55% 0.05 350);
+  --color-muted: oklch(55% 0.05 350);
 
   /* Semantic Error Colors (Standardized) */
   --color-error: oklch(50.86% 0.193 27.64);
@@ -67,7 +67,7 @@
 
     /* Typography */
     --color-text: oklch(95% 0.02 350);
-    --color-muted-text: oklch(75% 0.05 350);
+    --color-muted: oklch(75% 0.05 350);
 
     /* Semantic Error Colors (Standardized) */
     --color-error: oklch(71.82% 0.176 27.57);

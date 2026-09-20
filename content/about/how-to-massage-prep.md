@@ -44,4 +44,6 @@ Now that you know how to do a good massage prep, you’re going to have an all a
 
 enjoy!
 
+{{< button "https://vagaro.com/firelightstudio" >}}
 Book Your Massage
+{{< /button >}}

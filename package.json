@@ -10,7 +10,9 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "links:check": "node scripts/apply-cross-links.mjs",
-    "links:apply": "node scripts/apply-cross-links.mjs --apply"
+    "links:apply": "node scripts/apply-cross-links.mjs --apply",
+    "audit:contrast": "node scripts/audit-contrast.mjs",
+    "audit:contrast:all": "node scripts/audit-contrast.mjs --all-themes"
   },
   "dependencies": {
     "@casoon/atlas": "^0.2.0",
@@ -25,6 +27,7 @@
   "devDependencies": {
     "@tailwindcss/cli": "^4.3.3",
     "@tailwindcss/typography": "^0.5.20",
+    "@tailwindcss/forms": "^0.5.1",
     "prettier": "^3.9.6",
     "prettier-plugin-go-template": "^0.0.15",
     "tailwindcss": "^4.3.3",

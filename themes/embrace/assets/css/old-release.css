@@ -1,5 +1,5 @@
 /* virtue-courage context */
-.theme-renew {
+.theme-release {
   /* Brand/Core Colors */
   --color-primary: oklch(49.48% 0.132 277.34);
   --color-on-primary: oklch(98.34% 0.010 305.41);
@@ -7,7 +7,7 @@
   --color-on-secondary: oklch(97.35% 0.053 121.36);
   --color-tertiary: oklch(48.81% 0.132 121.94);
   --color-on-tertiary: oklch(97.10% 0.059 119.53);
-  
+
   /* Fill/Text Variants */
   --color-primary-fill: oklch(77.53% 0.091 280.20);
   --color-primary-text: oklch(37.56% 0.133 277.67);
@@ -15,7 +15,7 @@
   --color-secondary-text: oklch(45.54% 0.083 123.33);
   --color-tertiary-fill: oklch(93.99% 0.147 120.91);
   --color-tertiary-text: oklch(45.92% 0.126 121.94);
-  
+
   /* Surfaces & Backgrounds */
   --color-background: oklch(98.34% 0.009 311.16);
   --color-card: oklch(93.58% 0.024 295.31);
@@ -23,7 +23,7 @@
   --color-elevated: oklch(89.87% 0.028 295.31);
   --color-border: oklch(55.67% 0.057 291.56);
   --color-subtle-border: oklch(74.43% 0.055 291.56);
-  
+
   /* Typography */
   --color-text: oklch(30.63% 0.055 285.54);
   --color-muted: oklch(46.99% 0.053 285.54);
@@ -35,11 +35,12 @@
   --color-error-text: oklch(28.72% 0.117 27.53);
 
   /* Shadows */
-  --color-shadow: var(--color-jade);
+  --color-shadow: var(--color-onyx);
 }
 
+
 @media (prefers-color-scheme: dark) {
-  .theme-renew {
+  .theme-release {
     /* Brand/Core Colors */
     --color-primary: oklch(81.99% 0.080 279.80);
     --color-on-primary: oklch(37.89% 0.126 274.67);
@@ -73,8 +74,8 @@
     --color-on-error: oklch(25.72% 0.105 27.65);
     --color-error-fill: oklch(47.21% 0.187 27.54);
     --color-error-text: oklch(84.66% 0.084 26.20);
-    
+
     /* Shadows */
-    --color-shadow: var(--color-jade);
+    --color-shadow: var(--color-onyx);
   }
 }

@@ -1,0 +1,190 @@
+/* ============================================================
+   colors-tw.css
+   Gem Tone Color Scale — Tailwind v4 / OKLCH / P3 + sRGB
+   
+   CONTRAST REFERENCE (Dorothy theme, oklch soft-light surface)
+   Light mode surface ≈ oklch(97% 0.004 245)
+   Dark mode surface  ≈ oklch(17% 0.010 245)
+   
+   SEMANTIC STOP MAP:
+   -100  Fill backgrounds, light tints      → --color-primary-fill
+   -200  Subtle fills, hover states
+   -300  Borders, decorative               → --color-border
+   -400  Interactive, icons (AA large ✅)
+   -500  Primary semantic anchor  (AA ✅)  → --color-primary
+   -600  Dark variant (AAA ✅)
+   -700  Text, dark fills (AAA ✅)          → --color-primary-text
+   -800  Heavy text (AAA ✅)
+   -900  Near-black depths (AAA ✅)         → --color-on-primary
+
+   SEMANTIC VARIABLE MAPPING REFERENCE:
+   | Semantic Variable          | Light Mode Stop | Dark Mode Stop |
+   |----------------------------|-----------------|----------------|
+   | --color-primary            | 500             | 400            |
+   | --color-on-primary         | 900             | 100            |
+   | --color-secondary          | 500–600         | 300–400        |
+   | --color-on-secondary       | 900             | 100            |
+   | --color-tertiary           | 400–500         | 300            |
+   | --color-on-tertiary        | 900             | 100            |
+   | --color-primary-fill       | 100             | 800            |
+   | --color-primary-text       | 700             | 200            |
+   | --color-secondary-fill     | 100             | 800            |
+   | --color-secondary-text     | 700             | 200            |
+   | --color-tertiary-fill      | 100–200         | 800            |
+   | --color-tertiary-text      | 600–700         | 200            |
+   | --color-border             | 300             | 700            |
+   | --color-subtle-border      | 200             | 800            |
+   | --color-text               | 800–900         | 100            |
+   | --color-muted         | 600–700         | 300            |
+   ============================================================ */
+
+@theme {
+
+  /* ── Ruby (H=25, C=0.25, L=55%) ───────────────── */
+  --color-ruby-100: oklch(96% 0.03 25);
+  --color-ruby-200: oklch(90% 0.06 25);
+  --color-ruby-300: oklch(80% 0.13 25);
+  --color-ruby-400: oklch(68% 0.20 25);
+  --color-ruby-500: oklch(55% 0.25 25);
+  --color-ruby-600: oklch(44% 0.23 25);
+  --color-ruby-700: oklch(34% 0.20 25);
+  --color-ruby-800: oklch(24% 0.14 25);
+  --color-ruby-900: oklch(15% 0.09 25);
+
+  /* ── Emerald (H=155, C=0.15, L=55%) ─────────────── */
+  --color-emerald-100: oklch(96% 0.02 155);
+  --color-emerald-200: oklch(90% 0.04 155);
+  --color-emerald-300: oklch(80% 0.08 155);
+  --color-emerald-400: oklch(68% 0.12 155);
+  --color-emerald-500: oklch(55% 0.15 155);
+  --color-emerald-600: oklch(44% 0.14 155);
+  --color-emerald-700: oklch(34% 0.12 155);
+  --color-emerald-800: oklch(24% 0.08 155);
+  --color-emerald-900: oklch(15% 0.05 155);
+
+  /* ── Gold (H=65, C=0.18, L=85% - Adapted Base) ─── */
+  --color-gold-100: oklch(98% 0.02 65);
+  --color-gold-200: oklch(94% 0.05 65);
+  --color-gold-300: oklch(90% 0.09 65);
+  --color-gold-400: oklch(87% 0.14 65);
+  --color-gold-500: oklch(85% 0.18 65);
+  --color-gold-600: oklch(72% 0.17 65);
+  --color-gold-700: oklch(58% 0.14 65);
+  --color-gold-800: oklch(42% 0.10 65);
+  --color-gold-900: oklch(26% 0.06 65);
+
+  /* ── Aquamarine (H=215, C=0.10, L=75%) ─────────── */
+  --color-aquamarine-100: oklch(97% 0.01 215);
+  --color-aquamarine-200: oklch(92% 0.03 215);
+  --color-aquamarine-300: oklch(85% 0.05 215);
+  --color-aquamarine-400: oklch(80% 0.08 215);
+  --color-aquamarine-500: oklch(75% 0.10 215);
+  --color-aquamarine-600: oklch(62% 0.09 215);
+  --color-aquamarine-700: oklch(49% 0.08 215);
+  --color-aquamarine-800: oklch(35% 0.06 215);
+  --color-aquamarine-900: oklch(20% 0.03 215);
+
+  /* ── Amethyst (H=300, C=0.16, L=60%) ───────────── */
+  --color-amethyst-100: oklch(96% 0.02 300);
+  --color-amethyst-200: oklch(90% 0.04 300);
+  --color-amethyst-300: oklch(82% 0.08 300);
+  --color-amethyst-400: oklch(71% 0.12 300);
+  --color-amethyst-500: oklch(60% 0.16 300);
+  --color-amethyst-600: oklch(48% 0.15 300);
+  --color-amethyst-700: oklch(37% 0.12 300);
+  --color-amethyst-800: oklch(26% 0.09 300);
+  --color-amethyst-900: oklch(15% 0.06 300);
+
+  /* ── Sapphire (H=270, C=0.14, L=45%) ───────────── */
+  --color-sapphire-100: oklch(95% 0.02 270);
+  --color-sapphire-200: oklch(88% 0.04 270);
+  --color-sapphire-300: oklch(75% 0.07 270);
+  --color-sapphire-400: oklch(60% 0.11 270);
+  --color-sapphire-500: oklch(45% 0.14 270);
+  --color-sapphire-600: oklch(36% 0.13 270);
+  --color-sapphire-700: oklch(28% 0.11 270);
+  --color-sapphire-800: oklch(20% 0.08 270);
+  --color-sapphire-900: oklch(12% 0.05 270);
+
+  /* ── Steel (H=250, C=0.04, L=55%) ──────────────── */
+  --color-steel-100: oklch(96% 0.005 250);
+  --color-steel-200: oklch(90% 0.010 250);
+  --color-steel-300: oklch(80% 0.020 250);
+  --color-steel-400: oklch(68% 0.031 250);
+  --color-steel-500: oklch(55% 0.040 250);
+  --color-steel-600: oklch(44% 0.037 250);
+  --color-steel-700: oklch(34% 0.031 250);
+  --color-steel-800: oklch(24% 0.022 250);
+  --color-steel-900: oklch(15% 0.014 250);
+
+  /* ── Onyx (H=270, C=0.02, L=35%) ───────────────── */
+  --color-onyx-100: oklch(95% 0.002 270);
+  --color-onyx-200: oklch(88% 0.005 270);
+  --color-onyx-300: oklch(75% 0.010 270);
+  --color-onyx-400: oklch(55% 0.016 270);
+  --color-onyx-500: oklch(35% 0.020 270);
+  --color-onyx-600: oklch(28% 0.018 270);
+  --color-onyx-700: oklch(21% 0.016 270);
+  --color-onyx-800: oklch(15% 0.011 270);
+  --color-onyx-900: oklch(9% 0.007 270);
+
+  /* ── Cobalt (H=260, C=0.16, L=50%) ─────────────── */
+  --color-cobalt-100: oklch(96% 0.02 260);
+  --color-cobalt-200: oklch(90% 0.04 260);
+  --color-cobalt-300: oklch(80% 0.08 260);
+  --color-cobalt-400: oklch(65% 0.12 260);
+  --color-cobalt-500: oklch(50% 0.16 260);
+  --color-cobalt-600: oklch(40% 0.15 260);
+  --color-cobalt-700: oklch(31% 0.12 260);
+  --color-cobalt-800: oklch(22% 0.09 260);
+  --color-cobalt-900: oklch(14% 0.06 260);
+
+  /* ── Bronze (H=45, C=0.14, L=55%) ──────────────── */
+  --color-bronze-100: oklch(96% 0.02 45);
+  --color-bronze-200: oklch(90% 0.04 45);
+  --color-bronze-300: oklch(80% 0.07 45);
+  --color-bronze-400: oklch(68% 0.11 45);
+  --color-bronze-500: oklch(55% 0.14 45);
+  --color-bronze-600: oklch(44% 0.13 45);
+  --color-bronze-700: oklch(34% 0.11 45);
+  --color-bronze-800: oklch(24% 0.08 45);
+  --color-bronze-900: oklch(15% 0.05 45);
+
+  /* ── Topaz (H=75, C=0.16, L=60%) ───────────────── */
+  --color-topaz-100: oklch(96% 0.02 75);
+  --color-topaz-200: oklch(90% 0.04 75);
+  --color-topaz-300: oklch(82% 0.08 75);
+  --color-topaz-400: oklch(71% 0.12 75);
+  --color-topaz-500: oklch(60% 0.16 75);
+  --color-topaz-600: oklch(48% 0.15 75);
+  --color-topaz-700: oklch(37% 0.12 75);
+  --color-topaz-800: oklch(26% 0.09 75);
+  --color-topaz-900: oklch(15% 0.06 75);
+
+  --color-jade-100: oklch(96% 0.01 150);
+  --color-jade-200: oklch(90% 0.03 150);
+  --color-jade-300: oklch(80% 0.06 150);
+  --color-jade-400: oklch(68% 0.09 150);
+  --color-jade-500: oklch(55% 0.11 150);
+  --color-jade-600: oklch(44% 0.10 150);
+  --color-jade-700: oklch(34% 0.09 150);
+  --color-jade-800: oklch(24% 0.06 150);
+  --color-jade-900: oklch(15% 0.04 150);
+
+  /* Static System Neutrals */
+  --color-snow: oklch(100% 0 0);
+  --color-ebon: oklch(0% 0 0);
+  --color-charcoal: oklch(25% 0 0);
+  --color-scrim: oklch(0% 0 0 / 0.32);
+}
+
+@supports (color: color(display-p3 0 0 0)) {
+  @theme {
+    --color-ruby-800: oklch(24% 0.20 25);
+    --color-ruby-900: oklch(15% 0.25 25);
+    --color-sapphire-800: oklch(20% 0.12 270);
+    --color-sapphire-900: oklch(12% 0.14 270);
+    --color-cobalt-800: oklch(22% 0.13 260);
+    --color-cobalt-900: oklch(14% 0.16 260);
+  }
+}
