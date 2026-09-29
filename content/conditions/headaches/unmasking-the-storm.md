@@ -2,6 +2,7 @@
 title: "Unmasking the Storm: Understanding Cluster Headaches and Soft-Tissue Support"
 date: 2026-08-17T00:00:00Z
 draft: false
+imageURL:
 slug: "cluster-headache-causes-myofascial-support"
 description: "Understand the intense anatomy of cluster headaches. Discover how clinical myofascial release provides support and pain management strategies."
 categories:
@@ -30,30 +31,7 @@ cycle. However, specialized clinical bodywork—specifically Advanced Myofascial
 secondary muscle guarding, addressing cervical trigger points, and reducing autonomic strain, targeted bodywork helps manage the severe physical
 load these attacks place on the body.
 Signs, Symptoms, and Autonomic Characteristics
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="auto" role="img" aria-label
-<defs>
-<linearGradient id="bg-grad9" x1="0%" y1="0%" x2="100%" y2="100%">
-<stop offset="0%" stop-color="#0f172a" />
-<stop offset="100%" stop-color="#1e293b" />
-</linearGradient>
-<radialGradient id="cluster-fire" cx="50%" cy="50%" r="50%">
-<stop offset="0%" stop-color="#ef4444" stop-opacity="0.9" />
-<stop offset="50%" stop-color="#f97316" stop-opacity="0.6" />
-<stop offset="100%" stop-color="#dc2626" stop-opacity="0" />
-</radialGradient>
-</defs>
-<rect width="800" height="600" fill="url(#bg-grad9)" rx="12" />
-<g transform="translate(150, 50)">
-<path d="M 200,380 C 210,300 240,250 280,240 L 280,180 C 270,120 300,50 380,50 C 450,50 490,110 480,190 C
-<circle cx="430" cy="140" r="50" fill="url(#cluster-fire)" />
-<path d="M 410,120 L 450,135" stroke="#f87171" stroke-width="5" stroke-linecap="round" />
-<path d="M 440,150 Q 435,180 440,200" stroke="#38bdf8" stroke-width="3" stroke-dasharray="4,4" fill="none"
-<path d="M 480,220 C 450,180 420,160 390,170 L 380,190 C 410,190 440,210 470,250 Z" fill="#64748b" stroke=
-</g>
-<text x="400" y="550" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" font-weight="6
-Cluster Headache Presentation: Unilateral Orbital Pain &amp; Ipsilateral Autonomic Reactivity
-</text>
-</svg>
+
 Cluster headaches follow a specific clinical pattern:
 Extreme, Searing or Boring Pain: Centered strictly behind one eye or temple, often described as a "hot poker in the eye socket."
 Circadian Rhythmicity: Attacks occur in cluster periods lasting weeks or months, striking at predictable times (often during early morning REM
