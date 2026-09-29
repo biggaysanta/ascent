@@ -1,5 +1,5 @@
-
-{{- $options := dict "optimize" true -}}
-{{- $style := resources.Get "/css/main.css" | css.TailwindCSS $options -}}
-
+{{ $options := dict "optimize" true }}
+{{ $style := resources.Get "/css/main.css" |
+               css.TailwindCSS $options |
+               resources.Fingerprint "sha256" }}
 <link rel="stylesheet" href="{{ $style.RelPermalink }}">
