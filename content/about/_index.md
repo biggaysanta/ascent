@@ -34,7 +34,7 @@ sections:
     caption: "Call me Poppy, Ms. Cake if you're nasty!"
     badge: "The Heart"
     body: |
-      Poppy is my beautiful Siberian Husky I found at Front Street Shelter back in January 2025.  She lured me in with her winsome sinuousness!  She really is my silver-eyed devil.  Poppy keeps me moving!
+      Poppy is my beautiful Siberian Husky I found at Front Street Shelter back in January 2025.  She lured me in with her winsome sinuousness!  She really is my silver-eyed devil.  Like all huskies, Poppy keeps me moving!
 
 ---
 Welcome, and thank you for your interest - I hope you'll decide to work with me.
@@ -44,3 +44,5 @@ I've been practicing therapeutic massage and since 2003, after a 20 computer pro
 I invite you to come and experience the difference between my work and other massage therapists.  You'll know it by the results.
 
 I love you all, and I bid you peace.
+
+{{< button "https://vagaro.com/firelightstudio/" >}}Book Now!{{< /button >}}

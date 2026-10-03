@@ -10,11 +10,11 @@
   
   /* Fill/Text Variants */
   --color-primary-fill: oklch(88% 0.08 65);
-  --color-primary-text: oklch(35% 0.10 65);
+  --color-primary-text: oklch(24.657% 0.05746 60.622);
   --color-secondary-fill: oklch(90% 0.04 130);
-  --color-secondary-text: oklch(30% 0.06 130);
+  --color-secondary-text: oklch(22.415% 0.03937 128.374);
   --color-tertiary-fill: oklch(88% 0.10 25);
-  --color-tertiary-text: oklch(35% 0.14 25);
+  --color-tertiary-text: oklch(24.294% 0.0962 22.562);
   
   /* Surfaces & Backgrounds */
   --color-background: oklch(98% 0.01 65);
@@ -22,7 +22,7 @@
   --color-card-alt: oklch(93% 0.02 65);
   --color-elevated: oklch(90% 0.025 65);
   --color-border: oklch(70% 0.03 65);
-  --color-subtle-border: oklch(85% 0.02 65);
+  --color-subtle-border: oklch(54.671% 0.05689 65.183);
   
   /* Typography */
   --color-text: oklch(25% 0.02 65);

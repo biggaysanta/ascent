@@ -186,7 +186,6 @@
 .nav-link:hover {
   @apply bg-primary/20 border-primary/30 elevation-3;
 }
-*/
 
 .nav-link.active {
   @apply bg-secondary/15 font-bold text-secondary border-secondary/20 elevation-2;
@@ -195,11 +194,11 @@
 .nav-link.ancestor {
   @apply font-bold border-primary/30;
 }
+*/
 
 .service-tab-btn {
-  @apply flex items-center gap-2 rounded-lg bg-tertiary/15 px-2.5 py-1 text-xs font-medium text-tertiary border border-tertiary/20 backdrop-blur-sm transition-all elevation-2 active:bg-tertiary/5 active:scale-95 active:elevation-1;
-}
-
+  @apply flex items-center gap-2 cabochon-brn-ruby; }
+/*
 .service-tab-btn:hover {
   @apply bg-tertiary/20 border-tertiary/30 elevation-3 scale-105;
 }
@@ -209,44 +208,8 @@
   @apply scale-95 elevation-1;
 }
 
+*/
 
-:root {
-  html {
-    /* 1. The "Safety Net" (Solid Color) */
-    background-color: var(--color-background);
-  }
-
-  /* Ensure the transition container doesn't obscure the background */
-  ::view-transition {
-    background-color: var(--color-background);
-  }
-}
-
-:focus-visible,
-button:focus-visible,
-a:focus-visible,
-input:focus-visible,
-select:focus-visible,
-textarea:focus-visible,
-[role="button"]:focus-visible,
-[role="tab"]:focus-visible,
-[role="link"]:focus-visible {
-  outline: 2px solid color-mix(in oklch, var(--color-tertiary) 20%, transparent);
-  outline-offset: 2px;
-  border-radius: 0.5rem;
-}
-
-:focus-visible:hover,
-button:focus-visible:hover,
-a:focus-visible:hover,
-input:focus-visible:hover,
-select:focus-visible:hover,
-textarea:focus-visible:hover,
-[role="button"]:focus-visible:hover,
-[role="tab"]:focus-visible:hover,
-[role="link"]:focus-visible:hover {
-  outline-color: color-mix(in oklch, var(--color-tertiary) 30%, transparent);
-}
 
 .menu-item>.submenu {
   display: none;

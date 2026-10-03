@@ -1,0 +1,174 @@
+/**
+ * CABOCHON & GEM-SLAB DYNAMIC UTILITIES (Tailwind CSS v4)
+ * 
+ * Assumes color tokens (--color-*) are defined in an external stylesheet/theme.
+ * Automatically resolves both custom theme colors (e.g. ruby, emerald, sapphire)
+ * and default Tailwind palette scales (e.g. blue-500, slate-800).
+ */
+
+
+  /* ==========================================================================
+     1. WIDE CONTENT PANELS: Polished Slab / Shallow Gemstone Bevel
+     Calibrated for wide reading surfaces, cards, and structural layouts.
+     ========================================================================== */
+  @utility gem-slab-* {
+    position: relative;
+    border-radius: 1.5rem; /* 24px soft architectural corners */
+
+    /* Optical Diffusion & Saturation */
+    backdrop-filter: blur(14px) saturate(120%);
+    -webkit-backdrop-filter: blur(14px) saturate(120%);
+
+    /* High/Low Opacity Contrast: 
+       6% transparent body to stay open and clear; 
+       45% border for crisp, defined glass boundaries */
+    background-color: color-mix(in oklab, --value(--color-*) 6%, transparent);
+    border: 1px solid color-mix(in oklab, --value(--color-*) 45%, transparent);
+
+    /* Text Contrast: 95% opacity maintains WCAG 2.1 AA readability */
+    color: color-mix(in oklab, --value(--color-*) 95%, transparent);
+
+    /* Broad, Shallow Gemstone Lighting:
+       - Layer 1: Subtle top specular grazing horizon (studio light)
+       - Layer 2: Ultra-wide, shallow radial glow centered across the top */
+    background-image:
+      linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.22) 0%,
+        rgba(255, 255, 255, 0.05) 12%,
+        transparent 35%
+      ),
+      radial-gradient(
+        120% 80% at 50% -20%,
+        color-mix(in oklab, --value(--color-*) 12%, transparent) 0%,
+        transparent 70%
+      );
+
+    /* Architectural Inset Shadow:
+       Creates crisp rim highlight and grounding base without bulbous distortion */
+    box-shadow:
+      inset 0 1px 1px 0 rgba(255, 255, 255, 0.35),
+      inset 0 -1px 2px 0 color-mix(in oklab, --value(--color-*) 15%, black),
+      0 10px 30px -10px rgba(0, 0, 0, 0.12);
+  }
+
+
+  /* ==========================================================================
+     2. INTERACTIVE BUTTONS: Domed Cabochon Gemstone
+     Curved, volumetric pebble finish designed for high tactile affordance.
+     ========================================================================== */
+  @utility cabochon-btn-* {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px; /* WCAG 2.5.5 minimum touch target */
+    min-width: 44px;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px; /* Pill profile */
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+
+    /* Refractive Backdrop Distortion */
+    backdrop-filter: blur(10px) saturate(140%) contrast(105%);
+    -webkit-backdrop-filter: blur(10px) saturate(140%) contrast(105%);
+
+    /* 10% Body Transparency with 65% Crisp Outer Rim */
+    background-color: color-mix(in oklab, --value(--color-*) 10%, transparent);
+    border: 1px solid color-mix(in oklab, --value(--color-*) 65%, transparent);
+    color: color-mix(in oklab, --value(--color-*) 95%, transparent);
+
+    /* 3D Curvature Lighting:
+       - Layer 1: Tight 25% 20% specular light spot simulating a curved polish
+       - Layer 2: 145deg diagonal volume gradient */
+    background-image:
+      radial-gradient(
+        ellipse at 25% 20%,
+        rgba(255, 255, 255, 0.6) 0%,
+        rgba(255, 255, 255, 0) 45%
+      ),
+      linear-gradient(
+        145deg,
+        color-mix(in oklab, --value(--color-*) 20%, transparent) 0%,
+        transparent 50%,
+        color-mix(in oklab, --value(--color-*) 20%, black) 100%
+      );
+
+    /* Deep Inset Shadows for 3D Pebble Depth */
+    box-shadow:
+      inset 0 2px 4px rgba(255, 255, 255, 0.45),
+      inset -3px -3px 8px color-mix(in oklab, --value(--color-*) 25%, black),
+      0 8px 20px color-mix(in oklab, --value(--color-*) 15%, transparent);
+
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+
+    /* Hover State */
+    &:hover {
+      background-color: color-mix(in oklab, --value(--color-*) 18%, transparent);
+      transform: translateY(-1px);
+      box-shadow:
+        inset 0 2px 5px rgba(255, 255, 255, 0.6),
+        inset -3px -3px 10px color-mix(in oklab, --value(--color-*) 35%, black),
+        0 12px 28px color-mix(in oklab, --value(--color-*) 25%, transparent);
+    }
+
+    /* Active / Press State */
+    &:active {
+      transform: translateY(1px);
+    }
+
+    /* Accessible Focus Indicator (WCAG 2.4.7 compliant 3:1 focus ring) */
+    &:focus-visible {
+      outline: 2px solid --value(--color-*);
+      outline-offset: 3px;
+    }
+  }
+
+
+  /* ==========================================================================
+     3. COMPACT ACCENT BADGES / PILLS
+     Miniature cabochon finish for metadata tags, categories, or status chips.
+     ========================================================================== */
+  @utility cabochon-chip-* {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 9999px;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.025em;
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    background-color: color-mix(in oklab, --value(--color-*) 8%, transparent);
+    border: 1px solid color-mix(in oklab, --value(--color-*) 40%, transparent);
+    color: color-mix(in oklab, --value(--color-*) 95%, transparent);
+
+    background-image:
+      linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.3) 0%,
+        transparent 60%
+      );
+
+    box-shadow:
+      inset 0 1px 2px rgba(255, 255, 255, 0.3),
+      inset 0 -1px 2px color-mix(in oklab, --value(--color-*) 20%, black);
+  }
+
+
+/* ==========================================================================
+   4. ACCESSIBILITY OVERRIDES: MOTION SENSITIVITY (WCAG 2.3.3)
+   Disables 3D translation transforms for users who request reduced motion.
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  [class*="cabochon-btn-"],
+  [class*="gem-slab-"],
+  [class*="cabochon-chip-"] {
+    transition: none !important;
+    transform: none !important;
+  }
+}
